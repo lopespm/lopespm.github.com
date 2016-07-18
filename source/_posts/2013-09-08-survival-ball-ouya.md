@@ -20,3 +20,5 @@ The game was re-submitted on the same day, and was approved on the 5th of Septem
 I've came to learn during this process, after publishing the game, it first goes to the "Sandbox" section. Only after a major acceptance from the game community, can the game be promoted to the primary categories. So, if you would like to take a quick peek at the game, you can find it at the "Sandbox" section.
 
 <center><iframe width="560" height="315" src="//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen></iframe></center>
+
+<br>
