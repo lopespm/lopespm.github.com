@@ -60,4 +60,3 @@ And that is it! The rest of the plugins included on the Master Track Patch are:
 - The final result of a movie using these plugins:
 
 <center><iframe width="560" height="315" src="//www.youtube.com/embed/sczmkokpEuY" frameborder="0" allowfullscreen></iframe></center>
-
