@@ -57,8 +57,6 @@ And that is it! The rest of the plugins included on the Master Track Patch are:
 
 - [Master Track Patch](/files/gopro_heartbeat/gopro_master_track.patch.zip) (which includes all the above plugins)
 - [Channel EQ preset](/files/gopro_heartbeat/gopro_eq_heartbeat_attenuate.pst) to attenuate the heartbeat sound. This can be used by opening a Channel EQ plugin in any of your tracks and clicking "More->Load.." inside it
-- The final result of a movie using these plugins:
-
-<center><iframe width="560" height="315" src="//www.youtube.com/embed/sczmkokpEuY" frameborder="0" allowfullscreen></iframe></center>
+- [Example video](https://www.youtube.com/watch?v=sczmkokpEuY) in which these plugins were applied
 
 <br>
