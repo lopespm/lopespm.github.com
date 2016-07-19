@@ -7,8 +7,7 @@ sharing: false
 footer: true
 ---
 
-In this blog I will mainly focus over tech / programming / geek topics, giving some insights about projects that I eventually get involved with.
+[GitHub profile](https://github.com/lopespm) | [@lopes_pm](https://twitter.com/lopes_pm)
 
-You can find more information about me and my projects in my [GitHub Profile](https://github.com/lopespm)
 
 
