@@ -52,6 +52,20 @@ body > nav {
     ul li {
       margin: 0;
     }
+    .subscription li a img {
+      padding-left: 7px;
+      padding-left: 7px;
+       opacity: 1;
+    }
+
+    .subscription li a img:hover {
+      opacity: 0.6;
+    }
+
+    img:hover {
+      opacity: 1;
+    }
+
     a {
       @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);
       font-family: $sans;
