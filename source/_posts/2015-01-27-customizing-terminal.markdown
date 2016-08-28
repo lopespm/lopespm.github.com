@@ -9,6 +9,8 @@ tags: [android]
 
 ![image](/images/blog_images/terminal_custom/terminal_before_after.png)
 
+<!--more-->
+
 ###Style - how it looks
 Add the *real world tested* [Solarized (dark/light)](http://ethanschoonover.com/solarized) Terminal profiles: [https://github.com/tomislav/osx-terminal.app-colors-solarized](https://github.com/tomislav/osx-terminal.app-colors-solarized)
 

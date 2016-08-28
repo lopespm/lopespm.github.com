@@ -12,6 +12,8 @@ If you have a chest mount (chesty) for your GoPro, then you might have had the s
 - show you how to attenuate the heartbeat sound to a point where it is almost imperceptible, while maintaining the overall sound
 - attenuate the difference between quiet and loud sounds, so the listener gets less startled by a sudden noise created when entering with the bike on rought terrain or the common bike bell sound.
 
+<!--more-->
+
 ##Steps, using GarageBand/iMovie
 
 In this specific case, GarageBand 10.0.3 and iMovie 10.0.5 were used, but other versions should work just as fine.

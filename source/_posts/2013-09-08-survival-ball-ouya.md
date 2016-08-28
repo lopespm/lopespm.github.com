@@ -11,6 +11,8 @@ Survival Ball in now available on OUYA, and its publishing process was fairly st
 
 Survival Ball was already available on [Google Play](https://play.google.com/store/apps/details?id=com.rockbyte.survivalball), [Amazon ](http://www.amazon.com/RockByte-Software-Survival-Ball/dp/B00ARVZ7F0/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1378394674&sr=1-1)and [Kongregate](http://www.kongregate.com/games/rockbyte/survival-ball), but OUYA just felt like the perfect platform for the game. With it, you could just grab the OUYA controller and/or a spare XBox/PS3 controller, and just have a quick match. I really loved the concept, and re-iterated on the previous version of the game to give it more controller friendly menus, better graphics, refined textures, and an overall revamp.
 
+<!--more-->
+
 After finishing up the port to OUYA, on the 2nd of September, I've made the first submission. I'll just point out that upon this moment, it seemed to be stuck with a red status message which read "*Still verifying apk…*". To resolve this, I edited the submission, re-submitted the APK, and waited a few seconds. The game was then submitted for approval.
 
 On the 4th of September, a re-submission was asked by the OUYA review team (which were very friendly by the way), since some elements fell of the safe-frame, which is safe-guard for gamers who have screens that perform [too much overscan](https://devs.ouya.tv/developers/docs/content-review-guidelines).

@@ -10,7 +10,7 @@ html {
 body {
 	font-family: helvetica,arial,clean,sans-serif !important;
 	font-size: 1em;
-	max-width: 850px;
+	max-width: 705px;
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 
@@ -32,8 +32,10 @@ body {
 	> nav {
 		background: $white;
 		border-bottom: 1px solid #F2F2F2;
-		padding-left: 0px;
-		padding-right: 0px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: -10px;
+		margin-right: -10px;
 
 		form .search {
 			border-radius: 0.2em 0.2em 0.2em 0.2em;
@@ -99,7 +101,7 @@ body {
 }
 
 article {
-	padding-top: 0em;
+	padding-top: 50px;
 
 	.entry-content {
 		h3 {
@@ -139,7 +141,7 @@ article {
 
 	.blog-index {
 		article {
-			padding-top: 2em;
+			padding-top: 77px;
 
 			header {
 				padding-left: 0;
