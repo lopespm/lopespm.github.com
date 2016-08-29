@@ -1,0 +1,437 @@
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #959595;
+$base2:     #eee8d5;
+$base3:     #ffffff;
+$yellow:    #99940d;
+$orange:    #ff7f0e;
+$red:       #d62728;
+$magenta:   #c4620b;
+$violet:    #9467bd;
+$blue:      #1f77b4;
+$cyan:      #2ca02c;
+$green:     #222222;
+
+span.CodeRay {
+  white-space: pre;
+  border: 0px;
+  padding: 2px;
+}
+
+table.CodeRay { 
+  border-collapse: collapse;
+  width: 100%;
+  padding: 2px;
+
+  td {
+    padding: 2px 4px;
+    vertical-align: top;
+  }
+}
+
+.CodeRay {
+  background-color: $base3;
+  border: 0px solid $base00;
+  color: $base00;
+
+  pre {
+    margin: 0px;
+  }
+
+  .line-numbers {
+    background-color: $base2;
+    color: $base1;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    a {
+      background-color: $base2 !important;
+      color: $base1 !important;
+      text-decoration: none !important;
+
+      &:target {
+        color: $blue !important;
+      }
+    }
+
+    pre {
+      word-break: normal;
+    }
+
+    .highlighted {
+      color: $red !important;
+
+      a {
+        color: $red !important;
+      }
+    }
+  }
+  span.line-numbers {
+    padding: 0px 4px;
+  }
+  
+  .line {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  .code {
+    width: 100%;
+  }
+  .debug {
+    color: $base3 !important;
+    background: $blue !important;
+  }
+  .annotation {
+    color: $blue;
+  }
+  .attribute-name {
+    color: $magenta;
+  }
+  .attribute-value {
+    color: $red;
+  }
+  .binary {
+    color: $violet;
+    .char {
+     color: $violet;
+    }
+    .delimiter {
+     color: $violet;
+    }
+  }
+
+  .char {
+    color: $red;
+    .content {
+      color: $red;
+    }
+    .delimiter {
+     color: $red;
+    }
+  }
+
+  .class {
+    color: $magenta;
+    font-weight:bold;
+    &-variable {
+     color: $blue;
+    }
+  }
+
+  .color {
+    color: $green;
+  }
+
+  .comment {
+    color: $base1;
+    .char {
+      color: $base00;
+    }
+    .delimiter {
+      color: $base00;
+    }
+  }
+
+  .constant {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  .decorator {
+    color: $magenta;
+  }
+
+  .definition {
+    color: $cyan;
+    font-weight: bold;
+  }
+
+  .delimiter {
+    color: $base01;
+  }
+
+  .directive {
+    color: $cyan;
+    font-weight: bold;
+  }
+
+  .docstring {
+    color: $orange;
+  }
+
+  .doctype {
+    color: $blue;
+  }
+
+  .done {
+    text-decoration: line-through;
+    color: $base01;
+  }
+
+  .entity {
+    color: $red;
+    font-weight: bold;
+  }
+
+  .error {
+    color: $base3;
+    background-color: $red;
+  }
+
+  .escape {
+    color: $base1;
+  }
+
+  .exception {
+    color: $red;
+    font-weight: bold;
+  }
+
+  .float {
+    color: $violet;
+  }
+
+  .function {
+    color: $blue;
+    font-weight: bold;
+    .delimiter {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+
+  .global-variable {
+    color: $orange;
+  }
+
+  .hex {
+    color: $blue;
+  }
+
+  .id {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  .include {
+    color: $magenta;
+    font-weight: bold;
+  }
+
+  .inline {
+    background-color: hsla(0,0%,0%,0.07);
+    color: $base01;
+    &-delimiter {
+      font-weight: bold;
+      color: $base1;
+    }
+  }
+
+  .instance-variable {
+    color: $blue;
+  }
+
+  .integer {
+    color: $cyan;
+  }
+
+  .imaginary {
+    color: $red;
+  }
+
+  .important {
+    color: $red;
+  }
+
+  .key {
+    color: $violet;
+    .char {
+      color: $violet;
+    }
+    .delimiter {
+      color: $violet;
+    }
+  }
+
+  .keyword {
+    color: $green;
+    font-weight: bold;
+  }
+
+  .label {
+    color: $yellow;
+    font-weight: bold;
+  }
+
+  .local-variable {
+    color: $orange;
+  }
+
+  .map {
+    .content {
+      color: $violet;
+    }
+    .delimiter {
+      color: $violet;
+    }
+  }
+
+  .namespace {
+    color: $violet;
+    font-weight: bold;
+  }
+
+  .octal {
+    color: $violet;
+  }
+
+  .operator {
+  }
+
+  .predefined {
+    color: $blue;
+    font-weight: bold;
+    &-constant {
+      color: $blue;
+    }
+    &-type {
+      color: $green;
+      font-weight: bold;
+    }
+  }
+
+  .preprocessor {
+    color: $violet;
+  }
+
+  .pseudo-class {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  .regexp {
+    .content {
+      color: $violet;
+    }
+    .delimiter {
+      color: $violet;
+    }
+    .modifier {
+      color: $violet;
+    }
+  }
+
+  .reserved {
+    color: $green;
+    font-weight: bold;
+  }
+
+  .shell {
+    .content {
+      color: $green;
+    }
+    .delimiter {
+      color: $green;
+    }
+  }
+
+  .string {
+    .char {
+      color: $magenta;
+    }
+    .content {
+      color: $red;
+    }
+    .delimiter {
+      color: $red;
+    }
+    .modifier {
+      color: $orange;
+    }
+  }
+
+  .symbol {
+    color: $orange;
+    .content {
+      color: $orange;
+    }
+    .delimiter {
+      color: $orange;
+    }
+  }
+
+  .tag {
+    color: $green;
+    font-weight: bold;
+  }
+
+  .type {
+    color: $violet;
+    font-weight: bold;
+  }
+
+  .value {
+    color: $cyan;
+  }
+
+  .variable {
+    color: $blue;
+  }
+
+  .insert {
+    background-color: hsla(120,100%,50%,0.2);
+    .insert {
+      color: $green;
+      font-weight: bold;
+    }
+    .eyecatcher {
+      background-color: hsla(120,100%,50%,0.2);
+      border: 1px solid hsla(120,100%,25%,0.5);
+      margin: -1px;
+      border-top: none;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+
+  .delete {
+    background: hsla(0,100%,50%,0.12);
+    .delete {
+      color: $red;
+      background: transparent;
+      font-weight: bold;
+    }
+    .eyecatcher {
+      background-color: hsla(0,100%,50%,0.2);
+      border: 1px solid hsla(0,100%,45%,0.5);
+      margin: -1px;
+      border-bottom: none;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+  }
+
+  .change {
+    color: $violet;
+    background: $blue;
+    .change {
+      color: $violet;
+    }
+  }
+
+  .head {
+    color: $violet;
+    .head {
+      color: $violet;
+    }
+    .filename {
+      color: $violet;
+    }
+  }
+}// .Coderay

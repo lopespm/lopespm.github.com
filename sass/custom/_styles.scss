@@ -190,3 +190,12 @@ figure.code {
 aside {
 	display: none;
 }
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+/* fixes issue where the whole line wouldn't get colored in a diff */
+.CodeRay span.insert, .CodeRay span.change, .CodeRay span.delete {
+	width: auto;
+}
+
+@import "coderay-github"
