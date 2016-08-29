@@ -13,7 +13,7 @@ This post aims to give some insights about a recently [open-sourced](https://git
 
 ##Why? How can it be useful?
 
-Compressed Deque came up while buiding an algorithm which relied on fast random accesses of  numerous complex objects. When compressed, this blob of data could easily fit in fast volatile memory, as opposed to being fetched from a slow hard drive. Even though there was a performance penalty from compressing/decompressing items from volatile memory, this solution proved to be faster than accessing these items from indexed files resident on a hard disk (on a SSD the gains are more negligible though).
+Compressed Deque came up while buiding an algorithm which relied on fast random accesses of numerous complex objects. When compressed, this blob of data could easily fit in fast volatile memory, as opposed to being fetched from a slow hard drive. Even though there was a performance penalty from compressing/decompressing items from volatile memory, this solution proved to be faster than accessing these items from indexed files on a hard disk (on a SSD the gains are more negligible though).
 
 This collection might also be useful for programs running on devices with very limited memory available.
  
