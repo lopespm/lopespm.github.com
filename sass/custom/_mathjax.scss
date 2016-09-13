@@ -1,0 +1,13 @@
+// BEGINNING: Fix the MathJax right-click bug (context menu would hide the entire page)
+
+#MathJax_MenuFrame {
+    background-color: transparent
+}
+
+#MathJax_MenuFrame {
+  div:not(.MathJax_Menu):not(.MathJax_MenuActive) {
+    background-color: transparent
+  }
+}
+
+// END: right-click fix
