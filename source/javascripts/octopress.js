@@ -119,7 +119,7 @@ function renderDeliciousLinks(items) {
 
 $('document').ready(function() {
   testFeatures();
-  wrapFlashVideos();
+  //wrapFlashVideos();
   flashVideoFallback();
   addCodeLineNumbers();
   getNav();
