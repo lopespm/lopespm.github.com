@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T11:55:24+01:00</updated>
+  <updated>2016-10-06T11:56:07+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -225,7 +225,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
     </ul>
   </li>
   <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56"><code>RewardCalculator</code></a> class: contains the reward function. Instead of using a generic reward function like DeepMind, it was chosen to have a tailor-made reward function for Out Run, which takes into account the car’s speed and its off-road and crash status.</li>
-  <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/visualization/metrics.py">metrics</a> module: aware of <code>speed</code> metrics, which is Out Run specific, and score, which is game specific domain knowledge.</li>
+  <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/visualization/metrics.py"><code>metrics</code></a> module: aware of <code>speed</code> metrics, which is Out Run specific, and score, which is game specific domain knowledge.</li>
 </ul>
 
 <p>Training another game would require to create a new wrapper with the same interface as cannonball wrapper, have a new Action enumerator specific to the game, create a <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56"><code>RewardCalculator</code></a> with a different reward function and remove/replace the speed metric.</p>
