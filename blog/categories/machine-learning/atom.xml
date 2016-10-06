@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T11:34:32+01:00</updated>
+  <updated>2016-10-06T11:36:26+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -34,7 +34,7 @@
 
 <p>There is a wealth of <a href="#further-references">good information</a> about this reinforcement learning algorithm, but I found some topics difficult to grasp or contextualize solely from the information available online. I will attempt to add my humble contribution by tackling these and also provide details about the project’s implementation, results and how it can be used/modified/deployed.</p>
 
-<p>Let’s start by one its main gears: Q-Learning</p>
+<p>Let’s start by one of its main gears: Q-Learning</p>
 
 <p />
 
