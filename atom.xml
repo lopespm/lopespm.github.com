@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank]]></title>
   <link href="http://lopespm.github.com/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:27:50+01:00</updated>
+  <updated>2016-10-06T12:37:28+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -224,7 +224,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
   <li><a href="https://github.com/lopespm/agent-trainer/tree/master/agent/game"><code>game</code></a> package, which contains
     <ul>
       <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/game/action.py"><code>Action</code></a> enumeration: describes all the possible actions in the game.</li>
-      <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/game/cannonball_wrapper.py"><code>cannonball_wrapper</code></a> module: only this module has access to the cannonball emulator. It translates the aforementioned actions into game actions and is accessed by methods such as <code>start_game()</code>, <code>reset()</code> and <code>speed()</code></li>
+      <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/game/cannonball_wrapper.py"><code>cannonball_wrapper</code></a> module: only this module has access to the cannonball emulator. It translates the aforementioned actions into game actions and is accessed by methods such as <code>start_game()</code>, <code>reset()</code> and <code>speed()</code>.</li>
     </ul>
   </li>
   <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56"><code>RewardCalculator</code></a> class: contains the reward function. Instead of using a generic reward function like DeepMind, it was chosen to have a tailor-made reward function for Out Run, which takes into account the car’s speed and its off-road and crash status.</li>
