@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:02:31+01:00</updated>
+  <updated>2016-10-06T12:04:25+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -228,7 +228,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
   <li><a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/visualization/metrics.py"><code>metrics</code></a> module: aware of the <code>speed</code> metric, which is Out Run specific, and <code>score</code>, which is game specific domain knowledge.</li>
 </ul>
 
-<p>Training another game would require the creation of a new wrapper with the same interface as cannonball wrapper, a new <code>Action</code> enumerator specific to the game, a new <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56"><code>RewardCalculator</code></a> with a different reward function and the removal/replacement of the <code>speed</code> metric.</p>
+<p>Training another game would require the creation of a new wrapper with the same interface as <code>cannonball_wrapper</code>, a new <code>Action</code> enumerator specific to the game, a new <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56"><code>RewardCalculator</code></a> with a different reward function and the removal/replacement of the <code>speed</code> metric.</p>
 
 <p>Apart from the previously mentioned steps, solving generic problems would require the preprocessor to be changed/replaced if images were not to be used for state representation. An option would be to create a new preprocessor class with a <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/image_preprocessor.py#L13"><code>process(input)</code></a> method, tweak the hyperparameters as required (so that the network knows which dimensions to expect on its input), and finally inject the newly created class in <a href="https://github.com/lopespm/agent-preprocessor/blob/master/agent/trainer/episode.py#L300"><code>EpisodeRunner</code></a>, replacing the old preprocessor class.</p>
 
