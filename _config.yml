@@ -5,7 +5,7 @@
 url: http://lopespm.github.com
 title: Byte Tank
 subtitle: 
-author: Byte Tank
+author: Pedro Lopes
 simple_search:
 description:
 
@@ -93,6 +93,10 @@ google_analytics_tracking_id: UA-39962763-1
 
 # Facebook Like
 facebook_like: false
+
+# Facebook/Twitter share metadata
+facebook_locale: en_US
+twitter_creator: lopes_pm
 
 # Markdown; highlighting
 markdown: kramdown
