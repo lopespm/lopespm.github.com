@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank]]></title>
   <link href="http://lopespm.github.com/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T10:20:00+01:00</updated>
+  <updated>2016-10-06T10:28:39+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Byte Tank]]></name>
@@ -55,7 +55,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>In the above grid, there are 9 actionable states, 2 terminal states and 4 possible actions (left, right, up, down), resulting in 36 (9 actionable states x 4 possible actions) Q-values.</p>
 
-<p>This project aims to train an agent to play Out Run via its game screens, so for the sake of argument, let´s consider that each game screen is transformed into a 80x80 grayscale image (each pixel value ranging from 0 to 255), and that each transformed image represents a state. 6400 pixels (80x80) and 256 possible values per pixel translate to 256<sup>6400</sup> possible states. This value alone is a good indicator of how inflated the number of possible Q-values will be.</p>
+<p>This project aims to train an agent to play Out Run via its game screens, so for the sake of argument, let´s consider that each game screen is transformed into a 80x80 greyscale image (each pixel value ranging from 0 to 255), and that each transformed image represents a state. 6400 pixels (80x80) and 256 possible values per pixel translate to 256<sup>6400</sup> possible states. This value alone is a good indicator of how inflated the number of possible Q-values will be.</p>
 
 <p>Multiplying <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/game/action.py">9 possible actions</a> by 256<sup>6400</sup> possible states results in 256<sup>6400</sup> x 9 possible Q-values. If we use multiple and/or colored images for state representation, then this value will be even higher. Quite unwieldy if we want to store these values in a table or similar structure.</p>
 
@@ -109,7 +109,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Run the trainer and emulator on your local machine by following the guide available on <a href="https://github.com/lopespm/agent-trainer/blob/master/README.md">agent-trainer’s readme</a>.</p>
 
-<p>It is also possible to deploy the agent to an AWS EC2 instance or generic linux remote machine by using a set of bash scripts offered by <a href="https://github.com/lopespm/agent-trainer-deployer">agent-trainer-deployer</a>.</p>
+<p>It is also possible to deploy the agent to an AWS EC2 instance or generic Linux remote machine by using a set of bash scripts offered by <a href="https://github.com/lopespm/agent-trainer-deployer">agent-trainer-deployer</a>.</p>
 
 <h3 id="aws-ec2">AWS EC2</h3>
 
@@ -239,7 +239,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>I am not a machine learning expert, but from my learner’s point of view, if you are interested in getting your feet wet, Andrew Ng’s Machine Learning Course is as a great starting point. It is freely available on the <a href="https://www.coursera.org/learn/machine-learning">Coursera online learning platform</a>. This was my first solid contact with the subject and served as a major stepping stone for related topics such as Reinforcement Learning.</p>
 
-<p><a href="https://www.udacity.com/course/deep-learning--ud730">Udacity Google Deep Learning</a>: this free course tackles some of popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng’s course and found it to leave the student with less support during lessons - less handholding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. </p>
+<p><a href="https://www.udacity.com/course/deep-learning--ud730">Udacity Google Deep Learning</a>: this free course tackles some of popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng’s course and found it to leave the student with less support during lessons - less hand-holding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. </p>
 
 <p>As a side note, I started building this project by the end the Deep Learning course, mostly because I wanted to apply and consolidate the concepts I learnt into something more practical and to share this knowledge further, so it could hopefully help more people who are interested in this.</p>
 
