@@ -1,0 +1,26 @@
+//.caption-wrapper {
+//     @extend .flex-content;
+//     @extend .basic-alignment;
+//  }
+//  .caption-wrapper {
+//    display: inline-block;
+//    margin-bottom: 10px;
+//    .caption-text {
+//      background: #fff;
+//      text-align: center;
+//      font-size: .8em;
+//      color: #666;
+//      display: block;
+//    }
+//   }
+
+.media-caption {
+  text-align: center;
+  font-size: .8em;
+  color: #666;
+  display: block;
+  margin-bottom: 45px;
+  figcaption { 
+    margin-bottom: 45px;
+  }
+}
