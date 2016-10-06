@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:37:28+01:00</updated>
+  <updated>2016-10-06T14:21:04+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -15,16 +15,16 @@
   
   <entry>
     <title type="html"><![CDATA[Deep Reinforcement Learning: Playing a Racing Game]]></title>
-    <link href="http://lopespm.github.com/machine_learning/2016/10/05/deep-reinforcement-learning-racing-game.html"/>
-    <updated>2016-10-05T00:00:00+01:00</updated>
-    <id>http://lopespm.github.com/machine_learning/2016/10/05/deep-reinforcement-learning-racing-game</id>
+    <link href="http://lopespm.github.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html"/>
+    <updated>2016-10-06T00:00:00+01:00</updated>
+    <id>http://lopespm.github.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game</id>
     <content type="html"><![CDATA[<center>
   <div style=" display: inline-block; ">
     <iframe width="350" height="197" src="https://www.youtube.com/embed/spzYVhOgKBA" frameborder="0" allowfullscreen=""></iframe>
     <p class="media-caption">Agent playing Out Run, session 201609171218_175eps<br />No time limit, no traffic, 2X time lapse</p>
   </div>
 </center>
-<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="/machine_learning/2016/10/05/deep-reinforcement-learning-racing-game.html#source-code">available on GitHub</a>.</p>
+<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html#source-code">available on GitHub</a>.</p>
 
 <!--more-->
 
