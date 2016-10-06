@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:06:21+01:00</updated>
+  <updated>2016-10-06T12:08:05+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -238,7 +238,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p><a href="https://www.udacity.com/course/deep-learning--ud730">Udacity Google Deep Learning</a>: this free course tackles some of the popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng’s course and found it to leave the student with less support during lessons - less hand-holding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. </p>
 
-<p>As a side note, I started building this project by the end the Deep Learning course, mostly because I wanted to apply and consolidate the concepts I learnt into something more practical and to share this knowledge further, so it could hopefully help more people who are interested in this.</p>
+<p>As a side note, I started building this project by the end of the Deep Learning course, mostly because I wanted to apply and consolidate the concepts I learnt into something more practical and to share this knowledge further, so it could hopefully help more people who are interested in this.</p>
 
 <p>Other useful resources:</p>
 
