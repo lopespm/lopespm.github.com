@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:04:25+01:00</updated>
+  <updated>2016-10-06T12:06:21+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -236,7 +236,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>I am not a machine learning expert, but from my learner’s point of view, if you are interested in getting your feet wet, Andrew Ng’s Machine Learning Course is as a great starting point. It is freely available on the <a href="https://www.coursera.org/learn/machine-learning">Coursera online learning platform</a>. This was my first solid contact with the subject and served as a major stepping stone for related topics such as Reinforcement Learning.</p>
 
-<p><a href="https://www.udacity.com/course/deep-learning--ud730">Udacity Google Deep Learning</a>: this free course tackles some of popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng’s course and found it to leave the student with less support during lessons - less hand-holding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. </p>
+<p><a href="https://www.udacity.com/course/deep-learning--ud730">Udacity Google Deep Learning</a>: this free course tackles some of the popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng’s course and found it to leave the student with less support during lessons - less hand-holding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. </p>
 
 <p>As a side note, I started building this project by the end the Deep Learning course, mostly because I wanted to apply and consolidate the concepts I learnt into something more practical and to share this knowledge further, so it could hopefully help more people who are interested in this.</p>
 
