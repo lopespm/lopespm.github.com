@@ -4,6 +4,8 @@ title: "Deep Reinforcement Learning: Playing a Racing Game"
 comments: true
 categories: [machine_learning]
 tags: [machine learning, reinforcement learning, games]
+description: "Python+Tensorflow DQN agent, which autonomously learns how to play Out Run and can potentially be modified to play other games or perform other tasks"
+ogp_image: "/files/dqn_outrun/thumb.jpg"
 published: true
 ---
 
@@ -17,7 +19,7 @@ Above is the built [deep Q-network (DQN)](https://deepmind.com/research/dqn/) ag
 
 <!--more-->
 
-The agent learnt how to play by being rewarded for high speeds and penalized for crashing or going off road. It fetched the game’s screens, car speed, number of off-road wheels and collision state from the emulator and issued actions to it such as pressing the left, right, accelerate or brake button. 
+The agent learnt how to play by being rewarded for high speeds and penalized for crashing or going off road. It fetched the game’s screens, car speed, number of off-road wheels and collision state from the emulator and issued actions to it such as pressing the left, right, accelerate or brake virtual button. 
 
 Agent trainer implements the deep Q learning algorithm used by [Google’s DeepMind Team to play various Atari 2600 games](http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D). It uses a reward function and hyperparameters that fit best for Out Run, but could potentially be used to [play other games or solve other problems](#plugging-other-problems-and-games).
 
@@ -45,7 +47,7 @@ To implement this algorithm, we need to build the Q-function ([one of the forms]
 
 In the above grid, there are 9 actionable states, 2 terminal states and 4 possible actions (left, right, up, down), resulting in 36 (9 actionable states x 4 possible actions) Q-values.
 
-This project aims to train an agent to play Out Run via its game screens, so for the sake of argument, consider that each game screen is transformed into a 80x80 grayscale image (each pixel value ranging from 0 to 255), and that each transformed image represents a state. 6400 pixels (80x80) and 256 possible values per pixel translate to 256<sup>6400</sup> possible states. This value alone is a good indicator of how inflated the number of possible Q-values will be.
+This project aims to train an agent to play Out Run via its game screens, so for the sake of argument, let´s consider that each game screen is transformed into a 80x80 greyscale image (each pixel value ranging from 0 to 255), and that each transformed image represents a state. 6400 pixels (80x80) and 256 possible values per pixel translate to 256<sup>6400</sup> possible states. This value alone is a good indicator of how inflated the number of possible Q-values will be.
 
 Multiplying [9 possible actions](https://github.com/lopespm/agent-trainer/blob/master/agent/game/action.py) by 256<sup>6400</sup> possible states results in 256<sup>6400</sup> x 9 possible Q-values. If we use multiple and/or colored images for state representation, then this value will be even higher. Quite unwieldy if we want to store these values in a table or similar structure.
 
@@ -53,15 +55,15 @@ Multiplying [9 possible actions](https://github.com/lopespm/agent-trainer/blob/m
 
 Artificial neural networks work quite well for inferring the mapping implied by data, giving them the ability to predict an approximated output from an input that they never saw before. No longer do we need to store all state/action pair’s q-values, we can now model these mappings in a more general, less redundant way.
 
-This is perfect. We can now use a neural network to model the Q-function, which accepts a state and an action on its input and outputs the corresponding Q-value. Training-wise, we can feed in an action and state to get the network’s output and calculate the expected Q-value using the formula above. With these two values, we can perform a gradient step on the squared difference between the expected value and the network’s output.
+This is perfect. We can now use a neural network to model the Q-function: the network would accept a state and an action for input and would output the corresponding Q-value. Training-wise, we can feed in an action and state to get the network’s output and calculate the expected Q-value using the formula above. With these two values, we can perform a gradient step on the squared difference between the expected value and the network’s output.
 
 This is perfect, but there is still room for improvement. Imagine we have 5 possible actions for any given state: to get the optimal future value estimate (consequent state’s maximum Q-value) we need to ask (forward pass) our neural network for a Q-value 5 times per learning step.
 
-Another approach (used in [DeepMind’s](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf) [network](http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D)) would be to feed in the game’s screens and make the network output the Q-value for each possible action. This way, a single forward pass would output all the Q-values for a given state, translating to one forward pass per optimal future value estimate.
+Another approach (used in [DeepMind’s](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf) [network](http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D)) would be to feed in the game’s screens and have the network output the Q-value for each possible action. This way, a single forward pass would output all the Q-values for a given state, translating to one forward pass per optimal future value estimate.
 
  {% imgcap /files/dqn_outrun/q_network_formulations.png Image courtesy of Tambet Matiisen’s <a href='https://www.nervanasys.com/demystifying-deep-reinforcement-learning'>Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. %} 
 
-Q-Learning and Neural Networks are the center pieces in a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.
+Q-Learning and Neural Networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.
 
 #Implementation
 
@@ -69,7 +71,7 @@ Q-Learning and Neural Networks are the center pieces in a deep Q-network reinfor
 
 <p></p>
 
-Above is an overall representation of the how the different components relate during a play evaluation, centered around the `deep Q Network for playing`[^1], the main decision component.
+Above is an overall representation of how the different components relate during a play evaluation, centered around the `deep Q Network for playing`[^1], the main decision component.
 
 Each game screen is resized to a desaturated 80x80 pixels image (opposed to 84x84 on DeepMind’s papers), and if you might be wondering why each state is a sequence of four game screens instead of one, that is because the agent’s history is used for better motion perception. Achieving this requires a sequence of preprocessed images to be stacked in channels (like you would stack RGB channels on a colored image) and fed to the network. Note that a RGB image and agent history could be used simultaneously for state representation. For example, with three channels per (RGB) image and an agent history length of four, the network would be fed twelve channels per input state.
 
@@ -97,7 +99,7 @@ The reward function’s definition is crucial for good learning performance and 
 
 Run the trainer and emulator on your local machine by following the guide available on [agent-trainer’s readme](https://github.com/lopespm/agent-trainer/blob/master/README.md).
 
-It is also possible to deploy the agent to an AWS EC2 instance or generic linux remote machine by using a set of bash scripts offered by [agent-trainer-deployer](https://github.com/lopespm/agent-trainer-deployer).
+It is also possible to deploy the agent to an AWS EC2 instance or generic Linux remote machine by using a set of bash scripts offered by [agent-trainer-deployer](https://github.com/lopespm/agent-trainer-deployer).
 
 ### AWS EC2
 
@@ -189,13 +191,13 @@ Apart from the previously mentioned steps, solving generic problems would requir
 
 I am not a machine learning expert, but from my learner’s point of view, if you are interested in getting your feet wet, Andrew Ng's Machine Learning Course is as a great starting point. It is freely available on the [Coursera online learning platform](https://www.coursera.org/learn/machine-learning). This was my first solid contact with the subject and served as a major stepping stone for related topics such as Reinforcement Learning.
 
-[Udacity Google Deep Learning](https://www.udacity.com/course/deep-learning--ud730): this free course tackles some of popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng's course and found it to leave the student with less support during lessons - less handholding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. 
+[Udacity Google Deep Learning](https://www.udacity.com/course/deep-learning--ud730): this free course tackles some of popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng's course and found it to leave the student with less support during lessons - less hand-holding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. 
 
 As a side note, I started building this project by the end the Deep Learning course, mostly because I wanted to apply and consolidate the concepts I learnt into something more practical and to share this knowledge further, so it could hopefully help more people who are interested in this.
 
 Other useful resources:
 
-- DeepMind’s [Human-Level Control through Deep Reinforcement Learning paper](http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D) and respective [source code](https://sites.google.com/a/deepmind.com/dqn/)
+- DeepMind’s [Human-Level Control through Deep Reinforcement Learning paper](http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D) and its respective [source code](https://sites.google.com/a/deepmind.com/dqn/)
 - [Playing Atari with Deep Reinforcement Learning](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf)
 - [Deep Reinforcement Learning for Simulated Autonomous Vehicle Control](http://cs231n.stanford.edu/reports2016/112_Report.pdf)
 - [Demystifying Deep Reinforcement Learning](https://www.nervanasys.com/demystifying-deep-reinforcement-learning/)
