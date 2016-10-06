@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:08:05+01:00</updated>
+  <updated>2016-10-06T12:13:39+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -30,19 +30,19 @@
 
 <p>The agent learnt how to play by being rewarded for high speeds and penalized for crashing or going off road. It fetched the game’s screens, car speed, number of off-road wheels and collision state from the emulator and issued actions to it such as pressing the left, right, accelerate or brake virtual button. </p>
 
-<p>Agent trainer implements the deep Q learning algorithm used by <a href="http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D">Google’s DeepMind Team to play various Atari 2600 games</a>. It uses a reward function and hyperparameters that fit best for Out Run, but could potentially be used to <a href="#plugging-other-problems-and-games">play other games or solve other problems</a>.</p>
+<p>Agent trainer implements the deep Q-learning algorithm used by <a href="http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D">Google’s DeepMind Team to play various Atari 2600 games</a>. It uses a reward function and hyperparameters that fit best for Out Run, but could potentially be used to <a href="#plugging-other-problems-and-games">play other games or solve other problems</a>.</p>
 
 <p>There is a wealth of <a href="#further-references">good information</a> about this reinforcement learning algorithm, but I found some topics difficult to grasp or contextualize solely from the information available online. I will attempt to add my humble contribution by tackling these and also provide details about the project’s implementation, results and how it can be used/modified/deployed.</p>
 
-<p>Let’s start by one of its main gears: Q-Learning</p>
+<p>Let’s start by one of its main gears: Q-learning</p>
 
 <p />
 
 <h1 id="concepts">Concepts</h1>
 
-<h2 id="q--learning">Q- Learning</h2>
+<h2 id="q-learning">Q-learning</h2>
 
-<p>At the heart of deep Q learning lies Q-learning, a popular and effective <a href="https://www.youtube.com/watch?time_continue=258&amp;v=bFPoHrAoPoQ">model-free</a> algorithm for learning from delayed reinforcement.  </p>
+<p>At the heart of deep Q-learning lies Q-learning, a popular and effective <a href="https://www.youtube.com/watch?time_continue=258&amp;v=bFPoHrAoPoQ">model-free</a> algorithm for learning from delayed reinforcement.  </p>
 
 <p>Jacob Schrum has made available a terse and accessible <a href="https://www.youtube.com/playlist?list=PL4uSLeZ-ET3xLlkPVEGw9Bn4Z8Mbp-SQc">explanation</a> which takes around 45 minutes to watch and serves as a great starting point for the paragraphs below. 
 Let’s take the canonical reinforcement learning example presented by Jacob (grid world):</p>
@@ -71,7 +71,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p><figure class='image'><center><a href='/files/dqn_outrun/q_network_formulations.png'><img src='/files/dqn_outrun/q_network_formulations.png'></a></center><figcaption class='media-caption'> Image courtesy of Tambet Matiisen’s <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning">Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. </figcaption></figure> </p>
 
-<p>Q-Learning and Neural Networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.</p>
+<p>Q-learning and neural networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.</p>
 
 <h1 id="implementation">Implementation</h1>
 
@@ -79,7 +79,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p />
 
-<p>Above is an overall representation of how the different components relate during a play evaluation, centered around the <code>deep Q Network for playing</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, the main decision component.</p>
+<p>Above is an overall representation of how the different components relate during a play evaluation, centered around the <code>deep Q-network for playing</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, the main decision component.</p>
 
 <p>Each game screen is resized to a desaturated 80x80 pixels image (opposed to 84x84 on DeepMind’s papers), and if you might be wondering why each state is a sequence of four game screens instead of one, that is because the agent’s history is used for better motion perception. Achieving this requires a sequence of preprocessed images to be stacked in channels (like you would stack RGB channels on a colored image) and fed to the network. Note that a RGB image and agent history could be used simultaneously for state representation. For example, with three channels per (RGB) image and an agent history length of four, the network would be fed twelve channels per input state.</p>
 
@@ -271,7 +271,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>“Deep Q Network for playing” in this project is equivalent to DeepMind’s “target network $\hat Q$” and “Deep Q Network for training” is equivalent to DeepMind’s “network Q”<a href="#fnref:1" rel="reference">&#8617;</a></p>
+      <p>“Deep Q-network for playing” in this project is equivalent to DeepMind’s “target network $\hat Q$” and “Deep Q-network for training” is equivalent to DeepMind’s “network Q”<a href="#fnref:1" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
