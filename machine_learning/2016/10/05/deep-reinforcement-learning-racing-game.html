@@ -175,7 +175,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Artificial neural networks work quite well for inferring the mapping implied by data, giving them the ability to predict an approximated output from an input that they never saw before. No longer do we need to store all state/action pair’s q-values, we can now model these mappings in a more general, less redundant way.</p>
 
-<p>This is perfect. We can now use a neural network to model the Q-function: the network would accept a state and an action as input and would output the corresponding Q-value. Training-wise, we can feed in an action and state to get the network’s output, and calculate the expected Q-value using the formula above. With these two values, we can perform a gradient step on the squared difference between the expected value and the network’s output.</p>
+<p>This is perfect. We can now use a neural network to model the Q-function: the network would accept a state/action combination as input and would output the corresponding Q-value. Training-wise, we can feed in the state/action combination to get the network’s Q-value output, and calculate the expected Q-value using the formula above. With these two values, we can perform a gradient step on the (for example) squared difference between the expected value and the network’s output.</p>
 
 <p>This is perfect, but there is still room for improvement. Imagine we have 5 possible actions for any given state: to get the optimal future value estimate (consequent state’s maximum Q-value) we need to ask (forward pass) our neural network for a Q-value 5 times per learning step.</p>
 
