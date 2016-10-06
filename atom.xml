@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank]]></title>
   <link href="http://lopespm.github.com/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:13:39+01:00</updated>
+  <updated>2016-10-06T12:25:21+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -81,7 +81,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Above is an overall representation of how the different components relate during a play evaluation, centered around the <code>deep Q-network for playing</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, the main decision component.</p>
 
-<p>Each game screen is resized to a desaturated 80x80 pixels image (opposed to 84x84 on DeepMind’s papers), and if you might be wondering why each state is a sequence of four game screens instead of one, that is because the agent’s history is used for better motion perception. Achieving this requires a sequence of preprocessed images to be stacked in channels (like you would stack RGB channels on a colored image) and fed to the network. Note that a RGB image and agent history could be used simultaneously for state representation. For example, with three channels per (RGB) image and an agent history length of four, the network would be fed twelve channels per input state.</p>
+<p>Each game screen is resized to a desaturated 80x80 pixels image (opposed to 84x84 on DeepMind’s papers), and if you might be wondering why each state is a sequence of four game screens instead of one, that is because the agent’s history is used for better motion perception. Achieving this requires a sequence of preprocessed images to be stacked in channels (like you would stack RGB channels on a colored image) and fed to the network. Note that RGB channels and agent history could be used simultaneously for state representation. For example, with three channels per (RGB) image and an agent history length of four, the network would be fed twelve channels per input state.</p>
 
 <p>The <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/q_network.py#L121">network’s architecture</a> is the same used by DeepMind, except for the first convolutional neural network’s input (80x80x4 instead of 84x84x4, to account for the different input sizes) and the linear layer’s output (9 instead of 18, to account for the different number of actions available)</p>
 
