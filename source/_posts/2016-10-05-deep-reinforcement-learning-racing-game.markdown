@@ -4,8 +4,6 @@ title: "Deep Reinforcement Learning: Playing a Racing Game"
 comments: true
 categories: [machine_learning]
 tags: [machine learning, reinforcement learning, games]
-description: "Python+Tensorflow DQN agent, which autonomously learns how to play Out Run and can potentially be modified to play other games or perform other tasks"
-ogp_image: "/files/dqn_outrun/thumb.jpg"
 published: true
 ---
 
@@ -21,20 +19,20 @@ Above is the built [deep Q-network (DQN)](https://deepmind.com/research/dqn/) ag
 
 The agent learnt how to play by being rewarded for high speeds and penalized for crashing or going off road. It fetched the game’s screens, car speed, number of off-road wheels and collision state from the emulator and issued actions to it such as pressing the left, right, accelerate or brake virtual button. 
 
-Agent trainer implements the deep Q learning algorithm used by [Google’s DeepMind Team to play various Atari 2600 games](http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D). It uses a reward function and hyperparameters that fit best for Out Run, but could potentially be used to [play other games or solve other problems](#plugging-other-problems-and-games).
+Agent trainer implements the deep Q-learning algorithm used by [Google’s DeepMind Team to play various Atari 2600 games](http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D). It uses a reward function and hyperparameters that fit best for Out Run, but could potentially be used to [play other games or solve other problems](#plugging-other-problems-and-games).
 
 There is a wealth of [good information](#further-references) about this reinforcement learning algorithm, but I found some topics difficult to grasp or contextualize solely from the information available online. I will attempt to add my humble contribution by tackling these and also provide details about the project’s implementation, results and how it can be used/modified/deployed.
 
-Let’s start by one its main gears: Q-Learning
+Let’s start by one of its main gears: Q-learning
 
 <p></p>
 
 
 #Concepts
 
-##Q- Learning
+##Q-learning
 
-At the heart of deep Q learning lies Q-learning, a popular and effective [model-free](https://www.youtube.com/watch?time_continue=258&v=bFPoHrAoPoQ) algorithm for learning from delayed reinforcement.  
+At the heart of deep Q-learning lies Q-learning, a popular and effective [model-free](https://www.youtube.com/watch?time_continue=258&v=bFPoHrAoPoQ) algorithm for learning from delayed reinforcement.  
 
 Jacob Schrum has made available a terse and accessible [explanation](https://www.youtube.com/playlist?list=PL4uSLeZ-ET3xLlkPVEGw9Bn4Z8Mbp-SQc) which takes around 45 minutes to watch and serves as a great starting point for the paragraphs below. 
 Let’s take the canonical reinforcement learning example presented by Jacob (grid world):
@@ -55,7 +53,7 @@ Multiplying [9 possible actions](https://github.com/lopespm/agent-trainer/blob/m
 
 Artificial neural networks work quite well for inferring the mapping implied by data, giving them the ability to predict an approximated output from an input that they never saw before. No longer do we need to store all state/action pair’s q-values, we can now model these mappings in a more general, less redundant way.
 
-This is perfect. We can now use a neural network to model the Q-function: the network would accept a state and an action for input and would output the corresponding Q-value. Training-wise, we can feed in an action and state to get the network’s output and calculate the expected Q-value using the formula above. With these two values, we can perform a gradient step on the squared difference between the expected value and the network’s output.
+This is perfect. We can now use a neural network to model the Q-function: the network would accept a state/action combination as input and would output the corresponding Q-value. Training-wise, we can feed in the state/action combo to get the network’s Q-value output, and calculate the expected Q-value using the formula above. With these two values, we can perform a gradient step on the (for example) squared difference between the expected value and the network’s output.
 
 This is perfect, but there is still room for improvement. Imagine we have 5 possible actions for any given state: to get the optimal future value estimate (consequent state’s maximum Q-value) we need to ask (forward pass) our neural network for a Q-value 5 times per learning step.
 
@@ -63,7 +61,7 @@ Another approach (used in [DeepMind’s](https://www.cs.toronto.edu/~vmnih/docs/
 
  {% imgcap /files/dqn_outrun/q_network_formulations.png Image courtesy of Tambet Matiisen’s <a href='https://www.nervanasys.com/demystifying-deep-reinforcement-learning'>Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. %} 
 
-Q-Learning and Neural Networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.
+Q-learning and neural networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.
 
 #Implementation
 
@@ -71,7 +69,7 @@ Q-Learning and Neural Networks are the center pieces of a deep Q-network reinfor
 
 <p></p>
 
-Above is an overall representation of how the different components relate during a play evaluation, centered around the `deep Q Network for playing`[^1], the main decision component.
+Above is an overall representation of how the different components relate during a play evaluation, centered around the `deep Q-network for playing`[^1], the main decision component.
 
 Each game screen is resized to a desaturated 80x80 pixels image (opposed to 84x84 on DeepMind’s papers), and if you might be wondering why each state is a sequence of four game screens instead of one, that is because the agent’s history is used for better motion perception. Achieving this requires a sequence of preprocessed images to be stacked in channels (like you would stack RGB channels on a colored image) and fed to the network. Note that a RGB image and agent history could be used simultaneously for state representation. For example, with three channels per (RGB) image and an agent history length of four, the network would be fed twelve channels per input state.
 
@@ -180,20 +178,20 @@ There are three main areas in which [agent-trainer](https://github.com/lopespm/a
    - [`Action`](https://github.com/lopespm/agent-trainer/blob/master/agent/game/action.py) enumeration: describes all the possible actions in the game.
    - [`cannonball_wrapper`](https://github.com/lopespm/agent-trainer/blob/master/agent/game/cannonball_wrapper.py) module: only this module has access to the cannonball emulator. It translates the aforementioned actions into game actions and is accessed by methods such as `start_game()`, `reset()` and `speed()`
 - [`RewardCalculator`](https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56) class: contains the reward function. Instead of using a generic reward function like DeepMind, it was chosen to have a tailor-made reward function for Out Run, which takes into account the car’s speed and its off-road and crash status.
-- [metrics](https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/visualization/metrics.py) module: aware of `speed` metrics, which is Out Run specific, and score, which is game specific domain knowledge.
+- [`metrics`](https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/visualization/metrics.py) module: aware of the `speed` metric, which is Out Run specific, and `score`, which is game specific domain knowledge.
 
-Training another game would require to create a new wrapper with the same interface as cannonball wrapper, have a new Action enumerator specific to the game, create a [`RewardCalculator`](https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56) with a different reward function and remove/replace the speed metric.
+Training another game would require the creation of a new wrapper with the same interface as `cannonball_wrapper`, a new `Action` enumerator specific to the game, a new [`RewardCalculator`](https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L56) with a different reward function and the removal/replacement of the `speed` metric.
 
-Apart from the previously mentioned steps, solving generic problems would require the preprocessor to be changed/replaced if images were not to be used for state representation. An option would be to create a new preprocessor class with a [`process(input)`](https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/image_preprocessor.py#L13) method, tweak the hyperparameters as required (so that the network knows which dimensions to expect on its input), and finally inject the new class in [`EpisodeRunner`](https://github.com/lopespm/agent-preprocessor/blob/master/agent/trainer/episode.py#L300), replacing the old preprocessor class.
+Apart from the previously mentioned steps, solving generic problems would require the preprocessor to be changed/replaced if images were not to be used for state representation. An option would be to create a new preprocessor class with a [`process(input)`](https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/image_preprocessor.py#L13) method, tweak the hyperparameters as required (so that the network knows which dimensions to expect on its input), and finally inject the newly created class in [`EpisodeRunner`](https://github.com/lopespm/agent-preprocessor/blob/master/agent/trainer/episode.py#L300), replacing the old preprocessor class.
 
 
 ## Further references
 
 I am not a machine learning expert, but from my learner’s point of view, if you are interested in getting your feet wet, Andrew Ng's Machine Learning Course is as a great starting point. It is freely available on the [Coursera online learning platform](https://www.coursera.org/learn/machine-learning). This was my first solid contact with the subject and served as a major stepping stone for related topics such as Reinforcement Learning.
 
-[Udacity Google Deep Learning](https://www.udacity.com/course/deep-learning--ud730): this free course tackles some of popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng's course and found it to leave the student with less support during lessons - less hand-holding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. 
+[Udacity Google Deep Learning](https://www.udacity.com/course/deep-learning--ud730): this free course tackles some of the popular deep learning techniques, all the while using tensorflow. I did this right after Andrew Ng's course and found it to leave the student with less support during lessons - less hand-holding if you will - and as result I spent a good amount of time dabbling to reach a solution for the assignments. 
 
-As a side note, I started building this project by the end the Deep Learning course, mostly because I wanted to apply and consolidate the concepts I learnt into something more practical and to share this knowledge further, so it could hopefully help more people who are interested in this.
+As a side note, I started building this project by the end of the Deep Learning course, mostly because I wanted to apply and consolidate the concepts I learnt into something more practical and to share this knowledge further, so it could hopefully help more people who are interested in this.
 
 Other useful resources:
 
@@ -219,4 +217,4 @@ All source code is available on GitHub:
 
 <br/>
 
-[^1]: “Deep Q Network for playing” in this project is equivalent to DeepMind’s “target network $\hat Q$” and “Deep Q Network for training” is equivalent to DeepMind’s “network Q”
+[^1]: “Deep Q-network for playing” in this project is equivalent to DeepMind’s “target network $\hat Q$” and “Deep Q-network for training” is equivalent to DeepMind’s “network Q”
