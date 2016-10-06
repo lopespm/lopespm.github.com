@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2016-10-06T12:25:21+01:00</updated>
+  <updated>2016-10-06T12:27:50+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -83,7 +83,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Each game screen is resized to a desaturated 80x80 pixels image (opposed to 84x84 on DeepMind’s papers), and if you might be wondering why each state is a sequence of four game screens instead of one, that is because the agent’s history is used for better motion perception. Achieving this requires a sequence of preprocessed images to be stacked in channels (like you would stack RGB channels on a colored image) and fed to the network. Note that RGB channels and agent history could be used simultaneously for state representation. For example, with three channels per (RGB) image and an agent history length of four, the network would be fed twelve channels per input state.</p>
 
-<p>The <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/q_network.py#L121">network’s architecture</a> is the same used by DeepMind, except for the first convolutional neural network’s input (80x80x4 instead of 84x84x4, to account for the different input sizes) and the linear layer’s output (9 instead of 18, to account for the different number of actions available)</p>
+<p>The <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/q_network.py#L121">network’s architecture</a> is essentially the same used by DeepMind, except for the first convolutional neural network’s input (80x80x4 instead of 84x84x4, to account for the different input sizes) and the linear layer’s output (9 instead of 18, to account for the different number of actions available)</p>
 
 <p>The algorithm used to train this network is well described <a href="http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D">here (page 7)</a> and <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning/">here</a>, but I would like to present it graphically, to hopefully provide some further intuition.</p>
 
