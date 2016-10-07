@@ -4,6 +4,8 @@ title: "Deep Reinforcement Learning: Playing a Racing Game"
 comments: true
 categories: [machine_learning]
 tags: [machine learning, reinforcement learning, games]
+description: "Python+Tensorflow DQN agent, which autonomously learns how to play Out Run and can potentially be modified to play other games or perform other tasks"
+ogp_image: "/files/dqn_outrun/thumb.jpg"
 published: true
 ---
 
