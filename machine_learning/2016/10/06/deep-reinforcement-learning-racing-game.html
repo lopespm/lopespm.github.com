@@ -137,7 +137,7 @@ MathJax.Hub.Config({
     <p class="media-caption">Agent playing Out Run, session 201609171218_175eps<br />No time limit, no traffic, 2X time lapse</p>
   </div>
 </center>
-<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="##source-code">available on GitHub</a>.</p>
+<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html#source-code">available on GitHub</a>.</p>
 
 <!--more-->
 
@@ -172,19 +172,19 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Multiplying <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/game/action.py">9 possible actions</a> by 256<sup>6400</sup> possible states results in 256<sup>6400</sup> x 9 possible Q-values. If we use multiple and/or colored images for state representation, then this value will be even higher. Quite unwieldy if we want to store these values in a table or similar structure.</p>
 
-<h2 id="enter-neural-networks">Enter neural networks</h2>
+<h2 id="enter-deep-neural-networks">Enter deep neural networks</h2>
 
-<p>Artificial neural networks work quite well for inferring the mapping implied by data, giving them the ability to predict an approximated output from an input that they never saw before. No longer do we need to store all state/action pair’s q-values, we can now model these mappings in a more general, less redundant way.</p>
+<p>Deep neural networks work quite well for inferring the mapping implied by data, giving them the ability to predict an approximated output from an input that they never saw before. No longer do we need to store all state/action pair’s Q-values, we can now model these mappings in a more general, less redundant way. These networks also automatically learn a set of internal features which are useful in complex non-linear mapping domains, such as image processing, releasing us from the need to handcraft these features.</p>
 
-<p>This is perfect. We can now use a neural network to model the Q-function: the network would accept a state/action combination as input and would output the corresponding Q-value. Training-wise, we can feed in the state/action combo to get the network’s Q-value output, and calculate the expected Q-value using the formula above. With these two values, we can perform a gradient step on the (for example) squared difference between the expected value and the network’s output.</p>
+<p>This is perfect. We can now use a deep neural network to approximate the Q-function: the network would accept a state/action combination as input and would output the corresponding Q-value. Training-wise, we would need the network’s Q-value output for a given state/action combo (obtained through a forward pass) and the target Q-value, which is calculated through the expression: <script type="math/tex">r_{t+1} + \gamma \underset{a}\max Q(s_{t+1}, a)</script>. With these two values, we can perform a gradient step on the squared difference between the target Q-value and the network’s output.</p>
 
-<p>This is perfect, but there is still room for improvement. Imagine we have 5 possible actions for any given state: to get the optimal future value estimate (consequent state’s maximum Q-value) we need to ask (forward pass) our neural network for a Q-value 5 times per learning step.</p>
+<p>This is perfect, but there is still room for improvement. Imagine we have 5 possible actions for any given state: when calculating the target Q-value, to get the optimal future value estimate (consequent state’s maximum Q-value) we need to ask (forward pass) our neural network for a Q-value 5 times per learning step.</p>
 
-<p>Another approach (used in <a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">DeepMind’s</a> <a href="http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D">network</a>) would be to feed in the game’s screens and have the network output the Q-value for each possible action. This way, a single forward pass would output all the Q-values for a given state, translating to one forward pass per optimal future value estimate.</p>
+<p>Another approach (used in <a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">DeepMind’s</a> <a href="http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D">network</a>) would be to feed in the game’s screens and have the network output the Q-value for each possible action. This way, a single forward pass would output all the Q-values for a given state, translating into one forward pass per optimal future value estimate.</p>
 
 <figure class="image"><center><a href="/files/dqn_outrun/q_network_formulations.png"><img src="/files/dqn_outrun/q_network_formulations.png" /></a></center><figcaption class="media-caption"> Image courtesy of Tambet Matiisen’s <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning">Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. </figcaption></figure>
 
-<p>Q-learning and neural networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.</p>
+<p>Q-learning and deep neural networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.</p>
 
 <h1 id="implementation">Implementation</h1>
 
@@ -414,6 +414,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 
 <time datetime="2016-10-06T00:00:00+01:00" pubdate data-updated="true">Oct 6<span>th</span>, 2016</time>
+      (Revised on Dec. 5th, 2016: broken link fix; more neural network concepts details)
       
 
 <span class="categories">
