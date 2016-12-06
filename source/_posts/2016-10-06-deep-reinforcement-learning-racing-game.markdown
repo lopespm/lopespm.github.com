@@ -54,7 +54,7 @@ Multiplying [9 possible actions](https://github.com/lopespm/agent-trainer/blob/m
 
 ##Enter deep neural networks
 
-Deep neural networks work quite well for inferring the mapping implied by data, giving them the ability to predict an approximated output from an input that they never saw before. No longer do we need to store all state/action pair’s Q-values, we can now model these mappings in a more general, less redundant way. These networks also automatically learn a set of internal features which are useful in complex non-linear mapping domains, such as image processing, releasing us from the need to handcraft these features.
+Deep neural networks work quite well for inferring the mapping implied by data, giving them the ability to predict an approximated output from an input that they never saw before. No longer do we need to store all state/action pair’s Q-values, we can now model these mappings in a more general, less redundant way. These networks also automatically learn a set of internal features which are useful in complex non-linear mapping domains, such as image processing, releasing us from laborious feature handcrafting tasks.
 
 This is perfect. We can now use a deep neural network to approximate the Q-function: the network would accept a state/action combination as input and would output the corresponding Q-value. Training-wise, we would need the network’s Q-value output for a given state/action combo (obtained through a forward pass) and the target Q-value, which is calculated through the expression: $$r_{t+1} + \gamma \underset{a}\max Q(s_{t+1}, a)$$. With these two values, we can perform a gradient step on the squared difference between the target Q-value and the network’s output.
 
