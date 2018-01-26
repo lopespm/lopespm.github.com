@@ -61,7 +61,7 @@ export default class YourComponent extends React.Component {
 
 You can pass any component you desire as a `toolbar`, but typically this will be a toolbar/navbar backed by react native or a UI library of your choice, like [Native Base](https://nativebase.io/).
 
-The scrollable however, will need to be scrollable component such as a ScrollView, ListView, FlatList, etc. The `OffscreenToolbar` will then create hooks around this component in order to gauge the user's scrolling behaviour and change toolbar's animation accordingly.
+The scrollable however, will need to be scrollable component such as a `ScrollView`, `ListView`, `FlatList`, etc. The `OffscreenToolbar` will then create hooks around this component in order to gauge the user's scrolling behaviour and change toolbar's animation accordingly.
 
 You can also provide the following properties to the component:
 
