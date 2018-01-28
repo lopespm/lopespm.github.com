@@ -4,6 +4,8 @@ title: "React Native Offscreen Toolbar"
 comments: true
 categories: libraries
 tags: [mobile]
+description: "React native library which animates the toolbar off-screen while scrolling, a common material design pattern"
+ogp_image: "/files/rn-offscreen-toolbar/thumb2.jpg"
 published: true
 ---
 
