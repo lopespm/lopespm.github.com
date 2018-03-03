@@ -14,12 +14,11 @@ In material design, there is a [common scrolling technique](https://material.io/
 The [library](https://www.npmjs.com/package/react-native-offscreen-toolbar) I am releasing today is an encapsulation of this behaviour and its implementation is heavily based on Janic Duplessis' approach.
 
 <center>
-  <div style=" display: inline-block; ">
-    <figure class='image'><center><img src='/files/rn-offscreen-toolbar/simplelist_demo.gif'></center></figure>
-  </div>
-  <div style=" display: inline-block; width: 50px"></div>
-    <div style=" display: inline-block;">
-    <figure class='image'><center><img src='/files/rn-offscreen-toolbar/search_demo.gif'></center></figure>
+  <div style="overflow: auto; margin-bottom: 16px">
+    <div style="float: left;height: 10px; width:8%;"/>
+    <img style="float: left;height: auto; width:40%;" src='/files/rn-offscreen-toolbar/simplelist_demo.gif'/>
+    <div style="float: left;height: 10px; width:4%;"/>
+    <img style="float: left;height: auto; width:40%;" src='/files/rn-offscreen-toolbar/search_demo.gif'/>
   </div>
   <figcaption class='media-caption'>Library usage in both the <a href="https://github.com/lopespm/react-native-offscreen-toolbar/tree/master/example">example</a> bundled with the library and in the search screen of a to be released application</figcaption>
 </center>
