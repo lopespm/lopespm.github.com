@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank]]></title>
   <link href="http://lopespm.github.com/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2018-03-12T19:35:16+00:00</updated>
+  <updated>2018-03-12T22:45:03+00:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ArXiv Papers: React Native Android App]]></title>
-    <link href="http://lopespm.github.com/apps/2018/02/27/arxiv-papers.html"/>
-    <updated>2018-02-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/apps/2018/02/27/arxiv-papers</id>
+    <link href="http://lopespm.github.com/apps/2018/03/12/arxiv-papers.html"/>
+    <updated>2018-03-12T00:00:00+00:00</updated>
+    <id>http://lopespm.github.com/apps/2018/03/12/arxiv-papers</id>
     <content type="html"><![CDATA[<p><img src="http://lopespm.github.com/files/arxiv-papers/arxiv_layout_implementation.png" /> </p>
 
 <p>ArXiv Papers is an <a href="https://github.com/lopespm/arxiv-papers-mobile">open source</a> mobile application to search, download and save arXiv papers. It was developed using a react native / redux framework and is currently available for smartphone and tablet devices. You can get it on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.arxiv">Google Play</a>.</p>
