@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Compressed Deque in Python - Byte Tank</title>
+  <title>Tag: audio - Byte Tank</title>
   <meta name="author" content="Pedro Lopes">
 
   
-  <meta name="description" content="This post aims to give some insights about a recently open-sourced python deque which compresses its items for a decreased volatile and persistent &hellip;">
+  <meta name="description" content="Tag: audio">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lopespm.github.com/libraries/2016/08/27/compressed-deque.html">
+  <link rel="canonical" href="http://lopespm.github.comblog/tags/audio">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -47,16 +47,16 @@ MathJax.Hub.Config({
 });
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-  <meta property="og:title" content="Compressed Deque in Python - Byte Tank" />
-<meta property="og:description" content="This post aims to give some insights about a recently open-sourced python deque which compresses its items for a decreased volatile and persistent &hellip;" />
-<meta property="og:url" content="http://lopespm.github.com/libraries/2016/08/27/compressed-deque.html" />
+  <meta property="og:title" content="Tag: audio - Byte Tank" />
+<meta property="og:description" content="Tag: audio" />
+<meta property="og:url" content="http://lopespm.github.comblog/tags/audio" />
 <meta property="og:image" content="" />
 <meta property="og:site_name" content="Byte Tank" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
 
-<meta name="twitter:title" content="Compressed Deque in Python - Byte Tank">
-<meta name="twitter:description" content="This post aims to give some insights about a recently open-sourced python deque which compresses its items for a decreased volatile and persistent &hellip;">
+<meta name="twitter:title" content="Tag: audio - Byte Tank">
+<meta name="twitter:description" content="Tag: audio">
 
 <meta name="twitter:creator" content="@lopes_pm">
 
@@ -105,145 +105,36 @@ MathJax.Hub.Config({
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Compressed Deque in Python</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-08-27T00:00:00+01:00" pubdate data-updated="true">Aug 27<span>th</span>, 2016</time>
-        
-      </p>
+    <h1 class="entry-title">Tag: Audio</h1>
     
   </header>
-
-
-<div class="entry-content"><p>This post aims to give some insights about a recently <a href="https://github.com/lopespm/compressed-deque">open-sourced</a> python deque which compresses its items for a decreased volatile and persistent memory footprint.</p>
-
-<!--more-->
-
-<h2 id="why-how-can-it-be-useful">Why? How can it be useful?</h2>
-
-<p>Compressed Deque came up while buiding an algorithm which relied on fast random accesses of numerous complex objects. When compressed, this blob of data could easily fit in fast volatile memory, as opposed to being fetched from a slow hard drive. Even though there was a performance penalty from compressing/decompressing items from volatile memory, this solution proved to be faster than accessing these items from indexed files on a hard disk (on a SSD the gains are more negligible though).</p>
-
-<p>This collection might also be useful for programs running on devices with very limited memory available.</p>
-
-<h2 id="structure">Structure</h2>
-
-<p>Compressed Deque inherits from <a href="https://docs.python.org/2/library/collections.html#collections.deque">deque</a> and stores its items as zlib compressed pickles. The middle pickle layer only serves as a generic serialization method which can provide a serialized object string for zlib to compress. Although pickle can compress objects, its compression rate does not match zlib’s, even using <a href="https://docs.python.org/2/library/pickle.html#data-stream-format">higher protocols</a>.</p>
-
-<p><img src="/files/compressed_deque/value_layers.png" alt="image" /></p>
-
-<p><code>save_to_file()</code> and <code>load_from_file()</code> static methods are provided to persist the collection directly into disk in its compressed representation, without much overhead. </p>
-
-<p>The persisted file contains a sequence of header/compressed_value pairs: the header is a 4 byte integer description of the compressed value’s length and the compressed value is similiar to its in-memory representation.</p>
-
-<p><img src="/files/compressed_deque/persisted_values.png" alt="image" /></p>
-
-<h2 id="how-to-use-it">How to Use it</h2>
-
-<p>An easy way to install this package is by using <code>pip</code>:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>$ pip install compressed-deque
-</pre></div>
-</div>
-</div>
-
-<p><br /></p>
-
-<p>You can then import the class and use it:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">from</span> <span class="include">compdeque</span> <span class="keyword">import</span> <span class="include">CompressedDeque</span>
-
-<span class="comment"># Instantiate the Deque</span>
-collection = CompressedDeque()
-
-<span class="comment"># Use it as a normal deque</span>
-collection.append(<span class="integer">1</span>)
-
-<span class="comment"># Persist to a file</span>
-CompressedDeque.save_to_file(collection, file_path=<span class="string"><span class="delimiter">&quot;</span><span class="content">/path/to/collection.dat</span><span class="delimiter">&quot;</span></span>)
-
-<span class="comment"># ...</span>
-
-<span class="comment"># and load it when you need it later</span>
-loaded_collection = CompressedDeque.load_from_file(<span class="string"><span class="delimiter">&quot;</span><span class="content">/path/to/collection.dat</span><span class="delimiter">&quot;</span></span>)
-</pre></div>
-</div>
-</div>
-
-<p><br /></p>
-
-<h2 id="source-code">Source Code</h2>
-
-<p>Source code is available here: <a href="https://github.com/lopespm/compressed-deque">https://github.com/lopespm/compressed-deque</a></p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives" class="category">
 
 
 
   
+  <h2>2015</h2>
 
-
-<time datetime="2016-08-27T00:00:00+01:00" pubdate data-updated="true">Aug 27<span>th</span>, 2016</time>
-      
-      
-
-<span class="categories">
+<article>
   
-    <a class='category' href='/blog/tags/libraries/'>libraries</a>
-  
-</span>
+<h1><a href="/audio/2015/12/08/gopro-heartbeat.html">Attenuate GoPro Chest Mount Heartbeat - using GarageBand/iMovie</a></h1>
+<time datetime="2015-12-08T00:00:00+00:00" pubdate><span class='month'>Dec</span> <span class='day'>08</span> <span class='year'>2015</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/tags/audio/'>audio</a></span>
+</footer>
 
 
-    </p>
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/audio/2015/12/08/gopro-heartbeat.html" title="Previous Post: Attenuate GoPro Chest Mount Heartbeat - using GarageBand/iMovie">&laquo; Attenuate GoPro Chest Mount Heartbeat - using GarageBand/iMovie</a>
-      
-      
-        <a class="basic-alignment right" href="/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html" title="Next Post: Deep Reinforcement Learning: Playing a Racing Game">Deep Reinforcement Learning: Playing a Racing Game &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+
+  
+</article>
 
 </div>
 
@@ -327,10 +218,7 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
       var disqus_shortname = 'bytetank';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://lopespm.github.com/libraries/2016/08/27/compressed-deque.html';
-        var disqus_url = 'http://lopespm.github.com/libraries/2016/08/27/compressed-deque.html';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

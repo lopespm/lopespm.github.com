@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: games | Byte Tank]]></title>
-  <link href="http://lopespm.github.com/blog/categories/games/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: libraries | Byte Tank]]></title>
+  <link href="http://lopespm.github.com/blog/tags/libraries/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
   <updated>2019-01-17T22:32:44+00:00</updated>
   <id>http://lopespm.github.com/</id>
@@ -211,42 +211,150 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Survival Ball on OUYA]]></title>
-    <link href="http://lopespm.github.com/games/2013/09/08/survival-ball-ouya.html"/>
-    <updated>2013-09-08T00:00:00+01:00</updated>
-    <id>http://lopespm.github.com/games/2013/09/08/survival-ball-ouya</id>
-    <content type="html"><![CDATA[<p>Survival Ball in now available on OUYA, and its publishing process was fairly straightforward. From the day of submission (2nd of September) to its approval (5th of September), it took a mere 3 days, counting that a re-submission had to be made in-between.</p>
+    <title type="html"><![CDATA[React Native Offscreen Toolbar]]></title>
+    <link href="http://lopespm.github.com/libraries/2018/01/25/react-native-offscreen-toolbar.html"/>
+    <updated>2018-01-25T00:00:00+00:00</updated>
+    <id>http://lopespm.github.com/libraries/2018/01/25/react-native-offscreen-toolbar</id>
+    <content type="html"><![CDATA[<p>In material design, there is a <a href="https://material.io/guidelines/patterns/scrolling-techniques.html#scrolling-techniques-behavior">common scrolling technique</a> in which the toolbar is smoothly tucked away while scrolling down and is made visible again when scrolling up. This behaviour is fairly straightforward to implement when developing a native android app, but for a react native app, the best solution I found was <a href="https://medium.com/appandflow/react-native-collapsible-navbar-e51a049b560a">Janic Duplessis’</a>.</p>
 
-<p>Survival Ball was already available on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Google Play</a>, <a href="http://www.amazon.com/RockByte-Software-Survival-Ball/dp/B00ARVZ7F0/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1378394674&amp;sr=1-1">Amazon </a>and <a href="http://www.kongregate.com/games/rockbyte/survival-ball">Kongregate</a>, but OUYA just felt like the perfect platform for the game. With it, you could just grab the OUYA controller and/or a spare XBox/PS3 controller, and just have a quick match. I really loved the concept, and re-iterated on the previous version of the game to give it more controller friendly menus, better graphics, refined textures, and an overall revamp.</p>
+<p>The <a href="https://www.npmjs.com/package/react-native-offscreen-toolbar">library</a> I am releasing today is an encapsulation of this behaviour and its implementation is heavily based on Janic Duplessis’ approach.</p>
+
+<center>
+  <div style="overflow: auto; margin-bottom: 16px">
+    <div style="float: left;height: 10px; width:8%;"></div>
+    <img style="float: left;height: auto; width:40%;" src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.gif" />
+    <div style="float: left;height: 10px; width:4%;"></div>
+    <img style="float: left;height: auto; width:40%;" src="http://lopespm.github.com/files/rn-offscreen-toolbar/search_demo.gif" />
+  </div>
+  <figcaption class="media-caption">Library usage in both the <a href="https://github.com/lopespm/react-native-offscreen-toolbar/tree/master/example">example</a> bundled with the library and in the search screen of a to be released application</figcaption>
+</center>
 
 <!--more-->
 
-<p>After finishing up the port to OUYA, on the 2nd of September, I’ve made the first submission. I’ll just point out that upon this moment, it seemed to be stuck with a red status message which read “<em>Still verifying apk…</em>”. To resolve this, I edited the submission, re-submitted the APK, and waited a few seconds. The game was then submitted for approval.</p>
+<h2 id="how-to-use-it">How to Use it</h2>
 
-<p>On the 4th of September, a re-submission was asked by the OUYA review team (which were very friendly by the way), since some elements fell of the safe-frame, which is safe-guard for gamers who have screens that perform <a href="https://devs.ouya.tv/developers/docs/content-review-guidelines">too much overscan</a>.</p>
+<p>Installation:</p>
 
-<p>The game was re-submitted on the same day, and was approved on the 5th of September. From this point on, one can release the game whenever it seems more appropriate. The game was released on the same day.</p>
-
-<p>I’ve came to learn during this process, after publishing the game, it first goes to the “Sandbox” section. Only after a major acceptance from the game community, can the game be promoted to the primary categories. So, if you would like to take a quick peek at the game, you can find it at the “Sandbox” section.</p>
-
-<center><iframe width="560" height="315" src="http://lopespm.github.com//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
+<div><div class="CodeRay">
+  <div class="code"><pre>$ $ npm install react-native-offscreen-toolbar --save
+</pre></div>
+</div>
+</div>
 
 <p><br /></p>
+
+<p>Usage (full example <a href="https://github.com/lopespm/react-native-offscreen-toolbar/tree/master/example">here</a>):</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>import OffscreenToolbar from 'react-native-offscreen-toolbar';
+ 
+export default class YourComponent extends React.Component {
+    render() {
+        const toolbar = () =&gt; (&lt;ToolbarAndroid title={'Title'} /&gt;);
+        const listItem = ({item}) =&gt; &lt;Text&gt;{item.key}&lt;/Text&gt;;
+        const scrollable = () =&gt; (&lt;FlatList data={DUMMY_DATA} renderItem={listItem}/&gt;);
+        return (
+            &lt;View style={styles.container}&gt;
+                &lt;OffscreenToolbar
+                    toolbar={toolbar}
+                    scrollable={scrollable} /&gt;
+            &lt;/View&gt;
+        );
+    }
+}
+</pre></div>
+</div>
+</div>
+
+<p><br /></p>
+
+<p>You can pass any component you desire as a <code>toolbar</code>, but typically this will be a toolbar/navbar backed by react native or a UI library of your choice, like <a href="https://nativebase.io/">Native Base</a>.</p>
+
+<p>The scrollable however, will need to be scrollable component such as a <code>ScrollView</code>, <code>ListView</code>, <code>FlatList</code>, etc. The <code>OffscreenToolbar</code> will then create hooks around this component in order to gauge the user’s scrolling behaviour and change toolbar’s animation accordingly.</p>
+
+<p>You can also provide the following properties to the component:</p>
+
+<ul>
+  <li><code>scrollableOverlay</code>: for a search screen as the one presented above, this component can be used to present an overlay between the scrollable and the toolbar</li>
+  <li><code>toolbarHeight</code>: adjust this property according to your toolbar height. This value is used for the toolbar’s animation</li>
+  <li><code>scrollablePaddingTop</code>: since the scrollable is laying behind the toolbar, this property comes in handy to place the scrollable content below the toolbar</li>
+</ul>
+
+<h2 id="where-to-get-the-library">Where to get the library</h2>
+
+<ul>
+  <li><a href="https://github.com/lopespm/react-native-offscreen-toolbar">Source code on GitHub</a></li>
+  <li><a href="https://www.npmjs.com/package/react-native-offscreen-toolbar">NPM distribution</a></li>
+</ul>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Nordic Game Jam’s winners]]></title>
-    <link href="http://lopespm.github.com/games/2013/01/27/nordic-game-jams-winners.html"/>
-    <updated>2013-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/games/2013/01/27/nordic-game-jams-winners</id>
-    <content type="html"><![CDATA[<p>This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: <a href="http://nordicgamejam.org/2013/01/21/winners-ngj13/">http://nordicgamejam.org/2013/01/21/winners-ngj13/</a></p>
-
-<p>My personal highlight goes to Stalagflight (<a href="https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html">https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html</a>), which is as simple as stupidly fun! Stalagflight can be played with the keyboard, but it is tricky. If you have a gamepad the experience is much better.</p>
+    <title type="html"><![CDATA[Compressed Deque in Python]]></title>
+    <link href="http://lopespm.github.com/libraries/2016/08/27/compressed-deque.html"/>
+    <updated>2016-08-27T00:00:00+01:00</updated>
+    <id>http://lopespm.github.com/libraries/2016/08/27/compressed-deque</id>
+    <content type="html"><![CDATA[<p>This post aims to give some insights about a recently <a href="https://github.com/lopespm/compressed-deque">open-sourced</a> python deque which compresses its items for a decreased volatile and persistent memory footprint.</p>
 
 <!--more-->
 
-<p>On other lines, if you want to stretch the face of Justin Bieber and force him to make heavenly sounds, rejoice with this: <a href="http://unicorn7.org/static/be/">http://unicorn7.org/static/be/</a></p>
+<h2 id="why-how-can-it-be-useful">Why? How can it be useful?</h2>
+
+<p>Compressed Deque came up while buiding an algorithm which relied on fast random accesses of numerous complex objects. When compressed, this blob of data could easily fit in fast volatile memory, as opposed to being fetched from a slow hard drive. Even though there was a performance penalty from compressing/decompressing items from volatile memory, this solution proved to be faster than accessing these items from indexed files on a hard disk (on a SSD the gains are more negligible though).</p>
+
+<p>This collection might also be useful for programs running on devices with very limited memory available.</p>
+
+<h2 id="structure">Structure</h2>
+
+<p>Compressed Deque inherits from <a href="https://docs.python.org/2/library/collections.html#collections.deque">deque</a> and stores its items as zlib compressed pickles. The middle pickle layer only serves as a generic serialization method which can provide a serialized object string for zlib to compress. Although pickle can compress objects, its compression rate does not match zlib’s, even using <a href="https://docs.python.org/2/library/pickle.html#data-stream-format">higher protocols</a>.</p>
+
+<p><img src="/files/compressed_deque/value_layers.png" alt="image" /></p>
+
+<p><code>save_to_file()</code> and <code>load_from_file()</code> static methods are provided to persist the collection directly into disk in its compressed representation, without much overhead. </p>
+
+<p>The persisted file contains a sequence of header/compressed_value pairs: the header is a 4 byte integer description of the compressed value’s length and the compressed value is similiar to its in-memory representation.</p>
+
+<p><img src="/files/compressed_deque/persisted_values.png" alt="image" /></p>
+
+<h2 id="how-to-use-it">How to Use it</h2>
+
+<p>An easy way to install this package is by using <code>pip</code>:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>$ pip install compressed-deque
+</pre></div>
+</div>
+</div>
+
+<p><br /></p>
+
+<p>You can then import the class and use it:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">from</span> <span class="include">compdeque</span> <span class="keyword">import</span> <span class="include">CompressedDeque</span>
+
+<span class="comment"># Instantiate the Deque</span>
+collection = CompressedDeque()
+
+<span class="comment"># Use it as a normal deque</span>
+collection.append(<span class="integer">1</span>)
+
+<span class="comment"># Persist to a file</span>
+CompressedDeque.save_to_file(collection, file_path=<span class="string"><span class="delimiter">&quot;</span><span class="content">/path/to/collection.dat</span><span class="delimiter">&quot;</span></span>)
+
+<span class="comment"># ...</span>
+
+<span class="comment"># and load it when you need it later</span>
+loaded_collection = CompressedDeque.load_from_file(<span class="string"><span class="delimiter">&quot;</span><span class="content">/path/to/collection.dat</span><span class="delimiter">&quot;</span></span>)
+</pre></div>
+</div>
+</div>
+
+<p><br /></p>
+
+<h2 id="source-code">Source Code</h2>
+
+<p>Source code is available here: <a href="https://github.com/lopespm/compressed-deque">https://github.com/lopespm/compressed-deque</a></p>
 ]]></content>
   </entry>
   

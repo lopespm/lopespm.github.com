@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
-  <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: machine learning | Byte Tank]]></title>
+  <link href="http://lopespm.github.com/blog/tags/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
   <updated>2019-01-17T22:32:44+00:00</updated>
   <id>http://lopespm.github.com/</id>
