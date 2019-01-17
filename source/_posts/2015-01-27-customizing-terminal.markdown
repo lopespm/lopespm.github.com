@@ -3,7 +3,7 @@ layout: post
 title: "Quickly Customize OSX Terminal Style and Functionality"
 comments: true
 categories: workflow
-tags: [android]
+tags: [workflow]
 ---
 
 

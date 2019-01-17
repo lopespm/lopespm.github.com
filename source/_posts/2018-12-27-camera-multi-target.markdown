@@ -3,7 +3,7 @@ layout: post
 title: "Unity: Dynamic Multi Target Camera"
 comments: true
 categories: [libraries, games]
-tags: [games]
+tags: [libraries, games]
 description: "Open source Unity library to dynamically keep multiple objects in view. This article details the inner workings of this library, which was developed for, and used by Survival Ball"
 ogp_image: "/files/camera_multi_target/og-thumb.jpg"
 published: true

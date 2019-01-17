@@ -3,7 +3,7 @@ layout: post
 title: "Attenuate GoPro Chest Mount Heartbeat - using GarageBand/iMovie"
 comments: true
 categories: audio
-tags: [gopro]
+tags: [audio]
 published: true
 ---
 

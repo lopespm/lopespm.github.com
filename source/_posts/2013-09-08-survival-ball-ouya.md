@@ -3,7 +3,7 @@ layout: post
 title: "Survival Ball on OUYA"
 description: "The release of a Unity game on OUYA"
 category: games
-tags: [ouya]
+tags: [games]
 comments: true
 ---
 

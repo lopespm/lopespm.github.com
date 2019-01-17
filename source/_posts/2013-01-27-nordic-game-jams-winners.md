@@ -3,7 +3,7 @@ layout: post
 title: "Nordic Game Jam’s winners"
 description: ""
 category: games
-tags: [ngj2013]
+tags: [games]
 comments: true
 ---
 This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: [http://nordicgamejam.org/2013/01/21/winners-ngj13/](http://nordicgamejam.org/2013/01/21/winners-ngj13/)

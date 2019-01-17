@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Compressed Deque"
+title: "Compressed Deque in Python"
 comments: true
 categories: libraries
-tags: [python]
+tags: [libraries]
 published: true
 ---
 

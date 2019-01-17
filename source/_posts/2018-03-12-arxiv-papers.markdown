@@ -3,7 +3,7 @@ layout: post
 title: "ArXiv Papers: React Native Android App"
 comments: true
 categories: apps
-tags: [mobile, android]
+tags: [mobile]
 description: "ArXiv Papers is an open source mobile application to search, download and save arXiv papers. Developed using react native / redux and avalaible for Android"
 ogp_image: "/files/arxiv-papers/thumb.jpg"
 published: true
