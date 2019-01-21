@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: games | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/tags/games/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2019-01-17T22:32:44+00:00</updated>
+  <updated>2019-01-21T11:02:47+00:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -190,16 +190,17 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
 
 <h1 id="where-to-get-it">Where to get it</h1>
 
-<p>The library is available on GitHub and will be available in the Unity Asset Store once it is approved<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. An example scene of the library’s usage is included. Feedback is most welcome and I hope this can be useful!</p>
+<p></li>
+</ul>
+
+<p>The library is available on GitHub and the Unity Asset Store. An example scene of the library’s usage is included. Feedback is most welcome and I hope this can be useful!</p>
 
 <ul>
   <li><a href="https://github.com/lopespm/unity-camera-multi-target">GitHub Repository</a></li>
+  <li><a href="https://assetstore.unity.com/packages/tools/camera/camera-multi-target-dynamic-135922">Unity Asset Store Package</a></li>
 </ul>
 
 <p></p>
-
-<p><br /></p>
-
 <div class="footnotes">
   <ol>
     <li id="fn:1">
