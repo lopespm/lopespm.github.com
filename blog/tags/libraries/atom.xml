@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: libraries | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/tags/libraries/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2019-01-21T11:02:47+00:00</updated>
+  <updated>2019-01-23T04:58:09+00:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -18,7 +18,7 @@
     <link href="http://lopespm.github.com/libraries/games/2018/12/27/camera-multi-target.html"/>
     <updated>2018-12-27T00:00:00+00:00</updated>
     <id>http://lopespm.github.com/libraries/games/2018/12/27/camera-multi-target</id>
-    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=In3eVapQ5mk"><img class="center" src="/files/camera_multi_target/demo.gif"></a></p>
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI"><img class="center" src="/files/camera_multi_target/demo.gif"></a></p>
 
 <p>Mostly invisible, yet essential, camera work is key to any game with dynamic cameras. This article dissects a concise Unity <a href="https://github.com/lopespm/unity-camera-multi-target">open source</a> library which dynamically keeps a set of objects (e.g. players and important objects) in view, a common problem for a wide range of games.</p>
 
