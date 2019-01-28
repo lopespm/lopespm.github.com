@@ -9,7 +9,7 @@ ogp_image: "/files/camera_multi_target/og-thumb.jpg"
 published: true
 ---
 
-<a href="https://www.youtube.com/watch?v=In3eVapQ5mk">{% img center /files/camera_multi_target/demo.gif %}</a>
+<a href="https://www.youtube.com/watch?v=HeJrQkkIfOI">{% img center /files/camera_multi_target/demo.gif %}</a>
 
 Mostly invisible, yet essential, camera work is key to any game with dynamic cameras. This article dissects a concise Unity [open source](https://github.com/lopespm/unity-camera-multi-target) library which dynamically keeps a set of objects (e.g. players and important objects) in view, a common problem for a wide range of games.
 
@@ -251,18 +251,20 @@ With the camera position calculated in the transformed space, we can now multipl
 
 #Where to get it
 
+{%comment%}
 The library is available on GitHub and will be available in the Unity Asset Store once it is approved[^1]. An example scene of the library's usage is included. Feedback is most welcome and I hope this can be useful!
 
 - [GitHub Repository](https://github.com/lopespm/unity-camera-multi-target)
-
-{%comment%}
-The library is available on GitHub and the <del>Unity Asset Store</del> (pending approval). An example scene of the library's usage is included. Feedback is most welcome and I hope this can be useful!
-
-- [GitHub Repository](https://github.com/lopespm/unity-camera-multi-target)
-- <del>Unity Asset Store Package</del> (pending approval from the Unity Asset Store, the link will be placed here once it is available)
-
 {%endcomment%}
 
+The library is available on GitHub and the Unity Asset Store. An example scene of the library's usage is included. Feedback is most welcome and I hope this can be useful!
+
+- [GitHub Repository](https://github.com/lopespm/unity-camera-multi-target)
+- [Unity Asset Store Package](https://assetstore.unity.com/packages/tools/camera/camera-multi-target-dynamic-135922)
+
+
+{%comment%}
 <br/>
 
 [^1]: *I have been informed that the Unity Asset Store team is experiencing longer than normal review times. From the information I gathered online, it might take a couple of weeks until it is available. I will post an update on my twitter [@lopes_pm](https://twitter.com/lopes_pm) once it is published.*
+{%endcomment%}
