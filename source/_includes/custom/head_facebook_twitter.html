@@ -11,5 +11,7 @@
 
 {% if site.twitter_creator %}<meta name="twitter:creator" content="@{{ site.twitter_creator }}">{% endif %}
 
-{% if page.ogp_image %}<meta name="twitter:card" content="summary_large_image">
+{% if page.ogp_image_twitter %}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ site.url }}{{ page.ogp_image_twitter }}">
+{% else if page.ogp_image %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ site.url }}{{ page.ogp_image }}">{% endif %}
