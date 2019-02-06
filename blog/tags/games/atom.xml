@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: games | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/tags/games/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2019-02-06T12:50:47+00:00</updated>
+  <updated>2019-02-06T12:54:03+00:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -145,7 +145,7 @@
  </div>
  </center>
 
-<p>This article/postmortem provides an in-depth look in to the process of building <a href="https://survivalball.com/">Survival Ball</a>, a Single / Local Co-Op physics-based game available on Steam for Windows and macOS. From prototype until showcase at Lisboa Games Week, passing by the related principles, design decisions, level creation process, tools and technical details.  </p>
+<p>This article/postmortem provides an in-depth look into the process of building <a href="https://survivalball.com/">Survival Ball</a>, a Single / Local Co-Op physics-based game available on Steam for Windows and macOS. From prototype until showcase at Lisboa Games Week, passing by the related principles, design decisions, level creation process, tools and technical details.  </p>
 
 <!--more-->
 
