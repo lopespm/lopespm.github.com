@@ -9,7 +9,7 @@ ogp_image: "/files/arxiv-papers/thumb.jpg"
 published: true
 ---
 
-{% img /files/arxiv-papers/arxiv_layout_implementation.png %} 
+{% imgopt /files/arxiv-papers/arxiv_layout_implementation %} 
 
 ArXiv Papers is an [open source](https://github.com/lopespm/arxiv-papers-mobile) mobile application to search, download and save arXiv papers. It was developed using a react native / redux framework and is currently available for smartphone and tablet devices. You can get it on [Google Play](https://play.google.com/store/apps/details?id=com.rockbyte.arxiv).
 

@@ -4,10 +4,11 @@ title: "Quickly Customize OSX Terminal Style and Functionality"
 comments: true
 categories: workflow
 tags: [workflow]
+published: true
 ---
 
 
-![image](/images/blog_images/terminal_custom/terminal_before_after.png)
+{% imgopt center /files/terminal_custom/terminal_before_after %}
 
 <!--more-->
 
