@@ -4,7 +4,7 @@
   <title><![CDATA[Category: libraries | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/libraries/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2020-01-13T14:21:44+00:00</updated>
+  <updated>2020-01-13T19:07:44+00:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -228,7 +228,7 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
 
 <center>
   <div style="overflow: auto; margin-bottom: 16px">
-    <div style="float: left;height: 10px; width:8%;"></div>
+    <div style="float: left;height: 10px; width:8%"></div>
         <video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
         <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm" />
         <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4" />

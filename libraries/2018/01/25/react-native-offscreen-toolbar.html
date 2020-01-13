@@ -32,21 +32,6 @@
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  jax: ["input/TeX", "output/HTML-CSS"],
-  tex2jax: {
-    inlineMath: [ ['$', '$'] ],
-    displayMath: [ ['$$', '$$']],
-    processEscapes: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  },
-  messageStyle: "none",
-  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 <link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
   <meta property="og:title" content="React Native Offscreen Toolbar - Byte Tank" />
 <meta property="og:description" content="React native library which animates the toolbar off-screen while scrolling, a common material design pattern" />
@@ -193,6 +178,21 @@ MathJax.Hub.Config({
 
 <script src="/javascripts/rocket-loader/tools.min.js"></script>
 <script src="/javascripts/rocket-loader/loader.min.js"></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
   <header role="banner"><hgroup>
   <h1><a href="/">Byte Tank</a></h1>
   
@@ -254,7 +254,7 @@ MathJax.Hub.Config({
 
 <center>
   <div style="overflow: auto; margin-bottom: 16px">
-    <div style="float: left;height: 10px; width:8%;"></div>
+    <div style="float: left;height: 10px; width:8%"></div>
         <video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
         <source src="/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm" />
         <source src="/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4" />

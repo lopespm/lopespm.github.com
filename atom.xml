@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.com/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2020-01-13T14:21:44+00:00</updated>
+  <updated>2020-01-13T19:07:44+00:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -767,7 +767,13 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
     <link href="http://lopespm.github.com/apps/2018/03/12/arxiv-papers.html"/>
     <updated>2018-03-12T00:00:00+00:00</updated>
     <id>http://lopespm.github.com/apps/2018/03/12/arxiv-papers</id>
-    <content type="html"><![CDATA[<p><img src="http://lopespm.github.com/files/arxiv-papers/arxiv_layout_implementation.png" /> </p>
+    <content type="html"><![CDATA[<center>
+          <picture>
+             <source type="image/webp" srcset="/files/arxiv-papers/arxiv_layout_implementation.webp" />
+             <source type="image/png" srcset="/files/arxiv-papers/arxiv_layout_implementation.png" />
+             <img src="http://lopespm.github.com/files/arxiv-papers/arxiv_layout_implementation.png" />
+           </picture>
+         </center>
 
 <p>ArXiv Papers is an <a href="https://github.com/lopespm/arxiv-papers-mobile">open source</a> mobile application to search, download and save arXiv papers. It was developed using a react native / redux framework and is currently available for smartphone and tablet devices. You can get it on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.arxiv">Google Play</a>.</p>
 
@@ -865,7 +871,7 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
 
 <center>
   <div style="overflow: auto; margin-bottom: 16px">
-    <div style="float: left;height: 10px; width:8%;"></div>
+    <div style="float: left;height: 10px; width:8%"></div>
         <video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
         <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm" />
         <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4" />
@@ -1364,7 +1370,13 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
     <link href="http://lopespm.github.com/workflow/2015/01/27/customizing-terminal.html"/>
     <updated>2015-01-27T00:00:00+00:00</updated>
     <id>http://lopespm.github.com/workflow/2015/01/27/customizing-terminal</id>
-    <content type="html"><![CDATA[<p><img src="http://lopespm.github.com/images/blog_images/terminal_custom/terminal_before_after.png" alt="image" /></p>
+    <content type="html"><![CDATA[<center>
+          <picture>
+             <source type="image/webp" srcset="/files/terminal_custom/terminal_before_after.webp" />
+             <source type="image/png" srcset="/files/terminal_custom/terminal_before_after.png" />
+             <img src="http://lopespm.github.com/files/terminal_custom/terminal_before_after.png" />
+           </picture>
+         </center>
 
 <!--more-->
 

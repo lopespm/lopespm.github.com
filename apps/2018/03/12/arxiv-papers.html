@@ -32,21 +32,6 @@
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  jax: ["input/TeX", "output/HTML-CSS"],
-  tex2jax: {
-    inlineMath: [ ['$', '$'] ],
-    displayMath: [ ['$$', '$$']],
-    processEscapes: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  },
-  messageStyle: "none",
-  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 <link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
   <meta property="og:title" content="ArXiv Papers: React Native Android App - Byte Tank" />
 <meta property="og:description" content="ArXiv Papers is an open source mobile application to search, download and save arXiv papers. Developed using react native / redux and avalaible for &hellip;" />
@@ -193,6 +178,21 @@ MathJax.Hub.Config({
 
 <script src="/javascripts/rocket-loader/tools.min.js"></script>
 <script src="/javascripts/rocket-loader/loader.min.js"></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
   <header role="banner"><hgroup>
   <h1><a href="/">Byte Tank</a></h1>
   
@@ -248,7 +248,13 @@ MathJax.Hub.Config({
   </header>
 
 
-<div class="entry-content"><p><img src="/files/arxiv-papers/arxiv_layout_implementation.png" /> </p>
+<div class="entry-content"><center>
+          <picture>
+             <source type="image/webp" srcset="/files/arxiv-papers/arxiv_layout_implementation.webp" />
+             <source type="image/png" srcset="/files/arxiv-papers/arxiv_layout_implementation.png" />
+             <img src="/files/arxiv-papers/arxiv_layout_implementation.png" />
+           </picture>
+         </center>
 
 <p>ArXiv Papers is an <a href="https://github.com/lopespm/arxiv-papers-mobile">open source</a> mobile application to search, download and save arXiv papers. It was developed using a react native / redux framework and is currently available for smartphone and tablet devices. You can get it on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.arxiv">Google Play</a>.</p>
 

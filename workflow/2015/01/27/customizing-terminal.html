@@ -33,21 +33,6 @@ Add the real world tested Solarized (dark/light) Terminal profiles: https://gith
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  jax: ["input/TeX", "output/HTML-CSS"],
-  tex2jax: {
-    inlineMath: [ ['$', '$'] ],
-    displayMath: [ ['$$', '$$']],
-    processEscapes: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  },
-  messageStyle: "none",
-  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 <link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
   <meta property="og:title" content="Quickly Customize OSX Terminal Style and Functionality - Byte Tank" />
 <meta property="og:description" content="Style - how it looks
@@ -196,6 +181,21 @@ Add the real world tested Solarized (dark/light) Terminal profiles: https://gith
 
 <script src="/javascripts/rocket-loader/tools.min.js"></script>
 <script src="/javascripts/rocket-loader/loader.min.js"></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
   <header role="banner"><hgroup>
   <h1><a href="/">Byte Tank</a></h1>
   
@@ -251,7 +251,13 @@ Add the real world tested Solarized (dark/light) Terminal profiles: https://gith
   </header>
 
 
-<div class="entry-content"><p><img src="/images/blog_images/terminal_custom/terminal_before_after.png" alt="image" /></p>
+<div class="entry-content"><center>
+          <picture>
+             <source type="image/webp" srcset="/files/terminal_custom/terminal_before_after.webp" />
+             <source type="image/png" srcset="/files/terminal_custom/terminal_before_after.png" />
+             <img src="/files/terminal_custom/terminal_before_after.png" />
+           </picture>
+         </center>
 
 <!--more-->
 
