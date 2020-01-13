@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2019-04-04T18:31:00+01:00</updated>
+  <updated>2020-01-13T14:14:04+00:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -19,11 +19,12 @@
     <updated>2016-10-06T00:00:00+01:00</updated>
     <id>http://lopespm.github.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game</id>
     <content type="html"><![CDATA[<center>
-  <div style=" display: inline-block; ">
-    <iframe width="350" height="197" src="https://www.youtube.com/embed/spzYVhOgKBA" frameborder="0" allowfullscreen=""></iframe>
-    <p class="media-caption">Agent playing Out Run, session 201609171218_175eps<br />No time limit, no traffic, 2X time lapse</p>
-  </div>
-</center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="spzYVhOgKBA"></div></div>
+   <p class="media-caption media-caption-two">Agent playing Out Run, session 201609171218_175eps<br />No time limit, no traffic, 2X time lapse</p>
+ </div>
+  </center>
+
 <p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html#source-code">available on GitHub</a>.</p>
 
 <!--more-->
@@ -181,14 +182,14 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 <p />
 
 <center>
-  <div style=" display: inline-block; ">
-    <iframe width="350" height="197" src="https://www.youtube.com/embed/1Gpl9Xc-E8M" frameborder="0" allowfullscreen=""></iframe>
-    <p class="media-caption">Agent playing Out Run (timed easy mode, no traffic)<br />Session 201609111241_2700eps</p>
-  </div>
-    <div style=" display: inline-block;">
-    <iframe width="350" height="197" src="https://www.youtube.com/embed/6F3eCoCw57E" frameborder="0" allowfullscreen=""></iframe>
-    <p class="media-caption">Agent playing Out Run (timed easy mode, no traffic)<br />Session 201609171218_175eps</p>
-  </div>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+   <div class="youtube-player video-frame-two" data-id="1Gpl9Xc-E8M"></div></div>
+ <p class="media-caption media-caption-two">Agent playing Out Run (timed easy mode, no traffic)<br />Session 201609111241_2700eps</p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="6F3eCoCw57E"></div></div>
+ <p class="media-caption media-caption-two">Agent playing Out Run (timed easy mode, no traffic)<br />Session 201609171218_175eps<br class="video-br-end" /></p>
+</div>
 </center>
 
 <p>Notice on the videos above how the timed mode trained session <code>201609111241_2700eps</code> reaches the first checkpoint about five seconds earlier than the unlimited time mode trained session <code>201609171218_175eps</code>, but proceeds to drive off-road two turns after. Its stability gets increasingly compromised as more episodes are trained, which can be observed by the rampant loss increase before 7300 episodes are reached (<code>201609111241_7300eps</code>):</p>
