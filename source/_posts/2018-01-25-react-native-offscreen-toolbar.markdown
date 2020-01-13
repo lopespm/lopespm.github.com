@@ -16,9 +16,17 @@ The [library](https://www.npmjs.com/package/react-native-offscreen-toolbar) I am
 <center>
   <div style="overflow: auto; margin-bottom: 16px">
     <div style="float: left;height: 10px; width:8%;"/>
-    <img style="float: left;height: auto; width:40%;" src='/files/rn-offscreen-toolbar/simplelist_demo.gif'/>
+        <video autoplay loop muted playsinline style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
+        <source src="/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm"/>
+        <source src="/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4"/>
+        <!--[if lt IE 9]><img src="/files/rn-offscreen-toolbar/simplelist_demo.gif"><![endif]-->
+    </video> 
     <div style="float: left;height: 10px; width:4%;"/>
-    <img style="float: left;height: auto; width:40%;" src='/files/rn-offscreen-toolbar/search_demo.gif'/>
+    <video autoplay loop muted playsinline style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
+        <source src="/files/rn-offscreen-toolbar/search_demo.webm" type="video/webm"/>
+        <source src="/files/rn-offscreen-toolbar/search_demo.mp4" type="video/mp4"/>
+        <!--[if lt IE 9]><img src="/files/rn-offscreen-toolbar/search_demo.gif"><![endif]-->
+    </video> 
   </div>
   <figcaption class='media-caption'>Library usage in both the <a href="https://github.com/lopespm/react-native-offscreen-toolbar/tree/master/example">example</a> bundled with the library and in the search screen of a to be released application</figcaption>
 </center>

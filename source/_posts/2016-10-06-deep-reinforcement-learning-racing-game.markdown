@@ -10,12 +10,13 @@ published: true
 update_notes: "Dec. 5th, 2016: broken link fix; more neural network concepts details"
 ---
 
-<center>
-  <div style=" display: inline-block; ">
-    <iframe width="350" height="197" src="https://www.youtube.com/embed/spzYVhOgKBA" frameborder="0" allowfullscreen></iframe>
-    <p class="media-caption">Agent playing Out Run, session 201609171218_175eps<br/>No time limit, no traffic, 2X time lapse</p>
-  </div>
-</center>
+ <center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="spzYVhOgKBA"></div></div>
+   <p class="media-caption media-caption-two">Agent playing Out Run, session 201609171218_175eps<br/>No time limit, no traffic, 2X time lapse</p>
+ </div>
+  </center>
+
 Above is the built [deep Q-network (DQN)](https://deepmind.com/research/dqn/) agent playing [Out Run](https://en.wikipedia.org/wiki/Out_Run), trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of [Cannonball](https://github.com/lopespm/cannonball). All source code for this project is [available on GitHub]({% post_url 2016-10-06-deep-reinforcement-learning-racing-game %}#source-code).
 
 <!--more-->
@@ -139,14 +140,14 @@ Here is a summary of the most relevant training sessions (you can find their mod
 <p></p>
 
 <center>
-  <div style=" display: inline-block; ">
-    <iframe width="350" height="197" src="https://www.youtube.com/embed/1Gpl9Xc-E8M" frameborder="0" allowfullscreen></iframe>
-    <p class="media-caption">Agent playing Out Run (timed easy mode, no traffic)<br/>Session 201609111241_2700eps</p>
-  </div>
-    <div style=" display: inline-block;">
-    <iframe width="350" height="197" src="https://www.youtube.com/embed/6F3eCoCw57E" frameborder="0" allowfullscreen></iframe>
-    <p class="media-caption">Agent playing Out Run (timed easy mode, no traffic)<br/>Session 201609171218_175eps</p>
-  </div>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+   <div class="youtube-player video-frame-two" data-id="1Gpl9Xc-E8M"></div></div>
+ <p class="media-caption media-caption-two">Agent playing Out Run (timed easy mode, no traffic)<br/>Session 201609111241_2700eps</p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="6F3eCoCw57E"></div></div>
+ <p class="media-caption media-caption-two">Agent playing Out Run (timed easy mode, no traffic)<br/>Session 201609171218_175eps<br class="video-br-end"/></p>
+</div>
 </center>
 
 Notice on the videos above how the timed mode trained session `201609111241_2700eps` reaches the first checkpoint about five seconds earlier than the unlimited time mode trained session `201609171218_175eps`, but proceeds to drive off-road two turns after. Its stability gets increasingly compromised as more episodes are trained, which can be observed by the rampant loss increase before 7300 episodes are reached (`201609111241_7300eps`):

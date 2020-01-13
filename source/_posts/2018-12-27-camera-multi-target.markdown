@@ -9,7 +9,14 @@ ogp_image: "/files/camera_multi_target/og-thumb.jpg"
 published: true
 ---
 
-<a href="https://www.youtube.com/watch?v=HeJrQkkIfOI">{% img center /files/camera_multi_target/demo.gif %}</a>
+<a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;">
+	<video autoplay loop muted playsinline style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
+		<source src="/files/camera_multi_target/demo.webm" type="video/webm"/>
+		<source src="/files/camera_multi_target/demo.mp4" type="video/mp4"/>
+		<!--[if lt IE 9]><img src="/files/camera_multi_target/demo.gif"><![endif]-->
+	</video> 
+</a>
+
 
 Mostly invisible, yet essential, camera work is key to any game with dynamic cameras. This article dissects a concise Unity [open source](https://github.com/lopespm/unity-camera-multi-target) library which dynamically keeps a set of objects (e.g. players and important objects) in view, a common problem for a wide range of games.
 
