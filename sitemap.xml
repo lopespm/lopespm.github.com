@@ -45,16 +45,22 @@
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://lopespm.github.com/2020/08/03/implementation-autocomplete-system-design.html
+        </loc>
+        <lastmod>2020-08-03T11:13:10+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://lopespm.github.com/about/</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
         <loc>http://lopespm.github.com/blog/archives/</loc>
-        <lastmod>2020-01-13T19:14:43+00:00</lastmod>
+        <lastmod>2020-08-03T11:13:10+01:00</lastmod>
     </url>
     <url>
         <loc>http://lopespm.github.com/</loc>
-        <lastmod>2020-01-13T19:14:43+00:00</lastmod>
+        <lastmod>2020-08-03T11:13:10+01:00</lastmod>
     </url>
     <url>
         <loc>http://lopespm.github.com/robots.txt</loc>
