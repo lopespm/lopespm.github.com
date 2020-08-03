@@ -9,7 +9,7 @@
   <meta name="author" content="Pedro Lopes">
 
   
-  <meta name="description" content="Before: Initial prototype, built 6 years ago After: Current version, released last November This article/postmortem provides an in-depth look into &hellip;">
+  <meta name="description" content="This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -34,7 +34,7 @@
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 <link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
   <meta property="og:title" content="Byte Tank" />
-<meta property="og:description" content="Before: Initial prototype, built 6 years ago After: Current version, released last November This article/postmortem provides an in-depth look into &hellip;" />
+<meta property="og:description" content="This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one &hellip;" />
 <meta property="og:url" content="http://lopespm.github.com" />
 <meta property="og:image" content="" />
 <meta property="og:site_name" content="Byte Tank" />
@@ -42,7 +42,7 @@
 <meta property="og:type" content="article" />
 
 <meta name="twitter:title" content="Byte Tank">
-<meta name="twitter:description" content="Before: Initial prototype, built 6 years ago After: Current version, released last November This article/postmortem provides an in-depth look into &hellip;">
+<meta name="twitter:description" content="This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one &hellip;">
 
 <meta name="twitter:creator" content="@lopes_pm">
 
@@ -222,6 +222,59 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2020/08/03/implementation-autocomplete-system-design.html">Implementation: Autocomplete System Design for Large Scale</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2020-08-03T00:00:00+01:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2020</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one gets when typing a Google search.</p>
+
+<p>This design was implemented using Docker Compose <sup id="fnref:10"><a href="#fn:10" rel="footnote">1</a></sup>, and you can find the source code here: <a href="https://github.com/lopespm/autocomplete">https://github.com/lopespm/autocomplete</a></p>
+
+<div style="margin-bottom: 20px">
+<center>
+          <picture>
+             <source type="image/webp" srcset="/files/autocomplete/pintro_image_705.webp" />
+             <source type="image/png" srcset="/files/autocomplete/pintro_image_705.png" />
+             <img src="/files/autocomplete/pintro_image_705.png" />
+           </picture>
+         </center> 
+</div>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2020/08/03/implementation-autocomplete-system-design.html">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -661,50 +714,9 @@ MathJax.Hub.Config({
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/games/2013/01/27/nordic-game-jams-winners.html">Nordic Game Jam’s Winners</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-27T00:00:00+00:00" pubdate data-updated="true">Jan 27<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: <a href="http://nordicgamejam.org/2013/01/21/winners-ngj13/">http://nordicgamejam.org/2013/01/21/winners-ngj13/</a></p>
-
-<p>My personal highlight goes to Stalagflight (<a href="https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html">https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html</a>), which is as simple as stupidly fun! Stalagflight can be played with the keyboard, but it is tricky. If you have a gamepad the experience is much better.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/games/2013/01/27/nordic-game-jams-winners.html">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -715,6 +727,10 @@ MathJax.Hub.Config({
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2020/08/03/implementation-autocomplete-system-design.html">Implementation: Autocomplete System Design for Large Scale</a>
+      </li>
     
       <li class="post">
         <a href="/2019/02/06/survival-ball-making-the-game.html">Survival Ball: Making the Game</a>
@@ -730,10 +746,6 @@ MathJax.Hub.Config({
     
       <li class="post">
         <a href="/libraries/2018/01/25/react-native-offscreen-toolbar.html">React Native Offscreen Toolbar</a>
-      </li>
-    
-      <li class="post">
-        <a href="/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html">Deep Reinforcement Learning: Playing a Racing Game</a>
       </li>
     
   </ul>
