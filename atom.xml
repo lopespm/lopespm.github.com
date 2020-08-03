@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.com/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2020-08-03T11:29:15+01:00</updated>
+  <updated>2020-08-03T11:35:37+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -20,7 +20,7 @@
     <id>http://lopespm.github.com/2020/08/03/implementation-autocomplete-system-design</id>
     <content type="html"><![CDATA[<p>This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one gets when typing a Google search.</p>
 
-<p>This design was implemented using Docker Compose <sup id="fnref:10"><a href="#fn:10" rel="footnote">1</a></sup>, and you can find the source code here: <a href="https://github.com/lopespm/autocomplete">https://github.com/lopespm/autocomplete</a></p>
+<p>This design was implemented using Docker Compose<sup id="fnref:10"><a href="#fn:10" rel="footnote">1</a></sup>, and you can find the source code here: <a href="https://github.com/lopespm/autocomplete">https://github.com/lopespm/autocomplete</a></p>
 
 <div style="margin-bottom: 20px">
 <center>
@@ -38,7 +38,7 @@
 
 <p>The design has to accommodate a Google-like scale of about 5 billion daily searches, which translates in to about 58 thousand queries per second. We can expect 20% of these searches to be unique, this is, 1 billion queries per day.</p>
 
-<p>If we choose to index these 1 billion queries, having 15 characters on average per query <sup id="fnref:12"><a href="#fn:12" rel="footnote">2</a></sup> and 2 bytes per character (we will only support the english locale), that reflects in to about 30GB of storage to host these queries.</p>
+<p>If we choose to index these 1 billion queries, having 15 characters on average per query<sup id="fnref:12"><a href="#fn:12" rel="footnote">2</a></sup> and 2 bytes per character (we will only support the english locale), that reflects in to about 30GB of storage to host these queries.</p>
 
 <h2 id="functional-requirements">Functional Requirements</h2>
 
