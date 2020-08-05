@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.com/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2020-08-05T10:51:34+01:00</updated>
+  <updated>2020-08-05T11:25:21+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -287,7 +287,7 @@
 
 <h1 id="source-code">Source Code</h1>
 
-<p>You can get full source code at <a href="https://github.com/lopespm/autocomplete">https://github.com/lopespm/autocomplete</a>. I would be happy to know your thoughts about this implementation and design.</p>
+<p>You can get the full source code at <a href="https://github.com/lopespm/autocomplete">https://github.com/lopespm/autocomplete</a>. I would be happy to know your thoughts about this implementation and design.</p>
 
 <p><br /></p>
 <hr />
