@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: system design | Byte Tank]]></title>
   <link href="http://lopespm.github.com/blog/tags/system-design/atom.xml" rel="self"/>
   <link href="http://lopespm.github.com/"/>
-  <updated>2020-08-03T11:35:37+01:00</updated>
+  <updated>2020-08-05T10:51:34+01:00</updated>
   <id>http://lopespm.github.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -36,9 +36,9 @@
 
 <h1 id="requirements">Requirements</h1>
 
-<p>The design has to accommodate a Google-like scale of about 5 billion daily searches, which translates in to about 58 thousand queries per second. We can expect 20% of these searches to be unique, this is, 1 billion queries per day.</p>
+<p>The design has to accommodate a Google-like scale of about 5 billion daily searches, which translates to about 58 thousand queries per second. We can expect 20% of these searches to be unique, this is, 1 billion queries per day.</p>
 
-<p>If we choose to index these 1 billion queries, having 15 characters on average per query<sup id="fnref:12"><a href="#fn:12" rel="footnote">2</a></sup> and 2 bytes per character (we will only support the english locale), that reflects in to about 30GB of storage to host these queries.</p>
+<p>If we choose to index 1 billion queries, with 15 characters on average per query<sup id="fnref:12"><a href="#fn:12" rel="footnote">2</a></sup> and 2 bytes per character (we will only support the english locale), then we will need about 30GB of storage to host these queries.</p>
 
 <h2 id="functional-requirements">Functional Requirements</h2>
 
