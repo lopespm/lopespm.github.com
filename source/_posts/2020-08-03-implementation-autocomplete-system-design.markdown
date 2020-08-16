@@ -15,9 +15,11 @@ This article will go through my implementation/design of a large scale autocompl
 This design was implemented using Docker Compose[^10], and you can find the source code here: [https://github.com/lopespm/autocomplete](https://github.com/lopespm/autocomplete)
 
 
+
 <div style="margin-bottom: 20px">
-{% imgopt /files/autocomplete/pintro_image_705 %} 
+    <div class="youtube-player" data-id="UFr5Mb7YXRg"/>
 </div>
+<p class="media-caption media-caption-one">YouTube video overview of this implementation</p>
 
 
 
