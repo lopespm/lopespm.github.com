@@ -23,7 +23,7 @@ This article will dive into the system behind the generation of [Hacker News Dai
 
 # Motivation
 
-Hacker News is my go-to source for relevant, interesting and constructive discussions on a wide range of topics. I usually consume it via [Daemonology’s Hacker News Daily](https://www.daemonology.net/hn-daily/), to catch up on most active topics in the community.
+Hacker News is my go-to source for relevant, interesting and constructive discussions on a wide range of topics. I usually consume it via [Daemonology’s Hacker News Daily](https://www.daemonology.net/hn-daily/), to catch up on the most active topics in the community.
 
 [Daemonology’s Hacker News Daily](https://www.daemonology.net/hn-daily/) presents the title, story link, Hacker News discussion link, and is optimized for desktop. I usually consult it on mobile, and when I am several days behind, I sweep through the archives and open several story/discussion links in separate mobile tabs, in order to triage the stories with a quick glance at their web page and their discussion's top comments.
 
