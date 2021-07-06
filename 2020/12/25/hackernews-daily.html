@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Survival Ball on OUYA - Byte Tank</title>
+  <title>Hacker News Daily - Byte Tank</title>
   <meta name="author" content="Pedro Lopes">
 
   
-  <meta name="description" content="The release of a Unity game on OUYA">
+  <meta name="description" content="Lightweight daily best Hacker News stories, with screenshots and top comments. No JavaScript used. Deployed via GitHub Actions">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html">
+  <link rel="canonical" href="http://lopespm.github.io/2020/12/25/hackernews-daily.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -33,21 +33,22 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 <link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
-  <meta property="og:title" content="Survival Ball on OUYA - Byte Tank" />
-<meta property="og:description" content="The release of a Unity game on OUYA" />
-<meta property="og:url" content="http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html" />
-<meta property="og:image" content="" />
+  <meta property="og:title" content="Hacker News Daily - Byte Tank" />
+<meta property="og:description" content="Lightweight daily best Hacker News stories, with screenshots and top comments. No JavaScript used. Deployed via GitHub Actions" />
+<meta property="og:url" content="http://lopespm.github.io/2020/12/25/hackernews-daily.html" />
+<meta property="og:image" content="http://lopespm.github.io/files/hackernews_daily/screenshots_cropped2.png" />
 <meta property="og:site_name" content="Byte Tank" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
 
-<meta name="twitter:title" content="Survival Ball on OUYA - Byte Tank">
-<meta name="twitter:description" content="The release of a Unity game on OUYA">
+<meta name="twitter:title" content="Hacker News Daily - Byte Tank">
+<meta name="twitter:description" content="Lightweight daily best Hacker News stories, with screenshots and top comments. No JavaScript used. Deployed via GitHub Actions">
 
 <meta name="twitter:creator" content="@lopes_pm">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://lopespm.github.io">
+<meta name="twitter:image" content="http://lopespm.github.io/files/hackernews_daily/screenshots_cropped2.png">
+
 
   
   <script>
@@ -225,7 +226,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Survival Ball on OUYA</h1>
+      <h1 class="entry-title">Hacker News Daily</h1>
     
     
       <p class="meta">
@@ -241,30 +242,101 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2013-09-08T00:00:00+01:00" pubdate data-updated="true">Sep 8<span>th</span>, 2013</time>
+<time datetime="2020-12-25T00:00:00+00:00" pubdate data-updated="true">Dec 25<span>th</span>, 2020</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Survival Ball in now available on OUYA, and its publishing process was fairly straightforward. From the day of submission (2nd of September) to its approval (5th of September), it took a mere 3 days, counting that a re-submission had to be made in-between.</p>
+<div class="entry-content"><p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
 
-<p>Survival Ball was already available on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Google Play</a>, <a href="http://www.amazon.com/RockByte-Software-Survival-Ball/dp/B00ARVZ7F0/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1378394674&amp;sr=1-1">Amazon </a>and <a href="http://www.kongregate.com/games/rockbyte/survival-ball">Kongregate</a>, but OUYA just felt like the perfect platform for the game. With it, you could just grab the OUYA controller and/or a spare XBox/PS3 controller, and just have a quick match. I really loved the concept, and re-iterated on the previous version of the game to give it more controller friendly menus, better graphics, refined textures, and an overall revamp.</p>
+<center>
+          <picture>
+             <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp" />
+             <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png" />
+             <img src="/files/hackernews_daily/screenshots_cropped2_705.png" />
+           </picture>
+         </center>
 
 <!--more-->
 
-<p>After finishing up the port to OUYA, on the 2nd of September, I’ve made the first submission. I’ll just point out that upon this moment, it seemed to be stuck with a red status message which read “<em>Still verifying apk…</em>”. To resolve this, I edited the submission, re-submitted the APK, and waited a few seconds. The game was then submitted for approval.</p>
-
-<p>On the 4th of September, a re-submission was asked by the OUYA review team (which were very friendly by the way), since some elements fell of the safe-frame, which is safe-guard for gamers who have screens that perform <a href="https://devs.ouya.tv/developers/docs/content-review-guidelines">too much overscan</a>.</p>
-
-<p>The game was re-submitted on the same day, and was approved on the 5th of September. From this point on, one can release the game whenever it seems more appropriate. The game was released on the same day.</p>
-
-<p>I’ve came to learn during this process, after publishing the game, it first goes to the “Sandbox” section. Only after a major acceptance from the game community, can the game be promoted to the primary categories. So, if you would like to take a quick peek at the game, you can find it at the “Sandbox” section.</p>
-
-<center><iframe width="560" height="315" src="//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
-
 <p><br /></p>
+
+<h1 id="motivation">Motivation</h1>
+
+<p>Hacker News is my go-to source for relevant, interesting and constructive discussions on a wide range of topics. I usually consume it via <a href="https://www.daemonology.net/hn-daily/">Daemonology’s Hacker News Daily</a>, to catch up on the most active topics in the community.</p>
+
+<p><a href="https://www.daemonology.net/hn-daily/">Daemonology’s Hacker News Daily</a> presents the title, story link, Hacker News discussion link, and is optimized for desktop. I usually consult it on mobile, and when I am several days behind, I sweep through the archives and open several story/discussion links in separate mobile tabs, in order to triage the stories with a quick glance at their web page and their discussion’s top comments.</p>
+
+<p>This project aims to ease that process, by generating a set of web pages presenting the best daily Hacker News for mobile or desktop, with screenshots and top comments for each story, while aiming to have a low footprint to the end user.</p>
+
+<h1 id="architecture">Architecture</h1>
+
+<figure class="image"><center><a href="/files/hackernews_daily/hn_daily_diagram.png"><img src="/files/hackernews_daily/hn_daily_diagram.png" /></a></center><figcaption class="media-caption"> Information flow diagram between the different components of the system </figcaption></figure>
+
+<p>The basilar idea is to recurrently get the <a href="https://news.ycombinator.com/best">best Hacker News</a> stories via its <a href="https://github.com/HackerNews/API">API</a>; take screenshots of the web pages that these stories link to; and have this workflow executed via <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
+
+<p>In specific, these are the steps taken to generate the final web pages (illustrated by the above diagram):</p>
+
+<p><strong>1.</strong> Every day, a new <a href="https://github.com/lopespm/hackernews_daily/actions">Github Workflow</a> is spawned, kickstarting the entire process.</p>
+
+<p><strong>2.</strong> Update History</p>
+
+<ul>
+  <li>The first step is to get the past days best stories from the last successful run, and add the current best stories by
+ reaching out to the Hacker News API to fetch the current list of best stories, removing the ones that were already featured, and adding the top ones to the current history
+    <ul>
+      <li>To persist the past best stories history, an <code>days_history.dat</code> artifact is created in every run, which is a simple <a href="https://docs.python.org/3/library/pickle.html">Python Pickle</a> containing the story ids from the past days. These days are stored in form of a deque, in order to pop the older days as the history grows larger</li>
+      <li>The final result of this step is a new <code>days_history.dat</code>, which will be used in the next step below, and will also serve as a base for the next workflow</li>
+      <li>If a viable <code>days_history.dat</code> artifact cannot not be found in the previous successful runs, it is rebuilt by parsing the <a href="https://www.daemonology.net/hn-daily/">Daemonology’s Hacker News Daily</a> web page</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>3.</strong> Create Day/Story Models</p>
+
+<ul>
+  <li>From the story ids provided by the previously built <code>days_history.dat</code>, a list of hydrated days with their respective stories are built. These models will posteriorly provide all the information needed to create the final web page views
+    <ul>
+      <li>Each story is composed of an ID, title, story link, Hacker News discussion link, and its top comments. This information is obtained via the Hacker News API (example <a href="https://hacker-news.firebaseio.com/v0/item/25518730.json?print=pretty">call</a>)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>4.</strong> Create the <code>generated</code> folder. This is where the generated web pages and screenshots will be placed, in order to be later deployed to GitHub pages</p>
+
+<p><strong>5.</strong> Gather Screenshots</p>
+
+<ul>
+  <li>Using <a href="https://pypi.org/project/pyppeteer/">pyppeteer</a>, an headless browser is created to navigate through all the story links
+    <ul>
+      <li>A screenshot is taken for each of these pages (after attempting to dismiss a possible “Allow Cookies” prompt), and stored as PNGs in the <code>generated</code> folder</li>
+      <li>Each of these screenshots are re-encoded in <a href="https://en.wikipedia.org/wiki/WebP">WebP</a>, which allows for a smaller image footprint in browser’s that support it</li>
+    </ul>
+  </li>
+  <li>If there is an unexpected error while processing the screenshots, it will not halt the overall workflow, since the final web pages can still function without screenshot images</li>
+</ul>
+
+<p><strong>6</strong>. Generate Web Pages</p>
+
+<ul>
+  <li><a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a>, a templating engine for Python, is used to define and generate each of the final web pages. Four web pages are generated from a <a href="https://github.com/lopespm/hackernews_daily/blob/main/templates/page.html">single template</a>. These four variants are permutations of either presenting all past 10 days or not, and either showing images or not:
+    <ul>
+      <li>Latest day, with images</li>
+      <li>Latest day, without images</li>
+      <li>Past 10 days, with images</li>
+      <li>Past 10 days, without images</li>
+    </ul>
+  </li>
+  <li>It was chosen to keep these in separate static web pages, in order to keep them simple, static, and without additional dynamic logic</li>
+</ul>
+
+<p><strong>7.</strong> The <code>generated</code> folder is deployed to the <code>gh-pages</code> branch, which is deployed as a GitHub page, making these generated contents <a href="https://lopespm.github.io/hackernews_daily">publicly accessible</a></p>
+
+<h1 id="source-code">Source Code</h1>
+
+<p>The full source code is accessible at <a href="https://github.com/lopespm/hackernews_daily">https://github.com/lopespm/hackernews_daily</a> and the generated website at <a href="https://lopespm.github.io/hackernews_daily">https://lopespm.github.io/hackernews_daily</a>, feel free to improve it or to leave some feedback.</p>
 </div>
 
 
@@ -287,13 +359,13 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2013-09-08T00:00:00+01:00" pubdate data-updated="true">Sep 8<span>th</span>, 2013</time>
+<time datetime="2020-12-25T00:00:00+00:00" pubdate data-updated="true">Dec 25<span>th</span>, 2020</time>
       
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/tags/games/'>games</a>
+    <a class='category' href='/blog/tags/aggregators/'>aggregators</a>
   
 </span>
 
@@ -302,10 +374,8 @@ MathJax.Hub.Config({
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/games/2013/01/27/nordic-game-jams-winners.html" title="Previous Post: Nordic Game Jam’s winners">&laquo; Nordic Game Jam’s winners</a>
+        <a class="basic-alignment left" href="/2020/08/03/implementation-autocomplete-system-design.html" title="Previous Post: Implementation: Autocomplete System Design for Large Scale">&laquo; Implementation: Autocomplete System Design for Large Scale</a>
       
-      
-        <a class="basic-alignment right" href="/workflow/2015/01/27/customizing-terminal.html" title="Next Post: Quickly Customize OSX Terminal Style and Functionality">Quickly Customize OSX Terminal Style and Functionality &raquo;</a>
       
     </p>
   </footer>
@@ -400,8 +470,8 @@ MathJax.Hub.Config({
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html';
-        var disqus_url = 'http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html';
+        var disqus_identifier = 'http://lopespm.github.io/2020/12/25/hackernews-daily.html';
+        var disqus_url = 'http://lopespm.github.io/2020/12/25/hackernews-daily.html';
         var disqus_script = 'embed.js';
       
     (function () {

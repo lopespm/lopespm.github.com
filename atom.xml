@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
-  <link href="http://lopespm.github.com/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.com/"/>
-  <updated>2020-08-16T17:55:45+01:00</updated>
-  <id>http://lopespm.github.com/</id>
+  <link href="http://lopespm.github.io/atom.xml" rel="self"/>
+  <link href="http://lopespm.github.io/"/>
+  <updated>2021-07-06T21:32:14+01:00</updated>
+  <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -14,10 +14,106 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Hacker News Daily]]></title>
+    <link href="http://lopespm.github.io/2020/12/25/hackernews-daily.html"/>
+    <updated>2020-12-25T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/2020/12/25/hackernews-daily</id>
+    <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
+
+<center>
+          <picture>
+             <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp" />
+             <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png" />
+             <img src="http://lopespm.github.io/files/hackernews_daily/screenshots_cropped2_705.png" />
+           </picture>
+         </center>
+
+<!--more-->
+
+<p><br /></p>
+
+<h1 id="motivation">Motivation</h1>
+
+<p>Hacker News is my go-to source for relevant, interesting and constructive discussions on a wide range of topics. I usually consume it via <a href="https://www.daemonology.net/hn-daily/">Daemonology’s Hacker News Daily</a>, to catch up on the most active topics in the community.</p>
+
+<p><a href="https://www.daemonology.net/hn-daily/">Daemonology’s Hacker News Daily</a> presents the title, story link, Hacker News discussion link, and is optimized for desktop. I usually consult it on mobile, and when I am several days behind, I sweep through the archives and open several story/discussion links in separate mobile tabs, in order to triage the stories with a quick glance at their web page and their discussion’s top comments.</p>
+
+<p>This project aims to ease that process, by generating a set of web pages presenting the best daily Hacker News for mobile or desktop, with screenshots and top comments for each story, while aiming to have a low footprint to the end user.</p>
+
+<h1 id="architecture">Architecture</h1>
+
+<figure class="image"><center><a href="http://lopespm.github.io/files/hackernews_daily/hn_daily_diagram.png"><img src="http://lopespm.github.io/files/hackernews_daily/hn_daily_diagram.png" /></a></center><figcaption class="media-caption"> Information flow diagram between the different components of the system </figcaption></figure>
+
+<p>The basilar idea is to recurrently get the <a href="https://news.ycombinator.com/best">best Hacker News</a> stories via its <a href="https://github.com/HackerNews/API">API</a>; take screenshots of the web pages that these stories link to; and have this workflow executed via <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
+
+<p>In specific, these are the steps taken to generate the final web pages (illustrated by the above diagram):</p>
+
+<p><strong>1.</strong> Every day, a new <a href="https://github.com/lopespm/hackernews_daily/actions">Github Workflow</a> is spawned, kickstarting the entire process.</p>
+
+<p><strong>2.</strong> Update History</p>
+
+<ul>
+  <li>The first step is to get the past days best stories from the last successful run, and add the current best stories by
+ reaching out to the Hacker News API to fetch the current list of best stories, removing the ones that were already featured, and adding the top ones to the current history
+    <ul>
+      <li>To persist the past best stories history, an <code>days_history.dat</code> artifact is created in every run, which is a simple <a href="https://docs.python.org/3/library/pickle.html">Python Pickle</a> containing the story ids from the past days. These days are stored in form of a deque, in order to pop the older days as the history grows larger</li>
+      <li>The final result of this step is a new <code>days_history.dat</code>, which will be used in the next step below, and will also serve as a base for the next workflow</li>
+      <li>If a viable <code>days_history.dat</code> artifact cannot not be found in the previous successful runs, it is rebuilt by parsing the <a href="https://www.daemonology.net/hn-daily/">Daemonology’s Hacker News Daily</a> web page</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>3.</strong> Create Day/Story Models</p>
+
+<ul>
+  <li>From the story ids provided by the previously built <code>days_history.dat</code>, a list of hydrated days with their respective stories are built. These models will posteriorly provide all the information needed to create the final web page views
+    <ul>
+      <li>Each story is composed of an ID, title, story link, Hacker News discussion link, and its top comments. This information is obtained via the Hacker News API (example <a href="https://hacker-news.firebaseio.com/v0/item/25518730.json?print=pretty">call</a>)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>4.</strong> Create the <code>generated</code> folder. This is where the generated web pages and screenshots will be placed, in order to be later deployed to GitHub pages</p>
+
+<p><strong>5.</strong> Gather Screenshots</p>
+
+<ul>
+  <li>Using <a href="https://pypi.org/project/pyppeteer/">pyppeteer</a>, an headless browser is created to navigate through all the story links
+    <ul>
+      <li>A screenshot is taken for each of these pages (after attempting to dismiss a possible “Allow Cookies” prompt), and stored as PNGs in the <code>generated</code> folder</li>
+      <li>Each of these screenshots are re-encoded in <a href="https://en.wikipedia.org/wiki/WebP">WebP</a>, which allows for a smaller image footprint in browser’s that support it</li>
+    </ul>
+  </li>
+  <li>If there is an unexpected error while processing the screenshots, it will not halt the overall workflow, since the final web pages can still function without screenshot images</li>
+</ul>
+
+<p><strong>6</strong>. Generate Web Pages</p>
+
+<ul>
+  <li><a href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja</a>, a templating engine for Python, is used to define and generate each of the final web pages. Four web pages are generated from a <a href="https://github.com/lopespm/hackernews_daily/blob/main/templates/page.html">single template</a>. These four variants are permutations of either presenting all past 10 days or not, and either showing images or not:
+    <ul>
+      <li>Latest day, with images</li>
+      <li>Latest day, without images</li>
+      <li>Past 10 days, with images</li>
+      <li>Past 10 days, without images</li>
+    </ul>
+  </li>
+  <li>It was chosen to keep these in separate static web pages, in order to keep them simple, static, and without additional dynamic logic</li>
+</ul>
+
+<p><strong>7.</strong> The <code>generated</code> folder is deployed to the <code>gh-pages</code> branch, which is deployed as a GitHub page, making these generated contents <a href="https://lopespm.github.io/hackernews_daily">publicly accessible</a></p>
+
+<h1 id="source-code">Source Code</h1>
+
+<p>The full source code is accessible at <a href="https://github.com/lopespm/hackernews_daily">https://github.com/lopespm/hackernews_daily</a> and the generated website at <a href="https://lopespm.github.io/hackernews_daily">https://lopespm.github.io/hackernews_daily</a>, feel free to improve it or to leave some feedback.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Implementation: Autocomplete System Design for Large Scale]]></title>
-    <link href="http://lopespm.github.com/2020/08/03/implementation-autocomplete-system-design.html"/>
+    <link href="http://lopespm.github.io/2020/08/03/implementation-autocomplete-system-design.html"/>
     <updated>2020-08-03T00:00:00+01:00</updated>
-    <id>http://lopespm.github.com/2020/08/03/implementation-autocomplete-system-design</id>
+    <id>http://lopespm.github.io/2020/08/03/implementation-autocomplete-system-design</id>
     <content type="html"><![CDATA[<p>This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one gets when typing a Google search.</p>
 
 <p>This design was implemented using Docker Compose<sup id="fnref:10"><a href="#fn:10" rel="footnote">1</a></sup>, and you can find the source code here: <a href="https://github.com/lopespm/autocomplete">https://github.com/lopespm/autocomplete</a></p>
@@ -67,7 +163,7 @@
           <picture>
              <source type="image/webp" srcset="/files/autocomplete/phigh_level_design.webp" />
              <source type="image/png" srcset="/files/autocomplete/phigh_level_design.png" />
-             <img src="http://lopespm.github.com/files/autocomplete/phigh_level_design.png" />
+             <img src="http://lopespm.github.io/files/autocomplete/phigh_level_design.png" />
            </picture>
          </center>
 </div>
@@ -86,7 +182,7 @@
           <picture>
              <source type="image/webp" srcset="/files/autocomplete/psystem_design_diagram.webp" />
              <source type="image/png" srcset="/files/autocomplete/psystem_design_diagram.png" />
-             <img src="http://lopespm.github.com/files/autocomplete/psystem_design_diagram.png" />
+             <img src="http://lopespm.github.io/files/autocomplete/psystem_design_diagram.png" />
            </picture>
          </center>
 </div>
@@ -276,7 +372,7 @@
           <picture>
              <source type="image/webp" srcset="/files/autocomplete/pclient_web_705.webp" />
              <source type="image/png" srcset="/files/autocomplete/pclient_web_705.png" />
-             <img src="http://lopespm.github.com/files/autocomplete/pclient_web_705.png" />
+             <img src="http://lopespm.github.io/files/autocomplete/pclient_web_705.png" />
            </picture>
          </center>
 
@@ -334,9 +430,9 @@
   
   <entry>
     <title type="html"><![CDATA[Survival Ball: Making the Game]]></title>
-    <link href="http://lopespm.github.com/2019/02/06/survival-ball-making-the-game.html"/>
+    <link href="http://lopespm.github.io/2019/02/06/survival-ball-making-the-game.html"/>
     <updated>2019-02-06T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/2019/02/06/survival-ball-making-the-game</id>
+    <id>http://lopespm.github.io/2019/02/06/survival-ball-making-the-game</id>
     <content type="html"><![CDATA[<center>
 <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
    <div class="youtube-player video-frame-two" data-id="VO6P3h9RRcg"></div></div>
@@ -475,7 +571,7 @@
 
 <p>Lara Croft GO is a beautiful game. The charming colors and elegant (yet simple) style made an impression on me. While building up the game’s aesthetics, I consulted several screenshots of Lara Croft GO and attempted to transpose its most pleasant design elements into Survival Ball.</p>
 
-<p><img class="center" src="http://lopespm.github.com/files/sb_making_game/lara_croft_go_0.jpg" /></p>
+<p><img class="center" src="http://lopespm.github.io/files/sb_making_game/lara_croft_go_0.jpg" /></p>
 
 <h2 id="codebase">Codebase</h2>
 
@@ -789,7 +885,7 @@
 
 <p>Music and sound effects were built using GarageBand. Many freely available sound libraries such as the <a href="https://sonniss.com/gameaudiogdc2017/">Sonniss GameAudioGDC Bundles</a> were used to mash up different samples into new sound effects.  </p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/sb_making_game/main_screen_main_theme2.png"><img src="http://lopespm.github.com/files/sb_making_game/main_screen_main_theme2.png" /></a></center><figcaption class="media-caption"> GarageBand project for the main theme </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/sb_making_game/main_screen_main_theme2.png"><img src="http://lopespm.github.io/files/sb_making_game/main_screen_main_theme2.png" /></a></center><figcaption class="media-caption"> GarageBand project for the main theme </figcaption></figure>
 
 <p>Audio aimed to be clean and coherent, thus a small subset of samples were used from the immense libraries available and reused whenever possible, trying to settle with a mostly electronic style for music and to use instruments or natural audio effects for SFX.</p>
 
@@ -803,7 +899,7 @@
 
 <p>Another interesting tidbit was to remove the extremely low and high frequencies in the final mix. The effect is threefold: audio fatigue is reduced when editing; makes the overall composition seem cleaner to the listener; leaves more headroom in the audible frequency range, improving the composition’s focus and clarity.  </p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/sb_making_game/eq_cutoff.png"><img src="http://lopespm.github.com/files/sb_making_game/eq_cutoff.png" /></a></center><figcaption class="media-caption"> Extremely low and high frequencies cutoff in the master bus&#8217; EQ </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/sb_making_game/eq_cutoff.png"><img src="http://lopespm.github.io/files/sb_making_game/eq_cutoff.png" /></a></center><figcaption class="media-caption"> Extremely low and high frequencies cutoff in the master bus&#8217; EQ </figcaption></figure>
 
 <h3 id="organization">Organization</h3>
 
@@ -859,7 +955,7 @@
 
 <p>The event surpassed all my expectations. It was the first time I saw, in person, swathes of anonymous people playing Survival Ball. It was pleasantly surprising to recurrently see many groups of gamers trying out the game, playing for hours, and even returning back to the booth at a later time. Not much sleep was had during those four days, but it was rewarding to witness such moments.</p>
 
-<center><a href="https://twitter.com/survivalball/status/1064556805630697477"><img align="center" src="http://lopespm.github.com/files/sb_making_game/composite-3-players-photos_705.png" alt="" /></a></center>
+<center><a href="https://twitter.com/survivalball/status/1064556805630697477"><img align="center" src="http://lopespm.github.io/files/sb_making_game/composite-3-players-photos_705.png" alt="" /></a></center>
 <p class="media-caption media-caption-one">Some of the players at Lisboa Games Week. More photos and videos <a href="https://twitter.com/survivalball/status/1064556805630697477">here</a></p>
 
 <p>The showcase was also a great opportunity to connect with other developers and get to know their stories and games. The overall experience was incredible and I am immensly thankful to the organizers for putting it all together 🙏  </p>
@@ -927,14 +1023,14 @@
   
   <entry>
     <title type="html"><![CDATA[Unity: Dynamic Multi Target Camera]]></title>
-    <link href="http://lopespm.github.com/libraries/games/2018/12/27/camera-multi-target.html"/>
+    <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
     <updated>2018-12-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/libraries/games/2018/12/27/camera-multi-target</id>
+    <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
     <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;">
 	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
-		<source src="http://lopespm.github.com/files/camera_multi_target/demo.webm" type="video/webm" />
-		<source src="http://lopespm.github.com/files/camera_multi_target/demo.mp4" type="video/mp4" />
-		<!--[if lt IE 9]><img src="http://lopespm.github.com/files/camera_multi_target/demo.gif"><![endif]-->
+		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
+		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />
+		<!--[if lt IE 9]><img src="http://lopespm.github.io/files/camera_multi_target/demo.gif"><![endif]-->
 	</video> 
 </a></p>
 
@@ -952,14 +1048,14 @@
 
 <p>The library’s sole responsibility is to calculate a camera position in which all targets lie inside its view. To achieve this, all target objects are projected onto a slice (plane) of the <a href="https://docs.unity3d.com/Manual/UnderstandingFrustum.html">camera’s view frustrum</a>. The projections located inside the view frustrum will be visible and the others will not. The idea is to trace back a new camera position from the outermost target projections, since this way we are guaranteed to include all projections inside the view.</p>
 
-<p><img class="center" src="http://lopespm.github.com/files/camera_multi_target/side_view_screen_basis_with_captions.png" /></p>
+<p><img class="center" src="http://lopespm.github.io/files/camera_multi_target/side_view_screen_basis_with_captions.png" /></p>
 
 <p>In order to make the bulk of the operations easier to compute, the process starts by multiplying the camera’s <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Using_quaternion_as_rotations">inverse rotation</a> with each of the targets positions, which will place them as they would if the camera’s axis would be aligned with the world’s axis (identity rotation). Once the camera position is calculated in this transformed space, the camera rotation is multiplied by this position, resulting in the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_1.png"><img src="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_1.png" /></a></center><figcaption class="media-caption"> Original targets positions </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_2_with_captions.png"><img src="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_2_with_captions.png" /></a></center><figcaption class="media-caption"> Multiply the camera&#8217;s inverse rotation with each of the targets positions </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_3.png"><img src="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_3.png" /></a></center><figcaption class="media-caption"> Calculate the camera position in this transformed space </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png"><img src="http://lopespm.github.com/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png" /></a></center><figcaption class="media-caption"> Multiply the camera&#8217;s rotation with the calculated position in the previous transformed space, which will reveal the final camera position in the original space</figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_1.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_1.png" /></a></center><figcaption class="media-caption"> Original targets positions </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_2_with_captions.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_2_with_captions.png" /></a></center><figcaption class="media-caption"> Multiply the camera&#8217;s inverse rotation with each of the targets positions </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_3.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_3.png" /></a></center><figcaption class="media-caption"> Calculate the camera position in this transformed space </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png" /></a></center><figcaption class="media-caption"> Multiply the camera&#8217;s rotation with the calculated position in the previous transformed space, which will reveal the final camera position in the original space</figcaption></figure>
 
 <h1 id="implementation">Implementation</h1>
 
@@ -971,9 +1067,9 @@
 
 <p>For each target, four projections are cast to a plane parallel to the view plane, sliced from the camera’s view frustrum. The line described from the target object to its respective projection is parallel to the camera’s view frustrum edges. Relative to the camera, two of these projections run horizontally, and the other two vertically.</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_intro/projections_1.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_intro/projections_1.png" /></a></center><figcaption class="media-caption"> Perspective view of the targets projections </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_intro/projections_2.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_intro/projections_2.png" /></a></center><figcaption class="media-caption"> Side view of the targets projections </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_intro/projections_3.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_intro/projections_3.png" /></a></center><figcaption class="media-caption"> Top view of the targets projections </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_1.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_1.png" /></a></center><figcaption class="media-caption"> Perspective view of the targets projections </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_2.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_2.png" /></a></center><figcaption class="media-caption"> Side view of the targets projections </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_3.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_3.png" /></a></center><figcaption class="media-caption"> Top view of the targets projections </figcaption></figure>
 
 <p>If any of the target’s projections are outside the camera’s view frustrum (or its sliced plane), then the target object will not be visible. If they are inside, the target object will be visible. This means that the four outermost projections from all targets will define the limit of where the view frustrum must be in order to have all objects in view or partially in view. Adding some padding to these outermost projections (i.e. moving these projections away from the center of the view frustrum plane slice), will result in additional padding between the target object and the camera’s view borders.</p>
 
@@ -981,7 +1077,7 @@
 
 <p>For all vertical projections positions, we are interested in finding their Y component. In the figure below, notice the right triangle with one vertex on the target object and another one on the projection. If we discover the length of the side running parallel the projection plane, that value can be added to the Y component of the target’s position, resulting in the Y component for the upper projection.</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png" /></a></center><figcaption class="media-caption"> Side view of the elements needed to calculate the vertical projections </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png" /></a></center><figcaption class="media-caption"> Side view of the elements needed to calculate the vertical projections </figcaption></figure>
 
 <p><script type="math/tex">\theta</script> is equal to half the camera’s vertical field of view angle <script type="math/tex">\theta'</script> (<script type="math/tex">\theta = \frac{\theta'}{2}</script>). The vertical field of view angle <script type="math/tex">\theta'</script> is provided by the camera’s <a href="https://docs.unity3d.com/ScriptReference/Camera-fieldOfView.html"><code>fieldOfView</code></a> in degrees, which needs to be converted to radians for our purposes (<script type="math/tex">\theta' = \theta'_{degrees} \times \frac{\pi}{180º}</script>).</p>
 
@@ -993,7 +1089,7 @@
 
 <h3 id="horizontal-projections">Horizontal projections</h3>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png" /></a></center><figcaption class="media-caption"> Top view of the elements needed to calculate the horizontal projections </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png" /></a></center><figcaption class="media-caption"> Top view of the elements needed to calculate the horizontal projections </figcaption></figure>
 
 <p>The horizontal projections follow a set of similar set of calculations, difference being that we are now interested in finding the X component (instead of Y), and the horizontal field of view angle is used instead of the vertical one. The horizontal field of view angle <script type="math/tex">\gamma'</script> and its half value <script type="math/tex">\gamma</script> (<script type="math/tex">\gamma = \gamma' \times 2</script>) need some further steps to be computed, which will be detailed in the following section.</p>
 
@@ -1001,7 +1097,7 @@
 
 <p>Consider the following figure, in which <script type="math/tex">\gamma</script> represents half the horizontal field of view angle, <script type="math/tex">\theta</script> represents half the vertical field of view angle, <script type="math/tex">w</script> the viewport width and <script type="math/tex">h</script> the viewport height:</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/horizontal_fov.png"><img src="http://lopespm.github.com/files/camera_multi_target/horizontal_fov.png" /></a></center><figcaption class="media-caption"> Elements for the calculation of the horizontal field of view angle </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/horizontal_fov.png"><img src="http://lopespm.github.io/files/camera_multi_target/horizontal_fov.png" /></a></center><figcaption class="media-caption"> Elements for the calculation of the horizontal field of view angle </figcaption></figure>
 
 <p>Using trigonometric ratios, these two equations can be devised:</p>
 
@@ -1041,7 +1137,7 @@ tan(\gamma) = \frac{w}{h} \times tan(\theta)
   <li><script type="math/tex">p_{vMin}</script> is the projection with the lowest Y component</li>
 </ul>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_outermost/projections_outermost.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_outermost/projections_outermost.png" /></a></center><figcaption class="media-caption"> All outermost projections </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_outermost/projections_outermost.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_outermost/projections_outermost.png" /></a></center><figcaption class="media-caption"> All outermost projections </figcaption></figure>
 
 <h2 id="calculating-the-camera-position">Calculating the camera position</h2>
 
@@ -1051,9 +1147,9 @@ tan(\gamma) = \frac{w}{h} \times tan(\theta)
 
 <p>The Z component of the camera position in the transformed space is calculated by backtracking a view frustrum from the the outermost projections to the camera Z component candidate. The furthest Z component from the projection plane will be the chosen, in order for the final camera position to contain all targets within its view.</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png" /></a></center><figcaption class="media-caption"> Elements for adjacent<sub>v</sub> calculation </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png" /></a></center><figcaption class="media-caption"> Elements for adjacent<sub>v</sub> calculation </figcaption></figure>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png"><img src="http://lopespm.github.com/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png" /></a></center><figcaption class="media-caption"> Elements for adjacent<sub>h</sub> calculation </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png" /></a></center><figcaption class="media-caption"> Elements for adjacent<sub>h</sub> calculation </figcaption></figure>
 
 <p>Once again, trigonometric ratios will be used to calculate these Z position candidates.</p>
 
@@ -1083,14 +1179,14 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   
   <entry>
     <title type="html"><![CDATA[ArXiv Papers: React Native Android App]]></title>
-    <link href="http://lopespm.github.com/apps/2018/03/12/arxiv-papers.html"/>
+    <link href="http://lopespm.github.io/apps/2018/03/12/arxiv-papers.html"/>
     <updated>2018-03-12T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/apps/2018/03/12/arxiv-papers</id>
+    <id>http://lopespm.github.io/apps/2018/03/12/arxiv-papers</id>
     <content type="html"><![CDATA[<center>
           <picture>
              <source type="image/webp" srcset="/files/arxiv-papers/arxiv_layout_implementation.webp" />
              <source type="image/png" srcset="/files/arxiv-papers/arxiv_layout_implementation.png" />
-             <img src="http://lopespm.github.com/files/arxiv-papers/arxiv_layout_implementation.png" />
+             <img src="http://lopespm.github.io/files/arxiv-papers/arxiv_layout_implementation.png" />
            </picture>
          </center>
 
@@ -1116,7 +1212,7 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
 
 <h1 id="design">Design</h1>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/arxiv-papers/arxiv_layout_mockup.png"><img src="http://lopespm.github.com/files/arxiv-papers/arxiv_layout_mockup.png" /></a></center><figcaption class="media-caption"> Final Android smartphone app design, made in Sketch </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/arxiv-papers/arxiv_layout_mockup.png"><img src="http://lopespm.github.io/files/arxiv-papers/arxiv_layout_mockup.png" /></a></center><figcaption class="media-caption"> Final Android smartphone app design, made in Sketch </figcaption></figure>
 
 <p>After a few iterations, the above design seemed like a good compromise between functionality, breadth and ease of use. Most importantly, it catered to the app’s motif: search, download and save arXiv articles. </p>
 
@@ -1181,9 +1277,9 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   
   <entry>
     <title type="html"><![CDATA[React Native Offscreen Toolbar]]></title>
-    <link href="http://lopespm.github.com/libraries/2018/01/25/react-native-offscreen-toolbar.html"/>
+    <link href="http://lopespm.github.io/libraries/2018/01/25/react-native-offscreen-toolbar.html"/>
     <updated>2018-01-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/libraries/2018/01/25/react-native-offscreen-toolbar</id>
+    <id>http://lopespm.github.io/libraries/2018/01/25/react-native-offscreen-toolbar</id>
     <content type="html"><![CDATA[<p>In material design, there is a <a href="https://material.io/guidelines/patterns/scrolling-techniques.html#scrolling-techniques-behavior">common scrolling technique</a> in which the toolbar is smoothly tucked away while scrolling down and is made visible again when scrolling up. This behaviour is fairly straightforward to implement when developing a native android app, but for a react native app, the best solution I found was <a href="https://medium.com/appandflow/react-native-collapsible-navbar-e51a049b560a">Janic Duplessis’</a>.</p>
 
 <p>The <a href="https://www.npmjs.com/package/react-native-offscreen-toolbar">library</a> I am releasing today is an encapsulation of this behaviour and its implementation is heavily based on Janic Duplessis’ approach.</p>
@@ -1192,15 +1288,15 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   <div style="overflow: auto; margin-bottom: 16px">
     <div style="float: left;height: 10px; width:8%;"></div>
         <video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
-        <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm" />
-        <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4" />
-        <!--[if lt IE 9]><img src="http://lopespm.github.com/files/rn-offscreen-toolbar/simplelist_demo.gif"><![endif]-->
+        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm" />
+        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4" />
+        <!--[if lt IE 9]><img src="http://lopespm.github.io/files/rn-offscreen-toolbar/simplelist_demo.gif"><![endif]-->
     </video> 
     <div style="float: left;height: 10px; width:4%;"></div>
     <video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
-        <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/search_demo.webm" type="video/webm" />
-        <source src="http://lopespm.github.com/files/rn-offscreen-toolbar/search_demo.mp4" type="video/mp4" />
-        <!--[if lt IE 9]><img src="http://lopespm.github.com/files/rn-offscreen-toolbar/search_demo.gif"><![endif]-->
+        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/search_demo.webm" type="video/webm" />
+        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/search_demo.mp4" type="video/mp4" />
+        <!--[if lt IE 9]><img src="http://lopespm.github.io/files/rn-offscreen-toolbar/search_demo.gif"><![endif]-->
     </video> 
   </div>
   <figcaption class="media-caption">Library usage in both the <a href="https://github.com/lopespm/react-native-offscreen-toolbar/tree/master/example">example</a> bundled with the library and in the search screen of a to be released application</figcaption>
@@ -1268,9 +1364,9 @@ export default class YourComponent extends React.Component {
   
   <entry>
     <title type="html"><![CDATA[Deep Reinforcement Learning: Playing a Racing Game]]></title>
-    <link href="http://lopespm.github.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html"/>
+    <link href="http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html"/>
     <updated>2016-10-06T00:00:00+01:00</updated>
-    <id>http://lopespm.github.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game</id>
+    <id>http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game</id>
     <content type="html"><![CDATA[<center>
  <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
      <div class="youtube-player video-frame-two" data-id="spzYVhOgKBA"></div></div>
@@ -1278,7 +1374,7 @@ export default class YourComponent extends React.Component {
  </div>
   </center>
 
-<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="http://lopespm.github.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html#source-code">available on GitHub</a>.</p>
+<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html#source-code">available on GitHub</a>.</p>
 
 <!--more-->
 
@@ -1301,11 +1397,11 @@ export default class YourComponent extends React.Component {
 <p>Jacob Schrum has made available a terse and accessible <a href="https://www.youtube.com/playlist?list=PL4uSLeZ-ET3xLlkPVEGw9Bn4Z8Mbp-SQc">explanation</a> which takes around 45 minutes to watch and serves as a great starting point for the paragraphs below. 
 Let’s take the canonical reinforcement learning example presented by Jacob (grid world):</p>
 
-<p><img class="center" src="http://lopespm.github.com/files/dqn_outrun/gridworld.png" /></p>
+<p><img class="center" src="http://lopespm.github.io/files/dqn_outrun/gridworld.png" /></p>
 
 <p>To implement this algorithm, we need to build the Q-function (<a href="https://www.youtube.com/watch?v=XLkW_WGJoyQ">one of the forms</a> of the <a href="https://en.wikipedia.org/wiki/Bellman_equation">Bell-Equation</a>) by using the Q-value iteration update:</p>
 
-<p><img class="center" src="http://lopespm.github.com/files/dqn_outrun/q_value_iteration_update.svg" /></p>
+<p><img class="center" src="http://lopespm.github.io/files/dqn_outrun/q_value_iteration_update.svg" /></p>
 
 <p>In the above grid, there are 9 actionable states, 2 terminal states and 4 possible actions (left, right, up, down), resulting in 36 (9 actionable states x 4 possible actions) Q-values.</p>
 
@@ -1323,13 +1419,13 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Another approach (used in <a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">DeepMind’s</a> <a href="http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D">network</a>) would be to feed in the game’s screens and have the network output the Q-value for each possible action. This way, a single forward pass would output all the Q-values for a given state, translating into one forward pass per optimal future value estimate.</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/q_network_formulations.png"><img src="http://lopespm.github.com/files/dqn_outrun/q_network_formulations.png" /></a></center><figcaption class="media-caption"> Image courtesy of Tambet Matiisen’s <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning">Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/q_network_formulations.png"><img src="http://lopespm.github.io/files/dqn_outrun/q_network_formulations.png" /></a></center><figcaption class="media-caption"> Image courtesy of Tambet Matiisen’s <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning">Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. </figcaption></figure>
 
 <p>Q-learning and deep neural networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.</p>
 
 <h1 id="implementation">Implementation</h1>
 
-<center><a href="http://lopespm.github.com/files/dqn_outrun/overall_view_play.png"><img align="center" src="http://lopespm.github.com/files/dqn_outrun/overall_view_play.png" alt="" /></a></center>
+<center><a href="http://lopespm.github.io/files/dqn_outrun/overall_view_play.png"><img align="center" src="http://lopespm.github.io/files/dqn_outrun/overall_view_play.png" alt="" /></a></center>
 
 <p />
 
@@ -1349,7 +1445,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
   <li>ε-greedy policy to balance exploitation/exploration</li>
 </ul>
 
-<center><a href="http://lopespm.github.com/files/dqn_outrun/overall_view_train_merged.png"><img align="center" src="http://lopespm.github.com/files/dqn_outrun/overall_view_train_merged.png" alt="" /></a></center>
+<center><a href="http://lopespm.github.io/files/dqn_outrun/overall_view_train_merged.png"><img align="center" src="http://lopespm.github.io/files/dqn_outrun/overall_view_train_merged.png" alt="" /></a></center>
 
 <p />
 
@@ -1357,7 +1453,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>The reward function’s definition is crucial for good learning performance and determines the goal in a reinforcement learning problem. April Yu et al. have an interesting paper on <a href="http://cs231n.stanford.edu/reports2016/112_Report.pdf">simulated autonomous vehicle control</a> which details a DQN agent used to drive a game that strongly resembles Out Run (<a href="http://codeincomplete.com/games/racer/v4-final/">JavaScript Racer</a>). Based on their reward function experiments, I’ve built a <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L60">function</a> which rewards logarithmically based on speed and penalizes when the car is off-road, crashed or stopped. </p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/reward_function_plot.png"><img src="http://lopespm.github.com/files/dqn_outrun/reward_function_plot.png" /></a></center><figcaption class="media-caption"> Reward values for when the car is not crashed or off-road </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/reward_function_plot.png"><img src="http://lopespm.github.io/files/dqn_outrun/reward_function_plot.png" /></a></center><figcaption class="media-caption"> Reward values for when the car is not crashed or off-road </figcaption></figure>
 
 <h1 id="deployment">Deployment</h1>
 
@@ -1371,7 +1467,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>To accommodate this scenario, the deployment scripts and agent-trainer are designed to support train session resumes. To persist results and decrease boot up time between sessions, a long-lived EBS volume is attached to the live instance. The volume contains the training results, agent-trainer´s source code, cannonball’s source code, dockerfiles and their respective docker images. </p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/deployed-diagram.png"><img src="http://lopespm.github.com/files/dqn_outrun/deployed-diagram.png" /></a></center><figcaption class="media-caption"> Relationship between components when deploying agent-trainer to an AWS EC2 instance </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/deployed-diagram.png"><img src="http://lopespm.github.io/files/dqn_outrun/deployed-diagram.png" /></a></center><figcaption class="media-caption"> Relationship between components when deploying agent-trainer to an AWS EC2 instance </figcaption></figure>
 
 <h1 id="results">Results</h1>
 
@@ -1447,22 +1543,22 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Notice on the videos above how the timed mode trained session <code>201609111241_2700eps</code> reaches the first checkpoint about five seconds earlier than the unlimited time mode trained session <code>201609171218_175eps</code>, but proceeds to drive off-road two turns after. Its stability gets increasingly compromised as more episodes are trained, which can be observed by the rampant loss increase before 7300 episodes are reached (<code>201609111241_7300eps</code>):</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/201609111241_7300eps/metrics_in_train.png"><img src="http://lopespm.github.com/files/dqn_outrun/201609111241_7300eps/metrics_in_train.png" /></a></center><figcaption class="media-caption"> Training metrics for session 201609111241_7300eps </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/201609111241_7300eps/metrics_trained_play.png"><img src="http://lopespm.github.com/files/dqn_outrun/201609111241_7300eps/metrics_trained_play.png" /></a></center><figcaption class="media-caption"> Play evaluation metrics for session 201609111241_7300eps: using ε=0.0; evaluation made at the end of every 20 training episodes </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/metrics_in_train.png"><img src="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/metrics_in_train.png" /></a></center><figcaption class="media-caption"> Training metrics for session 201609171218_175eps </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/metrics_trained_play.png"><img src="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/metrics_trained_play.png" /></a></center><figcaption class="media-caption"> Play evaluation metrics 201609171218_175eps: using ε=0.0; evaluation made at the end of every training episode </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/201609111241_7300eps/metrics_in_train.png"><img src="http://lopespm.github.io/files/dqn_outrun/201609111241_7300eps/metrics_in_train.png" /></a></center><figcaption class="media-caption"> Training metrics for session 201609111241_7300eps </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/201609111241_7300eps/metrics_trained_play.png"><img src="http://lopespm.github.io/files/dqn_outrun/201609111241_7300eps/metrics_trained_play.png" /></a></center><figcaption class="media-caption"> Play evaluation metrics for session 201609111241_7300eps: using ε=0.0; evaluation made at the end of every 20 training episodes </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/metrics_in_train.png"><img src="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/metrics_in_train.png" /></a></center><figcaption class="media-caption"> Training metrics for session 201609171218_175eps </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/metrics_trained_play.png"><img src="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/metrics_trained_play.png" /></a></center><figcaption class="media-caption"> Play evaluation metrics 201609171218_175eps: using ε=0.0; evaluation made at the end of every training episode </figcaption></figure>
 
 <p>Both <code>201609111241_2700eps</code> and <code>201609111241_7300eps</code> timed trained sessions mostly drive off-road and stall after the first stage, whereas the unlimited time mode trained session <code>201609171218_175eps</code> can race through all the stages crashing <em>only</em> three times (as shown on the article’s first video) and is able to match the performance of a timed trained session when evaluated on the default easy timed mode. </p>
 
 <p>Below is the loss plot for <code>201609160922_54eps</code> and <code>201609171218_175eps</code>, both trained using the game’s unlimited time mode, difference being that <code>201609160922_54eps</code> keeps a fixed learning rate and <code>201609171218_175eps</code> decays it every 50100 steps:</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/loss_201609171218_201609160922.png"><img src="http://lopespm.github.com/files/dqn_outrun/loss_201609171218_201609160922.png" /></a></center><figcaption class="media-caption"> Loss comparison between sessions <font color="#9c27b0">■</font> 201609160922_54eps and <font color="#009688">■</font> 201609171218_175eps, as viewed on <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a> </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/loss_201609171218_201609160922.png"><img src="http://lopespm.github.io/files/dqn_outrun/loss_201609171218_201609160922.png" /></a></center><figcaption class="media-caption"> Loss comparison between sessions <font color="#9c27b0">■</font> 201609160922_54eps and <font color="#009688">■</font> 201609171218_175eps, as viewed on <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a> </figcaption></figure>
 
 <p>Other representative visualizations:</p>
 
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/t-SNE_timed_easy_mode.png"><img src="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/t-SNE_timed_easy_mode.png" /></a></center><figcaption class="media-caption"> t-SNE visualization, generated by letting the agent play one game on timed easy mode. Agent is using the network trained on session 201609171218_175eps </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/t-SNE_no_time_mode.png"><img src="http://lopespm.github.com/files/dqn_outrun/201609171218_175eps/t-SNE_no_time_mode.png" /></a></center><figcaption class="media-caption"> t-SNE visualization, generated by letting the agent play one game on unlimited time mode. Agent is using the network trained on session 201609171218_175eps </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.com/files/dqn_outrun/conv_net_filters.png"><img src="http://lopespm.github.com/files/dqn_outrun/conv_net_filters.png" /></a></center><figcaption class="media-caption"> Visualization of the first convolutional network layer’s filters. These can be viewed via <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a></figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/t-SNE_timed_easy_mode.png"><img src="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/t-SNE_timed_easy_mode.png" /></a></center><figcaption class="media-caption"> t-SNE visualization, generated by letting the agent play one game on timed easy mode. Agent is using the network trained on session 201609171218_175eps </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/t-SNE_no_time_mode.png"><img src="http://lopespm.github.io/files/dqn_outrun/201609171218_175eps/t-SNE_no_time_mode.png" /></a></center><figcaption class="media-caption"> t-SNE visualization, generated by letting the agent play one game on unlimited time mode. Agent is using the network trained on session 201609171218_175eps </figcaption></figure>
+<figure class="image"><center><a href="http://lopespm.github.io/files/dqn_outrun/conv_net_filters.png"><img src="http://lopespm.github.io/files/dqn_outrun/conv_net_filters.png" /></a></center><figcaption class="media-caption"> Visualization of the first convolutional network layer’s filters. These can be viewed via <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a></figcaption></figure>
 
 <p><br /></p>
 
@@ -1537,9 +1633,9 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
   
   <entry>
     <title type="html"><![CDATA[Compressed Deque in Python]]></title>
-    <link href="http://lopespm.github.com/libraries/2016/08/27/compressed-deque.html"/>
+    <link href="http://lopespm.github.io/libraries/2016/08/27/compressed-deque.html"/>
     <updated>2016-08-27T00:00:00+01:00</updated>
-    <id>http://lopespm.github.com/libraries/2016/08/27/compressed-deque</id>
+    <id>http://lopespm.github.io/libraries/2016/08/27/compressed-deque</id>
     <content type="html"><![CDATA[<p>This post aims to give some insights about a recently <a href="https://github.com/lopespm/compressed-deque">open-sourced</a> python deque which compresses its items for a decreased volatile and persistent memory footprint.</p>
 
 <!--more-->
@@ -1554,13 +1650,13 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Compressed Deque inherits from <a href="https://docs.python.org/2/library/collections.html#collections.deque">deque</a> and stores its items as zlib compressed pickles. The middle pickle layer only serves as a generic serialization method which can provide a serialized object string for zlib to compress. Although pickle can compress objects, its compression rate does not match zlib’s, even using <a href="https://docs.python.org/2/library/pickle.html#data-stream-format">higher protocols</a>.</p>
 
-<p><img src="http://lopespm.github.com/files/compressed_deque/value_layers.png" alt="image" /></p>
+<p><img src="http://lopespm.github.io/files/compressed_deque/value_layers.png" alt="image" /></p>
 
 <p><code>save_to_file()</code> and <code>load_from_file()</code> static methods are provided to persist the collection directly into disk in its compressed representation, without much overhead. </p>
 
 <p>The persisted file contains a sequence of header/compressed_value pairs: the header is a 4 byte integer description of the compressed value’s length and the compressed value is similiar to its in-memory representation.</p>
 
-<p><img src="http://lopespm.github.com/files/compressed_deque/persisted_values.png" alt="image" /></p>
+<p><img src="http://lopespm.github.io/files/compressed_deque/persisted_values.png" alt="image" /></p>
 
 <h2 id="how-to-use-it">How to Use it</h2>
 
@@ -1606,9 +1702,9 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
   
   <entry>
     <title type="html"><![CDATA[Attenuate GoPro Chest Mount Heartbeat - using GarageBand/iMovie]]></title>
-    <link href="http://lopespm.github.com/audio/2015/12/08/gopro-heartbeat.html"/>
+    <link href="http://lopespm.github.io/audio/2015/12/08/gopro-heartbeat.html"/>
     <updated>2015-12-08T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/audio/2015/12/08/gopro-heartbeat</id>
+    <id>http://lopespm.github.io/audio/2015/12/08/gopro-heartbeat</id>
     <content type="html"><![CDATA[<p>If you have a chest mount (chesty) for your GoPro, then you might have had the surprise of hearing your heartbeat on the recording, since it may lay fairly close to your heart, picking up its beat. This post will:</p>
 
 <ul>
@@ -1633,7 +1729,7 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
       </li>
       <li>Drag the exported movie into your GarageBand project
         <ul>
-          <li>Decompress <a href="http://lopespm.github.com/files/gopro_heartbeat/gopro_master_track.patch.zip">gopro_master_track.patch.zip</a> and copy <strong>gopro_master_track.patch</strong> to the “~/Music/Audio Music Apps/Patches/Output”</li>
+          <li>Decompress <a href="http://lopespm.github.io/files/gopro_heartbeat/gopro_master_track.patch.zip">gopro_master_track.patch.zip</a> and copy <strong>gopro_master_track.patch</strong> to the “~/Music/Audio Music Apps/Patches/Output”</li>
           <li>Go to your Master Track (if you do not see it, click “Track-&gt;Show MasterTrack”) and click “User Patches” in your Library tab (if you do not see it, click “View-&gt;Show Library”)</li>
           <li>You should now see inside the “User Patches” the patch file we just copied, select it</li>
           <li><em>Your audio should now have an attenuated heartbeat and a more audible and balanced sound</em></li>
@@ -1655,15 +1751,15 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
 
 <p>The whole concept is very simple really, the heartbeat is simply being attenuated on specific frequencies by a Channel EQ plugin included in the above Master Track patch. This is how it looks visually:</p>
 
-<p><img src="http://lopespm.github.com/files/gopro_heartbeat/heartbeat_channel_eq.png" alt="image" /></p>
+<p><img src="http://lopespm.github.io/files/gopro_heartbeat/heartbeat_channel_eq.png" alt="image" /></p>
 
 <p>This Channel EQ alone will turn this:</p>
 
-<audio controls=""><source src="http://lopespm.github.com/files/gopro_heartbeat/gopro_sample_with_heartbeat.mp3" /></audio>
+<audio controls=""><source src="http://lopespm.github.io/files/gopro_heartbeat/gopro_sample_with_heartbeat.mp3" /></audio>
 
 <p>into this:</p>
 
-<audio controls=""><source src="http://lopespm.github.com/files/gopro_heartbeat/gopro_sample_without_heartbeat.mp3" /></audio>
+<audio controls=""><source src="http://lopespm.github.io/files/gopro_heartbeat/gopro_sample_without_heartbeat.mp3" /></audio>
 
 <p>And that is it! The rest of the plugins included on the Master Track Patch are:</p>
 
@@ -1675,8 +1771,8 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
 <h2 id="support-files">Support Files:</h2>
 
 <ul>
-  <li><a href="http://lopespm.github.com/files/gopro_heartbeat/gopro_master_track.patch.zip">Master Track Patch</a> (which includes all the above plugins)</li>
-  <li><a href="http://lopespm.github.com/files/gopro_heartbeat/gopro_eq_heartbeat_attenuate.pst">Channel EQ preset</a> to attenuate the heartbeat sound. This can be used by opening a Channel EQ plugin in any of your tracks and clicking “More-&gt;Load..” inside it</li>
+  <li><a href="http://lopespm.github.io/files/gopro_heartbeat/gopro_master_track.patch.zip">Master Track Patch</a> (which includes all the above plugins)</li>
+  <li><a href="http://lopespm.github.io/files/gopro_heartbeat/gopro_eq_heartbeat_attenuate.pst">Channel EQ preset</a> to attenuate the heartbeat sound. This can be used by opening a Channel EQ plugin in any of your tracks and clicking “More-&gt;Load..” inside it</li>
   <li><a href="https://www.youtube.com/watch?v=sczmkokpEuY">Example video</a> in which these plugins were applied</li>
 </ul>
 
@@ -1686,14 +1782,14 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
   
   <entry>
     <title type="html"><![CDATA[Quickly Customize OSX Terminal Style and Functionality]]></title>
-    <link href="http://lopespm.github.com/workflow/2015/01/27/customizing-terminal.html"/>
+    <link href="http://lopespm.github.io/workflow/2015/01/27/customizing-terminal.html"/>
     <updated>2015-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/workflow/2015/01/27/customizing-terminal</id>
+    <id>http://lopespm.github.io/workflow/2015/01/27/customizing-terminal</id>
     <content type="html"><![CDATA[<center>
           <picture>
              <source type="image/webp" srcset="/files/terminal_custom/terminal_before_after.webp" />
              <source type="image/png" srcset="/files/terminal_custom/terminal_before_after.png" />
-             <img src="http://lopespm.github.com/files/terminal_custom/terminal_before_after.png" />
+             <img src="http://lopespm.github.io/files/terminal_custom/terminal_before_after.png" />
            </picture>
          </center>
 
@@ -1723,9 +1819,9 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
   
   <entry>
     <title type="html"><![CDATA[Survival Ball on OUYA]]></title>
-    <link href="http://lopespm.github.com/games/2013/09/08/survival-ball-ouya.html"/>
+    <link href="http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html"/>
     <updated>2013-09-08T00:00:00+01:00</updated>
-    <id>http://lopespm.github.com/games/2013/09/08/survival-ball-ouya</id>
+    <id>http://lopespm.github.io/games/2013/09/08/survival-ball-ouya</id>
     <content type="html"><![CDATA[<p>Survival Ball in now available on OUYA, and its publishing process was fairly straightforward. From the day of submission (2nd of September) to its approval (5th of September), it took a mere 3 days, counting that a re-submission had to be made in-between.</p>
 
 <p>Survival Ball was already available on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Google Play</a>, <a href="http://www.amazon.com/RockByte-Software-Survival-Ball/dp/B00ARVZ7F0/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1378394674&amp;sr=1-1">Amazon </a>and <a href="http://www.kongregate.com/games/rockbyte/survival-ball">Kongregate</a>, but OUYA just felt like the perfect platform for the game. With it, you could just grab the OUYA controller and/or a spare XBox/PS3 controller, and just have a quick match. I really loved the concept, and re-iterated on the previous version of the game to give it more controller friendly menus, better graphics, refined textures, and an overall revamp.</p>
@@ -1740,7 +1836,7 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
 
 <p>I’ve came to learn during this process, after publishing the game, it first goes to the “Sandbox” section. Only after a major acceptance from the game community, can the game be promoted to the primary categories. So, if you would like to take a quick peek at the game, you can find it at the “Sandbox” section.</p>
 
-<center><iframe width="560" height="315" src="http://lopespm.github.com//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
+<center><iframe width="560" height="315" src="http://lopespm.github.io//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
 
 <p><br /></p>
 ]]></content>
@@ -1748,9 +1844,9 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
   
   <entry>
     <title type="html"><![CDATA[Nordic Game Jam’s winners]]></title>
-    <link href="http://lopespm.github.com/games/2013/01/27/nordic-game-jams-winners.html"/>
+    <link href="http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners.html"/>
     <updated>2013-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.com/games/2013/01/27/nordic-game-jams-winners</id>
+    <id>http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners</id>
     <content type="html"><![CDATA[<p>This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: <a href="http://nordicgamejam.org/2013/01/21/winners-ngj13/">http://nordicgamejam.org/2013/01/21/winners-ngj13/</a></p>
 
 <p>My personal highlight goes to Stalagflight (<a href="https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html">https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html</a>), which is as simple as stupidly fun! Stalagflight can be played with the keyboard, but it is tricky. If you have a gamepad the experience is much better.</p>

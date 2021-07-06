@@ -1,69 +1,73 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://lopespm.github.com/games/2013/01/27/nordic-game-jams-winners.html</loc>
+        <loc>http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/games/2013/09/08/survival-ball-ouya.html</loc>
+        <loc>http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/workflow/2015/01/27/customizing-terminal.html</loc>
+        <loc>http://lopespm.github.io/workflow/2015/01/27/customizing-terminal.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/audio/2015/12/08/gopro-heartbeat.html</loc>
+        <loc>http://lopespm.github.io/audio/2015/12/08/gopro-heartbeat.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/libraries/2016/08/27/compressed-deque.html</loc>
+        <loc>http://lopespm.github.io/libraries/2016/08/27/compressed-deque.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
         <loc>
-            http://lopespm.github.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html
+            http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html
         </loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
         <loc>
-            http://lopespm.github.com/libraries/2018/01/25/react-native-offscreen-toolbar.html
+            http://lopespm.github.io/libraries/2018/01/25/react-native-offscreen-toolbar.html
         </loc>
         <lastmod>2020-01-13T19:14:43+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/apps/2018/03/12/arxiv-papers.html</loc>
+        <loc>http://lopespm.github.io/apps/2018/03/12/arxiv-papers.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/libraries/games/2018/12/27/camera-multi-target.html</loc>
+        <loc>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/2019/02/06/survival-ball-making-the-game.html</loc>
+        <loc>http://lopespm.github.io/2019/02/06/survival-ball-making-the-game.html</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
         <loc>
-            http://lopespm.github.com/2020/08/03/implementation-autocomplete-system-design.html
+            http://lopespm.github.io/2020/08/03/implementation-autocomplete-system-design.html
         </loc>
         <lastmod>2020-08-16T17:06:34+01:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/about/</loc>
+        <loc>http://lopespm.github.io/2020/12/25/hackernews-daily.html</loc>
+        <lastmod>2021-07-06T21:31:52+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://lopespm.github.io/about/</loc>
         <lastmod>2020-01-13T18:31:04+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/blog/archives/</loc>
-        <lastmod>2020-08-16T17:06:34+01:00</lastmod>
+        <loc>http://lopespm.github.io/blog/archives/</loc>
+        <lastmod>2021-07-06T21:31:52+01:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/</loc>
-        <lastmod>2020-08-16T17:06:34+01:00</lastmod>
+        <loc>http://lopespm.github.io/</loc>
+        <lastmod>2021-07-06T21:31:52+01:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.com/robots.txt</loc>
+        <loc>http://lopespm.github.io/robots.txt</loc>
         <lastmod>2020-01-13T18:31:05+00:00</lastmod>
     </url>
 </urlset>
