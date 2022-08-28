@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2022-03-23T00:12:47+00:00</updated>
+  <updated>2022-08-28T10:36:59+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -18,7 +18,12 @@
     <link href="http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead.html"/>
     <updated>2022-03-22T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead</id>
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<div style="margin-bottom: 20px">
+    <div class="youtube-player" data-id="r0nmKZBhcws"></div>
+</div>
+<p class="media-caption media-caption-one">YouTube video with a summary of this article</p>
+
+<blockquote>
   <p>Life is growth. You grow or you die.</p>
 
   <p><em>― Phil Knight, Shoe Dog</em></p>
