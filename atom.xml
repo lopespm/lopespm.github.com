@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2022-10-08T17:19:31+01:00</updated>
+  <updated>2022-10-08T19:41:18+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -788,7 +788,7 @@
 
 <p>This concept apparently worked well, but when play tested with a group of friends, it was pointed out as being too punishing. When the special black button was pressed, the level’s difficulty skyrocketed, making the already difficult task of reaching prompted pieces even harder. As a result, pressing the black button was faced as a death kneel, urging players to restart the level right after the black button was pressed. After a few rounds of these, collective despair would soon grow due to the overwhelming difficulty.</p>
 
-<p>Solution was to invert the black button’s function. Instead of decaying the adjacent pieces, it would revive them. This time around, the special black button was not avoided in fear, but in greed. It was a precious resource, to be used as a late as possible.  </p>
+<p>Solution was to invert the black button’s function. Instead of decaying the adjacent pieces, it would revive them. This time around, the special black button was not avoided in fear, but in greed. It was a precious resource, to be used as late as possible.  </p>
 
 <center>
  <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
