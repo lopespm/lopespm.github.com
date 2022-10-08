@@ -322,14 +322,14 @@ MathJax.Hub.Config({
 
 <h1 id="prototype">Prototype</h1>
 
-<p>About six years ago I started learning Unity in my spare time, going through several official and unofficial tutorials. One was a simple tutorial on how to create a wire chain through physics. After its completion, I added a simple platform and a sphere. When arrow keys were pressed the sphere was torqued, and on spacebar press a vertical force was added to sphere, which caused it to jump. I was at awe. Unity’s physics were accessible and felt natural out of the box. Not only that, but a rough working scene could be quickly setup by gluing some basic concepts.</p>
+<p>About six years ago I started learning Unity in my spare time, going through several official and unofficial tutorials. One was a simple tutorial on how to create a wire chain through physics. After its completion, I added a simple platform and a sphere. When arrow keys were pressed the sphere was torqued, and on spacebar press a vertical force was added to the sphere, which caused it to jump. I was in awe. Unity’s physics were accessible and felt natural out of the box. Not only that, but a rough working scene could be quickly set up by gluing some basic concepts.</p>
 
 <div>
     <div class="youtube-player" data-id="3goAGlKg92Q" data-thumbsize="1"></div>
 </div>
 <p class="media-caption media-caption-one">Wire chain and sphere physics</p>
 
-<p>An idea started to bubble up about around this simple project: staying as long as possible on top of a platform. Antagonists, materialized in the form of various hazards, were added in order to coerce (directly or indirectly) the player off the platform. Frequency and power of these hazards increased over time, raising the probability of reaching the level’s finishing state. From this starting point, more elements were added, such as interactable platform edge blocks, destroyable floor tiles, backdrops, user interface and basic sound effects.</p>
+<p>An idea started to bubble up around this simple project: staying as long as possible on top of a platform. Antagonists, materialized in the form of various hazards, were added in order to coerce (directly or indirectly) the player off the platform. Frequency and power of these hazards increased over time, raising the probability of reaching the level’s finishing state. From this starting point, more elements were added, such as interactable platform edge blocks, destroyable floor tiles, backdrops, user interface and basic sound effects.</p>
 
 <p>Two versions resulted from this. The first ad supported version was available for <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Android mobile</a> devices only, having one playable level in single-player mode. Afterwards, a new adless version was released for <a href="https://www.ouya.tv/game/Survival-Ball/">OUYA</a>, <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalltv">Android TV</a> and Kongregate, featuring a new versus mode.</p>
 
@@ -342,7 +342,7 @@ MathJax.Hub.Config({
 
 <p>I went to work on other projects after the prototype’s launch, but the feedback provided from gamers was kept in the back of my mind in the meanwhile. Several ideas eventually piled up for a new, improved version of the game, and about two years ago they were first brought to fruition. First at night after work, then full-time until completion.</p>
 
-<p>Laying out a solid base was was essential in the beginning of the project, specially concept wise. Pre-production, if you will. Surviving on top of a platform was the root idea, but was there latitude for perpendicular ideas? Multiplayer mode? Versus or Cooperative? Online or local only? Powerups? Which player movements would be available, only jump? Progressive difficulty (the player does not choose the difficulty level) or bucket based difficulty (e.g. easy, normal, hard)? What will be the direction of visual style, audio, and code architecture? How many levels? What is the player’s motivation play these levels?</p>
+<p>Laying out a solid base was essential in the beginning of the project, especially concept wise. Pre-production, if you will. Surviving on top of a platform was the root idea, but was there latitude for perpendicular ideas? Multiplayer mode? Versus or Cooperative? Online or local only? Powerups? Which player movements would be available, only jump? Progressive difficulty (the player does not choose the difficulty level) or bucket based difficulty (e.g. easy, normal, hard)? What will be the direction of visual style, audio, and code architecture? How many levels? What is the player’s motivation to play these levels?</p>
 
 <h2 id="root-ideas-and-game-modes">Root ideas and game modes</h2>
 
@@ -358,13 +358,13 @@ MathJax.Hub.Config({
 
 <h2 id="difficulty">Difficulty</h2>
 
-<p>Again, having in mind that less is more, a progressive difficulty mode (where the player does not choose the difficulty level) was strived for, instead of a bucket based approach (e.g. easy, normal, hard). Choosing a difficulty level when starting a simple game like this one, forces the player to commit to a given difficulty level at start, and accepting that decision. The responsibility is on the player. Often happens to me that when I choose a difficulty level like “easy” or “normal”, I keep wondering throughout the game if I am really good at that game, or am I just being thrown softballs. Progressive difficulty resolves that problem immediately, but it falls on the developer shoulders to craft the game in such a way that all difficulty ranges are covered just right.</p>
+<p>Again, having in mind that less is more, a progressive difficulty mode (where the player does not choose the difficulty level) was strived for, instead of a bucket based approach (e.g. easy, normal, hard). Choosing a difficulty level when starting a simple game like this one, forces the player to commit to a given difficulty level at start, and accepting that decision. The responsibility is on the player. Often happens to me that when I choose a difficulty level like “easy” or “normal”, I keep wondering throughout the game if I am really good at that game, or am I just being thrown softballs. Progressive difficulty resolves that problem immediately, but it falls on the developer’s shoulders to craft the game in such a way that all difficulty ranges are covered just right.</p>
 
 <p>Progression would be 2-fold: each level would start in an accessible way, but would gradually get more difficult as time passes. On the other hand, each level would be more challenging than the last one during the campaign. </p>
 
 <h2 id="control-and-movement">Control and movement</h2>
 
-<p>There was the need to have offensive manuevers against hazards, and to provide mid-air control to the player. Two new movements were added to the already existing jump and double jump movements: dash and stomp. Dash provided mid-air control and allowed the player to interact with the world’s objects and attack hazards. Stomp, inspired by <a href="https://en.wikipedia.org/wiki/Super_Mario_64">Super Mario 64</a>, allowed for button interaction, and mid-air stop and plunge for precise vertical landings.</p>
+<p>There was the need to have offensive maneuvers against hazards, and to provide mid-air control to the player. Two new movements were added to the already existing jump and double jump movements: dash and stomp. Dash provided mid-air control and allowed the player to interact with the world’s objects and attack hazards. Stomp, inspired by <a href="https://en.wikipedia.org/wiki/Super_Mario_64">Super Mario 64</a>, allowed for button interaction, and mid-air stop and plunge for precise vertical landings.</p>
 
 <p>With this set of movements, the player was able to gain full control over the ball. Easy to learn, hard to master. Additionally, it suppressed the need for aerial control via directional controls, which would be less physically coherent and could quench some of the fun of gaining control proficiency.  </p>
 
@@ -383,7 +383,7 @@ MathJax.Hub.Config({
 
 <p>Defining the game’s visual appearance early on was quite important, since it would influence the reasoning behind 3D models, textures, UI, colors, mood and even audio. The two most influential references were <a href="https://material.io/archive/guidelines/">Material Design (first version)</a> and <a href="https://store.steampowered.com/app/540840/Lara_Croft_GO/">Lara Croft GO</a>.</p>
 
-<p>Coming from an Android development background, I was exposed to Material Design, which is a visual language that synthesizes the classic principles of good design. Its principles go beyond mobile UI development, and span to a swath of different form factors and use cases. I personally found it beautiful and applyed its principles throughout the game’s aesthetics, both in UI, but also in the overall style of the game. This influenced the game to have a simple, clean and coherent style.</p>
+<p>Coming from an Android development background, I was exposed to Material Design, which is a visual language that synthesizes the classic principles of good design. Its principles go beyond mobile UI development, and span to a swath of different form factors and use cases. I personally found it beautiful and applied its principles throughout the game’s aesthetics, both in UI, but also in the overall style of the game. This influenced the game to have a simple, clean and coherent style.</p>
 
 <p>Lara Croft GO is a beautiful game. The charming colors and elegant (yet simple) style made an impression on me. While building up the game’s aesthetics, I consulted several screenshots of Lara Croft GO and attempted to transpose its most pleasant design elements into Survival Ball.</p>
 
@@ -393,15 +393,15 @@ MathJax.Hub.Config({
 
 <p>The prototype was a literal extension of the initial <a href="#prototype">wire chain and ball physics experiment</a>, and features were added at the same time I learned Unity’s ropes. This, added to rapid prototyping and little to no code architecture planning, resulted in a codebase that was entangled, difficult to follow and hard to extend.</p>
 
-<p>The new version was built from scratch and several arquitectures were explored in the beginning of the project, until one was found to fit the game best. The chosen approach followed these principles:</p>
+<p>The new version was built from scratch and several architectures were explored in the beginning of the project, until one was found to fit the game best. The chosen approach followed these principles:</p>
 
 <ul>
-  <li>Each level had a single entry point, the game controller, which orquestrated the different actors.</li>
+  <li>Each level had a single entry point, the game controller, which orchestrated the different actors.</li>
   <li>The game controller contained all top level parameters. Sub-parametrization was facilitated via <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">Scriptable Objects</a>. For example, the PlayerController had PlayerParameters (which was a scriptable object) exposed on the game controller. The PlayerParameters could in turn have sub-parameters, if needed.</li>
   <li>Dynamic objects, such as the player, hazards and interactable level parts should be created programmatically whenever possible.</li>
   <li>The initial scene stage should only have static or decorative objects.</li>
   <li>Object behavior should be managed by its specific controller. Game object components should be presentational and have as little behaviour as possible. For example, a rocket thruster could have a component which changed the color and size of smoke and fire, but it would be the thruster’s controller responsibility to drive the input value for this component.</li>
-  <li>Orquestration of events (from dynamic objects, user interaction and other data streams) was handled using a reactive approach, facilitated by <a href="https://github.com/neuecc/UniRx">UniRx</a></li>
+  <li>Orchestration of events (from dynamic objects, user interaction and other data streams) was handled using a reactive approach, facilitated by <a href="https://github.com/neuecc/UniRx">UniRx</a></li>
 </ul>
 
 <h2 id="levels">Levels</h2>
@@ -419,9 +419,9 @@ MathJax.Hub.Config({
 
 <h3 id="rocketx">RocketX</h3>
 
-<p>SpaceX was landing their first rockets on drone ships when the first idea of the bunch was developed. It revolved around the concept of a four thruster rocket platform. Each of these thrusters could be activated or deactivated by their respective button. An additional center button turned all the thrusters on or off. The platform had a finite amount of fuel that could be replineshed by shoving fuel crates, hazards or players in the center fuel intake.</p>
+<p>SpaceX was landing their first rockets on drone ships when the first idea of the bunch was developed. It revolved around the concept of a four thruster rocket platform. Each of these thrusters could be activated or deactivated by their respective button. An additional center button turned all the thrusters on or off. The platform had a finite amount of fuel that could be replenished by shoving fuel crates, hazards or players in the center fuel intake.</p>
 
-<p>This level would set the tone for the upcoming ones, so it was important to pin down the core gameplay, level structure and hazard dynamics before moving on to the next level. Just like changing a cosmological parameter would drastically change everything in the universe (like the possiblity of life), the game’s basilar parameters were set as tightly as possibile early on, because even a small change could break other already built levels. For example, a small change in how fast the player is, how high can it jump or how gravity affects it, could translate into several hours of extra work to re-adjust every level accordingly, or even render them obsolete.</p>
+<p>This level would set the tone for the upcoming ones, so it was important to pin down the core gameplay, level structure and hazard dynamics before moving on to the next level. Just like changing a cosmological parameter would drastically change everything in the universe (like the possibility of life), the game’s basilar parameters were set as tightly as possible early on, because even a small change could break other already built levels. For example, a small change in how fast the player is, how high can it jump or how gravity affects it, could translate into several hours of extra work to re-adjust every level accordingly, or even render them obsolete.</p>
 
 <p>For these reasons, it took around 354 hours to develop the bulk of RocketX, about one fifth of the project’s timespan.      </p>
 
@@ -445,18 +445,18 @@ MathJax.Hub.Config({
 
 <p>Original concept for the second level was a variation of the <a href="https://en.wikipedia.org/wiki/Simon_(game)">Simon</a> game, hence <a href="https://en.wikipedia.org/wiki/Simon_%26_Garfunkel">Garfunkel</a>. A sequence of lights would be played out first, and the player(s) would then have to mimic the same sequence afterwards by orderly hitting the respective target pieces, at the cost of the piece falling off if it were to be hit outside the sequence. There would exist as many platforms as the number of players.</p>
 
-<p>A quick level layout was built. Soon after the first plays and it became apparent that the concept was flawed. Mimicking a sequence would mean that during the first phase, while the model sequence is played out, the player would be left to do nothing movementwise. Moreover, after the second or third prompt of the sequence, the player would most likely forget which came next, because his/her main focus would be getting the ball movement right and not hit any of the non sequenced tiles. Simon is about memory, Survival Ball is about motor skill.   </p>
+<p>A quick level layout was built. Soon after the first plays it became apparent that the concept was flawed. Mimicking a sequence would mean that during the first phase, while the model sequence is played out, the player would be left to do nothing movement wise. Moreover, after the second or third prompt of the sequence, the player would most likely forget which came next, because his/her main focus would be getting the ball movement right and not hit any of the non sequenced tiles. Simon is about memory, Survival Ball is about motor skill.   </p>
 
 <div>
     <div class="youtube-player" data-id="g13i_KKoPAM" data-thumbsize="1"></div>
 </div>
 <p class="media-caption media-caption-one">Initial Garfunkel prototype, exploring a variation of the Simon electronic game</p>
 
-<p>Pivoting from this, came the idea of collapsing the two phases into a single phase, no memorization needed. The platform piece prompts would be immediate and coupled with the background music rhythm, which would progressivly get faster as time passed. The player would have limited time to hit these prompts, as the unhit prompted pieces would fall after each music measure.</p>
+<p>Pivoting from this, came the idea of collapsing the two phases into a single phase, no memorization needed. The platform piece prompts would be immediate and coupled with the background music rhythm, which would progressively get faster as time passed. The player would have limited time to hit these prompts, as the unhit prompted pieces would fall after each music measure.</p>
 
 <p>There was only one platform, since having multiple platforms would elicit a natural exploit. The player could quickly notice that the best strategy would be to focus all energy in a single platform. There was no real gain to be had on saving all platforms. One would suffice, and would be easier for the player to manage.</p>
 
-<p>The background music was programmatically played. The easiest approach was to individually play each audio sample, meaning that the rhythm was dictated by the frequency to which these were played. Long and complex audio samples were not fit for this purpose, since they had their own tempo, and only transforming these samples would correctly match them with the overall music tempo. Simple and short audio samples were used, specially drum samples, which worked great for this use case.</p>
+<p>The background music was programmatically played. The easiest approach was to individually play each audio sample, meaning that the rhythm was dictated by the frequency to which these were played. Long and complex audio samples were not fit for this purpose, since they had their own tempo, and only transforming these samples would correctly match them with the overall music tempo. Simple and short audio samples were used, especially drum samples, which worked great for this use case.</p>
 
 <center>
  <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
@@ -480,7 +480,7 @@ MathJax.Hub.Config({
  </div>
  </center>
 
-<p>The music engine and platform movement were first tackled, and took a considerable amount of time to build. After a few playthroughs with these basic systems in place, something did not feel quite right. At the time, it seemed related with how the background looked like. Predominantly using drum samples, the overall music style suggested a tribal feel, and seemed important at the time to have a good match between the music and the level’s visual appearance, hence the different backdrop experiments.    </p>
+<p>The music engine and platform movement were first tackled, and took a considerable amount of time to build. After a few playthroughs with these basic systems in place, something did not feel quite right. At the time, it seemed related to how the background looked like. Predominantly using drum samples, the overall music style suggested a tribal feel, and seemed important at the time to have a good match between the music and the level’s visual appearance, hence the different backdrop experiments.    </p>
 
 <p>After these four different backdrops, something was still off. Progressively I realized that the real problem was related with the platform’s shape. In a circular platform, the best strategy is to safeguard the inner pieces, since they are easily reachable and have an inferior angular speed compared to the outer ones. Falling prey to <a href="https://en.wikipedia.org/wiki/Sunk_cost#Loss_aversion_and_the_sunk_cost_fallacy">sunk cost fallacy</a>, some attempts were made to save this concept: rotate the inner pieces at a higher speed or to rotate them in different axes; to implement piece decay, which released the piece if the player stayed on top of it for too long. None of them worked, since these obstacles could be easily bypassed, as shown by the above video number 3.</p>
 
@@ -531,7 +531,7 @@ MathJax.Hub.Config({
 
 <p>Garfunkel’s platform did not work in a survival setting, but could it work in a different setting? In order for it to work, the level’s progress could only advance when the player touched his/her respective prompt. An objective sequence. The level also needed a long term objective for these sequences to link up. Turns out the game campaign was lacking a final boss, and this could be a good opportunity to salvage Garfunkel’s platform (and its respective movement and prompt system) to a new level, the final one. The final boss.</p>
 
-<p>The defined long term objective was to deplete the boss’s life, but the players needed a way to interact with it. The first idea was to drain the boss’s life every time a prompted platform piece was hit, but that bore two problems: interaction was too indirect and there was no opposite force that gave the boss a chance to defend itself. Hazards could be used to fulfil this purpose, but that dynamic was too easy and insipid. The final boss was expected to be more challenging than all its previous levels, and was expected to require the player to use most, if not all, of the previously aquired learnings.</p>
+<p>The defined long term objective was to deplete the boss’s life, but the players needed a way to interact with it. The first idea was to drain the boss’s life every time a prompted platform piece was hit, but that bore two problems: interaction was too indirect and there was no opposite force that gave the boss a chance to defend itself. Hazards could be used to fulfil this purpose, but that dynamic was too easy and insipid. The final boss was expected to be more challenging than all its previous levels, and was expected to require the player to use most, if not all, of the previously acquired learnings.</p>
 
 <p>Inspired by classic game bosses, which stack different boss stages, solution was to materialize the boss into an anthropomorphic head, and have the head appear in the center, equipped with a turret, when it was sufficiently small to fit platform’s center gap. The head shrank every time a sequence of prompted platform pieces were hit. The players could directly interact with the center head by hitting it, draining the boss’s life. Difficulty progression was accomplished by decaying a set of platform pieces every time the small center head was defeated.</p>
 
@@ -548,7 +548,7 @@ MathJax.Hub.Config({
 
 <h3 id="unfair-fair">Unfair Fair</h3>
 
-<p>“Giant washing machine drum” was the initial concept behind this level. Challenge was to transform this germinal idea into a fun level, coherent with the game’s survival motto. Some scattered ideas were drafted on paper, such as having interactable controls to make the drum rotate in a given direction or to stop the rotation entirelly, but none of them were successfuly transformed in to a viable challenge or part of a larger challenge.</p>
+<p>“Giant washing machine drum” was the initial concept behind this level. Challenge was to transform this germinal idea into a fun level, coherent with the game’s survival motto. Some scattered ideas were drafted on paper, such as having interactable controls to make the drum rotate in a given direction or to stop the rotation entirely, but none of them were successfully transformed in to a viable challenge or part of a larger challenge.</p>
 
 <div>
     <div class="youtube-player" data-id="ogk1-BE4Wgo" data-thumbsize="1"></div>
@@ -578,7 +578,7 @@ MathJax.Hub.Config({
 
 <p>Upon Garfunkel’s closure, began the development of a concept revolving around an oil rig shaped platform. The platform had four pillars, each destroyed when their respective button was pressed. The player had no motivation to press them, but these could be pressed by stomper hazard developed previously for RocketX. Their only task was to press these buttons.</p>
 
-<p>To add another challenge dimension, a concept from the game’s prototype was added: decay rockets (in the prototype they were represented as rectangular parallelepipeds). Upon landing, these hazards decayed the platform piece below until the piece was completely detached from the platform. Other hazards would be spawned throughout the lifecyle of the level for increased diversity.</p>
+<p>To add another challenge dimension, a concept from the game’s prototype was added: decay rockets (in the prototype they were represented as rectangular parallelepipeds). Upon landing, these hazards decayed the platform piece below until the piece was completely detached from the platform. Other hazards would be spawned throughout the lifecycle of the level for increased diversity.</p>
 
 <center>
  <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
@@ -602,7 +602,7 @@ MathJax.Hub.Config({
 
 <p>Solution was to have an infinite amount of procedurally generated platforms, each higher than the previous one. The only way to reach the next platform was via an elevator assigned to a specific player, which first had to be activated by touching all of its respective prompts. The elevators would only rise when all players occupied their respective elevator.</p>
 
-<p><a href="https://www.redblobgames.com/grids/hexagons/">Reb Blob Games’ guides</a> on hex grids were immensly useful when building the procedurally generated honeycomb platforms. These guides couple well explained theory with concise practical implementations, and I highly recommend them to anyone doing hex grid work.</p>
+<p><a href="https://www.redblobgames.com/grids/hexagons/">Reb Blob Games’ guides</a> on hex grids were immensely useful when building the procedurally generated honeycomb platforms. These guides couple well explained theory with concise practical implementations, and I highly recommend them to anyone doing hex grid work.</p>
 
 <center>
 <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
@@ -615,7 +615,7 @@ MathJax.Hub.Config({
 </div>
 </center>
 
-<p>Upon the first play test session with friends, it became apparent that small tweaks were required to the behaviour of elevators. Because elevators would only rise when all players were sitting on top of their respective elevator, a problem arised if, near the upper platform, someone abandoned the elevator earlier than others. At that point, all elevators would drop, taking most of the players with them.</p>
+<p>Upon the first play test session with friends, it became apparent that small tweaks were required to the behavior of elevators. Because elevators would only rise when all players were sitting on top of their respective elevator, a problem arised if, near the upper platform, someone abandoned the elevator earlier than others. At that point, all elevators would drop, taking most of the players with them.</p>
 
 <p>Solution was to make each elevator independent when they were close the upper platform, allowing for a smoother team transition between platforms.  </p>
 
@@ -632,9 +632,9 @@ MathJax.Hub.Config({
 
 <h3 id="tutorial">Tutorial</h3>
 
-<p>Is is generally a good idea to write the introduction of a book, essay or paper last, since you need to have a very solid idea of the shape of the finished product, and exactly what you need to mention up front for everything to hold together. The tutorial level was left for last for the same reasons.</p>
+<p>It is generally a good idea to write the introduction of a book, essay or paper last, since you need to have a very solid idea of the shape of the finished product, and exactly what you need to mention up front for everything to hold together. The tutorial level was left for last for the same reasons.</p>
 
-<p>It was the game’s first level, and had the responsability to introduce the game and provide the required tools and knowledge to play it. Specifically, how to jump, double jump, dash and stomp. The overall concept of the level was inspired by an early version of <a href="https://www.youtube.com/watch?v=eQgWTt5usQ4&amp;feature=youtu.be&amp;t=17">Gang Beasts’ tutorial</a>, which was pedagogic andp fun. Having the controls layed out as part of the scenario, instead of using an UI overlay fixture, was something quite interesting as well.</p>
+<p>It was the game’s first level, and had the responsibility to introduce the game and provide the required tools and knowledge to play it. Specifically, how to jump, double jump, dash and stomp. The overall concept of the level was inspired by an early version of <a href="https://www.youtube.com/watch?v=eQgWTt5usQ4&amp;feature=youtu.be&amp;t=17">Gang Beasts’ tutorial</a>, which was pedagogic and fun. Having the controls layed out as part of the scenario, instead of using an UI overlay fixture, was something quite interesting as well.</p>
 
 <div>
     <div class="youtube-player" data-id="rCCqNCzG7RE" data-thumbsize="1"></div>
@@ -658,7 +658,7 @@ MathJax.Hub.Config({
 
 <p>After a play test with friends, it was noticeable that very few people understood how to dash, or how important the combination of jump, dash and stomps were to gain air control. </p>
 
-<p>Solution was to add an animated billboard ilustrating how the dash charge worked, and add two additional sections focused on air control. The following play tests showed that these changes made a significant difference on a player’s comprehension of the game’s basilar movements and techniques. </p>
+<p>Solution was to add an animated billboard illustrating how the dash charge worked, and add two additional sections focused on air control. The following play tests showed that these changes made a significant difference on a player’s comprehension of the game’s basilar movements and techniques. </p>
 
 <div>
     <div class="youtube-player" data-id="bdmKDki32Og" data-thumbsize="1"></div>
@@ -707,7 +707,7 @@ MathJax.Hub.Config({
 
 <h3 id="keys">Keys</h3>
 
-<p>I believe coherency is gained when using a small set of musical keys throughout the game. Survival Ball only used the C major key and its relative minor, A minor. Major keys are genererally recognized as happier and joyful and minor keys as darker and heavier. In the game, each level or screen used one of these keys, according to the desired environment and feel. </p>
+<p>I believe coherency is gained when using a small set of musical keys throughout the game. Survival Ball only used the C major key and its relative minor, A minor. Major keys are generally recognized as happier and joyful and minor keys as darker and heavier. In the game, each level or screen used one of these keys, according to the desired environment and feel. </p>
 
 <p>One interesting nugget of knowledge I came to learn while developing the audio, was that sound effects also fit within a certain key. The overall audio will sound much better when sound effects and music are built in key accordance.  </p>
 
@@ -727,7 +727,7 @@ MathJax.Hub.Config({
 
 <p>Having the need to perform many iterations and tweaks without constant access to other testers, a simple AI was built to simulate multiplayer dynamics and to have a better grasp of how the level handles these dynamics.</p>
 
-<p>AI agents were specific to each level, and driven by a series of objectives. For example, in Beatmill, the agent’s main objective was to reach its respective colored prompt. If no prompts existed, it would move towards the platform’s center, the optimal place to wait for a prompt. It also had passive behaviours such as avoidance of gaps or special black buttons via jumps. As seen in the video below, the agents are not perfect, but set a good work baseline.</p>
+<p>AI agents were specific to each level, and driven by a series of objectives. For example, in Beatmill, the agent’s main objective was to reach its respective colored prompt. If no prompts existed, it would move towards the platform’s center, the optimal place to wait for a prompt. It also had passive behaviors such as avoidance of gaps or special black buttons via jumps. As seen in the video below, the agents are not perfect, but set a good work baseline.</p>
 
 <div>
     <div class="youtube-player" data-id="L82f3-ckaYA" data-thumbsize="1"></div>
@@ -740,13 +740,13 @@ MathJax.Hub.Config({
 
 <p>There were 6 play test sessions in total. Apart from how valuable these were to improve the game, they were also a great opportunity to gather a group of friends and have a good time. The game was modified and tweaked between each session, after digesting the impressions and feedback of the previous one.</p>
 
-<p>The game had some backdoor hooks which allowed for quick macro difficulty tweaks, e.g. how many waves were necessary to unlock a level. These were specially useful in the first play session, since the game was extremelly punishing in its early incarnations.</p>
+<p>The game had some backdoor hooks which allowed for quick macro difficulty tweaks, e.g. how many waves were necessary to unlock a level. These were specially useful in the first play session, since the game was extremely punishing in its early incarnations.</p>
 
 <p>Some guidelines I tried to follow:</p>
 
 <ul>
   <li>Refrained from playing. I only joined if the backdoor hooks were not enough to lower the difficulty to a point that was enjoyable by the players. I could infrequently join near the session’s end and most of the feedback had been provided.</li>
-  <li>I sat behind the players, writing impressions and feedback. Sporadically I asked for more details on a comment or behaviour that I observed. Being an observer, it is also easier to probe for mood fluctuations in the room. For example, when frustration starts to build up due to the extreme difficulty of a level, it is easily noticeable when observing from outside. The same applies for bursts of joy a given level or dynamic might cause.</li>
+  <li>I sat behind the players, writing impressions and feedback. Sporadically I asked for more details on a comment or behavior that I observed. Being an observer, it is also easier to probe for mood fluctuations in the room. For example, when frustration starts to build up due to the extreme difficulty of a level, it is easily noticeable when observing from outside. The same applies for bursts of joy a given level or dynamic might cause.</li>
   <li>Gut reactions were very precious, so I would probe for more details on these reactions and encourage honest reactions and feedback.  </li>
   <li>After the game was finished, I asked the players about their impressions, what they liked, they did not like, the level they enjoyed the most and the level they enjoyed the least. On that note, RocketX, Hex Elevator and Big Giant Head were top favorites. Venom Rig, Unfair Fair and Beatmill were most often referred as the less enjoyable of the bunch.</li>
   <li>Only explained the reasons behind a given design decision after the game was finished and most of the feedback had been given, to diminish the influence of my opinion on the players feedback.</li>
@@ -762,7 +762,7 @@ MathJax.Hub.Config({
 
 <p>Shortly after completing the first beta build of the game, I submitted my application to <a href="https://indiex.pt/">Indie X</a>, the biggest indie game showcase/contest in Portugal. Fortunately, Survival Ball was accepted as one of the 55 finalists, meaning that it would be showcased at Lisboa Games Week 2018 a week after the game’s launch!</p>
 
-<p>A custom build was specially crafted for the event. To better fit the event’s environment, the build offered an arcade experience through local leaderbords for the players with the highest number of completed waves, and leaderboards for the fastest players to finish Big Giant Head or the Tutorial. A simple controls cheat sheet was added to the pause menu, and the end game screens were changed to allow the players to enter their (group) name to the leaderboard. All levels were unlocked in this build, avoiding the need to finish the campaign to access a specific level.</p>
+<p>A custom build was specially crafted for the event. To better fit the event’s environment, the build offered an arcade experience through local leaderboards for the players with the highest number of completed waves, and leaderboards for the fastest players to finish Big Giant Head or the Tutorial. A simple controls cheat sheet was added to the pause menu, and the end game screens were changed to allow the players to enter their (group) name to the leaderboard. All levels were unlocked in this build, avoiding the need to finish the campaign to access a specific level.</p>
 
 <div>
     <div class="youtube-player" data-id="m6X0yNZu-PI" data-thumbsize="1"></div>
@@ -774,7 +774,7 @@ MathJax.Hub.Config({
 <center><a href="https://twitter.com/survivalball/status/1064556805630697477"><img align="center" src="/files/sb_making_game/composite-3-players-photos_705.png" alt="" /></a></center>
 <p class="media-caption media-caption-one">Some of the players at Lisboa Games Week. More photos and videos <a href="https://twitter.com/survivalball/status/1064556805630697477">here</a></p>
 
-<p>The showcase was also a great opportunity to connect with other developers and get to know their stories and games. The overall experience was incredible and I am immensly thankful to the organizers for putting it all together 🙏  </p>
+<p>The showcase was also a great opportunity to connect with other developers and get to know their stories and games. The overall experience was incredible and I am immensely thankful to the organizers for putting it all together 🙏  </p>
 
 <h1 id="additional-notes--appendix">Additional Notes / Appendix</h1>
 
@@ -815,7 +815,7 @@ MathJax.Hub.Config({
   <li><strong>Website</strong> - 22h</li>
   <li><strong>Marketing, screenshots, videos, social media</strong> - 123 hours</li>
   <li><strong>User support</strong> - 8 hours</li>
-  <li><strong>Administrative, burocracies</strong> - 22h</li>
+  <li><strong>Administrative, bureaucracies</strong> - 22h</li>
 </ul>
 
 <h2 id="final-notes">Final Notes</h2>
