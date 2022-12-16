@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2022-12-16T19:09:39+00:00</updated>
+  <updated>2022-12-16T19:14:57+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -526,7 +526,7 @@
     <content type="html"><![CDATA[<div style="margin-bottom: 20px">
     <div class="youtube-player" data-id="IwRUqng9yK8"></div>
 </div>
-<p class="media-caption media-caption-one">YouTube video based on this article</p>
+<p class="media-caption media-caption-one">YouTube video version of this article</p>
 
 <center>
 <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
