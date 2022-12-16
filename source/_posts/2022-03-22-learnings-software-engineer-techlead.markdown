@@ -10,12 +10,16 @@ ogp_image_twitter: "/files/learnings_swe_teachlead/learnings_swe_teachlead_title
 published: true
 ---
 
+<div style="margin-bottom: 20px">
+    <div class="youtube-player" data-id="r0nmKZBhcws"/>
+</div>
+<p class="media-caption media-caption-one">YouTube video with a summary of this article</p>
+
 > Life is growth. You grow or you die.
 > 
 > *― Phil Knight, Shoe Dog*
 
 I've had the good fortune of having the opportunity to develop my software engineering work as a tech lead (which is not a fixed role), focusing more of my effort on solving sets of problems, as opposed to individual projects/tasks. While navigating this path, I've gathered a set of teachings from my mentors/peers/managers and other personal learnings and observations that I attempted to compile in a condensed list. Hopefully these can be useful in your own journey, just like other people's learnings were to mine:
-
 
 <!--more-->
 

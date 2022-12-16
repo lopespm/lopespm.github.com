@@ -10,6 +10,11 @@ ogp_image_twitter: "/files/sb_making_game/og-thumb-twitter.png"
 published: true
 ---
 
+<div style="margin-bottom: 20px">
+    <div class="youtube-player" data-id="IwRUqng9yK8"/>
+</div>
+<p class="media-caption media-caption-one">YouTube video version of this article</p>
+
 <center>
 <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
    <div class="youtube-player video-frame-two" data-id="VO6P3h9RRcg"></div></div>
