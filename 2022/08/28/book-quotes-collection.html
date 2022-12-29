@@ -1,30 +1,261 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: software engineering | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/blog/tags/software-engineering/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2022-12-29T23:38:07+00:00</updated>
-  <id>http://lopespm.github.io/</id>
-  <author>
-    <name><![CDATA[Pedro Lopes]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Book Quotes Collection - Part 1 - Byte Tank</title>
+  <meta name="author" content="Pedro Lopes">
 
   
-  <entry>
-    <title type="html"><![CDATA[Book Quotes Collection - Part 1]]></title>
-    <link href="http://lopespm.github.io/2022/08/28/book-quotes-collection.html"/>
-    <updated>2022-08-28T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/2022/08/28/book-quotes-collection</id>
-    <content type="html"><![CDATA[<p><center>
+  <meta name="description" content="Collection of quotes from books, gathered throughout several years">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://lopespm.github.io/2022/08/28/book-quotes-collection.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="Byte Tank" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+<link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
+  <meta property="og:title" content="Book Quotes Collection - Part 1 - Byte Tank" />
+<meta property="og:description" content="Collection of quotes from books, gathered throughout several years" />
+<meta property="og:url" content="http://lopespm.github.io/2022/08/28/book-quotes-collection.html" />
+<meta property="og:image" content="http://lopespm.github.io/files/book_quotes_1/book_quotes_2_705.png" />
+<meta property="og:site_name" content="Byte Tank" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:title" content="Book Quotes Collection - Part 1 - Byte Tank">
+<meta name="twitter:description" content="Collection of quotes from books, gathered throughout several years">
+
+<meta name="twitter:creator" content="@lopes_pm">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://lopespm.github.io/files/book_quotes_1/book_quotes_2_705.png">
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39962763-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <script src="https://www.youtube.com/iframe_api"></script>
+<script>
+
+  /* Based on: http://labnol.org/?p=27941 */
+
+  // function onYouTubeIframeAPIReady() {
+  //   initialize();
+  // }
+
+  document.addEventListener("DOMContentLoaded", initialize );
+
+  function initialize() {
+    console.log("Init");
+
+    var div, n,
+      v = document.getElementsByClassName("youtube-player");
+    for (n = 0; n < v.length; n++) {
+      div = document.createElement("div");
+      div.setAttribute("data-id", v[n].dataset.id);
+      div.innerHTML = labnolThumb(v[n].dataset.id, v[n].dataset.thumbsize);
+      div.onclick = labnolIframe;
+
+      v[n].classList.add("ytp-thumbnail-overlay");
+      v[n].classList.add("ytp-cued-thumbnail-overlay");
+
+      v[n].appendChild(div);
+    }
+  }
+
+  function labnolThumb(id, thumbSize) {
+    var thumb = getThumb(thumbSize);
+    var thumbWithId = thumb.replace("ID", id);
+
+    var youtubePlayButton = '<div class="play-youtube-button"><button class="ytp-large-play-button ytp-button"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z" fill="#1f1f1e" fill-opacity="0.81"></path><path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path><path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path></svg></button></div>';
+
+
+
+    var bg = '<div class="bg" style=\'background-image: url(\"' + thumbWithId + '\')\"></div>';
+    var fadeBg = '<div class="fadeBg"></div>';
+    return bg + fadeBg + youtubePlayButton;
+  }
+
+  function getThumb(thumbSize) {
+    if (thumbSize === "0")
+      return 'https://i.ytimg.com/vi/ID/hqdefault.jpg';
+    if (thumbSize === "1")
+      return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+    else if (thumbSize === "2")
+      return 'https://i.ytimg.com/vi/ID/maxresdefault.jpg';
+    return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+  }
+
+  function labnolIframe() {
+    var container = document.createElement("div");
+
+    var loaderContainerOuter = document.createElement("div");
+    loaderContainerOuter.setAttribute("style", "display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: black; z-index: 200;");
+    var loaderContainerMiddle = document.createElement("div");
+    loaderContainerMiddle.setAttribute("style", "  display: table-cell; vertical-align: middle;");
+    var loaderContainerInner = document.createElement("div");
+    loaderContainerInner.setAttribute("style", "margin-left: auto; margin-right: auto; width: 400px;");
+
+    loaderContainerOuter.appendChild(loaderContainerMiddle);
+    loaderContainerMiddle.appendChild(loaderContainerInner);
+
+    const loader = Rocket.loader({
+      target: loaderContainerInner,
+      size: 'large',
+      type: 'spinner',
+      colour: 'grey-blue-dark'
+      //body: "Loading Video"
+    });
+
+    var containerPlayer = document.createElement("div");
+    container.appendChild(containerPlayer);
+    container.appendChild(loaderContainerOuter);
+
+    this.parentNode.replaceChild(container, this);
+
+    var didLoadAndPlay = 0;
+    player = new YT.Player(containerPlayer, {
+      videoId: this.dataset.id,
+      playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': function(event) {
+          event.target.playVideo();
+
+          // Fallback if onStateChange is not called
+          setInterval(function () {
+            if (didLoadAndPlay === 0) {
+              console.log("Hide on after ready");
+              container.removeChild(loaderContainerOuter);
+              didLoadAndPlay = 1;
+            }
+          }, 5000);
+        },
+        'onStateChange': function (event) {
+          console.log(event.data);
+          if (didLoadAndPlay === 0) {
+            console.log("Hide on play");
+            container.removeChild(loaderContainerOuter);
+            didLoadAndPlay = 1;
+          }
+        }
+      }
+    });
+
+  }
+
+</script>
+
+
+<script src="/javascripts/rocket-loader/tools.min.js"></script>
+<script src="/javascripts/rocket-loader/loader.min.js"></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  <header role="banner"><hgroup>
+  <h1><a href="/">Byte Tank</a></h1>
+  
+    <h2>Pedro Lopes Blog</h2>
+  
+</hgroup>
+
+
+</header>
+  <nav role="navigation">
+
+<ul class="subscription">
+  <li><a href="https://twitter.com/lopes_pm"><img src="/images/cn_twitter_19.png" height="19px"/></a></li>
+  <li><a href="https://github.com/lopespm"><img src="/images/cn_github_19.png" height="19px"/></a></li>
+  <li><a href="/atom.xml"><img src="/images/cn_rss_19.png" height="19px"/></a></li>  
+</ul>
+
+  
+
+<ul class="main-navigation">
+  <li><a href="/">Posts</a></li>
+  <li><a href="/blog/archives">Archive</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Book Quotes Collection - Part 1</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2022-08-28T00:00:00+01:00" pubdate data-updated="true">Aug 28<span>th</span>, 2022</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><center>
           <picture>
-             <source type="image/webp" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.webp">
-             <source type="image/png" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.png">
-             <img src="/files/book_quotes<em>1/book_quotes</em>2_705.png">
+             <source type="image/webp" srcset="/files/book_quotes_1/book_quotes_2_705.webp" />
+             <source type="image/png" srcset="/files/book_quotes_1/book_quotes_2_705.png" />
+             <img src="/files/book_quotes_1/book_quotes_2_705.png" />
            </picture>
-         </center> </p>
+         </center>
 
 <p><br /></p>
 
@@ -428,97 +659,179 @@
 </div>
 
 <p><em>The article’s thumbnail image background was created via Open AI’s DALL-E, with the prompt: bright, lively and colorful epic light coming from piles of books, with pages flying, against white background, digital art</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learnings as a Software Engineer Techlead]]></title>
-    <link href="http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead.html"/>
-    <updated>2022-03-22T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead</id>
-    <content type="html"><![CDATA[<div style="margin-bottom: 20px">
-    <div class="youtube-player" data-id="r0nmKZBhcws"></div>
 </div>
-<p class="media-caption media-caption-one">YouTube video with a summary of this article</p>
 
-<blockquote>
-  <p>Life is growth. You grow or you die.</p>
 
-  <p><em>― Phil Knight, Shoe Dog</em></p>
-</blockquote>
-
-<p>I’ve had the good fortune of having the opportunity to develop my software engineering work as a tech lead (which is not a fixed role), focusing more of my effort on solving sets of problems, as opposed to individual projects/tasks. While navigating this path, I’ve gathered a set of teachings from my mentors/peers/managers and other personal learnings and observations that I attempted to compile in a condensed list. Hopefully these can be useful in your own journey, just like other people’s learnings were to mine:</p>
-
-<!--more-->
-
-<ul>
-  <li><strong>Planning</strong>:
-    <ul>
-      <li><strong>Clear planning and prioritization of your projects is essential</strong>, especially in the early phases of an initiative. Well defined projects, with solid goaling metrics and well defined ownerships for each project, go a long way towards setting them up for success. These reduce the risk of not meeting goals, and allow for everyone involved to know which areas they need to tackle and own. Another interesting side effect is the value proposition to prospecting new-comers to support your projects, since there is a clear definition of what they can own and how valuable their contribution will be to the team/organization.</li>
-      <li><strong>But don’t plan too much</strong> - healthy balance is the secret: if your organization is fast moving and dynamic, excessive planning can have the deleterious effect that <a href="https://en-academic.com/dic.nsf/enwiki/11647520">little execution is actually done</a>, since most of the time is spent planning.</li>
-    </ul>
-  </li>
-  <li><strong>Design Docs, Strategy and Vision</strong>: 
-    <ul>
-      <li><strong>Design Docs</strong> are a valuable vehicle to crystalize how a complex system or process can be implemented, they incentivize the owner to structure their thoughts, are made stronger by receiving feedback from peers, and serve as an exceptional piece of documentation that will not only explain how a given system/process works, but also serve a rationale on why they were built that way. Here is an <a href="https://www.industrialempathy.com/posts/design-docs-at-google/">example template from Google</a></li>
-      <li><strong>Strategy and Vision</strong> - <em>This reflection will be mostly based on this great <a href="https://staffeng.com/guides/engineering-strategy">StaffEng article</a>, which I vividly recommend.</em> If you realize that you’ve rehashed the same discussion three or four times, look into your organization’s objectives, find the commonalities from five of your organization’s design docs, combine all of these together, and you have material to write a strategy. When the future’s too hazy to identify investments worth making, grab five strategies, combine them with your organization’s objectives and write a vision for two to three years out.</li>
-    </ul>
-  </li>
-  <li><strong>Scaling oneself</strong>: The best way to increase impact is by scaling oneself. I’ve personally encountered my speed limit when trying to solve a critical-path project, while at the same attempting to set the direction for the team. As much as I worked, placed hours, or made the process effective, I was the bottleneck. I’ve hit a speed limit, and at the time it was made clear by my manager that in order to increase impact, unblock our team, achieve our objectives and have a balanced workload, I would need to scale myself.
-    <ul>
-      <li><strong>Scaling through Delegation - the 75/25 rule</strong>:
-        <ul>
-          <li>If you are ~75% certain that someone will correctly execute a given project/task, then delegate. The other ~25% is the unknown space that the person needs in order to learn, explore, make errors and innovate. In other words, grow.</li>
-          <li>If you are 100% certain that the delegatee will successfully achieve a given project/task, they will not grow. On the other hand, if the probability of success is too low, then the project/task will be frustrating, probably will not be completed, and will jeopardize the team’s objectives.</li>
-        </ul>
-      </li>
-      <li><strong>By default, don’t micromanage</strong>: 
-        <ul>
-          <li>When delegating a task/project, give enough space for the delegatee to own it. In general, the objective is to clearly define expectations, clearly define areas of ownership, and agree upon which details you should be kept up to date, which meetings you should attend, and in which situations you would expect to be pinged for escalations.</li>
-          <li>Micromanaging only makes sense in very specific situations, such as when there is a high possibility of a major failure and help is needed to firefight and course correct.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>If you are not failing, you’re not pushing hard enough. And probably not growing</strong>: Conversely, the 75/25 rule can be applied to oneself. If you find you are easily executing your projects with a high level of predictability, this provides a hint that you should look for bigger challenges and responsibilities. In other words, aim for a growth mindset, rather than a fixed mindset.
-    <ul>
-      <li><strong>Errors</strong>: Making errors is completely OK and expected. They are part of the ~25% above. Strive for them to happen only once, otherwise they will fail to serve their learning purpose.</li>
-    </ul>
-  </li>
-  <li><strong>Mentorship</strong>:
-    <ul>
-      <li><strong>Give: one of the best ways to learn how to support projects is to mentor a new joiner.</strong> This will give you the opportunity to develop your interpersonal and project managing skills as you support/scope/prioritize projects and tasks for your mentee, and will help you consolidate your knowledge about the team and its position in the company as you transmit this knowledge forward. This relationship is especially rewarding in the long term as you work together on other projects down the line.</li>
-      <li><strong>Receive: having good mentors is one of the best ways to quickly grow and learn.</strong> I have had the good fortune to learn from specially good mentors throughout my tenure, who apart from sharing their deep technical knowledge about our systems and processes, provided me solid foundations (either directly or by example) on how to navigate ambiguity and tackle challenging projects/situations. Every new mentor will have something novel to share and teach to you, it is an ongoing process. Good mentors provide you a golden path that you can follow to cut through the exhausting search for viable solutions to a given problem.</li>
-    </ul>
-  </li>
-  <li><strong>Learn from others</strong>: 
-    <ul>
-      <li><strong>Outside your organization</strong>: other people’s experiences are immensely helpful, specially the ones that have been time tested and are well structured. Books are a good source of this knowledge, and I would recommend <a href="https://www.amazon.co.uk/Manager%60s-Path-Camille-Fournier/dp/1491973897">The Manager’s Path</a>, from which I extracted many of my base understandings of what a techlead should be, do and behave. The book goes straight to the point, gives actionable examples and was written by a very experienced manager.</li>
-      <li><strong>Reach out to your peers</strong>: specially in the beginning of my role as techlead, I was struggling to find the right balance between personal impact from my own actions and (the less concrete) directional impact. To resolve my conundrum, I’ve reached out for support from my manager, my original mentor and a fellow experienced techlead. Their experiences and advices helped me to tackle this subject, and other challenges that came along the way.</li>
-    </ul>
-  </li>
-  <li><strong>Measure your success</strong>:
-    <ul>
-      <li><strong>Goaling against quantifiable metrics = solid prioritization and justification</strong>: Make sure that all your projects are goaled against an objective, quantifiable metric. Otherwise it will be hard to prioritize between them and justify their value during planning and execution to your peers and external stakeholders.</li>
-      <li><strong>Clear and quantifiable goals = increased motivation</strong>: Projects with goals based on solid metrics allow for anyone working on a project to know how valuable their contribution will be. I would claim that working on projects with an ambiguous value proposition is frustrating and will receive less attention and effort from everyone involved, since it will not be clear how impactful their actions will be.</li>
-      <li><strong>Measure your personal progress by asking for candid feedback</strong>: if your manager and/peers don’t give you candid feedback on your progress, ask for it explicitly. It is one of the best ways to measure your progress on your role and surfacing any blindspots.</li>
-      <li><strong>No measurement = flying blind</strong></li>
-    </ul>
-  </li>
-  <li><strong>Communication - what you transmit, and how, matters</strong>:
-    <ul>
-      <li>Written and oral communication is essential when explaining the rationale behind an objective/project/task, and when coordinating with your peers and other stakeholders. This is a skill that can be learned, and one that I am still actively evolving. The best way to improve it, as I have found, is to write more, speak more, make more presentations, and study the communication methods from others.</li>
-      <li>As a rule of thumb, most communication styles benefit from a “news article” structure: first a TLDR (Too Long Didn’t Read), then an overall context of the problem in question and its impact, followed by details such as the delineation of a set of solutions, ending with a call to action or further questions.</li>
-    </ul>
-  </li>
-  <li><strong>Imposter syndrome</strong>: this might stem from a mismatch between your perceived performance and expectations for your role. Work with your manager to explicitly define expectations. Ask your manager and peers for explicit feedback, so you can better calibrate your perceptions. If you feel like an imposter, odds are, <a href="https://zapier.com/blog/actual-impostors-dont-get-impostor-syndrome/">you aren’t</a>.</li>
-  <li><strong>Take care of your body and mind, they are your ultimate tools</strong>: Last but not least, exercise, eat healthy food, nourish your relationships and strive for quality sleep. These are the essential tenants for the infrastructure (you) that will sustain all of the above points.</li>
-</ul>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The duty of a leader is to serve their people, not for the people to serve them</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1492227328386154509?ref_src=twsrc%5Etfw">February 11, 2022</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-]]></content>
-  </entry>
+  <footer>
+    <p class="meta">
+      
   
-</feed>
+
+<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2022-08-28T00:00:00+01:00" pubdate data-updated="true">Aug 28<span>th</span>, 2022</time>
+      
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/tags/software-engineering/'>software engineering</a>
+  
+</span>
+
+
+    </p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2022/03/22/learnings-software-engineer-techlead.html" title="Previous Post: Learnings as a Software Engineer Techlead">&laquo; Learnings as a Software Engineer Techlead</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2022/08/28/book-quotes-collection.html">Book Quotes Collection - Part 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2022/03/22/learnings-software-engineer-techlead.html">Learnings as a Software Engineer Techlead</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2020/12/25/hackernews-daily.html">Hacker News Daily</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2020/08/03/implementation-autocomplete-system-design.html">Implementation: Autocomplete System Design for Large Scale</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2019/02/06/survival-ball-making-the-game.html">Survival Ball: Making the Game</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/lopespm">@lopespm</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'lopespm',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2022 - Pedro Lopes -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>. Theme based on <a href="https://github.com/lucaslew/whitespace"> Whitespace</a>. Subscribe via <a href="/atom.xml">RSS Feed</a>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bytetank';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://lopespm.github.io/2022/08/28/book-quotes-collection.html';
+        var disqus_url = 'http://lopespm.github.io/2022/08/28/book-quotes-collection.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/javascripts/anchor.min.js"></script>
+
+<script>
+    anchors.options = {
+      placement: 'left'
+    };
+    anchors.add();
+    anchors.remove('.entry-title');
+    anchors.remove('#byte-tank');
+</script>
+
+
+
+</body>
+</html>
