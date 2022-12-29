@@ -15,6 +15,8 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'kramdown'
   gem 'coderay'
+  gem 'jekyll-scholar', '~> 1.1.0'
+  gem 'unicode', '~> 0.4.4.4'
 end
 
 gem 'sinatra', '~> 1.3.5'

@@ -107,4 +107,11 @@ kramdown:
     coderay_line_numbers: nil
     coderay_css: class
 
-
+scholar:
+  source: ./source/_bibliography
+  bibliography: references.bib
+  style: ./source/_bibliography/citation_style.csl
+  bibliography_list_tag: p
+  bibliography_item_tag: p
+  bibtex_filters:
+    - latex
