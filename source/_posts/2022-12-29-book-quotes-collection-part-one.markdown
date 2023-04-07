@@ -4,7 +4,7 @@ title: "Book Quotes Collection - Part 1"
 comments: true
 #categories: games
 tags: [books]
-description: "Collection of quotes from books, gathered throughout several years"
+description: "Collection of quotes from books, gathered throughout the past years"
 ogp_image: "/files/book_quotes_1/book_quotes_2_705.png"
 ogp_image_twitter: "/files/book_quotes_1/book_quotes_2_705.png"
 published: true
@@ -20,7 +20,7 @@ Books are an immensely valuable source of condensed knowledge and insightful tho
 
 ---
 
-<br/>
+<br class="spacer"/>
 
 * list element with functor item
 {:toc}
@@ -148,7 +148,7 @@ Books are an immensely valuable source of condensed knowledge and insightful tho
 ## Human condition
 - 'When you make love you're using up energy; and afterwards you feel happy and don't give a damn for anything. They can't bear you to feel like that. They want you to be bursting with energy all the time. All this marching up and down and cheering and waving flags is simply sex gone sour. If you're happy inside yourself, why should you get excited about Big Brother and the Three-Year Plans and the Two Minutes Hate and all the rest of their bloody rot?' <sup id="fnref:7"><a href="#fn:7" rel="footnote">7</a></sup>
 - Having so recently been one of the underdogs of the savannah, we are full of fears and anxieties over our position, which makes us doubly cruel and dangerous. <sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>
-- I define masculinity as that part of a man that equips him to survive as an individual, clan, and species. Without this masculine energy we would have all become extinct eons ago. Masculinity empowers a man to create and produce. It also empowers him provide for and protect those who are important to him. These aspects of masculinity include strength, discipline, courage, passion, persistence, and integrity. <sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>
+- I define masculinity as that part of a man that equips him to survive as an individual, clan, and species. Without this masculine energy we would have all become extinct eons ago. Masculinity empowers a man to create and produce. It also empowers him provide for and protect those who are important to him. These aspects of masculinity include strength, discipline, courage, passion, persistence, and integrity. <sup id="fnref:10"><a href="#fn:10" rel="footnote">10</a></sup>
 - This frustration is due to the reality that in general, women view men who try to please them as weak and hold these men in contempt. Most women do not want a man who tries to please them — they want a man who knows how to please himself. Women consistently share with me that they don't want a passive, pleasing wimp. They want a man — someone with his balls still intact <sup id="fnref:10"><a href="#fn:10" rel="footnote">10</a></sup>
 - When recovering Nice Guys create relationships with people who don't need fixing, they improve their odds of finding the love they want. This doesn't mean searching for the perfect partner, just one who is already taking responsibility for her own life. <sup id="fnref:10"><a href="#fn:10" rel="footnote">10</a></sup>
 - Internalized shame and fear are the greatest barriers to a satisfying sex life. A man can read all the books he wants on "How To Pick Up Women" or watch all the instructional videos on improving sexual technique. None of these things will help him get good sex as long as he has shame and fear about being sexual or being a sexual being. <sup id="fnref:10"><a href="#fn:10" rel="footnote">10</a></sup>
@@ -232,7 +232,7 @@ Books are an immensely valuable source of condensed knowledge and insightful tho
 - (...) none of these things exists outside the stories that people invent and tell one another. There are no gods in the universe, no nations, no money, no human rights, no laws, and no justice outside the common imagination of human beings. <sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>
 - “He who is abandoned is an abandoner,” <sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>
 - The invitation read, “There’s an old Hindu saying that goes, ‘In the first 30 years of your life, you make your habits. For the last 30 years of your life, your habits make you.’ Come help me celebrate mine.” <sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>
-- and more importantly, in order to take full advantage of the how, you need to understand the why. <sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>
+- (...) and more importantly, in order to take full advantage of the how, you need to understand the why. <sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>
 - Will they reach the nursery in time? If so, how delightful for them, and we shall all breathe a sigh of relief, but there will be no story. On the other hand, if they are not in time, I solemnly promise that it will all come right in the end. <sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup>
 - What are you putting off out of fear? Usually, what we most fear doing is what we most need to do. <sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a></sup>
 - The existential vacuum manifests itself mainly in a state of boredom. <sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a></sup>

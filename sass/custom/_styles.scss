@@ -101,7 +101,7 @@ body {
 }
 
 article {
-	padding-top: 50px;
+	padding-top: 8px;
 
 	.entry-content {
 		h3 {
@@ -141,7 +141,7 @@ article {
 
 	.blog-index {
 		article {
-			padding-top: 77px;
+			padding-top: 35px;
 
 			header {
 				padding-left: 0;
@@ -194,6 +194,10 @@ aside {
 article img {
      box-shadow: none !important;
      border: none !important;
+}
+
+.note-header-subtitle {
+	color: #d9ca77;
 }
 
 // This File is imported last, and will override other styles in the cascade
