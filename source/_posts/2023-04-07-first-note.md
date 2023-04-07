@@ -4,9 +4,7 @@ title: "The First Note"
 comments: true
 categories: notes
 tags: []
-description: "Test description for note 1"
-ogp_image: "/files/book_quotes_1/book_quotes_2_705.png"
-ogp_image_twitter: "/files/book_quotes_1/book_quotes_2_705.png"
+description: "The introduction and reasonings for the new 'Notes' section"
 published: true
 ---
 
