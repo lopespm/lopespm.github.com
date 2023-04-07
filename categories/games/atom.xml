@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: games | Byte Tank]]></title>
+  <link href="http://lopespm.github.io/categories/games/atom.xml" rel="self"/>
+  <link href="http://lopespm.github.io/"/>
+  <updated>2023-04-07T20:30:02+01:00</updated>
+  <id>http://lopespm.github.io/</id>
+  <author>
+    <name><![CDATA[Pedro Lopes]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Unity: Dynamic Multi Target Camera]]></title>
+    <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
+    <updated>2018-12-27T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;">
+	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
+		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
+		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />
+		<!--[if lt IE 9]><img src="http://lopespm.github.io/files/camera_multi_target/demo.gif"><![endif]-->
+	</video> 
+</a></p>
+
+<p>Mostly invisible, yet essential, camera work is key to any game with dynamic cameras. This article dissects a concise Unity <a href="https://github.com/lopespm/unity-camera-multi-target">open source</a> library which dynamically keeps a set of objects (e.g. players and important objects) in view, a common problem for a wide range of games.</p>
+
+<p>The library was developed for, and used by my first Steam game, <a href="https://survivalball.com/">Survival Ball</a>. The game has an heavy shared screen local co-op component, which requires the camera to dynamically keep many key elements in view.</p>
+
+<!--more-->
+
+<p>There are good camera resources for Unity, but I found them to either do too much or too little for this specific problem, so I thought this could be a good opportunity to learn a bit more about dynamic camera movement and to share that knowledge and <a href="#where-to-get-it">code</a> with the community.</p>
+
+<p></p>
+
+<h1 id="overview">Overview</h1>
+
+<p>The library is fed with the desired camera rotation (pitch, yaw and roll), the target objects that will be tracked and the camera that will be transformed. </p>
+
+<p></p>
+
+<p>The library’s sole responsibility is to calculate a camera position in which all targets lie inside its view. To achieve this, all target objects are projected onto a slice (plane) of the <a href="https://docs.unity3d.com/Manual/UnderstandingFrustum.html">camera’s view frustrum</a>. The projections located inside the view frustrum will be visible and the others will not. The idea is to trace back a new camera position from the outermost target projections, since this way we are guaranteed to include all projections inside the view.</p>
+
+<p> </p>
+
+<p><img class="center" src="/files/camera_multi_target/side_view_screen_basis_with_captions.png"></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>In order to make the bulk of the operations easier to compute, the process starts by multiplying the camera’s <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Using_quaternion_as_rotations">inverse rotation</a> with each of the targets positions, which will place them as they would if the camera’s axis would be aligned with the world’s axis (identity rotation). Once the camera position is calculated in this transformed space, the camera rotation is multiplied by this position, resulting in the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
+
+<p> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space<em>1.png'><img src='/files/camera_multi_target/transformed_space/transformed_space<em>1.png'></a></center><figcaption class='media-caption'> Original targets positions </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space</em>2<em>with_captions.png'><img src='/files/camera_multi_target/transformed_space/transformed_space</em>2<em>with_captions.png'></a></center><figcaption class='media-caption'> Multiply the camera’s inverse rotation with each of the targets positions </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space</em>3.png'><img src='/files/camera_multi_target/transformed_space/transformed_space</em>3.png'></a></center><figcaption class='media-caption'> Calculate the camera position in this transformed space </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png'><img src='/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png'></a></center><figcaption class='media-caption'> Multiply the camera’s rotation with the calculated position in the previous transformed space, which will reveal the final camera position in the original space</figcaption></figure></p>
+
+<h1 id="implementation">Implementation</h1>
+
+<p>Most of the operations are performed in the transformed space where the camera’s axis would be aligned with the world’s axis (identity rotation). After the targets are rotated into the camera’s identity rotation space by multiplying the camera’s inverse rotation with each of the targets positions, the first task is to calculate their projections.</p>
+
+<p>Please note that in all the figures below (with the exception of the <a href="#horizontal-projections"><em>horizontal field of view angle</em></a> section), the camera is present for reference only, as its final desired position will only be uncovered in the final step.</p>
+
+<h2 id="targets-projections">Targets projections</h2>
+
+<p>For each target, four projections are cast to a plane parallel to the view plane, sliced from the camera’s view frustrum. The line described from the target object to its respective projection is parallel to the camera’s view frustrum edges. Relative to the camera, two of these projections run horizontally, and the other two vertically.</p>
+
+<p> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections<em>1.png'><img src='/files/camera_multi_target/projections_intro/projections<em>1.png'></a></center><figcaption class='media-caption'> Perspective view of the targets projections </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections</em>2.png'><img src='/files/camera_multi_target/projections_intro/projections</em>2.png'></a></center><figcaption class='media-caption'> Side view of the targets projections </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections_3.png'><img src='/files/camera_multi_target/projections_intro/projections_3.png'></a></center><figcaption class='media-caption'> Top view of the targets projections </figcaption></figure></p>
+
+<p>If any of the target’s projections are outside the camera’s view frustrum (or its sliced plane), then the target object will not be visible. If they are inside, the target object will be visible. This means that the four outermost projections from all targets will define the limit of where the view frustrum must be in order to have all objects in view or partially in view. Adding some padding to these outermost projections (i.e. moving these projections away from the center of the view frustrum plane slice), will result in additional padding between the target object and the camera’s view borders.</p>
+
+<p> </p>
+
+<h3 id="vertical-projections">Vertical projections</h3>
+<p> </p>
+
+<p>For all vertical projections positions, we are interested in finding their Y component. In the figure below, notice the right triangle with one vertex on the target object and another one on the projection. If we discover the length of the side running parallel the projection plane, that value can be added to the Y component of the target’s position, resulting in the Y component for the upper projection.</p>
+
+<p> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png'><img src='/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png'></a></center><figcaption class='media-caption'> Side view of the elements needed to calculate the vertical projections </figcaption></figure></p>
+
+<p> </p>
+
+<p><script type="math/tex">\theta</script> is equal to half the camera’s vertical field of view angle <script type="math/tex">\theta'</script> (<script type="math/tex">\theta = \frac{\theta'}{2}</script>). The vertical field of view angle <script type="math/tex">\theta'</script> is provided by the camera’s <a href="https://docs.unity3d.com/ScriptReference/Camera-fieldOfView.html"><code>fieldOfView</code></a> in degrees, which needs to be converted to radians for our purposes (<script type="math/tex">\theta' = \theta'_{degrees} \times \frac{\pi}{180º}</script>).</p>
+
+<p>The triangle’s adjacent edge length (relative to <script type="math/tex">\theta</script>) is known, thus we can find the length of the opposite side of the triangle by using <a href="https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/a/finding-trig-ratios-in-right-triangles">trigonometric ratios</a>.</p>
+
+<script type="math/tex; mode=display">opposite = tan(\theta) \times adjacent</script>
+
+<p>With this, the upper projection’s Y/Z components can be fully calculated. The bottom projection has the same Z component as the upper one, and its Y component is equal to the target’s Y component minus the calculated opposite triangle edge length.</p>
+
+<h3 id="horizontal-projections">Horizontal projections</h3>
+
+<p></p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png'><img src='/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png'></a></center><figcaption class='media-caption'> Top view of the elements needed to calculate the horizontal projections </figcaption></figure></p>
+
+<p>The horizontal projections follow a set of similar set of calculations, difference being that we are now interested in finding the X component (instead of Y), and the horizontal field of view angle is used instead of the vertical one. The horizontal field of view angle <script type="math/tex">\gamma'</script> and its half value <script type="math/tex">\gamma</script> (<script type="math/tex">\gamma = \gamma' \times 2</script>) need some further steps to be computed, which will be detailed in the following section.</p>
+
+<p></p>
+
+<h4 id="horizontal-field-of-view-angle">Horizontal field of view angle</h4>
+
+<p>Consider the following figure, in which <script type="math/tex">\gamma</script> represents half the horizontal field of view angle, <script type="math/tex">\theta</script> represents half the vertical field of view angle, <script type="math/tex">w</script> the viewport width and <script type="math/tex">h</script> the viewport height:</p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/horizontal_fov.png'><img src='/files/camera_multi_target/horizontal_fov.png'></a></center><figcaption class='media-caption'> Elements for the calculation of the horizontal field of view angle </figcaption></figure> </p>
+
+<p>Using trigonometric ratios, these two equations can be devised:</p>
+
+<script type="math/tex; mode=display">
+\begin{cases}
+tan(\gamma) = \frac{w / 2}{adj} \\ 
+adj = \frac{h / 2}{tan(\theta)}
+\end{cases} 
+</script>
+
+<p>Replacing <script type="math/tex">adj</script> in the first equation with the definition of the second one:</p>
+
+<script type="math/tex; mode=display">
+tan(\gamma) = \frac{w / 2}{\frac{h / 2}{tan(\theta)}} 
+\Leftrightarrow \\
+tan(\gamma) = \frac{w / 2}{h / 2} \times tan(\theta)
+\Leftrightarrow \\
+tan(\gamma) = \frac{w}{h} \times tan(\theta)
+\Leftrightarrow \\
+\gamma = arctan(\frac{w}{h} \times tan(\theta))
+</script>
+
+<p>Unity’s camera has an <a href="https://docs.unity3d.com/ScriptReference/Camera-aspect.html"><code>aspect</code></a> attribute (view canvas width divided by height, i.e. <script type="math/tex">aspect\ ratio = \frac{w}{h}</script>), with which we can finalize our equation and discover the horizontal field of view angle half value.</p>
+
+<script type="math/tex; mode=display">
+\gamma = arctan(aspect\ ratio \times tan(\theta))
+</script>
+
+<h3 id="outermost-projections">Outermost projections</h3>
+
+<p>Having all target projections calculated, the four outermost ones are picked:</p>
+
+<ul>
+  <li><script type="math/tex">p_{hMax}</script> is the projection with the highest X component</li>
+  <li><script type="math/tex">p_{hMin}</script> is the projection with the lowest X component</li>
+  <li><script type="math/tex">p_{vMax}</script> is the projection with the highest Y component</li>
+  <li><script type="math/tex">p_{vMin}</script> is the projection with the lowest Y component</li>
+</ul>
+
+<p></p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_outermost/projections_outermost.png'><img src='/files/camera_multi_target/projections_outermost/projections_outermost.png'></a></center><figcaption class='media-caption'> All outermost projections </figcaption></figure> </p>
+
+<h2 id="calculating-the-camera-position">Calculating the camera position</h2>
+
+<h3 id="in-the-transformed-space">In the transformed space</h3>
+
+<p></p>
+
+<p>The X and Y components of the desired camera position in the transformed space are the midpoints of their respective outermost projections, this is, the midpoint between <script type="math/tex">p_{hMax}</script> and <script type="math/tex">p_{hMin}</script> is the camera’s X position, and the midpoint between <script type="math/tex">p_{vMax}</script> and <script type="math/tex">p_{vMin}</script> is the camera’s Y position.</p>
+
+<p></p>
+
+<p>The Z component of the camera position in the transformed space is calculated by backtracking a view frustrum from the the outermost projections to the camera Z component candidate. The furthest Z component from the projection plane will be the chosen, in order for the final camera position to contain all targets within its view.</p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png'><img src='/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png'></a></center><figcaption class='media-caption'> Elements for adjacent<sub>v</sub> calculation </figcaption></figure> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png'><img src='/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png'></a></center><figcaption class='media-caption'> Elements for adjacent<sub>h</sub> calculation </figcaption></figure> </p>
+
+<p>Once again, trigonometric ratios will be used to calculate these Z position candidates.</p>
+
+<script type="math/tex; mode=display">
+adjacent_{v} = \frac{opposite_{v}}{tan(\theta)}
+\\
+adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
+</script>
+
+<p>The highest value between <script type="math/tex">adjacent_{v}</script> and <script type="math/tex">adjacent_{h}</script> will be picked for the camera’s Z position component in the transformed space.</p>
+
+<p></p>
+
+<h3 id="final-camera-position-in-the-original-space">Final camera position in the original space</h3>
+
+<p>With the camera position calculated in the transformed space, we can now multiply the desired camera rotation with this position, which will provide us with the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
+
+<p></p>
+
+<h1 id="where-to-get-it">Where to get it</h1>
+
+<p></li>
+</ul>
+
+<p>The library is available on GitHub and the Unity Asset Store. An example scene of the library’s usage is included. Feedback is most welcome and I hope this can be useful!</p>
+
+<ul>
+  <li><a href="https://github.com/lopespm/unity-camera-multi-target">GitHub Repository</a></li>
+  <li><a href="https://assetstore.unity.com/packages/tools/camera/camera-multi-target-dynamic-135922">Unity Asset Store Package</a></li>
+</ul>
+
+<p></p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><em>I have been informed that the Unity Asset Store team is experiencing longer than normal review times. From the information I gathered online, it might take a couple of weeks until it is available. I will post an update on my twitter <a href="https://twitter.com/lopes_pm">@lopes_pm</a> once it is published.</em><a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Survival Ball on OUYA]]></title>
+    <link href="http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html"/>
+    <updated>2013-09-08T00:00:00+01:00</updated>
+    <id>http://lopespm.github.io/games/2013/09/08/survival-ball-ouya</id>
+    <content type="html"><![CDATA[<p>Survival Ball in now available on OUYA, and its publishing process was fairly straightforward. From the day of submission (2nd of September) to its approval (5th of September), it took a mere 3 days, counting that a re-submission had to be made in-between.</p>
+
+<p>Survival Ball was already available on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Google Play</a>, <a href="http://www.amazon.com/RockByte-Software-Survival-Ball/dp/B00ARVZ7F0/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1378394674&amp;sr=1-1">Amazon </a>and <a href="http://www.kongregate.com/games/rockbyte/survival-ball">Kongregate</a>, but OUYA just felt like the perfect platform for the game. With it, you could just grab the OUYA controller and/or a spare XBox/PS3 controller, and just have a quick match. I really loved the concept, and re-iterated on the previous version of the game to give it more controller friendly menus, better graphics, refined textures, and an overall revamp.</p>
+
+<!--more-->
+
+<p>After finishing up the port to OUYA, on the 2nd of September, I’ve made the first submission. I’ll just point out that upon this moment, it seemed to be stuck with a red status message which read “<em>Still verifying apk…</em>”. To resolve this, I edited the submission, re-submitted the APK, and waited a few seconds. The game was then submitted for approval.</p>
+
+<p>On the 4th of September, a re-submission was asked by the OUYA review team (which were very friendly by the way), since some elements fell of the safe-frame, which is safe-guard for gamers who have screens that perform <a href="https://devs.ouya.tv/developers/docs/content-review-guidelines">too much overscan</a>.</p>
+
+<p>The game was re-submitted on the same day, and was approved on the 5th of September. From this point on, one can release the game whenever it seems more appropriate. The game was released on the same day.</p>
+
+<p>I’ve came to learn during this process, after publishing the game, it first goes to the “Sandbox” section. Only after a major acceptance from the game community, can the game be promoted to the primary categories. So, if you would like to take a quick peek at the game, you can find it at the “Sandbox” section.</p>
+
+<center><iframe width="560" height="315" src="http://lopespm.github.io//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
+
+<p><br /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nordic Game Jam’s winners]]></title>
+    <link href="http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners.html"/>
+    <updated>2013-01-27T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners</id>
+    <content type="html"><![CDATA[<p>This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: <a href="http://nordicgamejam.org/2013/01/21/winners-ngj13/">http://nordicgamejam.org/2013/01/21/winners-ngj13/</a></p>
+
+<p>My personal highlight goes to Stalagflight (<a href="https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html">https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html</a>), which is as simple as stupidly fun! Stalagflight can be played with the keyboard, but it is tricky. If you have a gamepad the experience is much better.</p>
+
+<!--more-->
+
+<p>On other lines, if you want to stretch the face of Justin Bieber and force him to make heavenly sounds, rejoice with this: <a href="http://unicorn7.org/static/be/">http://unicorn7.org/static/be/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

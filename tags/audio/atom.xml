@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: audio | Byte Tank]]></title>
+  <link href="http://lopespm.github.io/tags/audio/atom.xml" rel="self"/>
+  <link href="http://lopespm.github.io/"/>
+  <updated>2023-04-07T20:30:02+01:00</updated>
+  <id>http://lopespm.github.io/</id>
+  <author>
+    <name><![CDATA[Pedro Lopes]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Attenuate GoPro Chest Mount Heartbeat - using GarageBand/iMovie]]></title>
+    <link href="http://lopespm.github.io/audio/2015/12/08/gopro-heartbeat.html"/>
+    <updated>2015-12-08T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/audio/2015/12/08/gopro-heartbeat</id>
+    <content type="html"><![CDATA[<p>If you have a chest mount (chesty) for your GoPro, then you might have had the surprise of hearing your heartbeat on the recording, since it may lay fairly close to your heart, picking up its beat. This post will:</p>
+
+<ul>
+  <li>show you how to attenuate the heartbeat sound to a point where it is almost imperceptible, while maintaining the overall sound</li>
+  <li>attenuate the difference between quiet and loud sounds, so the listener gets less startled by a sudden noise created when entering with the bike on rought terrain or the common bike bell sound.</li>
+</ul>
+
+<!--more-->
+
+<h2 id="steps-using-garagebandimovie">Steps, using GarageBand/iMovie</h2>
+
+<p>In this specific case, GarageBand 10.0.3 and iMovie 10.0.5 were used, but other versions should work just as fine.</p>
+
+<ol>
+  <li>Open iMovie
+    <ol>
+      <li>Import your GoPro file(s) into your iMovie project. This is the best point in time to edit them and arrange the movie to your liking</li>
+      <li>Export your movie (File-&gt;Share-&gt;File…)
+        <ul>
+          <li>Open GarageBand</li>
+        </ul>
+      </li>
+      <li>Drag the exported movie into your GarageBand project
+        <ul>
+          <li>Decompress <a href="/files/gopro_heartbeat/gopro_master_track.patch.zip">gopro_master_track.patch.zip</a> and copy <strong>gopro_master_track.patch</strong> to the “~/Music/Audio Music Apps/Patches/Output”</li>
+          <li>Go to your Master Track (if you do not see it, click “Track-&gt;Show MasterTrack”) and click “User Patches” in your Library tab (if you do not see it, click “View-&gt;Show Library”)</li>
+          <li>You should now see inside the “User Patches” the patch file we just copied, select it</li>
+          <li><em>Your audio should now have an attenuated heartbeat and a more audible and balanced sound</em></li>
+          <li>Export the audio (Share-&gt;Export to Disk). AIFF or MP3 will work great. I personally use the MP3 192kBit/s export, since the GoPro audio is not extra pristine to start with, so the tiny losses in compression are pretty much neglegible</li>
+          <li>Go back to iMovie</li>
+        </ul>
+      </li>
+      <li>Remove the sound on your original GoPro video(s)
+        <ul>
+          <li>Drag the export audio from GarageBand, and place it below the video timeline</li>
+          <li>Done!</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="why-did-this-hopefully-worked-for-you">Why did this *hopefully* worked for you?</h2>
+
+<p>The whole concept is very simple really, the heartbeat is simply being attenuated on specific frequencies by a Channel EQ plugin included in the above Master Track patch. This is how it looks visually:</p>
+
+<p><img src="/files/gopro_heartbeat/heartbeat_channel_eq.png" alt="image" /></p>
+
+<p>This Channel EQ alone will turn this:</p>
+
+<p><audio controls><source src='/files/gopro_heartbeat/gopro_sample_with_heartbeat.mp3'></audio></p>
+
+<p>into this:</p>
+
+<p><audio controls><source src='/files/gopro_heartbeat/gopro_sample_without_heartbeat.mp3'></audio></p>
+
+<p>And that is it! The rest of the plugins included on the Master Track Patch are:</p>
+
+<ul>
+  <li>An additional Channel EQ that attenuates clicking sounds I heard along my videos</li>
+  <li>Two compressors and a limiter which increase the overall loudness and diminish the difference between quiet and loud sounds</li>
+</ul>
+
+<h2 id="support-files">Support Files:</h2>
+
+<ul>
+  <li><a href="/files/gopro_heartbeat/gopro_master_track.patch.zip">Master Track Patch</a> (which includes all the above plugins)</li>
+  <li><a href="/files/gopro_heartbeat/gopro_eq_heartbeat_attenuate.pst">Channel EQ preset</a> to attenuate the heartbeat sound. This can be used by opening a Channel EQ plugin in any of your tracks and clicking “More-&gt;Load..” inside it</li>
+  <li><a href="https://www.youtube.com/watch?v=sczmkokpEuY">Example video</a> in which these plugins were applied</li>
+</ul>
+
+<p><br /></p>
+]]></content>
+  </entry>
+  
+</feed>

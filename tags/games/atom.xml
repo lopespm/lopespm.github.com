@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: games | Byte Tank]]></title>
+  <link href="http://lopespm.github.io/tags/games/atom.xml" rel="self"/>
+  <link href="http://lopespm.github.io/"/>
+  <updated>2023-04-07T20:30:02+01:00</updated>
+  <id>http://lopespm.github.io/</id>
+  <author>
+    <name><![CDATA[Pedro Lopes]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Survival Ball: Making the Game]]></title>
+    <link href="http://lopespm.github.io/2019/02/06/survival-ball-making-the-game.html"/>
+    <updated>2019-02-06T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/2019/02/06/survival-ball-making-the-game</id>
+    <content type="html"><![CDATA[<div style="margin-bottom: 20px">
+    <div class="youtube-player" data-id="IwRUqng9yK8"></div>
+</div>
+<p class="media-caption media-caption-one">YouTube video version of this article</p>
+
+<center>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+   <div class="youtube-player video-frame-two" data-id="VO6P3h9RRcg"></div></div>
+ <p class="media-caption media-caption-two"><b>Before:</b> Initial prototype, built 6 years ago</p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="DBqUGRCwBGc"></div></div>
+ <p class="media-caption media-caption-two"><b>After:</b> Current version, released last November<br class="video-br-end" /></p>
+</div>
+</center>
+
+<p>This article/postmortem provides an in-depth look into the process of building <a href="https://survivalball.com/">Survival Ball</a>, a Single / Local Co-Op physics-based game available on Steam for Windows and macOS. From prototype until showcase at Lisboa Games Week, passing by the related principles, design decisions, level creation process, tools and technical details.  </p>
+
+<!--more-->
+
+<hr />
+
+<p><br /></p>
+
+<ul id="markdown-toc">
+  <li><a href="#prototype">Prototype</a></li>
+  <li><a href="#reboot">Reboot</a>    <ul>
+      <li><a href="#root-ideas-and-game-modes">Root ideas and game modes</a></li>
+      <li><a href="#difficulty">Difficulty</a></li>
+      <li><a href="#control-and-movement">Control and movement</a></li>
+      <li><a href="#powerups">Powerups</a></li>
+      <li><a href="#visual-aesthetics">Visual Aesthetics</a></li>
+      <li><a href="#codebase">Codebase</a></li>
+      <li><a href="#levels">Levels</a>        <ul>
+          <li><a href="#first-sandbox">First Sandbox</a></li>
+          <li><a href="#rocketx">RocketX</a></li>
+          <li><a href="#garfunkel">Garfunkel</a></li>
+          <li><a href="#beatmill">Beatmill</a></li>
+          <li><a href="#big-giant-head">Big Giant Head</a></li>
+          <li><a href="#unfair-fair">Unfair Fair</a></li>
+          <li><a href="#venom-rig">Venom Rig</a></li>
+          <li><a href="#hex-elevator">Hex Elevator</a></li>
+          <li><a href="#tutorial">Tutorial</a></li>
+          <li><a href="#extra-block-towers">Extra: Block Towers</a></li>
+        </ul>
+      </li>
+      <li><a href="#menus-and-user-interface">Menus and User Interface</a></li>
+      <li><a href="#audio">Audio</a>        <ul>
+          <li><a href="#keys">Keys</a></li>
+          <li><a href="#eq">EQ</a></li>
+          <li><a href="#organization">Organization</a></li>
+        </ul>
+      </li>
+      <li><a href="#play-tests">Play Tests</a>        <ul>
+          <li><a href="#ai-agents">AI agents</a></li>
+          <li><a href="#user-tests">User Tests</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#launch">Launch</a></li>
+  <li><a href="#indie-x">Indie X</a></li>
+  <li><a href="#additional-notes--appendix">Additional Notes / Appendix</a>    <ul>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#time-log">Time log</a>        <ul>
+          <li><a href="#time-for-all-categories-per-milestone">Time for all categories, per milestone:</a></li>
+          <li><a href="#time-until-now-per-category">Time until now, per category</a></li>
+        </ul>
+      </li>
+      <li><a href="#final-notes">Final Notes</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="prototype">Prototype</h1>
+
+<p>About six years ago I started learning Unity in my spare time, going through several official and unofficial tutorials. One was a simple tutorial on how to create a wire chain through physics. After its completion, I added a simple platform and a sphere. When arrow keys were pressed the sphere was torqued, and on spacebar press a vertical force was added to sphere, which caused it to jump. I was at awe. Unity’s physics were accessible and felt natural out of the box. Not only that, but a rough working scene could be quickly setup by gluing some basic concepts.</p>
+
+<div>
+    <div class="youtube-player" data-id="3goAGlKg92Q" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Wire chain and sphere physics</p>
+
+<p>An idea started to bubble up about around this simple project: staying as long as possible on top of a platform. Antagonists, materialized in the form of various hazards, were added in order to coerce (directly or indirectly) the player off the platform. Frequency and power of these hazards increased over time, raising the probability of reaching the level’s finishing state. From this starting point, more elements were added, such as interactable platform edge blocks, destroyable floor tiles, backdrops, user interface and basic sound effects.</p>
+
+<p>Two versions resulted from this. The first ad supported version was available for <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Android mobile</a> devices only, having one playable level in single-player mode. Afterwards, a new adless version was released for <a href="https://www.ouya.tv/game/Survival-Ball/">OUYA</a>, <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalltv">Android TV</a> and Kongregate, featuring a new versus mode.</p>
+
+<div>
+    <div class="youtube-player" data-id="ZrqakDKWwjg"></div>
+</div>
+<p class="media-caption media-caption-one">Game prototype version for OUYA, Android TV and Kongregate</p>
+
+<h1 id="reboot">Reboot</h1>
+
+<p>I went to work on other projects after the prototype’s launch, but the feedback provided from gamers was kept in the back of my mind in the meanwhile. Several ideas eventually piled up for a new, improved version of the game, and about two years ago they were first brought to fruition. First at night after work, then full-time until completion.</p>
+
+<p>Laying out a solid base was was essential in the beginning of the project, specially concept wise. Pre-production, if you will. Surviving on top of a platform was the root idea, but was there latitude for perpendicular ideas? Multiplayer mode? Versus or Cooperative? Online or local only? Powerups? Which player movements would be available, only jump? Progressive difficulty (the player does not choose the difficulty level) or bucket based difficulty (e.g. easy, normal, hard)? What will be the direction of visual style, audio, and code architecture? How many levels? What is the player’s motivation play these levels?</p>
+
+<h2 id="root-ideas-and-game-modes">Root ideas and game modes</h2>
+
+<p>Less is more when it comes to the game’s root ideas, and surviving on top of a platform seemed like a good premise. This idea was dissected and questioned thoroughly during the initial phase of development, in order to make sure it was well sustained. Other ideas such as going as high as possible or objective based levels were considered, but set aside in the initial stage of the project. They were not completely scrapped, such that both survival/time based and objective based levels would later cohabitate throughout the game’s development.</p>
+
+<p>Assuming survival as the most important root idea, a question came up: survive what? It could be either you against the world, or you against other player(s), or a combination of both. The latter two options would prompt the need of a multiplayer versus mode and/or player AI, and the former one would naturally accommodate a single player and/or cooperation mode.</p>
+
+<p>Allowing for a local multiplayer mode would be something desirable, since I had a personal bias towards games that physically join a group of friends in the same place. Also, online multiplayer was set aside due to the added entropy and complexity associated with it. </p>
+
+<p>As for cooperative (co-op) games, there is usually an increased inclusion factor due to the wealth of opportunities to strike a balance between experienced and less experienced players, translating to less chances of frustration caused by huge proficiency gaps.</p>
+
+<p>Given the above points, solo and local co-op modes were chosen to be included in the game.</p>
+
+<h2 id="difficulty">Difficulty</h2>
+
+<p>Again, having in mind that less is more, a progressive difficulty mode (where the player does not choose the difficulty level) was strived for, instead of a bucket based approach (e.g. easy, normal, hard). Choosing a difficulty level when starting a simple game like this one, forces the player to commit to a given difficulty level at start, and accepting that decision. The responsibility is on the player. Often happens to me that when I choose a difficulty level like “easy” or “normal”, I keep wondering throughout the game if I am really good at that game, or am I just being thrown softballs. Progressive difficulty resolves that problem immediately, but it falls on the developer shoulders to craft the game in such a way that all difficulty ranges are covered just right.</p>
+
+<p>Progression would be 2-fold: each level would start in an accessible way, but would gradually get more difficult as time passes. On the other hand, each level would be more challenging than the last one during the campaign. </p>
+
+<h2 id="control-and-movement">Control and movement</h2>
+
+<p>There was the need to have offensive manuevers against hazards, and to provide mid-air control to the player. Two new movements were added to the already existing jump and double jump movements: dash and stomp. Dash provided mid-air control and allowed the player to interact with the world’s objects and attack hazards. Stomp, inspired by <a href="https://en.wikipedia.org/wiki/Super_Mario_64">Super Mario 64</a>, allowed for button interaction, and mid-air stop and plunge for precise vertical landings.</p>
+
+<p>With this set of movements, the player was able to gain full control over the ball. Easy to learn, hard to master. Additionally, it suppressed the need for aerial control via directional controls, which would be less physically coherent and could quench some of the fun of gaining control proficiency.  </p>
+
+<h2 id="powerups">Powerups</h2>
+
+<p>An assumption was made that powerups would be distributed randomly, either by items scattered throughout the level or by other means. Powerups were not used because of these four reasons: </p>
+
+<ul>
+  <li><strong>Added game design complexity</strong> - every new powerup would increase the realm of possible scenarios during a game session, which would increase the difficulty of striking good game balance.</li>
+  <li><strong>Simplicity</strong> - simplicity was held at high value during development, and powerups would probably require the usage of a new button to trigger the power, more UI elements and new concepts for the player to grasp.</li>
+  <li><strong>Skill based gameplay</strong> - the game aimed to be purely skill based. Since the randomized nature of hazards already abducted some of this intent, having powerups attributed by chance would further decrease the player’s perception that the level was completed by his/her own merit.</li>
+  <li><strong>They could be used as crutches</strong> - powerups are outstanding when <a href="https://en.wikipedia.org/wiki/Rollcage_(video_game)">used</a> <a href="https://en.wikipedia.org/wiki/Mario_Kart_8">properly</a>, but can also be abused to cover up design flaws. Having a no-powerup limitation forced me think in alternative ways to make the game more interesting, a challenge I was drawn to. </li>
+</ul>
+
+<h2 id="visual-aesthetics">Visual Aesthetics</h2>
+
+<p>Defining the game’s visual appearance early on was quite important, since it would influence the reasoning behind 3D models, textures, UI, colors, mood and even audio. The two most influential references were <a href="https://material.io/archive/guidelines/">Material Design (first version)</a> and <a href="https://store.steampowered.com/app/540840/Lara_Croft_GO/">Lara Croft GO</a>.</p>
+
+<p>Coming from an Android development background, I was exposed to Material Design, which is a visual language that synthesizes the classic principles of good design. Its principles go beyond mobile UI development, and span to a swath of different form factors and use cases. I personally found it beautiful and applyed its principles throughout the game’s aesthetics, both in UI, but also in the overall style of the game. This influenced the game to have a simple, clean and coherent style.</p>
+
+<p>Lara Croft GO is a beautiful game. The charming colors and elegant (yet simple) style made an impression on me. While building up the game’s aesthetics, I consulted several screenshots of Lara Croft GO and attempted to transpose its most pleasant design elements into Survival Ball.</p>
+
+<p><img class="center" src="/files/sb_making_game/lara_croft_go_0.jpg"></p>
+
+<h2 id="codebase">Codebase</h2>
+
+<p>The prototype was a literal extension of the initial <a href="#prototype">wire chain and ball physics experiment</a>, and features were added at the same time I learned Unity’s ropes. This, added to rapid prototyping and little to no code architecture planning, resulted in a codebase that was entangled, difficult to follow and hard to extend.</p>
+
+<p>The new version was built from scratch and several arquitectures were explored in the beginning of the project, until one was found to fit the game best. The chosen approach followed these principles:</p>
+
+<ul>
+  <li>Each level had a single entry point, the game controller, which orquestrated the different actors.</li>
+  <li>The game controller contained all top level parameters. Sub-parametrization was facilitated via <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">Scriptable Objects</a>. For example, the PlayerController had PlayerParameters (which was a scriptable object) exposed on the game controller. The PlayerParameters could in turn have sub-parameters, if needed.</li>
+  <li>Dynamic objects, such as the player, hazards and interactable level parts should be created programmatically whenever possible.</li>
+  <li>The initial scene stage should only have static or decorative objects.</li>
+  <li>Object behavior should be managed by its specific controller. Game object components should be presentational and have as little behaviour as possible. For example, a rocket thruster could have a component which changed the color and size of smoke and fire, but it would be the thruster’s controller responsibility to drive the input value for this component.</li>
+  <li>Orquestration of events (from dynamic objects, user interaction and other data streams) was handled using a reactive approach, facilitated by <a href="https://github.com/neuecc/UniRx">UniRx</a></li>
+</ul>
+
+<h2 id="levels">Levels</h2>
+
+<p>The level creation process went somewhere along these lines: I would go for a long walk without any audiobooks or entertainment, and allow my mind to wander around. If an idea came up, I would write it down in a <a href="https://keep.google.com/">Google Keep</a> note. At a later time, in a quiet place, I would dissect these ideas on paper to materialize its pros and cons, while further developing the ideas that seemed most promising. </p>
+
+<h3 id="first-sandbox">First Sandbox</h3>
+
+<p>Before building any of the levels, a scrappy sandbox level was built to work out the broader strokes of the player’s movement. In this sandbox, movement, jump, stomp and dash (immediate single charge at the time) were first developed and loosely tweaked.</p>
+
+<div>
+    <div class="youtube-player" data-id="7Fi5rzgwcVo"></div>
+</div>
+<p class="media-caption media-caption-one" />
+
+<h3 id="rocketx">RocketX</h3>
+
+<p>SpaceX was landing their first rockets on drone ships when the first idea of the bunch was developed. It revolved around the concept of a four thruster rocket platform. Each of these thrusters could be activated or deactivated by their respective button. An additional center button turned all the thrusters on or off. The platform had a finite amount of fuel that could be replineshed by shoving fuel crates, hazards or players in the center fuel intake.</p>
+
+<p>This level would set the tone for the upcoming ones, so it was important to pin down the core gameplay, level structure and hazard dynamics before moving on to the next level. Just like changing a cosmological parameter would drastically change everything in the universe (like the possiblity of life), the game’s basilar parameters were set as tightly as possibile early on, because even a small change could break other already built levels. For example, a small change in how fast the player is, how high can it jump or how gravity affects it, could translate into several hours of extra work to re-adjust every level accordingly, or even render them obsolete.</p>
+
+<p>For these reasons, it took around 354 hours to develop the bulk of RocketX, about one fifth of the project’s timespan.      </p>
+
+<center>
+  <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+      <div class="youtube-player video-frame-two" data-id="pNcz-92Qva0"></div></div>
+    <p class="media-caption media-caption-two">Initial RocketX prototype, to access the <br class="video-br" />overall feel of the level</p>
+  </div>
+  <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+       <div class="youtube-player video-frame-two" data-id="QWNof5LEvAE"></div></div>
+    <p class="media-caption media-caption-two">Textures, props, backdrop and hazards added, <br class="video-br" /> along with several adjustments to player gameplay</p>
+  </div>
+  </center>
+
+<div>
+    <div class="youtube-player" data-id="qRJ4ETvlLy8"></div>
+</div>
+<p class="media-caption media-caption-one">Four players playing the final version</p>
+
+<h3 id="garfunkel">Garfunkel</h3>
+
+<p>Original concept for the second level was a variation of the <a href="https://en.wikipedia.org/wiki/Simon_(game)">Simon</a> game, hence <a href="https://en.wikipedia.org/wiki/Simon_%26_Garfunkel">Garfunkel</a>. A sequence of lights would be played out first, and the player(s) would then have to mimic the same sequence afterwards by orderly hitting the respective target pieces, at the cost of the piece falling off if it were to be hit outside the sequence. There would exist as many platforms as the number of players.</p>
+
+<p>A quick level layout was built. Soon after the first plays and it became apparent that the concept was flawed. Mimicking a sequence would mean that during the first phase, while the model sequence is played out, the player would be left to do nothing movementwise. Moreover, after the second or third prompt of the sequence, the player would most likely forget which came next, because his/her main focus would be getting the ball movement right and not hit any of the non sequenced tiles. Simon is about memory, Survival Ball is about motor skill.   </p>
+
+<div>
+    <div class="youtube-player" data-id="g13i_KKoPAM" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Initial Garfunkel prototype, exploring a variation of the Simon electronic game</p>
+
+<p>Pivoting from this, came the idea of collapsing the two phases into a single phase, no memorization needed. The platform piece prompts would be immediate and coupled with the background music rhythm, which would progressivly get faster as time passed. The player would have limited time to hit these prompts, as the unhit prompted pieces would fall after each music measure.</p>
+
+<p>There was only one platform, since having multiple platforms would elicit a natural exploit. The player could quickly notice that the best strategy would be to focus all energy in a single platform. There was no real gain to be had on saving all platforms. One would suffice, and would be easier for the player to manage.</p>
+
+<p>The background music was programmatically played. The easiest approach was to individually play each audio sample, meaning that the rhythm was dictated by the frequency to which these were played. Long and complex audio samples were not fit for this purpose, since they had their own tempo, and only transforming these samples would correctly match them with the overall music tempo. Simple and short audio samples were used, specially drum samples, which worked great for this use case.</p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="O4v96qUWg5g"></div></div>
+   <p class="media-caption media-caption-two">1. First tribal backdrop experiment</p>
+ </div>
+ <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="1Q3wCCTs1jk"></div></div>
+   <p class="media-caption media-caption-two">2. Waterfall backdrop, later re-used in Unfair Fair</p>
+ </div>
+ </center>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="8CNEBxzrX8c"></div></div>
+   <p class="media-caption media-caption-two">3. Level exploit,<br class="video-br" /> bypassing piece decay, platform rotations and prompts</p>
+ </div>
+ <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="Vxnas8eIIkY"></div></div>
+   <p class="media-caption media-caption-two">4. Simple particle system backdrop,<br class="video-br" />synchronized with the music</p>
+ </div>
+ </center>
+
+<p>The music engine and platform movement were first tackled, and took a considerable amount of time to build. After a few playthroughs with these basic systems in place, something did not feel quite right. At the time, it seemed related with how the background looked like. Predominantly using drum samples, the overall music style suggested a tribal feel, and seemed important at the time to have a good match between the music and the level’s visual appearance, hence the different backdrop experiments.    </p>
+
+<p>After these four different backdrops, something was still off. Progressively I realized that the real problem was related with the platform’s shape. In a circular platform, the best strategy is to safeguard the inner pieces, since they are easily reachable and have an inferior angular speed compared to the outer ones. Falling prey to <a href="https://en.wikipedia.org/wiki/Sunk_cost#Loss_aversion_and_the_sunk_cost_fallacy">sunk cost fallacy</a>, some attempts were made to save this concept: rotate the inner pieces at a higher speed or to rotate them in different axes; to implement piece decay, which released the piece if the player stayed on top of it for too long. None of them worked, since these obstacles could be easily bypassed, as shown by the above video number 3.</p>
+
+<div>
+    <div class="youtube-player" data-id="55rM9iCQBSw" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Final Garfunkel state. The level was scrapped but most of its elements were re-used in Beatmill and Big Giant Head</p>
+
+<p>The last backdrop experiment was a simple water floor, which focused the player’s attention in the platform and had the additional benefit of having a near plane to which the player’s shadow could be casted. The vertical player shadow was a very important reference for the player’s position.</p>
+
+<p>The level would need to be completely redesigned or scrapped altogether, since it was not acceptable in its current form. It ended up being scrapped, but the waterfall backdrop (video 2. above) was later reused by <a href="#unfair-fair">Unfair Fair</a>, and two new levels were forked from Garfunkel’s base elements: <a href="#beatmill">Beatmill</a> and <a href="#big-giant-head">Big Giant Head</a>.</p>
+
+<h3 id="beatmill">Beatmill</h3>
+
+<p>Beatmill addressed one of the major issues in Garfunkel, the easy exploit of the circular platform shape. Solution was to have several loose square pieces which were part of a cross or lengthwise treadmill. Randomly moving each piece along these two directions meant that no piece was permanently in the same area (like the center area) of the platform. Every single piece was important to treasure and save.</p>
+
+<p>The treadmill system was developed from scratch, and Garfunkel’s music engine and water floor backdrop were reused. </p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="QoVlL5SxoKg"></div></div>
+   <p class="media-caption media-caption-two">Single piece treadmill logic,<br class="video-br" /> which would generalize in to a treadmill system</p>
+ </div>
+ <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="D9mfA-_3XU4"></div></div>
+   <p class="media-caption media-caption-two">Treadmill system<br class="video-br-end" /><br class="video-br-end" /></p>
+ </div>
+ </center>
+
+<p>After developing the level’s basic game elements and validating their gameplay via play testing, the decay concept was recycled from Garfunkel, with slight modifications. A special black button was placed as one of the platform’s pieces. If pressed, it decayed the adjacent pieces. If a decayed piece was touched, it would fall.</p>
+
+<p>This concept apparently worked well, but when play tested with a group of friends, it was pointed out as being too punishing. When the special black button was pressed, the level’s difficulty skyrocketed, making the already difficult task of reaching prompted pieces even harder. As a result, pressing the black button was faced as a death kneel, urging players to restart the level right after the black button was pressed. After a few rounds of these, collective despair would soon grow due to the overwhelming difficulty.</p>
+
+<p>Solution was to invert the black button’s function. Instead of decaying the adjacent pieces, it would revive them. This time around, the special black button was not avoided in fear, but in greed. It was a precious resource, to be used as a late as possible.  </p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="yq5UPIoTyLo"></div></div>
+   <p class="media-caption media-caption-two">Four players playing an early version,<br class="video-br" />with the special black button decaying the adjacent pieces</p>
+ </div>
+ <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="qPaBAVRu8xM"></div></div>
+   <p class="media-caption media-caption-two">Four players playing the final version,<br class="video-br" />with the special black button reviving the adjacent pieces</p>
+ </div>
+ </center>
+
+<h3 id="big-giant-head">Big Giant Head</h3>
+
+<p>Garfunkel’s platform did not work in a survival setting, but could it work in a different setting? In order for it to work, the level’s progress could only advance when the player touched his/her respective prompt. An objective sequence. The level also needed a long term objective for these sequences to link up. Turns out the game campaign was lacking a final boss, and this could be a good opportunity to salvage Garfunkel’s platform (and its respective movement and prompt system) to a new level, the final one. The final boss.</p>
+
+<p>The defined long term objective was to deplete the boss’s life, but the players needed a way to interact with it. The first idea was to drain the boss’s life every time a prompted platform piece was hit, but that bore two problems: interaction was too indirect and there was no opposite force that gave the boss a chance to defend itself. Hazards could be used to fulfil this purpose, but that dynamic was too easy and insipid. The final boss was expected to be more challenging than all its previous levels, and was expected to require the player to use most, if not all, of the previously aquired learnings.</p>
+
+<p>Inspired by classic game bosses, which stack different boss stages, solution was to materialize the boss into an anthropomorphic head, and have the head appear in the center, equipped with a turret, when it was sufficiently small to fit platform’s center gap. The head shrank every time a sequence of prompted platform pieces were hit. The players could directly interact with the center head by hitting it, draining the boss’s life. Difficulty progression was accomplished by decaying a set of platform pieces every time the small center head was defeated.</p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="Zd5Qi1Z-0Ww"></div></div>
+   <p class="media-caption media-caption-two">Interactable boss turret prototype<br class="video-br" />added to the Garfunkel platform</p>
+ </div>
+ <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+      <div class="youtube-player video-frame-two" data-id="9cJ6whQak_E"></div></div>
+   <p class="media-caption media-caption-two">Three players playing the final version<br class="video-br-end" /><br class="video-br-end" /></p>
+ </div>
+ </center>
+
+<h3 id="unfair-fair">Unfair Fair</h3>
+
+<p>“Giant washing machine drum” was the initial concept behind this level. Challenge was to transform this germinal idea into a fun level, coherent with the game’s survival motto. Some scattered ideas were drafted on paper, such as having interactable controls to make the drum rotate in a given direction or to stop the rotation entirelly, but none of them were successfuly transformed in to a viable challenge or part of a larger challenge.</p>
+
+<div>
+    <div class="youtube-player" data-id="ogk1-BE4Wgo" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Hardcoded drum to validate to overall feel of the level</p>
+
+<p>The most interesting avenue was to reuse the piece decay concept from Beatmill. In Unfair Fair, the decay was caused by a specific hazard, which if not hit by its respective player, exploded and decayed the nearby platform pieces. Once these pieces were touched, they fell. The pieces near the platform spokes were decayed at start, to increase the chances of partial or complete piece group detachment.</p>
+
+<p>The first iteration of this hazard exploded after bouncing a given amount of times, which proved to be unfair for when the hazard bounces close to the ground, giving little opportunity for the player(s) to react. </p>
+
+<p>The next and final iteration had the hazard explode a given time amount after its first bounce, which gave a fair chance for its dismantling. Visual presentation was reviewed to better present how close the hazard was to explode. The time taken to explode would decrease as the level progressed. </p>
+
+<p>Notice the waterfall backdrop below, repurposed from one of Garfunkel’s experiments.     </p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="lYch8E96Sdw"></div></div>
+   <p class="media-caption media-caption-two">First version<br class="video-br" />Decay hazards exploding after a given amount of bounces</p>
+ </div>
+ <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="nP65k-Fp9X0"></div></div>
+   <p class="media-caption media-caption-two">Four players playing the final version<br class="video-br" />Decay hazards explode after a given amount of time</p>
+ </div>
+ </center>
+
+<h3 id="venom-rig">Venom Rig</h3>
+
+<p>Upon Garfunkel’s closure, began the development of a concept revolving around an oil rig shaped platform. The platform had four pillars, each destroyed when their respective button was pressed. The player had no motivation to press them, but these could be pressed by stomper hazard developed previously for RocketX. Their only task was to press these buttons.</p>
+
+<p>To add another challenge dimension, a concept from the game’s prototype was added: decay rockets (in the prototype they were represented as rectangular parallelepipeds). Upon landing, these hazards decayed the platform piece below until the piece was completely detached from the platform. Other hazards would be spawned throughout the lifecyle of the level for increased diversity.</p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="8wkLZoBdFGw"></div></div>
+   <p class="media-caption media-caption-two">First iteration of the level<br class="video-br" />with a dynamically generated platform</p>
+ </div>
+ <div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="WHGM0U-mF0s"></div></div>
+   <p class="media-caption media-caption-two">Added decay rockets and other hazards,<br class="video-br" />along with model, backdrop and texture work</p>
+ </div>
+ </center>
+
+<div>
+    <div class="youtube-player" data-id="L89rCKa2zU4" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Four players playing the final version</p>
+
+<h3 id="hex-elevator">Hex Elevator</h3>
+
+<p>The initial concept on paper was a 2.5D level in which a fluid (water/lava) would progressively rise as the player(s) made their way up a series of platforms and objects. The rising fluid concept seemed promising, but having a series of fixed 2.5D platforms seemed somewhat bland and left little space for cooperation dynamics.</p>
+
+<p>Solution was to have an infinite amount of procedurally generated platforms, each higher than the previous one. The only way to reach the next platform was via an elevator assigned to a specific player, which first had to be activated by touching all of its respective prompts. The elevators would only rise when all players occupied their respective elevator.</p>
+
+<p><a href="https://www.redblobgames.com/grids/hexagons/">Reb Blob Games’ guides</a> on hex grids were immensly useful when building the procedurally generated honeycomb platforms. These guides couple well explained theory with concise practical implementations, and I highly recommend them to anyone doing hex grid work.</p>
+
+<center>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="7_Dx6vlX-vo"></div></div>
+  <p class="media-caption media-caption-two">First iteration of the level with procedurally generated<br class="video-br" />platforms and their respective prompts and elevators</p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="hV-HI7lUlsA"></div></div>
+  <p class="media-caption media-caption-two">Added rising water which was<br class="video-br" />replaced by lava in the upcoming iteration</p>
+</div>
+</center>
+
+<p>Upon the first play test session with friends, it became apparent that small tweaks were required to the behaviour of elevators. Because elevators would only rise when all players were sitting on top of their respective elevator, a problem arised if, near the upper platform, someone abandoned the elevator earlier than others. At that point, all elevators would drop, taking most of the players with them.</p>
+
+<p>Solution was to make each elevator independent when they were close the upper platform, allowing for a smoother team transition between platforms.  </p>
+
+<center>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="-eQAA99UQrQ"></div></div>
+  <p class="media-caption media-caption-two">Four players playing the early version without<br class="video-br" />elevator independence upon reaching the upper platform</p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="n5eVn3ieY3c"></div></div>
+  <p class="media-caption media-caption-two">Four players playing the final version with<br class="video-br" />elevator independence upon reaching the upper platform</p>
+</div>
+</center>
+
+<h3 id="tutorial">Tutorial</h3>
+
+<p>Is is generally a good idea to write the introduction of a book, essay or paper last, since you need to have a very solid idea of the shape of the finished product, and exactly what you need to mention up front for everything to hold together. The tutorial level was left for last for the same reasons.</p>
+
+<p>It was the game’s first level, and had the responsability to introduce the game and provide the required tools and knowledge to play it. Specifically, how to jump, double jump, dash and stomp. The overall concept of the level was inspired by an early version of <a href="https://www.youtube.com/watch?v=eQgWTt5usQ4&amp;feature=youtu.be&amp;t=17">Gang Beasts’ tutorial</a>, which was pedagogic andp fun. Having the controls layed out as part of the scenario, instead of using an UI overlay fixture, was something quite interesting as well.</p>
+
+<div>
+    <div class="youtube-player" data-id="rCCqNCzG7RE" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">First iteration. Functional, yet bland</p>
+
+<p>The first iteration had some of the required pedagogic elements, but was static and insipid when played, even though it had some interactive elements.</p>
+
+<p>The following idea was to have a series of small platforms sitting by a pond. The instability of these floating platforms imprinted a livelier dynamic and were more physically sound than the initial tutorial iteration.</p>
+
+<center>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="Q1ewmcfZoCM"></div></div>
+  <p class="media-caption media-caption-two">Second iteration, featuring <br class="video-br" /> several floating platforms inside a pond</p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+    <div class="youtube-player video-frame-two" data-id="7ACfcqM3zMQ"></div></div>
+  <p class="media-caption media-caption-two">Refinements to the second iteration<br class="video-br-end" /><br class="video-br-end" /></p>
+</div>
+</center>
+
+<p>After a play test with friends, it was noticeable that very few people understood how to dash, or how important the combination of jump, dash and stomps were to gain air control. </p>
+
+<p>Solution was to add an animated billboard ilustrating how the dash charge worked, and add two additional sections focused on air control. The following play tests showed that these changes made a significant difference on a player’s comprehension of the game’s basilar movements and techniques. </p>
+
+<div>
+    <div class="youtube-player" data-id="bdmKDki32Og" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Final iteration with an animated dash charge billboard and new sections focused on air control</p>
+
+<h3 id="extra-block-towers">Extra: Block Towers</h3>
+
+<p>This level was not used, since no plausible game dynamics were found to fit the overall concept of the game, but the sheer fun and simplicity it provided while moving around high stacks of blocks were worth the special mention. </p>
+
+<div>
+    <div class="youtube-player" data-id="_7bUriE71NY" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one" />
+
+<h2 id="menus-and-user-interface">Menus and User Interface</h2>
+
+<p>Most of these interfaces were built in the late stages of development. Following the <a href="#visual-aesthetics">Visual Aesthetics</a> layed out earlier, the first rough screens were sketched out, starting by the home screen. Some experiments were made with the game’s logo and UI elements. UI buttons design for example, referred their colors and shape from a core element of the game, the hexagonal wave counter. </p>
+
+<div>
+    <div class="youtube-player" data-id="3_a3mHJhOuQ" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">First iteration of the home screen</p>
+
+<p>At about the same time, the title screen was built. Presented when opening the game and right before the home screen, it was crafted to create an impactful first impression and to be later used for key art, showcasing the most important elements of the game: logo, players, enemies and some levels. Another important aspect was to illustrate that this was a co-op game, so the 4 players were placed in the forefront, aligned in such a way that no one was widely in front of anyone, with about equal highlight to all of them. The screen drew inspiration from other games’ key art, such as the one from <a href="https://en.wikipedia.org/wiki/Super_Mario_Land_2:_6_Golden_Coins">Super Mario Land 2</a>, which presented all game’s key elements in one powerful, stylized image. </p>
+
+<div>
+    <div class="youtube-player" data-id="OPnS6aaiGks" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Title screen</p>
+
+<p>The home screen was later refined and the remaining screens were progressively built and polished. These were the options (video, audio and controls), player selection, pause, end game, game selection and stats screens.</p>
+
+<div>
+    <div class="youtube-player" data-id="OrAXiD4QQis" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Tour of all menus and graphical interfaces</p>
+
+<h2 id="audio">Audio</h2>
+
+<p>Music and sound effects were built using GarageBand. Many freely available sound libraries such as the <a href="https://sonniss.com/gameaudiogdc2017/">Sonniss GameAudioGDC Bundles</a> were used to mash up different samples into new sound effects.  </p>
+
+<p><figure class='image'><center><a href='/files/sb_making_game/main_screen_main_theme2.png'><img src='/files/sb_making_game/main_screen_main_theme2.png'></a></center><figcaption class='media-caption'> GarageBand project for the main theme </figcaption></figure></p>
+
+<p>Audio aimed to be clean and coherent, thus a small subset of samples were used from the immense libraries available and reused whenever possible, trying to settle with a mostly electronic style for music and to use instruments or natural audio effects for SFX.</p>
+
+<h3 id="keys">Keys</h3>
+
+<p>I believe coherency is gained when using a small set of musical keys throughout the game. Survival Ball only used the C major key and its relative minor, A minor. Major keys are genererally recognized as happier and joyful and minor keys as darker and heavier. In the game, each level or screen used one of these keys, according to the desired environment and feel. </p>
+
+<p>One interesting nugget of knowledge I came to learn while developing the audio, was that sound effects also fit within a certain key. The overall audio will sound much better when sound effects and music are built in key accordance.  </p>
+
+<h3 id="eq">EQ</h3>
+
+<p>Another interesting tidbit was to remove the extremely low and high frequencies in the final mix. The effect is threefold: audio fatigue is reduced when editing; makes the overall composition seem cleaner to the listener; leaves more headroom in the audible frequency range, improving the composition’s focus and clarity.  </p>
+
+<p><figure class='image'><center><a href='/files/sb_making_game/eq_cutoff.png'><img src='/files/sb_making_game/eq_cutoff.png'></a></center><figcaption class='media-caption'> Extremely low and high frequencies cutoff in the master bus’ EQ </figcaption></figure></p>
+
+<h3 id="organization">Organization</h3>
+
+<p>The game ended up having more than 60 different sound effects and around <a href="https://store.steampowered.com/app/997540">20 musical segments</a>. A considerable amount of time was wasted checking on a given audio segment status, so a simple spreadsheet was used to track the name, category and its state (done, needs revision, missing). This simple sheet improved the audio creation process considerably. </p>
+
+<h2 id="play-tests">Play Tests</h2>
+
+<h3 id="ai-agents">AI agents</h3>
+
+<p>Having the need to perform many iterations and tweaks without constant access to other testers, a simple AI was built to simulate multiplayer dynamics and to have a better grasp of how the level handles these dynamics.</p>
+
+<p>AI agents were specific to each level, and driven by a series of objectives. For example, in Beatmill, the agent’s main objective was to reach its respective colored prompt. If no prompts existed, it would move towards the platform’s center, the optimal place to wait for a prompt. It also had passive behaviours such as avoidance of gaps or special black buttons via jumps. As seen in the video below, the agents are not perfect, but set a good work baseline.</p>
+
+<div>
+    <div class="youtube-player" data-id="L82f3-ckaYA" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Beatmill (non published early version): the blue, green and yellow players are controlled by AI</p>
+
+<h3 id="user-tests">User Tests</h3>
+
+<p>Once roughly tweaked, the game was presented (preferably for the first time) to a group of friends during a play test session. These sessions were of uttermost value, since they provided valuable feedback, critics and/or validation to the various game elements.</p>
+
+<p>There were 6 play test sessions in total. Apart from how valuable these were to improve the game, they were also a great opportunity to gather a group of friends and have a good time. The game was modified and tweaked between each session, after digesting the impressions and feedback of the previous one.</p>
+
+<p>The game had some backdoor hooks which allowed for quick macro difficulty tweaks, e.g. how many waves were necessary to unlock a level. These were specially useful in the first play session, since the game was extremelly punishing in its early incarnations.</p>
+
+<p>Some guidelines I tried to follow:</p>
+
+<ul>
+  <li>Refrained from playing. I only joined if the backdoor hooks were not enough to lower the difficulty to a point that was enjoyable by the players. I could infrequently join near the session’s end and most of the feedback had been provided.</li>
+  <li>I sat behind the players, writing impressions and feedback. Sporadically I asked for more details on a comment or behaviour that I observed. Being an observer, it is also easier to probe for mood fluctuations in the room. For example, when frustration starts to build up due to the extreme difficulty of a level, it is easily noticeable when observing from outside. The same applies for bursts of joy a given level or dynamic might cause.</li>
+  <li>Gut reactions were very precious, so I would probe for more details on these reactions and encourage honest reactions and feedback.  </li>
+  <li>After the game was finished, I asked the players about their impressions, what they liked, they did not like, the level they enjoyed the most and the level they enjoyed the least. On that note, RocketX, Hex Elevator and Big Giant Head were top favorites. Venom Rig, Unfair Fair and Beatmill were most often referred as the less enjoyable of the bunch.</li>
+  <li>Only explained the reasons behind a given design decision after the game was finished and most of the feedback had been given, to diminish the influence of my opinion on the players feedback.</li>
+</ul>
+
+<h1 id="launch">Launch</h1>
+
+<p>The game was launched on November 8th, 2018. One month earlier, the <a href="https://store.steampowered.com/app/918690">Steam store page</a>, <a href="https://survivalball.com/">official website</a> and <a href="https://twitter.com/survivalball">twiter account</a> were brought online. During that month, a closed beta ran on Steam, which served mostly for last mile validations, since the bulk of the iterations were made during the in-person play testing phase. At the same time, several dozens of keys were sent to youtubers, with notable regard to the ones specialized in couch co-op games. To the ones contacted by email, I took into attention <a href="https://www.youtube.com/watch?v=L3Qf1aQHqyc">this video by Stephen</a>, where he describes what kind of emails he expects to receive from developers. </p>
+
+<p>After launch, I was advised by fellow developers that the above strategy was not optimal, because it is usually a good idea to build your following by sharing your progress and interacting with the community during development (via social networks or dev blogs for example), potentially increasing the game’s exposure and sales. In a possible new game, it would be interesting to adopt this strategy and take note of how workflow and game design would be influenced.</p>
+
+<h1 id="indie-x">Indie X</h1>
+
+<p>Shortly after completing the first beta build of the game, I submitted my application to <a href="https://indiex.pt/">Indie X</a>, the biggest indie game showcase/contest in Portugal. Fortunately, Survival Ball was accepted as one of the 55 finalists, meaning that it would be showcased at Lisboa Games Week 2018 a week after the game’s launch!</p>
+
+<p>A custom build was specially crafted for the event. To better fit the event’s environment, the build offered an arcade experience through local leaderbords for the players with the highest number of completed waves, and leaderboards for the fastest players to finish Big Giant Head or the Tutorial. A simple controls cheat sheet was added to the pause menu, and the end game screens were changed to allow the players to enter their (group) name to the leaderboard. All levels were unlocked in this build, avoiding the need to finish the campaign to access a specific level.</p>
+
+<div>
+    <div class="youtube-player" data-id="m6X0yNZu-PI" data-thumbsize="1"></div>
+</div>
+<p class="media-caption media-caption-one">Highlights of the custom build for Lisboa Games Week 2018 showcase</p>
+
+<p>The event surpassed all my expectations. It was the first time I saw, in person, swathes of anonymous people playing Survival Ball. It was pleasantly surprising to recurrently see many groups of gamers trying out the game, playing for hours, and even returning back to the booth at a later time. Not much sleep was had during those four days, but it was rewarding to witness such moments.</p>
+
+<center><a href="https://twitter.com/survivalball/status/1064556805630697477"><img align="center" src="http://lopespm.github.io/files/sb_making_game/composite-3-players-photos_705.png" alt="" /></a></center>
+<p class="media-caption media-caption-one">Some of the players at Lisboa Games Week. More photos and videos <a href="https://twitter.com/survivalball/status/1064556805630697477">here</a></p>
+
+<p>The showcase was also a great opportunity to connect with other developers and get to know their stories and games. The overall experience was incredible and I am immensly thankful to the organizers for putting it all together 🙏  </p>
+
+<h1 id="additional-notes--appendix">Additional Notes / Appendix</h1>
+
+<h2 id="tools">Tools</h2>
+
+<ul>
+  <li><strong><a href="https://unity3d.com/">Unity</a></strong> - game engine in which the game was built
+    <ul>
+      <li><strong><a href="https://assetstore.unity.com/packages/tools/utilities/rewired-21676">Rewired (Unity plugin)</a></strong> - a godsend for managing input</li>
+    </ul>
+  </li>
+  <li><strong><a href="https://www.jetbrains.com/rider/">Rider</a></strong> - .NET IDE used to develop and manage the game’s code</li>
+  <li><strong><a href="https://www.blender.org/">Blender</a></strong> - used to build all the 3D models and to map their respective textures. Blender is one of the most powerful FOSS tools I have ever used, and puts up a good fight against proprietary packages such as 3ds Max</li>
+  <li><strong><a href="https://inkscape.org/">Inkscape</a></strong> - all textures were crafted in Inkscape. Almost all textures were <a href="https://vector-conversions.com/vectorizing/raster_vs_vector.html">vector based</a>, and later rasterized for Unity in PNG format</li>
+  <li><strong><a href="https://www.apple.com/lae/mac/garageband/">GarageBand</a></strong> - music and sound effects composition</li>
+  <li><strong><a href="https://www.tyme-app.com/">Tyme</a></strong> - project time tracking</li>
+  <li><strong><a href="https://git-scm.com/">Git</a></strong> - source control. <a href="https://gitlab.com/">GitLab</a> private repositories were used to host the game’s project and website</li>
+</ul>
+
+<h2 id="time-log">Time log</h2>
+
+<p>Time was tracked during the entire span of the project, in various categories.</p>
+
+<h3 id="time-for-all-categories-per-milestone">Time for all categories, per milestone:</h3>
+
+<ul>
+  <li><strong>Until first complete alpha build</strong> - 1334 hours </li>
+  <li><strong>Until Steam release</strong> - 1642 hours</li>
+  <li><strong>Total, until now</strong> - 1716 hours </li>
+</ul>
+
+<h3 id="time-until-now-per-category">Time until now, per category</h3>
+
+<ul>
+  <li><strong>Coding, visual work, tooling, research/study</strong> - 1417 hours</li>
+  <li><strong>Audio (music, sfx)</strong> - 92 hours</li>
+  <li><strong>Final builds play tests (does not include play tests with other people or tests during development)</strong> - 32 hours</li>
+  <li><strong>Website</strong> - 22h</li>
+  <li><strong>Marketing, screenshots, videos, social media</strong> - 123 hours</li>
+  <li><strong>User support</strong> - 8 hours</li>
+  <li><strong>Administrative, burocracies</strong> - 22h</li>
+</ul>
+
+<h2 id="final-notes">Final Notes</h2>
+
+<ul>
+  <li>The game was developed in macOS. Windows was mostly used to work out the particularities of its respective build, such as build post-processing work.</li>
+  <li><a href="https://twitter.com/chetfaliszek/status/1085957214781595648">In case you need one more reason</a> on why to use version control for your game project: time travel. The game was under version control since day one, and its git repository has around 1.3K commits at the time of this writing. Going back in time was as simple as checking out an older commit. Almost all videos presented throughout this article were made possible because of this. Checkout, open project, record, repeat. Not only that, but it was fairly easy to see how work evolved over time, which helped immensely when writing this article.</li>
+  <li>Most challenging aspect was to make sure everything was coherent. Once root concepts, design and objectives were aligned and the early level prototypes felt good when played, then filling out the gaps (refining gameplay, models, textures, audio, UI) was somewhat straightforward.</li>
+  <li>The game’s development could be divided in three phases:
+    <ul>
+      <li><strong>First phase (until first alpha build)</strong> - bulk of the development work was done during this phase. Very intense in terms of making sure everything was coherent, sane and enjoyable to play. There were large temporally contiguous blocks of work on each level.</li>
+      <li><strong>Second phase (first alpha to public launch)</strong> - development was scattered, moving from place to place, iterating where needed and finishing up peripheral features such as Steam integration. </li>
+      <li><strong>Third phase (from launch onwards)</strong> - maintenance work, user support, optimizations and bug fixes.</li>
+    </ul>
+  </li>
+  <li>I had an amazing experience building this game and am very happy with the final result. Not only did it materialize one of my dreams, but gave me the opportunity to explore and deepen areas outside my professional expertise, such as 3D modeling/texturing, audio production and game design. If you are a game developer or are thinking on becoming one, I hope this testimony was useful for your journey and hopefully brought more clarity into the process 🙌</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Unity: Dynamic Multi Target Camera]]></title>
+    <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
+    <updated>2018-12-27T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;">
+	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
+		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
+		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />
+		<!--[if lt IE 9]><img src="http://lopespm.github.io/files/camera_multi_target/demo.gif"><![endif]-->
+	</video> 
+</a></p>
+
+<p>Mostly invisible, yet essential, camera work is key to any game with dynamic cameras. This article dissects a concise Unity <a href="https://github.com/lopespm/unity-camera-multi-target">open source</a> library which dynamically keeps a set of objects (e.g. players and important objects) in view, a common problem for a wide range of games.</p>
+
+<p>The library was developed for, and used by my first Steam game, <a href="https://survivalball.com/">Survival Ball</a>. The game has an heavy shared screen local co-op component, which requires the camera to dynamically keep many key elements in view.</p>
+
+<!--more-->
+
+<p>There are good camera resources for Unity, but I found them to either do too much or too little for this specific problem, so I thought this could be a good opportunity to learn a bit more about dynamic camera movement and to share that knowledge and <a href="#where-to-get-it">code</a> with the community.</p>
+
+<p></p>
+
+<h1 id="overview">Overview</h1>
+
+<p>The library is fed with the desired camera rotation (pitch, yaw and roll), the target objects that will be tracked and the camera that will be transformed. </p>
+
+<p></p>
+
+<p>The library’s sole responsibility is to calculate a camera position in which all targets lie inside its view. To achieve this, all target objects are projected onto a slice (plane) of the <a href="https://docs.unity3d.com/Manual/UnderstandingFrustum.html">camera’s view frustrum</a>. The projections located inside the view frustrum will be visible and the others will not. The idea is to trace back a new camera position from the outermost target projections, since this way we are guaranteed to include all projections inside the view.</p>
+
+<p> </p>
+
+<p><img class="center" src="/files/camera_multi_target/side_view_screen_basis_with_captions.png"></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>In order to make the bulk of the operations easier to compute, the process starts by multiplying the camera’s <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Using_quaternion_as_rotations">inverse rotation</a> with each of the targets positions, which will place them as they would if the camera’s axis would be aligned with the world’s axis (identity rotation). Once the camera position is calculated in this transformed space, the camera rotation is multiplied by this position, resulting in the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
+
+<p> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space<em>1.png'><img src='/files/camera_multi_target/transformed_space/transformed_space<em>1.png'></a></center><figcaption class='media-caption'> Original targets positions </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space</em>2<em>with_captions.png'><img src='/files/camera_multi_target/transformed_space/transformed_space</em>2<em>with_captions.png'></a></center><figcaption class='media-caption'> Multiply the camera’s inverse rotation with each of the targets positions </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space</em>3.png'><img src='/files/camera_multi_target/transformed_space/transformed_space</em>3.png'></a></center><figcaption class='media-caption'> Calculate the camera position in this transformed space </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png'><img src='/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png'></a></center><figcaption class='media-caption'> Multiply the camera’s rotation with the calculated position in the previous transformed space, which will reveal the final camera position in the original space</figcaption></figure></p>
+
+<h1 id="implementation">Implementation</h1>
+
+<p>Most of the operations are performed in the transformed space where the camera’s axis would be aligned with the world’s axis (identity rotation). After the targets are rotated into the camera’s identity rotation space by multiplying the camera’s inverse rotation with each of the targets positions, the first task is to calculate their projections.</p>
+
+<p>Please note that in all the figures below (with the exception of the <a href="#horizontal-projections"><em>horizontal field of view angle</em></a> section), the camera is present for reference only, as its final desired position will only be uncovered in the final step.</p>
+
+<h2 id="targets-projections">Targets projections</h2>
+
+<p>For each target, four projections are cast to a plane parallel to the view plane, sliced from the camera’s view frustrum. The line described from the target object to its respective projection is parallel to the camera’s view frustrum edges. Relative to the camera, two of these projections run horizontally, and the other two vertically.</p>
+
+<p> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections<em>1.png'><img src='/files/camera_multi_target/projections_intro/projections<em>1.png'></a></center><figcaption class='media-caption'> Perspective view of the targets projections </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections</em>2.png'><img src='/files/camera_multi_target/projections_intro/projections</em>2.png'></a></center><figcaption class='media-caption'> Side view of the targets projections </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections_3.png'><img src='/files/camera_multi_target/projections_intro/projections_3.png'></a></center><figcaption class='media-caption'> Top view of the targets projections </figcaption></figure></p>
+
+<p>If any of the target’s projections are outside the camera’s view frustrum (or its sliced plane), then the target object will not be visible. If they are inside, the target object will be visible. This means that the four outermost projections from all targets will define the limit of where the view frustrum must be in order to have all objects in view or partially in view. Adding some padding to these outermost projections (i.e. moving these projections away from the center of the view frustrum plane slice), will result in additional padding between the target object and the camera’s view borders.</p>
+
+<p> </p>
+
+<h3 id="vertical-projections">Vertical projections</h3>
+<p> </p>
+
+<p>For all vertical projections positions, we are interested in finding their Y component. In the figure below, notice the right triangle with one vertex on the target object and another one on the projection. If we discover the length of the side running parallel the projection plane, that value can be added to the Y component of the target’s position, resulting in the Y component for the upper projection.</p>
+
+<p> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png'><img src='/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png'></a></center><figcaption class='media-caption'> Side view of the elements needed to calculate the vertical projections </figcaption></figure></p>
+
+<p> </p>
+
+<p><script type="math/tex">\theta</script> is equal to half the camera’s vertical field of view angle <script type="math/tex">\theta'</script> (<script type="math/tex">\theta = \frac{\theta'}{2}</script>). The vertical field of view angle <script type="math/tex">\theta'</script> is provided by the camera’s <a href="https://docs.unity3d.com/ScriptReference/Camera-fieldOfView.html"><code>fieldOfView</code></a> in degrees, which needs to be converted to radians for our purposes (<script type="math/tex">\theta' = \theta'_{degrees} \times \frac{\pi}{180º}</script>).</p>
+
+<p>The triangle’s adjacent edge length (relative to <script type="math/tex">\theta</script>) is known, thus we can find the length of the opposite side of the triangle by using <a href="https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/a/finding-trig-ratios-in-right-triangles">trigonometric ratios</a>.</p>
+
+<script type="math/tex; mode=display">opposite = tan(\theta) \times adjacent</script>
+
+<p>With this, the upper projection’s Y/Z components can be fully calculated. The bottom projection has the same Z component as the upper one, and its Y component is equal to the target’s Y component minus the calculated opposite triangle edge length.</p>
+
+<h3 id="horizontal-projections">Horizontal projections</h3>
+
+<p></p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png'><img src='/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png'></a></center><figcaption class='media-caption'> Top view of the elements needed to calculate the horizontal projections </figcaption></figure></p>
+
+<p>The horizontal projections follow a set of similar set of calculations, difference being that we are now interested in finding the X component (instead of Y), and the horizontal field of view angle is used instead of the vertical one. The horizontal field of view angle <script type="math/tex">\gamma'</script> and its half value <script type="math/tex">\gamma</script> (<script type="math/tex">\gamma = \gamma' \times 2</script>) need some further steps to be computed, which will be detailed in the following section.</p>
+
+<p></p>
+
+<h4 id="horizontal-field-of-view-angle">Horizontal field of view angle</h4>
+
+<p>Consider the following figure, in which <script type="math/tex">\gamma</script> represents half the horizontal field of view angle, <script type="math/tex">\theta</script> represents half the vertical field of view angle, <script type="math/tex">w</script> the viewport width and <script type="math/tex">h</script> the viewport height:</p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/horizontal_fov.png'><img src='/files/camera_multi_target/horizontal_fov.png'></a></center><figcaption class='media-caption'> Elements for the calculation of the horizontal field of view angle </figcaption></figure> </p>
+
+<p>Using trigonometric ratios, these two equations can be devised:</p>
+
+<script type="math/tex; mode=display">
+\begin{cases}
+tan(\gamma) = \frac{w / 2}{adj} \\ 
+adj = \frac{h / 2}{tan(\theta)}
+\end{cases} 
+</script>
+
+<p>Replacing <script type="math/tex">adj</script> in the first equation with the definition of the second one:</p>
+
+<script type="math/tex; mode=display">
+tan(\gamma) = \frac{w / 2}{\frac{h / 2}{tan(\theta)}} 
+\Leftrightarrow \\
+tan(\gamma) = \frac{w / 2}{h / 2} \times tan(\theta)
+\Leftrightarrow \\
+tan(\gamma) = \frac{w}{h} \times tan(\theta)
+\Leftrightarrow \\
+\gamma = arctan(\frac{w}{h} \times tan(\theta))
+</script>
+
+<p>Unity’s camera has an <a href="https://docs.unity3d.com/ScriptReference/Camera-aspect.html"><code>aspect</code></a> attribute (view canvas width divided by height, i.e. <script type="math/tex">aspect\ ratio = \frac{w}{h}</script>), with which we can finalize our equation and discover the horizontal field of view angle half value.</p>
+
+<script type="math/tex; mode=display">
+\gamma = arctan(aspect\ ratio \times tan(\theta))
+</script>
+
+<h3 id="outermost-projections">Outermost projections</h3>
+
+<p>Having all target projections calculated, the four outermost ones are picked:</p>
+
+<ul>
+  <li><script type="math/tex">p_{hMax}</script> is the projection with the highest X component</li>
+  <li><script type="math/tex">p_{hMin}</script> is the projection with the lowest X component</li>
+  <li><script type="math/tex">p_{vMax}</script> is the projection with the highest Y component</li>
+  <li><script type="math/tex">p_{vMin}</script> is the projection with the lowest Y component</li>
+</ul>
+
+<p></p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_outermost/projections_outermost.png'><img src='/files/camera_multi_target/projections_outermost/projections_outermost.png'></a></center><figcaption class='media-caption'> All outermost projections </figcaption></figure> </p>
+
+<h2 id="calculating-the-camera-position">Calculating the camera position</h2>
+
+<h3 id="in-the-transformed-space">In the transformed space</h3>
+
+<p></p>
+
+<p>The X and Y components of the desired camera position in the transformed space are the midpoints of their respective outermost projections, this is, the midpoint between <script type="math/tex">p_{hMax}</script> and <script type="math/tex">p_{hMin}</script> is the camera’s X position, and the midpoint between <script type="math/tex">p_{vMax}</script> and <script type="math/tex">p_{vMin}</script> is the camera’s Y position.</p>
+
+<p></p>
+
+<p>The Z component of the camera position in the transformed space is calculated by backtracking a view frustrum from the the outermost projections to the camera Z component candidate. The furthest Z component from the projection plane will be the chosen, in order for the final camera position to contain all targets within its view.</p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png'><img src='/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png'></a></center><figcaption class='media-caption'> Elements for adjacent<sub>v</sub> calculation </figcaption></figure> </p>
+
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png'><img src='/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png'></a></center><figcaption class='media-caption'> Elements for adjacent<sub>h</sub> calculation </figcaption></figure> </p>
+
+<p>Once again, trigonometric ratios will be used to calculate these Z position candidates.</p>
+
+<script type="math/tex; mode=display">
+adjacent_{v} = \frac{opposite_{v}}{tan(\theta)}
+\\
+adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
+</script>
+
+<p>The highest value between <script type="math/tex">adjacent_{v}</script> and <script type="math/tex">adjacent_{h}</script> will be picked for the camera’s Z position component in the transformed space.</p>
+
+<p></p>
+
+<h3 id="final-camera-position-in-the-original-space">Final camera position in the original space</h3>
+
+<p>With the camera position calculated in the transformed space, we can now multiply the desired camera rotation with this position, which will provide us with the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
+
+<p></p>
+
+<h1 id="where-to-get-it">Where to get it</h1>
+
+<p></li>
+</ul>
+
+<p>The library is available on GitHub and the Unity Asset Store. An example scene of the library’s usage is included. Feedback is most welcome and I hope this can be useful!</p>
+
+<ul>
+  <li><a href="https://github.com/lopespm/unity-camera-multi-target">GitHub Repository</a></li>
+  <li><a href="https://assetstore.unity.com/packages/tools/camera/camera-multi-target-dynamic-135922">Unity Asset Store Package</a></li>
+</ul>
+
+<p></p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><em>I have been informed that the Unity Asset Store team is experiencing longer than normal review times. From the information I gathered online, it might take a couple of weeks until it is available. I will post an update on my twitter <a href="https://twitter.com/lopes_pm">@lopes_pm</a> once it is published.</em><a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Survival Ball on OUYA]]></title>
+    <link href="http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html"/>
+    <updated>2013-09-08T00:00:00+01:00</updated>
+    <id>http://lopespm.github.io/games/2013/09/08/survival-ball-ouya</id>
+    <content type="html"><![CDATA[<p>Survival Ball in now available on OUYA, and its publishing process was fairly straightforward. From the day of submission (2nd of September) to its approval (5th of September), it took a mere 3 days, counting that a re-submission had to be made in-between.</p>
+
+<p>Survival Ball was already available on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Google Play</a>, <a href="http://www.amazon.com/RockByte-Software-Survival-Ball/dp/B00ARVZ7F0/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1378394674&amp;sr=1-1">Amazon </a>and <a href="http://www.kongregate.com/games/rockbyte/survival-ball">Kongregate</a>, but OUYA just felt like the perfect platform for the game. With it, you could just grab the OUYA controller and/or a spare XBox/PS3 controller, and just have a quick match. I really loved the concept, and re-iterated on the previous version of the game to give it more controller friendly menus, better graphics, refined textures, and an overall revamp.</p>
+
+<!--more-->
+
+<p>After finishing up the port to OUYA, on the 2nd of September, I’ve made the first submission. I’ll just point out that upon this moment, it seemed to be stuck with a red status message which read “<em>Still verifying apk…</em>”. To resolve this, I edited the submission, re-submitted the APK, and waited a few seconds. The game was then submitted for approval.</p>
+
+<p>On the 4th of September, a re-submission was asked by the OUYA review team (which were very friendly by the way), since some elements fell of the safe-frame, which is safe-guard for gamers who have screens that perform <a href="https://devs.ouya.tv/developers/docs/content-review-guidelines">too much overscan</a>.</p>
+
+<p>The game was re-submitted on the same day, and was approved on the 5th of September. From this point on, one can release the game whenever it seems more appropriate. The game was released on the same day.</p>
+
+<p>I’ve came to learn during this process, after publishing the game, it first goes to the “Sandbox” section. Only after a major acceptance from the game community, can the game be promoted to the primary categories. So, if you would like to take a quick peek at the game, you can find it at the “Sandbox” section.</p>
+
+<center><iframe width="560" height="315" src="http://lopespm.github.io//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
+
+<p><br /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nordic Game Jam’s winners]]></title>
+    <link href="http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners.html"/>
+    <updated>2013-01-27T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners</id>
+    <content type="html"><![CDATA[<p>This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: <a href="http://nordicgamejam.org/2013/01/21/winners-ngj13/">http://nordicgamejam.org/2013/01/21/winners-ngj13/</a></p>
+
+<p>My personal highlight goes to Stalagflight (<a href="https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html">https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html</a>), which is as simple as stupidly fun! Stalagflight can be played with the keyboard, but it is tricky. If you have a gamepad the experience is much better.</p>
+
+<!--more-->
+
+<p>On other lines, if you want to stretch the face of Justin Bieber and force him to make heavenly sounds, rejoice with this: <a href="http://unicorn7.org/static/be/">http://unicorn7.org/static/be/</a></p>
+]]></content>
+  </entry>
+  
+</feed>
