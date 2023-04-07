@@ -4,7 +4,7 @@ title: "The First Note"
 comments: true
 categories: notes
 tags: []
-description: "The introduction and reasonings for the new 'Notes' section"
+description: "Introduction and reasonings behind the new 'Notes' section"
 published: true
 ---
 
