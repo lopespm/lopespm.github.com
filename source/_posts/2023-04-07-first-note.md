@@ -5,6 +5,8 @@ comments: true
 categories: notes
 tags: []
 description: "Introduction and reasonings behind the new 'Notes' section"
+ogp_image: "/files/notes/notes2.png"
+ogp_image_twitter: "/files/notes/notes2.png"
 published: true
 ---
 
