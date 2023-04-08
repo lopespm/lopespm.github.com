@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: notes | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
+  <link href="http://lopespm.github.io/blog/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-04-08T03:27:48+01:00</updated>
+  <updated>2023-04-08T03:27:56+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>

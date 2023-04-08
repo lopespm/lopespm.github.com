@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Tag: machine learning | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/tags/machine-learning/atom.xml" rel="self"/>
+  <title><![CDATA[Category: machine_learning | Byte Tank]]></title>
+  <link href="http://lopespm.github.io/blog/categories/machine-learning/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-04-08T03:27:48+01:00</updated>
+  <updated>2023-04-08T03:27:56+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -25,7 +25,7 @@
  </div>
   </center>
 
-<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html#source-code">available on GitHub</a>.</p>
+<p>Above is the built <a href="https://deepmind.com/research/dqn/">deep Q-network (DQN)</a> agent playing <a href="https://en.wikipedia.org/wiki/Out_Run">Out Run</a>, trained for a total of 1.8 million frames on a Amazon Web Services g2.2xlarge (GPU enabled) instance. The agent was built using python and tensorflow. The Out Run game emulator is a modified version of <a href="https://github.com/lopespm/cannonball">Cannonball</a>. All source code for this project is <a href="{% post_url 2016-10-06-deep-reinforcement-learning-racing-game %}#source-code">available on GitHub</a>.</p>
 
 <!--more-->
 
@@ -48,11 +48,11 @@
 <p>Jacob Schrum has made available a terse and accessible <a href="https://www.youtube.com/playlist?list=PL4uSLeZ-ET3xLlkPVEGw9Bn4Z8Mbp-SQc">explanation</a> which takes around 45 minutes to watch and serves as a great starting point for the paragraphs below. 
 Let’s take the canonical reinforcement learning example presented by Jacob (grid world):</p>
 
-<p><img class="center" src="/files/dqn_outrun/gridworld.png"></p>
+<p>{% img center /files/dqn_outrun/gridworld.png %}</p>
 
 <p>To implement this algorithm, we need to build the Q-function (<a href="https://www.youtube.com/watch?v=XLkW_WGJoyQ">one of the forms</a> of the <a href="https://en.wikipedia.org/wiki/Bellman_equation">Bell-Equation</a>) by using the Q-value iteration update:</p>
 
-<p><img class="center" src="/files/dqn_outrun/q_value_iteration_update.svg"></p>
+<p>{% img center /files/dqn_outrun/q_value_iteration_update.svg %}</p>
 
 <p>In the above grid, there are 9 actionable states, 2 terminal states and 4 possible actions (left, right, up, down), resulting in 36 (9 actionable states x 4 possible actions) Q-values.</p>
 
@@ -70,7 +70,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Another approach (used in <a href="https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf">DeepMind’s</a> <a href="http://www.readcube.com/articles/10.1038/nature14236?shared_access_token=Lo_2hFdW4MuqEcF3CVBZm9RgN0jAjWel9jnR3ZoTv0P5kedCCNjz3FJ2FhQCgXkApOr3ZSsJAldp-tw3IWgTseRnLpAc9xQq-vTA2Z5Ji9lg16_WvCy4SaOgpK5XXA6ecqo8d8J7l4EJsdjwai53GqKt-7JuioG0r3iV67MQIro74l6IxvmcVNKBgOwiMGi8U0izJStLpmQp6Vmi_8Lw_A%3D%3D">network</a>) would be to feed in the game’s screens and have the network output the Q-value for each possible action. This way, a single forward pass would output all the Q-values for a given state, translating into one forward pass per optimal future value estimate.</p>
 
-<p><figure class='image'><center><a href='/files/dqn_outrun/q_network_formulations.png'><img src='/files/dqn_outrun/q_network_formulations.png'></a></center><figcaption class='media-caption'> Image courtesy of Tambet Matiisen’s <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning">Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. </figcaption></figure> </p>
+<p>{% imgcap /files/dqn_outrun/q_network_formulations.png Image courtesy of Tambet Matiisen’s <a href="https://www.nervanasys.com/demystifying-deep-reinforcement-learning">Demystifying Deep Reinforcement Learning</a> - Left: Naive formulation of deep Q-network. Right: More optimized architecture of deep Q-network, used in DeepMind papers. %} </p>
 
 <p>Q-learning and deep neural networks are the center pieces of a deep Q-network reinforcement learning agent and I think that by understanding them and how they fit together, it can be easier to picture how the algorithm works as a whole.</p>
 
@@ -104,7 +104,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>The reward function’s definition is crucial for good learning performance and determines the goal in a reinforcement learning problem. April Yu et al. have an interesting paper on <a href="http://cs231n.stanford.edu/reports2016/112_Report.pdf">simulated autonomous vehicle control</a> which details a DQN agent used to drive a game that strongly resembles Out Run (<a href="http://codeincomplete.com/games/racer/v4-final/">JavaScript Racer</a>). Based on their reward function experiments, I’ve built a <a href="https://github.com/lopespm/agent-trainer/blob/master/agent/trainer/episode.py#L60">function</a> which rewards logarithmically based on speed and penalizes when the car is off-road, crashed or stopped. </p>
 
-<p><figure class='image'><center><a href='/files/dqn_outrun/reward_function_plot.png'><img src='/files/dqn_outrun/reward_function_plot.png'></a></center><figcaption class='media-caption'> Reward values for when the car is not crashed or off-road </figcaption></figure> </p>
+<p>{% imgcap /files/dqn_outrun/reward_function_plot.png Reward values for when the car is not crashed or off-road %} </p>
 
 <h1 id="deployment">Deployment</h1>
 
@@ -118,7 +118,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>To accommodate this scenario, the deployment scripts and agent-trainer are designed to support train session resumes. To persist results and decrease boot up time between sessions, a long-lived EBS volume is attached to the live instance. The volume contains the training results, agent-trainer´s source code, cannonball’s source code, dockerfiles and their respective docker images. </p>
 
-<p><figure class='image'><center><a href='/files/dqn_outrun/deployed-diagram.png'><img src='/files/dqn_outrun/deployed-diagram.png'></a></center><figcaption class='media-caption'> Relationship between components when deploying agent-trainer to an AWS EC2 instance </figcaption></figure> </p>
+<p>{% imgcap /files/dqn_outrun/deployed-diagram.png Relationship between components when deploying agent-trainer to an AWS EC2 instance %} </p>
 
 <h1 id="results">Results</h1>
 
@@ -194,19 +194,19 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <p>Notice on the videos above how the timed mode trained session <code>201609111241_2700eps</code> reaches the first checkpoint about five seconds earlier than the unlimited time mode trained session <code>201609171218_175eps</code>, but proceeds to drive off-road two turns after. Its stability gets increasingly compromised as more episodes are trained, which can be observed by the rampant loss increase before 7300 episodes are reached (<code>201609111241_7300eps</code>):</p>
 
-<p><figure class='image'><center><a href='/files/dqn_outrun/201609111241<em>7300eps/metrics_in_train.png'><img src='/files/dqn_outrun/201609111241<em>7300eps/metrics_in_train.png'></a></center><figcaption class='media-caption'> Training metrics for session 201609111241</em>7300eps </figcaption></figure><figure class='image'><center><a href='/files/dqn_outrun/201609111241<em>7300eps/metrics_trained_play.png'><img src='/files/dqn_outrun/201609111241<em>7300eps/metrics_trained_play.png'></a></center><figcaption class='media-caption'> Play evaluation metrics for session 201609111241</em>7300eps: using ε=0.0; evaluation made at the end of every 20 training episodes </figcaption></figure><figure class='image'><center><a href='/files/dqn_outrun/201609171218<em>175eps/metrics_in_train.png'><img src='/files/dqn_outrun/201609171218<em>175eps/metrics_in_train.png'></a></center><figcaption class='media-caption'> Training metrics for session 201609171218</em>175eps </figcaption></figure><figure class='image'><center><a href='/files/dqn_outrun/201609171218<em>175eps/metrics_trained_play.png'><img src='/files/dqn_outrun/201609171218<em>175eps/metrics_trained_play.png'></a></center><figcaption class='media-caption'> Play evaluation metrics 201609171218</em>175eps: using ε=0.0; evaluation made at the end of every training episode </figcaption></figure></p>
+<p>{% imgcap /files/dqn_outrun/201609111241<em>7300eps/metrics_in_train.png Training metrics for session 201609111241</em>7300eps %}{% imgcap /files/dqn_outrun/201609111241<em>7300eps/metrics_trained_play.png Play evaluation metrics for session 201609111241</em>7300eps: using ε=0.0; evaluation made at the end of every 20 training episodes %}{% imgcap /files/dqn_outrun/201609171218<em>175eps/metrics_in_train.png Training metrics for session 201609171218</em>175eps %}{% imgcap /files/dqn_outrun/201609171218<em>175eps/metrics_trained_play.png Play evaluation metrics 201609171218</em>175eps: using ε=0.0; evaluation made at the end of every training episode %}</p>
 
 <p>Both <code>201609111241_2700eps</code> and <code>201609111241_7300eps</code> timed trained sessions mostly drive off-road and stall after the first stage, whereas the unlimited time mode trained session <code>201609171218_175eps</code> can race through all the stages crashing <em>only</em> three times (as shown on the article’s first video) and is able to match the performance of a timed trained session when evaluated on the default easy timed mode. </p>
 
 <p>Below is the loss plot for <code>201609160922_54eps</code> and <code>201609171218_175eps</code>, both trained using the game’s unlimited time mode, difference being that <code>201609160922_54eps</code> keeps a fixed learning rate and <code>201609171218_175eps</code> decays it every 50100 steps:</p>
 
-<p><figure class='image'><center><a href='/files/dqn_outrun/loss<em>201609171218</em>201609160922.png'><img src='/files/dqn_outrun/loss<em>201609171218</em>201609160922.png'></a></center><figcaption class='media-caption'> Loss comparison between sessions <font color="#9c27b0">■</font> 201609160922<em>54eps and <font color="#009688">■</font> 201609171218</em>175eps, as viewed on <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a> </figcaption></figure></p>
+<p>{% imgcap /files/dqn_outrun/loss<em>201609171218</em>201609160922.png Loss comparison between sessions <font color="#9c27b0">■</font> 201609160922<em>54eps and <font color="#009688">■</font> 201609171218</em>175eps, as viewed on <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a> %}</p>
 
 <p>Other representative visualizations:</p>
 
-<p><figure class='image'><center><a href='/files/dqn_outrun/201609171218<em>175eps/t-SNE_timed_easy_mode.png'><img src='/files/dqn_outrun/201609171218<em>175eps/t-SNE_timed_easy_mode.png'></a></center><figcaption class='media-caption'> t-SNE visualization, generated by letting the agent play one game on timed easy mode. Agent is using the network trained on session 201609171218</em>175eps </figcaption></figure>
-<figure class='image'><center><a href='/files/dqn_outrun/201609171218<em>175eps/t-SNE_no_time_mode.png'><img src='/files/dqn_outrun/201609171218<em>175eps/t-SNE_no_time_mode.png'></a></center><figcaption class='media-caption'> t-SNE visualization, generated by letting the agent play one game on unlimited time mode. Agent is using the network trained on session 201609171218</em>175eps </figcaption></figure>
- <figure class='image'><center><a href='/files/dqn_outrun/conv_net_filters.png'><img src='/files/dqn_outrun/conv_net_filters.png'></a></center><figcaption class='media-caption'> Visualization of the first convolutional network layer’s filters. These can be viewed via <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a></figcaption></figure> </p>
+<p>{% imgcap /files/dqn_outrun/201609171218<em>175eps/t-SNE_timed_easy_mode.png t-SNE visualization, generated by letting the agent play one game on timed easy mode. Agent is using the network trained on session 201609171218</em>175eps %}
+{% imgcap /files/dqn_outrun/201609171218<em>175eps/t-SNE_no_time_mode.png t-SNE visualization, generated by letting the agent play one game on unlimited time mode. Agent is using the network trained on session 201609171218</em>175eps %}
+ {% imgcap /files/dqn_outrun/conv_net_filters.png Visualization of the first convolutional network layer’s filters. These can be viewed via <a href="https://github.com/lopespm/agent-trainer-results">tensorboard</a>%} </p>
 
 <p><br /></p>
 
