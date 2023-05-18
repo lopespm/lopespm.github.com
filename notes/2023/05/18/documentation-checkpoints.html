@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Tag: games - Byte Tank</title>
+  <title>Solving task switching through documentation - Byte Tank</title>
   <meta name="author" content="Pedro Lopes">
 
   
-  <meta name="description" content="Tag: games">
+  <meta name="description" content="">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://lopespm.github.iotags/games">
+  <link rel="canonical" href="http://lopespm.github.io/notes/2023/05/18/documentation-checkpoints.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -33,21 +33,22 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 <link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
-  <meta property="og:title" content="Tag: games - Byte Tank" />
-<meta property="og:description" content="Tag: games" />
-<meta property="og:url" content="http://lopespm.github.iotags/games" />
-<meta property="og:image" content="" />
+  <meta property="og:title" content="Solving task switching through documentation - Byte Tank" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="http://lopespm.github.io/notes/2023/05/18/documentation-checkpoints.html" />
+<meta property="og:image" content="http://lopespm.github.io/files/notes/notes2.png" />
 <meta property="og:site_name" content="Byte Tank" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
 
-<meta name="twitter:title" content="Tag: games - Byte Tank">
-<meta name="twitter:description" content="Tag: games">
+<meta name="twitter:title" content="Solving task switching through documentation - Byte Tank">
+<meta name="twitter:description" content="">
 
 <meta name="twitter:creator" content="@lopes_pm">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://lopespm.github.io">
+<meta name="twitter:image" content="http://lopespm.github.io/files/notes/notes2.png">
+
 
   
   <script>
@@ -196,7 +197,7 @@ MathJax.Hub.Config({
   <header role="banner">
     <hgroup>
       <h1><a href="/">Byte Tank</a></h1>
-      <h2>Pedro Lopes Blog & <span class="note-header-subtitle">Notes</span></h2>
+      <h2>Pedro Lopes <span class="note-header-subtitle">Notes</span></h2>
 </hgroup>
 </header>
   <nav role="navigation">
@@ -218,84 +219,126 @@ MathJax.Hub.Config({
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Tag: Games</h1>
+    
+      <h1 class="entry-title">Solving Task Switching Through Documentation</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2023-05-18T00:00:00+01:00" pubdate data-updated="true">May 18<span>th</span>, 2023</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>We don’t actually multitask. We switch-task, rapidly shifting from one thing to another, interrupting ourselves unproductively, and losing time in the process <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. It just so happens that many aspects of our life require managing multiple tasks at the same time, so how to approach it?</p>
 
-  
-  <h2>2019</h2>
+<p>One strategy that consistently worked for me has been using documentation to checkpoint each step of a process. Just like in a videogame, where one can recall the last saved checkpoint.</p>
 
-<article>
-  
-<h1><a href="/2019/02/06/survival-ball-making-the-game.html">Survival Ball: Making the Game</a></h1>
-<time datetime="2019-02-06T00:00:00+00:00" pubdate><span class='month'>Feb</span> <span class='day'>06</span> <span class='year'>2019</span></time>
+<h2 id="the-backtracking-inefficiency">The Backtracking Inefficiency</h2>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/tags/games/'>games</a></span>
-</footer>
+<p>Similar to a CPU, our short-term memory (STM) has access to a limited amount (around four or seven concepts have been suggested <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>) of very quick memory. Everytime we change to a different task, most of the resident concepts need to be flushed in order to load the ones from the incoming task. This is quite taxing by itself and narrowly optimizable, since our wetware is mostly fixed. The biggest efficiency opportunities lie in <em>where</em> these concepts are loaded from.</p>
 
+<p>When working on a task, often we grab several simultaneous concepts, combine them together and generate new ones, which are then added to the concept pool and built upon further. During this process we are faced with these options:</p>
 
-</article>
+<ul>
+  <li><strong>Option 1.</strong> Don’t store our working memory - essentially lose work. Let’s rule out this option.</li>
+  <li><strong>Option 2.</strong> Progressively store the existing concepts into our long term memory.</li>
+  <li><strong>Option 3.</strong> Progressively store the existing concepts into an external memory bank, such as a document or piece of paper.</li>
+</ul>
 
+<p><strong>Option 2.</strong> works well, but requires significant cognitive effort and often only keeps the most relevant conclusions. If for some reason these need to be re-considered or understood why they were generated in the first place, we backtrack into the seminal thought processes, which in turn will probably require a repetition of previous work.</p>
 
+<p>This is one of the biggest offenders when task switching, because even if we recall the end state of a task (which is hard by itself), a lot of time and energy are spent when revisiting the overall context via backtracking.</p>
 
-  
-  <h2>2018</h2>
+<h2 id="documentation-as-checkpoint-mechanism">Documentation as Checkpoint Mechanism</h2>
 
-<article>
-  
-<h1><a href="/libraries/games/2018/12/27/camera-multi-target.html">Unity: Dynamic Multi Target Camera</a></h1>
-<time datetime="2018-12-27T00:00:00+00:00" pubdate><span class='month'>Dec</span> <span class='day'>27</span> <span class='year'>2018</span></time>
+<p>Enter <strong>Option 3.</strong>: Progressively store these existing concepts into an external memory bank, such as a document or piece of paper.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/tags/games/'>games</a>, <a class='category' href='/tags/libraries/'>libraries</a></span>
-</footer>
+<p>Although progressively writing in an external memory bank (e.g. a document) the contents of our working memory can take some effort, the yielded results are considerable:</p>
 
+<ul>
+  <li>Less cognitive load upon re-starting a task</li>
+  <li>Backtracking effort is reduced, since it is a matter of reading a document</li>
+  <li>Shareable with other stakeholders, which shaves off the time required to explain these concepts</li>
+  <li>Task switching becomes smoother and less burdensome</li>
+</ul>
 
-</article>
+<h2 id="parting-thoughts">Parting Thoughts</h2>
 
+<ul>
+  <li>The documentation’s structure has a significant impact in how efficiently it can be parsed and shared. This is a whole topic by itself.</li>
+  <li>Documentation as a checkpointing mechanism is a great way to consolidate personal learnings and reflections. It’s a valuable tool for leveraging life’s experiences to mature and grow. <em><strong>Option 1.</strong> is such a waste.</em></li>
+</ul>
 
-
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/games/2013/09/08/survival-ball-ouya.html">Survival Ball on OUYA</a></h1>
-<time datetime="2013-09-08T00:00:00+01:00" pubdate><span class='month'>Sep</span> <span class='day'>08</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/tags/games/'>games</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/games/2013/01/27/nordic-game-jams-winners.html">Nordic Game Jam’s winners</a></h1>
-<time datetime="2013-01-27T00:00:00+00:00" pubdate><span class='month'>Jan</span> <span class='day'>27</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/tags/games/'>games</a></span>
-</footer>
-
-
-</article>
-
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Bregman, <a href="https://hbr.org/2010/05/how-and-why-to-stop-multitaski">How (and Why) to Stop Multitasking</a><a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3425965/">About the Distinction between Working Memory and Short-Term Memory</a><a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2023-05-18T00:00:00+01:00" pubdate data-updated="true">May 18<span>th</span>, 2023</time>
+      
+      
+
+
+    </p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/notes/2023/05/04/the-case-for-not-having-tv.html" title="Previous Post: The case for not having a TV">&laquo; The case for not having a TV</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -379,7 +422,10 @@ MathJax.Hub.Config({
       var disqus_shortname = 'bytetank';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://lopespm.github.io/notes/2023/05/18/documentation-checkpoints.html';
+        var disqus_url = 'http://lopespm.github.io/notes/2023/05/18/documentation-checkpoints.html';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
