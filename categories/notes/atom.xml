@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-07-02T10:22:54+01:00</updated>
+  <updated>2023-07-02T11:50:22+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -18,17 +18,17 @@
     <link href="http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking.html"/>
     <updated>2023-07-02T00:00:00+01:00</updated>
     <id>http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking</id>
-    <content type="html"><![CDATA[<p>Large languaguage models (LLM) like ChatGPT triggered a remarkable societal and computational shift that feels comparable to the impact from the initial internet era with its first impressive search engines like Google. LLMs are the toast of the town.</p>
+    <content type="html"><![CDATA[<p>Large language models (LLM) like ChatGPT triggered a remarkable societal and computational shift that feels comparable to the impact from the initial internet era with its first impressive search engines like Google. LLMs are the toast of the town.</p>
 
-<p>Writing emails, reports, school home work, analysis, code, summaries. The list goes on. </p>
+<p>Writing emails, reports, school homework, analysis, code, summaries. The list goes on.</p>
 
-<p>Save from when you would delegate this task to another fellow human, long hours would be passed in the past trying to conjure a piece of text that could communicate something to another entity. Now this can be made at scale, at low cost, with low effort. </p>
+<p>Save from when you would delegate this task to another fellow human, long hours would be passed in the past trying to conjure a piece of text that could communicate something to another entity. Now this can be made at scale, at low cost, with low effort.</p>
 
-<p>Since we are still liable for the results of this tool, i.e. it’s still our name on the email sender, so instead of just sending that email, we might first read that LLM output, interpret it, understand it, and then send it. </p>
+<p>Since we are still liable for the results of this tool, i.e. it’s still our name on the email sender, so instead of just sending that email, we might first read that LLM output, interpret it, understand it, and then send it.</p>
 
 <h2 id="more-than-just-text">More than just text</h2>
 
-<p>Text is a form of communication. If something, or someone wrote it for us, certain decisions were made along the way to convey the goal that we gave. Out of the many paths possible to cristalize that piece of knowledge into a piece text, one of them was chosen.</p>
+<p>Text is a form of communication. If something, or someone wrote it for us, certain decisions were made along the way to convey the goal that we gave. Out of the many paths possible to crystallize that piece of knowledge into a piece text, one of them was chosen.</p>
 
 <p>I would claim that something gets lost on that delegation.</p>
 
@@ -38,7 +38,7 @@
 
 <p>Same holds for notes and articles. I start with a cloud of loosely held ideas that are related, which I attempt to refine into a structured form. Similar to the <a href="https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)">double diamond</a> process.</p>
 
-<p>Same for books. Several times I’ve came terms that I learned close to nothing about a book read one month before. Or conversations. Or movies. Or experiences. </p>
+<p>Same for books. Several times I’ve come to terms that I learned close to nothing about a book read one month before. Or conversations. Or movies. Or experiences.</p>
 
 <p>This is, <a href="https://www.youtube.com/watch?v=otazg3TuPWM">except</a> if I reflected or acted about them. Except if I wrote down my conclusions about them.</p>
 
@@ -47,6 +47,105 @@
 
   <p><em>― <a href="https://youtu.be/eTFy8RnUkoU?t=11">Bill Gates</a></em></p>
 </blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Custom Pomodoro Technique]]></title>
+    <link href="http://lopespm.github.io/notes/2023/07/02/custom-pomodoro-technique.html"/>
+    <updated>2023-07-02T00:00:00+01:00</updated>
+    <id>http://lopespm.github.io/notes/2023/07/02/custom-pomodoro-technique</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>Time is the most valuable thing a man can spend.</p>
+
+  <p><em>― Theophrastus</em></p>
+</blockquote>
+
+<p>There are countless articles, books, <a href="https://www.youtube.com/watch?v=aXvDEmo6uS4">videos</a> and lectures about time management. Since all of us have different needs, goals and environments, it is best to face them as guidances, where we take the ones we need, and leave the others in our toolbelt for another time.</p>
+
+<p>One of these methodologies is the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Techinique</a>, in which a kitchen timer is used to break work into intervals, typically 25 minutes in length, separated by short breaks. </p>
+
+<p>This doesn’t work for me, so here is my <em>Custom Pomodoro Technique</em> methodology.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>I usually need long bouts of deep focus during my work or any complex tasks. This can be reading / writing code, aligning with partners, structuring plans, going through my finances, etc. 25 minutes is typically not enough, since it coincides with where most of my flow peaks happen.</p>
+
+<p>One hour is my target for continuous focused work. Below that, I know that I can still take advantage of the remaining time to productively go through a problem. Above that, I start to prepare to wind down and take a break.</p>
+
+<p>Rule of thumb for breaks are to be enough to feel rested, which tends to happen in less than 15 minutes.</p>
+
+<h2 id="tools">Tools</h2>
+
+<p>I’ve tried several tools to track time. Physical and digital. Complex and simple. One has stuck for several years, and is the only one I use right now: <a href="https://www.klokki.com/">Klokki</a></p>
+
+<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/custom_pomodoro/timer_full_dialog.webp">
+             <source type="image/png" srcset="/files/custom_pomodoro/timer_full_dialog.png">
+             <img src="/files/custom_pomodoro/timer_full_dialog.png">
+           </picture>
+         </center></p>
+
+<p>Klokki is a concise Mac application that tracks time and generates nice time reports. It also allows you to track your time automatically, but I don’t use that feature.</p>
+
+<p>This is a wonderful tool that fulfills my main requirements:</p>
+
+<ul>
+  <li>Being able to start and stop the timer with a single click.</li>
+  <li>The timer should be always visible, but also non-obtrusive.</li>
+  <li>Simple usage, with low UI footprint. No distractions.</li>
+  <li>Concise time reports, which allow me to know how much time (and energy) I’ve used throughout the week. This is important for pacing calibration.</li>
+</ul>
+
+<h2 id="the-rules">The rules</h2>
+
+<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/custom_pomodoro/timer_on_1_minute.webp">
+             <source type="image/png" srcset="/files/custom_pomodoro/timer_on_1_minute.png">
+             <img src="/files/custom_pomodoro/timer_on_1_minute.png">
+           </picture>
+         </center></p>
+
+<ol>
+  <li>
+    <p>Whenever I sit down at the computer and start working, I start the timer. <em>I converged into using a single category to track all my deep flow blocks, since having multiple categories created too much mental overhead</em></p>
+  </li>
+  <li>
+    <p>Whenever the timer is on, I’m in productivity / work mode, and no distractions outside my goals are allowed.</p>
+  </li>
+  <li>
+    <p>Refrain from stopping the flow session before the one hour mark. Start preparing to stop the flow session after the 1 hour mark.</p>
+  </li>
+  <li>
+    <p>Take breaks in-between flow sessions, until I feel rested. Normally less than 15 minutes.</p>
+  </li>
+</ol>
+
+<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/custom_pomodoro/timer_off.webp">
+             <source type="image/png" srcset="/files/custom_pomodoro/timer_off.png">
+             <img src="/files/custom_pomodoro/timer_off.png">
+           </picture>
+         </center></p>
+
+<ol>
+  <li>When the timer is off, scattered tasks, exploration and wandering are allowed and encouraged.</li>
+</ol>
+
+<h2 id="the-benefits">The benefits</h2>
+
+<p>This is an incredibly simple methodology that I’ve been using throughout the past years. The recurrent benefits I’ve captured from it were:</p>
+
+<ul>
+  <li>Clear boundaries between focus time and exploration.</li>
+  <li>Simple, easy to follow process, allowing for flexibility on how time blocks are managed. Easy to consistently abide by.</li>
+  <li>Pacing: prevents over-working or under-utilization of my energy / time.</li>
+</ul>
+
+<p>Feel free to use this guidance / methodology and experiment with it, Or not 🙏</p>
 ]]></content>
   </entry>
   
