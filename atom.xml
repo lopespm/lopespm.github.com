@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-07-02T10:21:47+01:00</updated>
+  <updated>2023-07-02T10:22:54+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -24,7 +24,7 @@
 
 <p>Save from when you would delegate this task to another fellow human, long hours would be passed in the past trying to conjure a piece of text that could communicate something to another entity. Now this can be made at scale, at low cost, with low effort. </p>
 
-<p>Since we are still liable for the results of this tool, i.e. it’s still our name on the email sender, instead of just sending that email, we might first read that LLM output, interpret it, understand it, and then send it. </p>
+<p>Since we are still liable for the results of this tool, i.e. it’s still our name on the email sender, so instead of just sending that email, we might first read that LLM output, interpret it, understand it, and then send it. </p>
 
 <h2 id="more-than-just-text">More than just text</h2>
 
