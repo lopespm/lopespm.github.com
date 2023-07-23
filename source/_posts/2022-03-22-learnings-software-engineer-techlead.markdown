@@ -57,7 +57,7 @@ I've had the good fortune of having the opportunity to develop my software engin
 
 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The duty of a leader is to serve their people, not for the people to serve them</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1492227328386154509?ref_src=twsrc%5Etfw">February 11, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The duty of a leader is to serve their people, not for the people to serve them</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1492227328386154509?ref_src=twsrc%5Etfw">February 11, 2022</a></blockquote> <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 
 
