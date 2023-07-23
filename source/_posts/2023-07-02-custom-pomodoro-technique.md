@@ -5,6 +5,8 @@ comments: true
 categories: notes
 tags: []
 description: "Simple productivity methodology that consistently worked throughout the past years"
+ogp_image: "/files/custom_pomodoro/custom_pomodoro_thumb.png"
+ogp_image_twitter: "/files/custom_pomodoro/custom_pomodoro_thumb.png"
 published: true
 ---
 
