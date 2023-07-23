@@ -67,7 +67,7 @@ article {
     }
   }
   > footer {
-    padding-bottom: 2em;
+    padding-bottom: 0.5em;
     margin-top: 2em;
     @extend .sans;
     p.meta {
@@ -87,6 +87,12 @@ article + article {
     background: $img-border top left repeat-x;
   }
 }
+#content .article-full {
+  article { padding-top: 2em; }
+  @media only screen and (min-width: 768px) {
+    article { padding-top: 0.5em; }
+  }
+}
 #content .blog-index {
   padding: { top: 0; bottom: 0; }
   article { padding-top: 2em; }
@@ -100,6 +106,7 @@ article + article {
     display: inline-block;
     padding: .4em .8em;
     margin-right: .5em;
+    margin-bottom: 1.5em;
     text-decoration: none;
     color: mix($text-color, $text-color-light);
     @extend .serif;
@@ -141,7 +148,7 @@ article + article {
 }
 
 #giscus-comments {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     background: $img-border top left repeat-x;
 }
