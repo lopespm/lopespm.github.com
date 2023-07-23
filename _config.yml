@@ -115,3 +115,5 @@ scholar:
   bibliography_item_tag: p
   bibtex_filters:
     - latex
+
+giscus_repo_id: MDEwOlJlcG9zaXRvcnk3MDExOTAxNg==

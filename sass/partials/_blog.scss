@@ -67,7 +67,7 @@ article {
     }
   }
   > footer {
-    padding-bottom: 2.5em;
+    padding-bottom: 2em;
     margin-top: 2em;
     @extend .sans;
     p.meta {
@@ -138,4 +138,10 @@ article + article {
       &:before, &:after { content: '\2014'; padding: 0 .3em; }
     }
   }
+}
+
+#giscus-comments {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background: $img-border top left repeat-x;
 }
