@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-07-24T00:30:21+01:00</updated>
+  <updated>2023-08-05T10:19:07+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The real question behind 'what do you want?']]></title>
+    <link href="http://lopespm.github.io/notes/2023/08/05/real_question_behind_what_you_want.html"/>
+    <updated>2023-08-05T00:00:00+01:00</updated>
+    <id>http://lopespm.github.io/notes/2023/08/05/real_question_behind_what_you_want</id>
+    <content type="html"><![CDATA[<p>It’s easy to want something. If you are fortunate enough to be on <a href="https://www.gapminder.org/fw/income-levels/income-level-4/">income level 4</a> living in a peaceful nation, the world has so much to offer, within easy reach. Yet, the currencies required to enjoy them are limited: time, energy, health, money. Even though it is easy to make lists of everything one wants (typically occurring on yearly passages, such as new year’s and anniversaries), only a handful of them are achievable.</p>
+
+<h2 id="smaller-lists-require-sacrifices">Smaller lists require sacrifices</h2>
+<p>Given that lengthy lists are unachievable, they need to be slimmed down to a manageable and realistic size. They need to be prioritized. <em>Prioritization</em> is an euphemism for <em>sacrificing</em>.</p>
+
+<p>It’s easy to want something, it’s hard to choose it against another desirable one.</p>
+
+<h2 id="an-example">An example</h2>
+
+<p>At the start of each year, I produce a small list of 3 to 4 high priority goals and 1 optional low priority goal of what I want to achieve by end of it, along with a small description on why I want them, and their impact. This takes several hours, sometimes days to put together, because of all the other ones that need to be left out.</p>
+
+<p>Once the list is made though, it’s incredibly powerful due to it’s easy recall. This means that whenever I am faced with conflicting preferences, I can easily remember it and know in a snap what is the right thing to do. That is the real power behind that list. It’s guiding all the tiny small steps and decisions happening throughout the year, bringing me progressivily closer to those goals.</p>
+
+<h2 id="the-question">The question</h2>
+<p>The real question behind defining <em>knowing what we want</em> is actually <em>what we are willing to sacrifice</em>. Once the latter is defined and we are 100% convinced about it, then <em>knowing what we want</em> is bullet proof and easy to follow through. </p>
+
+<p>What are you willing to sacrifice?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Writing as a form of thinking]]></title>
@@ -224,54 +249,6 @@
 <p>I love it. I don’t love the fact that I’m blocking myself away from those satisfactions. No, I relish the long term results. The time it opens up to actively read, write (this post for example), create, think, be present with others, and even watch podcasts (of which I make an effort to pick an episode outside the normal recommendations). I’m not perfect, and the above serves as a rule for me. And rules do have exceptions, and that’s ok. </p>
 
 <p>Still, this is the case for not having a TV.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The First Note]]></title>
-    <link href="http://lopespm.github.io/notes/2023/04/07/first-note.html"/>
-    <updated>2023-04-07T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/04/07/first-note</id>
-    <content type="html"><![CDATA[<p>Welcome to <em>Notes</em>!</p>
-
-<p>This is a new space where you will be able to find essays, notes and other quick thoughts, whereas the existing <em>Blog</em> section will remain allocated to denser article pieces.</p>
-
-<h2 id="why">Why?</h2>
-
-<h3 id="the-recurrent-idea">The Recurrent Idea</h3>
-
-<p>I have a rule when buying non-essential items for my house: if I’ve been recurrently thinking about buying something over a span of multiple days, then it’s a good purchasing signal. The thought process for writing articles for this blog is similar.</p>
-
-<p>The downside of this approach is that the ideas and thoughts that don’t make it to a blog article are relegated into the realm of personal writings and/or conversations with others, but never exposed to the public. On the other hand, this very same thirst to share quick thoughts was recurrent by itself.</p>
-
-<h3 id="framing">Framing</h3>
-
-<p>The yearning towards developing this concept was there, but a satisfactory hosting plaform was missing still:</p>
-
-<ul>
-  <li>Twitter: although it allowed for volume and looser thoughts, the character restriction would limit the exploration of a topic, and all the content would not be owned by me.</li>
-  <li>New self-hosted space: this allowed me to own the contents and have a clear separation between dense blog articles and quick thoughts, but the maintenance cost was prohibitive.</li>
-</ul>
-
-<p>The third option was to host them here, in <em>Byte Tank</em>, which was customized over several years and already had the workflow and components I strived for. But how to frame this new concept into the existing structure?</p>
-
-<p>The answer came from <a href="https://notes.alinpanaitiu.com/How%20I%20write%20this%20blog%20on%20my%20iPhone%20in%20a%20train">Alin Panaitiu</a>. On his website, Alin has a separate section for <em>Notes</em>, which makes perfect sense to me. <em>Notes</em> sets the expectation that they are not fully fledged articles, and that they cater towards volume, rather than density.</p>
-
-<h3 id="making-it-a-reality">Making it a reality</h3>
-
-<p>An idea is only worth for its implementation, and these were the last nudges that incentivized me to bring it to life:</p>
-
-<ul>
-  <li>The inspiring examples presented in several of the comments in <a href="https://news.ycombinator.com/item?id=35164819">Ask HN: What has your personal website/blog done for you?</a>. One of them being a reference to <a href="https://www.benkuhn.net/writing/">Why and how to write things on the Internet</a>, the other one being Alin’s website (see above).</li>
-  <li>The spirit of the earlier Internet. I remember the earlier times of the Internet where there was this widespread fascination with the fact that with a telephone connection, one could have access to its immense world, and had the possibility to create their own virtual home, that anyone could visit. That is one of the many beauties of this massive network. Low cost, virtually no gatekeepers, nearly boundless. I find this idea incredibly exciting and empowering.</li>
-  <li>Even in an era where text content is now produced for a low cost and in massive amounts (GPT and other LLMs), I believe there is still space for <em>artisanal</em> human baked opinions. The human relatableness, its connection with the environment, biology and even its limitations are still charming on their own.</li>
-  <li>The incentive to create notes in volume could be a great way to generate more source material that can be coalesced into new blog articles</li>
-  <li>Exposing looser thoughts publicly forces me to structure then, and I believe this process can make me better equipped to navigate the complex universe of human interactions, in which having a more structured mindset can make a world of a difference. Personally and professionally.</li>
-</ul>
-
-<h2 id="going-forward">Going Forward</h2>
-
-<p>This is an exciting new phase for this modest establishment, and I’m looking forward to populating this section with new content. Until then!</p>
 ]]></content>
   </entry>
   
