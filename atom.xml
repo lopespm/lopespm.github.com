@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-08-05T11:04:00+01:00</updated>
+  <updated>2023-08-19T17:37:54+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Life has several exits]]></title>
+    <link href="http://lopespm.github.io/notes/2023/08/19/life_exits.html"/>
+    <updated>2023-08-19T00:00:00+01:00</updated>
+    <id>http://lopespm.github.io/notes/2023/08/19/life_exits</id>
+    <content type="html"><![CDATA[<p>Life has several exits:</p>
+
+<ul>
+  <li>The exit from the workplace, where you might even get a standing ovation as you leave the office for the last time</li>
+  <li>The exit from that youth group that accompanied you through your teenage years and early adulthood</li>
+  <li>The exit from your high-school.</li>
+  <li>The exit from your hometown.</li>
+  <li>The exit from a long term relationship.</li>
+  <li>The exit from life. Your funeral.</li>
+</ul>
+
+<p>Upon your exit, your contributions, actions, decisions, opinions and presence most likely will have affected the trajectories of the people and the world around you, in obvious and less obvious ways. Perhaps your own trajectory was deeply changed as well.</p>
+
+<p>These exits may be celebrated, be a special day with fulfilling words and thoughts. They may be the last time you see a set of people. The last time you will see them in your entire life.</p>
+
+<p>Perhaps, after your final exit, you have made such consequential dents on the world that your name will be engraved into the anals of history for centuries to come. On the other hand, contemporary personalities such Steve Jobs, Bill Gates, Elon Musk and Warren Buffet might be mostly forgotten a few centuries from now. People will move one, so most likely you should be grateful that our loved ones will keep you in their thoughts for those ensuing decades.</p>
+
+<p>Life has several exits. Life is also short and limited. There’ll be a finite number of exits you will experience. Make the most out of each period they enclose.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The real question behind 'what do you want?']]></title>
@@ -2639,21 +2665,6 @@ loaded_collection = CompressedDeque.load_from_file(<span class="string"><span cl
 <center><iframe width="560" height="315" src="http://lopespm.github.io//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
 
 <p><br /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Nordic Game Jam’s winners]]></title>
-    <link href="http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners.html"/>
-    <updated>2013-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners</id>
-    <content type="html"><![CDATA[<p>This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: <a href="http://nordicgamejam.org/2013/01/21/winners-ngj13/">http://nordicgamejam.org/2013/01/21/winners-ngj13/</a></p>
-
-<p>My personal highlight goes to Stalagflight (<a href="https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html">https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html</a>), which is as simple as stupidly fun! Stalagflight can be played with the keyboard, but it is tricky. If you have a gamepad the experience is much better.</p>
-
-<!--more-->
-
-<p>On other lines, if you want to stretch the face of Justin Bieber and force him to make heavenly sounds, rejoice with this: <a href="http://unicorn7.org/static/be/">http://unicorn7.org/static/be/</a></p>
 ]]></content>
   </entry>
   
