@@ -23,6 +23,6 @@ Upon your exit, your contributions, actions, decisions, opinions and presence mo
 
 These exits may be celebrated, be a special day with fulfilling words and thoughts. They may be the last time you see a set of people. The last time you will see them in your entire life.
 
-Perhaps upon your final exit, you have made such consequential dents on the world that your name will be engraved into the anals of history for centuries to come. On the other hand, contemporary personalities such Steve Jobs, Bill Gates, Elon Musk and Warren Buffet might be mostly forgotten a few centuries from now. People will move on, so most likely you should be grateful if your loved ones keep you in their thoughts for those ensuing decades.
+Perhaps upon your final exit, you have made such consequential dents on the world that your name will be engraved into the annals of history for centuries to come. On the other hand, contemporary personalities such Steve Jobs, Bill Gates, Elon Musk and Warren Buffet might be mostly forgotten a few centuries from now. People will move on, so most likely you should be grateful if your loved ones keep you in their thoughts for those ensuing decades.
 
 Life has several exits. Life is also short and limited. There'll be a finite number of exits you will experience. Make the most out of each period they enclose.
