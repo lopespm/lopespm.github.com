@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-08-19T20:51:06+01:00</updated>
+  <updated>2023-09-30T19:56:26+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Importance of Goal Clarity for Delegation]]></title>
+    <link href="http://lopespm.github.io/notes/2023/09/30/goal_clarity_in_delegation.html"/>
+    <updated>2023-09-30T00:00:00+01:00</updated>
+    <id>http://lopespm.github.io/notes/2023/09/30/goal_clarity_in_delegation</id>
+    <content type="html"><![CDATA[<p>Previously, in <a href="/2022/03/22/learnings-software-engineer-techlead.html">“Learnings as a Software Engineer Techlead”</a>, I’ve alluded to the 75/25 rule, where if you are ~75% certain that someone will correctly execute a given project/task, then delegate. The other ~25% is the unknown space that the person needs in order to learn, explore, make errors, innovate and grow.</p>
+
+<p>If the project/task was decided to be delegated, What comes next?</p>
+
+<h2 id="clarity-of-goals">Clarity of Goals</h2>
+
+<p>One common challenge I’ve confronted when delegating was how unpredictable and uncontrollable the results felt upon handing over the work. This unstructured approach often left me thinking how I could decrease the non-completion risk by diminishing the delegated scope, and created confusion on the delegatee side on how they could proceed.</p>
+
+<p>One tidbit of information from the “Who not How” book provided the guidance and structure to unlock this issue:</p>
+
+<blockquote>
+  <p>(…) research has found that teams who have high levels of autonomy but low clarity goals, as well as little performance feedback, perform worse than teams with low autonomy.</p>
+
+  <p><em>― <a href="https://www.amazon.co.uk/Who-Not-How-Accelerating-Teamwork-ebook/dp/B0867ZJ151">Who not How, by Dan Sullivan with Dr. Benjamin Hardy</a></em></p>
+</blockquote>
+
+<p>It is claimed in the above research that teams which have high autonomy, high goal clarity and regular feedback on their results, were observed to have their performance shooting through the roof.</p>
+
+<p>Apart from regular feedback, goal clarity is incredibly important, and even though it might sound obvious, it can be overlooked and drowned out on the process of delegation.</p>
+
+<h2 id="clarity-in-practice">Clarity, in Practice</h2>
+
+<p>After the above realization, I’ve made it a priority for each piece of delegated work to clearly define what was expected as an outcome, its definition of done, important milestones and deadlines, when should an issue be scaled to me, and which are the ownerships for each of the participants.</p>
+
+<p>All of the above communicated in a clear and concise way, and preferably publicly documented to increase accountability and decrease ambiguity (depending on the situation, merely communicating these verbally might be enough, especially if the task is simple).</p>
+
+<h2 id="the-delegation-formula">The Delegation Formula</h2>
+
+<p>Given the above, the proposed formula for delegation is:</p>
+
+<script type="math/tex; mode=display">Delegation = [ 75/25 \text{ } rule \rightarrow Goal \text{ } Clarity + Autonomy +Regular \text{ } Feedback ]</script>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Life has several exits]]></title>
@@ -196,62 +235,6 @@
 </ul>
 
 <p>Feel free to use this guidance / methodology and experiment with it, Or not 🙏</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Solving task switching through documentation]]></title>
-    <link href="http://lopespm.github.io/notes/2023/05/18/solving-task-switching-through-documentation.html"/>
-    <updated>2023-05-18T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/05/18/solving-task-switching-through-documentation</id>
-    <content type="html"><![CDATA[<p>We don’t actually multitask. We switch-task, rapidly shifting from one thing to another, interrupting ourselves unproductively, and losing time in the process <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. It just so happens that many aspects of our life require managing multiple tasks at the same time, so how to approach it?</p>
-
-<p>One strategy that consistently worked for me has been using documentation to checkpoint each step of a process. Just like in a videogame where the last saved checkpoint can be recalled.</p>
-
-<h2 id="the-backtracking-inefficiency">The Backtracking Inefficiency</h2>
-
-<p>Similar to a CPU, our short-term memory (STM) has access to a limited amount (around four or seven concepts have been suggested <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>) of very quick memory. Everytime we change to a different task, most of the resident concepts need to be flushed in order to load the ones from the incoming task. This is quite taxing by itself and narrowly optimizable, since our wetware is mostly fixed. The biggest efficiency opportunities lie in <em>where</em> these concepts are loaded from.</p>
-
-<p>When working on a task, often we grab several simultaneous concepts, combine them together and generate new ones, which are then added to the concept pool and built upon further. During this process we are faced with these options:</p>
-
-<ul>
-  <li><strong>Option 1.</strong> Don’t store our working memory - essentially lose work. Let’s rule out this option.</li>
-  <li><strong>Option 2.</strong> Progressively store the existing concepts into our long term memory.</li>
-  <li><strong>Option 3.</strong> Progressively store the existing concepts into an external memory bank, such as a document or piece of paper.</li>
-</ul>
-
-<p><strong>Option 2.</strong> works well, but requires significant cognitive effort and often only keeps the most relevant conclusions. If for some reason these need to be re-considered or understood why they were generated in the first place, we backtrack into the seminal thought processes, which in turn will probably require a repetition of previous work.</p>
-
-<p>This is one of the biggest offenders when task switching, because even if we recall the end state of a task (which is hard by itself), a lot of time and energy are spent when revisiting the overall context via backtracking.</p>
-
-<h2 id="documentation-as-checkpoint-mechanism">Documentation as Checkpoint Mechanism</h2>
-
-<p>Enter <strong>Option 3.</strong>: <em>Progressively store these existing concepts into an external memory bank, such as a document or piece of paper.</em> Although writing in an external memory bank the contents of our working memory can take some effort, the yielded results greatly justify the initial investment:</p>
-
-<ul>
-  <li>Less cognitive load upon re-starting a task</li>
-  <li>Backtracking effort is reduced, since it is a matter of reading a document</li>
-  <li>Shareable with other stakeholders, which shaves off the time required to explain these concepts</li>
-  <li>Task switching becomes smoother and less burdensome</li>
-</ul>
-
-<h2 id="parting-thoughts">Parting Thoughts</h2>
-
-<ul>
-  <li>The documentation’s structure significantly impacts how efficiently it can be parsed and shared. That is a whole new topic by itself.</li>
-  <li>Documentation as a checkpointing mechanism is a great way to consolidate personal learnings and reflections. It’s a valuable tool for leveraging life’s experiences to mature and grow. <em><strong>Option 1.</strong> is such a waste.</em></li>
-</ul>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Bregman, <a href="https://hbr.org/2010/05/how-and-why-to-stop-multitaski">How (and Why) to Stop Multitasking</a><a href="#fnref:1" rel="reference">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3425965/">About the Distinction between Working Memory and Short-Term Memory</a><a href="#fnref:2" rel="reference">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 ]]></content>
   </entry>
   
