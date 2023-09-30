@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-09-30T20:07:05+01:00</updated>
+  <updated>2023-09-30T20:14:04+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -48,7 +48,7 @@
 
 <p>Given the above, the proposed formula for delegation is:</p>
 
-<script type="math/tex; mode=display">Delegation = [ 75/25 \text{ } rule \rightarrow Goal \text{ } Clarity + Autonomy +Regular \text{ } Feedback ]</script>
+<p><em>Delegation = [ 75/25 rule -&gt; Goal Clarity + Autonomy + Regular Feedback ]</em></p>
 ]]></content>
   </entry>
   
