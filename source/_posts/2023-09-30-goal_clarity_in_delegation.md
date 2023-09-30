@@ -5,8 +5,8 @@ comments: true
 categories: notes
 tags: []
 description: "Clarity as one of the keys to unlock the delegation formula"
-ogp_image: "/files/goal_clarity_in_delegation/goal_clarity_in_delegation_thumb.png"
-ogp_image_twitter: "/files/goal_clarity_in_delegation/goal_clarity_in_delegation_thumb.png"
+ogp_image: "/files/goal_clarity_in_delegation/goal_clarity_in_delegation_thumb2.png"
+ogp_image_twitter: "/files/goal_clarity_in_delegation/goal_clarity_in_delegation_thumb2.png"
 published: true
 ---
 
