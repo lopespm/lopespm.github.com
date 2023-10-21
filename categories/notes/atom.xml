@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-10-21T13:52:32+01:00</updated>
+  <updated>2023-10-21T13:53:49+01:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Relative Cost / Benefit of an Investment]]></title>
-    <link href="http://lopespm.github.io/notes/2023/10/14/investment_relative_cost_gain.html"/>
-    <updated>2023-10-14T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/10/14/investment_relative_cost_gain</id>
+    <link href="http://lopespm.github.io/notes/2023/10/21/investment_relative_cost_gain.html"/>
+    <updated>2023-10-21T00:00:00+01:00</updated>
+    <id>http://lopespm.github.io/notes/2023/10/21/investment_relative_cost_gain</id>
     <content type="html"><![CDATA[<p>Let’s say you spend <span>$</span>1,000 to acquire film equipment (camera, microphones, and lights) to shoot YouTube videos. If you use this equipment to film and publish 2 videos, it means that each of those videos costs <span>$</span>500 to produce. If 100 videos are published, each of them cost <span>$</span>10. If all of these videos are able to generate <span>$</span>10 of revenue, then the entire cost of the initial investment was amortized.</p>
 
 <p>The above is a severely gross simplification<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the key point is that an investment left unused has a high associated cost. In the case above, if only two videos were to be produced, then it would have been a better idea to rent the equipment instead.</p>
