@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>New York City - Byte Tank</title>
+  <meta name="author" content="Pedro Lopes">
+
+  
+  <meta name="description" content="TODO">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://lopespm.github.io/notes/2023/12/19/nyc_todo.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="Byte Tank" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One&display=swap' rel='stylesheet' type='text/css'>
+<link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
+  <meta property="og:title" content="New York City - Byte Tank" />
+<meta property="og:description" content="TODO" />
+<meta property="og:url" content="http://lopespm.github.io/notes/2023/12/19/nyc_todo.html" />
+<meta property="og:image" content="http://lopespm.github.io/files/investment_relative_cost_benefit/thumb.png" />
+<meta property="og:site_name" content="Byte Tank" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:title" content="New York City - Byte Tank">
+<meta name="twitter:description" content="TODO">
+
+<meta name="twitter:creator" content="@lopes_pm">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://lopespm.github.io/files/investment_relative_cost_benefit/thumb.png">
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39962763-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <script src="https://www.youtube.com/iframe_api"></script>
+<script>
+
+  /* Based on: http://labnol.org/?p=27941 */
+
+  // function onYouTubeIframeAPIReady() {
+  //   initialize();
+  // }
+
+  document.addEventListener("DOMContentLoaded", initialize );
+
+  function initialize() {
+    console.log("Init");
+
+    var div, n,
+      v = document.getElementsByClassName("youtube-player");
+    for (n = 0; n < v.length; n++) {
+      div = document.createElement("div");
+      div.setAttribute("data-id", v[n].dataset.id);
+      div.innerHTML = labnolThumb(v[n].dataset.id, v[n].dataset.thumbsize);
+      div.onclick = labnolIframe;
+
+      v[n].classList.add("ytp-thumbnail-overlay");
+      v[n].classList.add("ytp-cued-thumbnail-overlay");
+
+      v[n].appendChild(div);
+    }
+  }
+
+  function labnolThumb(id, thumbSize) {
+    var thumb = getThumb(thumbSize);
+    var thumbWithId = thumb.replace("ID", id);
+
+    var youtubePlayButton = '<div class="play-youtube-button"><button class="ytp-large-play-button ytp-button"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z" fill="#1f1f1e" fill-opacity="0.81"></path><path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path><path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path></svg></button></div>';
+
+
+
+    var bg = '<div class="bg" style=\'background-image: url(\"' + thumbWithId + '\')\"></div>';
+    var fadeBg = '<div class="fadeBg"></div>';
+    return bg + fadeBg + youtubePlayButton;
+  }
+
+  function getThumb(thumbSize) {
+    if (thumbSize === "0")
+      return 'https://i.ytimg.com/vi/ID/hqdefault.jpg';
+    if (thumbSize === "1")
+      return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+    else if (thumbSize === "2")
+      return 'https://i.ytimg.com/vi/ID/maxresdefault.jpg';
+    return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+  }
+
+  function labnolIframe() {
+    var container = document.createElement("div");
+
+    var loaderContainerOuter = document.createElement("div");
+    loaderContainerOuter.setAttribute("style", "display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: black; z-index: 200;");
+    var loaderContainerMiddle = document.createElement("div");
+    loaderContainerMiddle.setAttribute("style", "  display: table-cell; vertical-align: middle;");
+    var loaderContainerInner = document.createElement("div");
+    loaderContainerInner.setAttribute("style", "margin-left: auto; margin-right: auto; width: 400px;");
+
+    loaderContainerOuter.appendChild(loaderContainerMiddle);
+    loaderContainerMiddle.appendChild(loaderContainerInner);
+
+    const loader = Rocket.loader({
+      target: loaderContainerInner,
+      size: 'large',
+      type: 'spinner',
+      colour: 'grey-blue-dark'
+      //body: "Loading Video"
+    });
+
+    var containerPlayer = document.createElement("div");
+    container.appendChild(containerPlayer);
+    container.appendChild(loaderContainerOuter);
+
+    this.parentNode.replaceChild(container, this);
+
+    var didLoadAndPlay = 0;
+    player = new YT.Player(containerPlayer, {
+      videoId: this.dataset.id,
+      playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': function(event) {
+          event.target.playVideo();
+
+          // Fallback if onStateChange is not called
+          setInterval(function () {
+            if (didLoadAndPlay === 0) {
+              console.log("Hide on after ready");
+              container.removeChild(loaderContainerOuter);
+              didLoadAndPlay = 1;
+            }
+          }, 5000);
+        },
+        'onStateChange': function (event) {
+          console.log(event.data);
+          if (didLoadAndPlay === 0) {
+            console.log("Hide on play");
+            container.removeChild(loaderContainerOuter);
+            didLoadAndPlay = 1;
+          }
+        }
+      }
+    });
+
+  }
+
+</script>
+
+
+<script src="/javascripts/rocket-loader/tools.min.js"></script>
+<script src="/javascripts/rocket-loader/loader.min.js"></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  <header role="banner">
+    <hgroup>
+      <h1><a href="/">Byte Tank</a></h1>
+      <h2>Pedro Lopes <span class="note-header-subtitle">Notes</span></h2>
+</hgroup>
+</header>
+  <nav role="navigation">
+
+<ul class="subscription">
+  <li><a href="https://twitter.com/lopes_pm"><img src="/images/cn_twitter_19.png" height="19px" width="19px" /></a></li>
+  <li><a href="https://github.com/lopespm"><img src="/images/cn_github_19.png" height="19px" width="19px"/></a></li>
+  <li><a href="/atom.xml"><img src="/images/cn_rss_19.png" height="19px" width="19px"/></a></li>  
+</ul>
+
+  
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/notes">Notes</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="article-full">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">New York City</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2023-12-19T00:00:00+00:00" pubdate data-updated="true">Dec 19<span>th</span>, 2023</time>
+        <!--
+        
+        -->
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/nyc/PXL_20231216_194118475.jpg')"></div>
+</div>
+
+<p>[use caroussel, or some kind of UI kit functionality to show galley of images]</p>
+
+<p>[share the map locations on google maps]</p>
+
+<p>I’ve recently been to NYC. It was one of the most interesting experience I’ve done in my life. Here’s some tips:</p>
+
+<p>I didn’t consider myself to be the type of person who takes pictures of almsot everything. I’ve discovered in this trip that I was probably wrong. I can’t recall the last time I took so many photos, it was like I was in an outstanding candy store of visual goodies.</p>
+
+<p>Each one has their own experience and view of visiting the city, and I’ve asked several people on theirs, which helped immesnly in planning out my itenerary. Now it’s my time to pay it forward. Here the guide / personal perspective of New York:</p>
+
+<h2 id="the-map">The Map</h2>
+
+<p>Having a pre-curated list of points of interest on Google Maps was one of the most useful and time efficient aspects of the entire trip. This allowed me to quickly improvise and make the most of my surroundings, since I could just look at the map to check which nearby places could I visit at any given time.</p>
+
+<p>(insert picture of the map, and the link to it)</p>
+
+<h2 id="museums">Museums</h2>
+
+<p>Let’s start by fashion. I’ve been pointed out that the glasses I wear daily make me look nerdy / square / too serious / look like an engineer. Well, thanks to this museum piece, I can now say they were developed for space walks:</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/nyc/PXL_20231210_162525852.jpg')"></div>
+</div>
+
+<p>Oh, and look back and you will also see the Space Shuttle <em>Enterprise</em>, the first orbiter of the Space Shuttle system:</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/nyc/PXL_20231210_161516492.jpg')"></div>
+  <div class="image-mosaic-card image-mosaic-card-tall" style="background-image: url('/files/nyc/PXL_20231210_163236552.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231210_162820076.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231210_162348213.jpg')"></div>
+</div>
+
+<p>You can find these glasses, the space shuttle, sit inside the mercury capsule or X, see real life jet planes like the B52, in the intrpid museum.</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/nyc/PXL_20231210_161516492.jpg')"></div>
+  <div class="image-mosaic-card image-mosaic-card-tall" style="background-image: url('/files/nyc/PXL_20231210_163236552.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231210_162820076.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231210_162348213.jpg')"></div>
+</div>
+
+<p>Where is the intrepid museum? The museum is an air carrier. Yes, the vessel IS the museum. You can explore several of it’s interior sections</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/nyc/PXL_20231210_154908796.jpg')"></div>
+  <div class="image-mosaic-card image-mosaic-card-tall" style="background-image: url('/files/nyc/PXL_20231210_155153393.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231210_173602131.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231210_164301932.jpg')"></div>
+</div>
+
+<p>do a tour inside a diesel powered submarine that was once used during the cold war, retro-fitted with nuclear missile (put more detail here)</p>
+
+<ul>
+  <li>
+    <p>fun fact: these diesel submarine was retro fitted, so they needed to constantly get refueled and had a circular patrol towards russia. The families of the crew members knew nothing about their mission, and that if they did launch a nuclear missile, they would be exposed, and most likely be killed as they expose themselves to launch the nuclear load (not to mention the anyhilation that comes from the nuclear warhead)</p>
+  </li>
+  <li>I asked 3 questions (that the helpful staff most patitially took the time to answer, and one of the ladies even asked me “are you an engineer?”. Busted. I’m not sure what gave that away, if was were my questions, or my glasses :) :</li>
+  <li>how can they pump out the exhaut gas?</li>
+  <li>how can they reload the nuclear thing?</li>
+  <li>
+    <p>are the motors eletrict or does one of the diesel generators connect directly to it?</p>
+  </li>
+  <li>
+    <p>I’ve lsot count to the amount of dinossaur skeeletons I’ve seen in the natural history history museum. It’s truly impressive. Nothing quite prepares you to see a gigantic sketelton of a XXXX</p>
+  </li>
+  <li>The MET. If you like the british museum, you will love MET. They reconstructed this this temple, must I say more?</li>
+</ul>
+
+<h2 id="food">Food</h2>
+
+<p>where to eat:
+- shwarma - cops were eating there
+- deli - order te oscar
+- wan wan</p>
+
+<ul>
+  <li>NY HI - make sure to go to to the free comedy sessions on friday, they are quite good</li>
+  <li>citizen m, for good quality, good location, fair pricing
+    <ul>
+      <li>show the views from the terrace</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="entertainment">Entertainment</h2>
+
+<ul>
+  <li>
+    <p>comedy cellar. down to earth, edgy comedy, wear you are asked to leave your phone in a pouch, so you are really present, and the comedians are notciably more at ease (cancel culture is a ressouding fear [get another word for his])</p>
+  </li>
+  <li>
+    <p>broadway shows. If you are from london, or are closer to london, don’t see the musicals that are available already in london, and in some cases, they are actually better, like hamilton. chicago is a good bet</p>
+  </li>
+  <li>
+    <p>met cloisters</p>
+  </li>
+  <li>
+    <p>columbia university</p>
+  </li>
+  <li>grant’s tomb</li>
+  <li>
+    <p>the joker stairs</p>
+  </li>
+  <li>
+    <p>911 memorial</p>
+  </li>
+  <li>subway is shallow and follows the streets</li>
+  <li>beware of the open trap doors, be attentive to surroundings</li>
+  <li>birthplace of hip hop</li>
+  <li>staten island ferry to see the statue liberty. it is free, but there will be several people with vests cajuling you to buy their trip. you don’t need to</li>
+  <li>which leads to hustling. NYC is a hustle city, and you can feel that there is much less social secirtuy and safety net. might be because of that why criminality raised during covid</li>
+  <li>walking is one of the best ways to discover the city. I did the large majority of my exploration of the city over the span of 180km throughout 4 days. wearing vivos to do so, is amazing. My feet were sore, but happy.</li>
+  <li>brooklyn is well worth the visit, parkm museum and library.</li>
+  <li>did you know that jay z is from brooklyin, cardi B from the bronx, jennifer lopez from the bronx, </li>
+  <li>want to eat somthing and you are in the center, ilek times saure? walk two blows to the west and you are in hells kitchen, whihc has tons of selction, at better prices
+    <ul>
+      <li>did you know that alicia jeys from hells ktchen?</li>
+    </ul>
+  </li>
+  <li>the place where trump took a photo in the elevator, it’s in the 5th avenue, that the same avenue, where the rockefeeler tree is, saks (which has a nice visual spectacle there), etc</li>
+  <li>be prepared to be encounter several people who are not as well off, and living the streets. be respectable and don’t engage actively. keep out of confusion, and if you are in a rougher area, be attentive and memorize your path and keep walking, you don’t want to look like a toursit there. use you common sense</li>
+  <li>
+    <p>in the place, 85% of people are looking at the screen in front. do realize that your time is precious. a long haul flight could be a great opportuinity to catch up on a book or write and reflect about what you learned in your trip (like this)</p>
+  </li>
+  <li>I will never again think anything badly of the London tube. Seeing the NYC tube gave me perspective</li>
+</ul>
+
+<h2 id="money">Money</h2>
+
+<ul>
+  <li>Stores, food establishments (even chains), bodegas, 7-11s, etc present their prices as pre-tax. New York City sales tax ranges from 4% to 8.875%, and <a href="https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/listings_of_taxable_and_exempt_food.htm">some products are exempt from it</a>. </li>
+  <li>Be prepared to tip everywhere. On restaurants it is customary to tip 20%. There is some debate about whether you should calculate the tip on the amount before or after tax. </li>
+  <li>You don’t really need cash. You do need it if you want to buy from street vendors, or if you want to dodge the additional cost that certain sellers inpose on card transations (like the shwarma above)  </li>
+  <li>On restaurants and entertainment venues, it is common practice for the attendand to leave with the credit card, to later return with an attached invoice that is meant to be signed and filled with the tipping amount. 
+    <ul>
+      <li>It also happened to me that when trying to pay by contactless card to a market vendor, the card kept being rejected, and since the card insertion feature was not available, the vendor wrote down the card number and details into the system to proceed with the payment. That failed as well, because the card got blocked by my bank due to a false-positive suspected fraud, as I later discovered. Eventually I just payed with cash to resolve the issue. </li>
+      <li>As an european, the practice of being physically separated from the card, verification via signature, and freely writting down credit card numbers strike me as quite unsecure.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The smells:
+- laundry detergent, gargabe, road paint (it’s incredibly poignant), the “subway smell”</p>
+
+<ul>
+  <li>
+    <p>Top views. I didnt go to, but one if the common pieces of advice is to avoid empire state uilding miradouro, becasue you cant actually it. Get a room in citizenM, and you will have it as an extra</p>
+  </li>
+  <li>Speaking of music, in Midtown Manhattan -located on the Manhattan Island (yes, <a href="https://simple.wikipedia.org/wiki/Manhattan#/media/File:New_York_City_location_Manhattan.svg">Island</a>), where you’ll find almost all of the best known attractions of New York - there are two songs which you’ll listen several times:</li>
+  <li>Empire State of Mind, a song from Alicia Keys (raised in Hell’s Kitchen, NYC) and JayZ (raised in Brooklyn, NYC)</li>
+  <li>All I want for Christmas is You, a song from Mariah Carey (raised in Huntisgton, NYC)</li>
+</ul>
+
+<h2 id="getting-around">Getting Around</h2>
+
+<ul>
+  <li>Walking through the perpendicular numbered streets and avenues is an absolute bliss, and makes it quite easy to navigate through them. Several times I just looked at the map and quickly memorized something like “3 right, 2 left”, which translated to “cross 3 roads and turn right, and then cross 2 roads and turn left”. This would keep me walking going for a long time and have time to appreciate the surroundings, without the need to constantly check the map.</li>
+  <li>Subway and Bus now have OMNI, which just means that you can tap in with your credit / debit card. Each ride costs each ride is $2.90 everywhere, there are no different prices for different zones. This has a [rolling 7 day price cap] (https://omny.info/fares), so you never pay more than $34 over that period.
+    <ul>
+      <li>Metro Card is the pre-paid version of this. You need one, buy them directly from the machines to avoid being scammed. For example, a 7-Day Unlimited MetroCard costs $34 upfront, and can be used any number of times during those 7 days. 
+        <ul>
+          <li>Be aware that if you swipe in, get out from the station, and then attempt to shortly after swipe in again, it will reject your swipe, due to being to recent. If that happens, ask a MTA attendant to let you in (if available), or do like many others and wait for someone to crack open the emergency exit from the inside. If you hear an alarm going off in the station, most likely is because someone opened the emergency exit to let other’s in.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Just like routine events such as figuring out post-tax prices purchases or how much and when to tip require some kind of mental effort, figuring out the different edge cases of the subway system will keep your mind busy. It is like there is a perpetual rat race game being played in the city.
+    <ul>
+      <li>Sometimes trains stop on all stations, sometimes they don’t, sometimes trains have indicators of which station you are in, sometimes they don’t, sometimes the station has (non-standard) indications of how much time it takes for next train to arrive, sometimes they don’t. Sometimes it rains heavily inside the stations, sometimes it doesn’t.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231210_235550442.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/nyc/PXL_20231218_105228134.jpg')"></div>
+</div>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>Ever since I was a kid I had considrable fascination with the USA. The culture that arrived through the small and big screens, the big companies and entrewpnrurs that I admired, the language, the people I’ve met along the way, the stories. Having had the oporunity to visit it and expirence first hand was a true priviledge. I’ve lived it like it was the last time I would visit it, and it imprinted in me several thoughts and perspetives that I’m sure to last my lifetime.</p>
+
+<p>New York is no Disney Land, and Elmo’s pictures in times square don’t come for free either, so set expectations accordingly. It can be one of the most fulfilling experiences you’ll ever have. I advise you to come prepared and plan accordingly.</p>
+
+<p>Frank sinatra sang that he wants “to wake up in the city that doens’t sleep”. That phrase has a deep meaning, that only struck me upon my trip. The city does not indeed sleep. Times sqaure lights, 24 hour subway, the constant movement. Living in NYC does wakes you up, not only literally, but also figuratively. It’s the wake up towards a different reality that keeps you on your toes in several ways. In a way, it is a celebration of being alive.</p>
+
+<p>It feels like you are constantly playing a game when living in New York</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('https://picsum.photos/id/564/1200/800')"></div>
+  <div class="image-mosaic-card image-mosaic-card-tall" style="background-image: url('https://picsum.photos/id/566/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/575/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/626/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/667/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/678/800/530')"></div>
+  <div class="image-mosaic-card image-mosaic-card-wide" style="background-image: url('https://picsum.photos/id/695/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/683/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/693/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/715/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/610/800/530')"></div>
+  <div class="image-mosaic-card" style="background-image: url('https://picsum.photos/id/599/800/530')"></div>
+</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2023-12-19T00:00:00+00:00" pubdate data-updated="true">Dec 19<span>th</span>, 2023</time>
+      
+      
+
+
+    </p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/notes/2023/10/21/investment_relative_cost_benefit.html" title="Previous Post: Relative Cost / Benefit of an Investment">&laquo; Relative Cost / Benefit of an Investment</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <div id="giscus-comments">
+    <script async src="https://giscus.app/client.js"
+        data-repo="lopespm/lopespm.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3MDExOTAxNg=="
+        data-category="Comments"
+        data-category-id="DIC_kwDOBC3uaM4CYFCk"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </section>
+
+<!--
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+-->
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/notes/2023/12/19/nyc_todo.html">New York City</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2023/10/21/investment_relative_cost_benefit.html">Relative Cost / Benefit of an Investment</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2023/09/30/goal_clarity_in_delegation.html">Importance of Goal Clarity for Delegation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2023/08/19/life_exits.html">Life has several exits</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2023/08/05/real_question_behind_what_you_want.html">The real question behind 'what do you want?'</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/lopespm">@lopespm</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'lopespm',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2023 - <a href="/about">Pedro Lopes</a> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>. Theme based on <a href="https://github.com/lucaslew/whitespace"> Whitespace</a>. Subscribe via <a href="/atom.xml">RSS Feed</a>
+</p>
+
+</footer>
+  
+
+
+
+
+
+<script src="/javascripts/anchor.min.js"></script>
+
+<script>
+    anchors.options = {
+      placement: 'left'
+    };
+    anchors.add();
+    anchors.remove('.entry-title');
+    anchors.remove('#byte-tank');
+</script>
+
+
+
+</body>
+</html>
