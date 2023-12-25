@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-25T02:33:29+00:00</updated>
+  <updated>2023-12-25T13:11:41+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -558,6 +558,43 @@
 <p>New York ain’t no DisneyLand, and Elmo’s pictures in Times Square don’t come for free either, so set expectations accordingly. It can be one of the most fulfilling experiences you’ll ever have. I advise you to come prepared and plan accordingly.</p>
 
 <p>Frank Sinatra sang that he wants “to wake up in the city that doesn’t sleep”. That phrase has a deep meaning that only struck me upon my trip. The city does not indeed sleep. Times Square lights, 24 hour subway, the constant movement. Living in NYC does wake you up, not only literally, but also figuratively. It wakes you up towards a different reality that keeps you on your toes in several ways. In a way, it’s a celebration of life.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Job Safety in the AI Era]]></title>
+    <link href="http://lopespm.github.io/notes/2023/12/25/job_safety_in_ai_era.html"/>
+    <updated>2023-12-25T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/notes/2023/12/25/job_safety_in_ai_era</id>
+    <content type="html"><![CDATA[<p>Words are cheap and keep getting cheaper. The last notes on this blog could have been written via generative AI, and as time goes by, new generative models will likely create higher quality content than I could ever would, consistently.</p>
+
+<p>I didn’t use these because the <a href="http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking.html">writing process comes as a form of thinking</a>, but if there are automated mechanisms that increasingly outperform us humans in so many different areas, what does that leave us?</p>
+
+<h2 id="human-connection">Human connection</h2>
+
+<p>How comfortable would you be in having a relationship with a being that is orders of magnitude more intelligent and capable than you? Not just logical-mathematical intelligence, but emotional, linguistic, musical or even spatial intelligence.</p>
+
+<p>A being so advanced that any form of communication or relationship between you and it would always be severely constrained, even with neural interfaces. A being so advanced that you would never be able to have an essential understanding of it. A being so advanced that you wouldn’t even know that you are being manipulated by it. How many humans do you know who are friends with chimpanzees or bonobos, our closest relatives?</p>
+
+<p>We are still human beings, with all the perks and limitations that come with it.</p>
+
+<p>I would claim that humans will always be attracted to their familiar counterparts. Other beings that share their own struggles and limitations, and by consequence, what they create and share. Machines have their important place in the world, and history has proven to us that life as whole improved as technology evolved to serve us, but it would be healthier for us to think of them as tools, rather than human replacements.</p>
+
+<h2 id="bioengineered">Bioengineered</h2>
+
+<p>We have been fitted with extraordinary senses and tools that allow us to efficiently interact with the world. It took milenea for nature to shape us, and as Leonardo da Vinci puts it when comparing natural to artificial structures: “Nature made the most perfect inventions. There is nothing superfluous, there is nothing lacking” (paraphrased)</p>
+
+<h3 id="our-place">Our place</h3>
+
+<p>Try having a machine fixing the leaky pipe in your bathroom, or to change your desk’s lightbulb. Odds are that you’ll be flooded and in the dark in the nearterm. There will come a point where they will <a href="https://www.youtube.com/watch?v=cpraXaw7dyc">likely do that</a>, but we are still not there.</p>
+
+<p>Machines / tools currently outperform us in several tasks on the digital realm, and in several heavy duty physical tasks. But when it comes to fine digital dexterity, human connection, and interaction with the real world and its complexities, we still have an edge.</p>
+
+<h2 id="future-proofing">Future Proofing</h2>
+
+<p>Take a look at the daily tasks in your job. How repetitive are they? If they are repetíve, how much of a human element is present? Look at your organization and see where rubber meets the road in terms of human connection and physical intervention.</p>
+
+<p>Strive to be closer to that human interface and focus on delivering tangible value to people or businesses (group of people). With this simple mindset, I believe you’ll be in a safer place, surrounded with an abundant supply of meaningful (monetary, emotional, etc) value that you can extract and provide.</p>
 ]]></content>
   </entry>
   
@@ -3134,75 +3171,6 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
     </li>
   </ol>
 </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Compressed Deque in Python]]></title>
-    <link href="http://lopespm.github.io/libraries/2016/08/27/compressed-deque.html"/>
-    <updated>2016-08-27T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/libraries/2016/08/27/compressed-deque</id>
-    <content type="html"><![CDATA[<p>This post aims to give some insights about a recently <a href="https://github.com/lopespm/compressed-deque">open-sourced</a> python deque which compresses its items for a decreased volatile and persistent memory footprint.</p>
-
-<!--more-->
-
-<h2 id="why-how-can-it-be-useful">Why? How can it be useful?</h2>
-
-<p>Compressed Deque came up while buiding an algorithm which relied on fast random accesses of numerous complex objects. When compressed, this blob of data could easily fit in fast volatile memory, as opposed to being fetched from a slow hard drive. Even though there was a performance penalty from compressing/decompressing items from volatile memory, this solution proved to be faster than accessing these items from indexed files on a hard disk (on a SSD the gains are more negligible though).</p>
-
-<p>This collection might also be useful for programs running on devices with very limited memory available.</p>
-
-<h2 id="structure">Structure</h2>
-
-<p>Compressed Deque inherits from <a href="https://docs.python.org/2/library/collections.html#collections.deque">deque</a> and stores its items as zlib compressed pickles. The middle pickle layer only serves as a generic serialization method which can provide a serialized object string for zlib to compress. Although pickle can compress objects, its compression rate does not match zlib’s, even using <a href="https://docs.python.org/2/library/pickle.html#data-stream-format">higher protocols</a>.</p>
-
-<p><img src="http://lopespm.github.io/files/compressed_deque/value_layers.png" alt="image" /></p>
-
-<p><code>save_to_file()</code> and <code>load_from_file()</code> static methods are provided to persist the collection directly into disk in its compressed representation, without much overhead. </p>
-
-<p>The persisted file contains a sequence of header/compressed_value pairs: the header is a 4 byte integer description of the compressed value’s length and the compressed value is similiar to its in-memory representation.</p>
-
-<p><img src="http://lopespm.github.io/files/compressed_deque/persisted_values.png" alt="image" /></p>
-
-<h2 id="how-to-use-it">How to Use it</h2>
-
-<p>An easy way to install this package is by using <code>pip</code>:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>$ pip install compressed-deque
-</pre></div>
-</div>
-</div>
-
-<p><br /></p>
-
-<p>You can then import the class and use it:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">from</span> <span class="include">compdeque</span> <span class="keyword">import</span> <span class="include">CompressedDeque</span>
-
-<span class="comment"># Instantiate the Deque</span>
-collection = CompressedDeque()
-
-<span class="comment"># Use it as a normal deque</span>
-collection.append(<span class="integer">1</span>)
-
-<span class="comment"># Persist to a file</span>
-CompressedDeque.save_to_file(collection, file_path=<span class="string"><span class="delimiter">&quot;</span><span class="content">/path/to/collection.dat</span><span class="delimiter">&quot;</span></span>)
-
-<span class="comment"># ...</span>
-
-<span class="comment"># and load it when you need it later</span>
-loaded_collection = CompressedDeque.load_from_file(<span class="string"><span class="delimiter">&quot;</span><span class="content">/path/to/collection.dat</span><span class="delimiter">&quot;</span></span>)
-</pre></div>
-</div>
-</div>
-
-<p><br /></p>
-
-<h2 id="source-code">Source Code</h2>
-
-<p>Source code is available here: <a href="https://github.com/lopespm/compressed-deque">https://github.com/lopespm/compressed-deque</a></p>
 ]]></content>
   </entry>
   
