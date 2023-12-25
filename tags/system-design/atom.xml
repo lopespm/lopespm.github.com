@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: system design | Byte Tank]]></title>
   <link href="http://lopespm.github.io/tags/system-design/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-21T11:28:33+00:00</updated>
+  <updated>2023-12-25T01:24:08+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -63,7 +63,13 @@
 <h2 id="high-level-design">High-level Design</h2>
 
 <div style="margin-bottom: 7px">
-{% imgopt /files/autocomplete/phigh_level_design %}
+<center>
+          <picture>
+             <source type="image/webp" srcset="/files/autocomplete/phigh_level_design.webp">
+             <source type="image/png" srcset="/files/autocomplete/phigh_level_design.png">
+             <img src="/files/autocomplete/phigh_level_design.png">
+           </picture>
+         </center>
 </div>
 
 <p>The two main sub-systems are: </p>
@@ -76,7 +82,13 @@
 <h2 id="detailed-design">Detailed Design</h2>
 
 <div style="margin-top: 25px">
-{% imgopt /files/autocomplete/psystem_design_diagram %}
+<center>
+          <picture>
+             <source type="image/webp" srcset="/files/autocomplete/psystem_design_diagram.webp">
+             <source type="image/png" srcset="/files/autocomplete/psystem_design_diagram.png">
+             <img src="/files/autocomplete/psystem_design_diagram.png">
+           </picture>
+         </center>
 </div>
 
 <p>This implementation uses off-the-shelf components like kafka (message broker), hadoop (map reduce and distributed file system), redis (distributed cache) and nginx (load balancing, gateway, reverse proxy), but also has custom services built in python, namely the trie distribution and building services. The trie data structure is custom made as well.</p>
@@ -260,7 +272,13 @@
 
 <p>You can interact with the system by accessing <code>http://localhost</code> in your browser. The search suggestions will be provided by the system as you write a query, and you can feed more queries/phrases into the system by submitting more searches.</p>
 
-<p>{% imgopt /files/autocomplete/pclient_web_705 %}</p>
+<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/autocomplete/pclient_web_705.webp">
+             <source type="image/png" srcset="/files/autocomplete/pclient_web_705.png">
+             <img src="/files/autocomplete/pclient_web_705.png">
+           </picture>
+         </center></p>
 
 <h1 id="source-code">Source Code</h1>
 

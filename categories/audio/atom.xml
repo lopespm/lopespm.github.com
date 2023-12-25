@@ -4,7 +4,7 @@
   <title><![CDATA[Category: audio | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/audio/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-21T11:28:33+00:00</updated>
+  <updated>2023-12-25T01:24:08+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -68,11 +68,11 @@
 
 <p>This Channel EQ alone will turn this:</p>
 
-<p>{% audio /files/gopro_heartbeat/gopro_sample_with_heartbeat.mp3 %}</p>
+<p><audio controls><source src='/files/gopro_heartbeat/gopro_sample_with_heartbeat.mp3'></audio></p>
 
 <p>into this:</p>
 
-<p>{% audio /files/gopro_heartbeat/gopro_sample_without_heartbeat.mp3 %}</p>
+<p><audio controls><source src='/files/gopro_heartbeat/gopro_sample_without_heartbeat.mp3'></audio></p>
 
 <p>And that is it! The rest of the plugins included on the Master Track Patch are:</p>
 

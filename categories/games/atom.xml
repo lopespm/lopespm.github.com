@@ -4,7 +4,7 @@
   <title><![CDATA[Category: games | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/games/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-21T11:28:33+00:00</updated>
+  <updated>2023-12-25T01:24:08+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -34,57 +34,34 @@
 
 <p>There are good camera resources for Unity, but I found them to either do too much or too little for this specific problem, so I thought this could be a good opportunity to learn a bit more about dynamic camera movement and to share that knowledge and <a href="#where-to-get-it">code</a> with the community.</p>
 
-<p>{% comment %}
-{% img center /files/camera_multi_target/demo.gif 705px 556px %}
-{% endcomment %}</p>
+<p></p>
 
 <h1 id="overview">Overview</h1>
 
 <p>The library is fed with the desired camera rotation (pitch, yaw and roll), the target objects that will be tracked and the camera that will be transformed. </p>
 
-<p>{% comment %}
-The camera’s field of view value and aspect ratio.</p>
-
-<p>Since camera rotation is managed outside the library, meaning that the library’s sole responsability is to calculate the new camera position and transform the camera accordingly. </p>
-
-<p>{% endcomment %}</p>
+<p></p>
 
 <p>The library’s sole responsibility is to calculate a camera position in which all targets lie inside its view. To achieve this, all target objects are projected onto a slice (plane) of the <a href="https://docs.unity3d.com/Manual/UnderstandingFrustum.html">camera’s view frustrum</a>. The projections located inside the view frustrum will be visible and the others will not. The idea is to trace back a new camera position from the outermost target projections, since this way we are guaranteed to include all projections inside the view.</p>
 
-<p>{% comment %}  || image of Y Z projection, with arrows to where the projection place is, padding, targets, camera
-{% endcomment %} </p>
+<p> </p>
 
-<p>{% img center /files/camera_multi_target/side_view_screen_basis_with_captions.png %}</p>
+<p><img class="center" src="/files/camera_multi_target/side_view_screen_basis_with_captions.png"></p>
 
-<p>{% comment %} 
-Requirements were as follows: dynamically keep all players and key scene elements in view. Pitch, yaw and roll would be provided as parameters and would not be managed by the library.</p>
+<p> </p>
 
-<p>would be provided and could be changed at runtime, but their dynamic nature (if one so wishes) would be outside the library’s realm of responsabilty.
-{% endcomment %} </p>
+<p> </p>
 
-<p>{% comment %} 
-##Changing the problem space
-{% endcomment %} </p>
-
-<p>{% comment %} 
-This problem can be more approachable if thought in terms of a two dimensional space (say Y and Z) where the camera’s axis are aligned with the world’s axis, and then generalized to three dimensions. For this reason, most of the the illustrations will show 
-{% endcomment %} </p>
+<p> </p>
 
 <p>In order to make the bulk of the operations easier to compute, the process starts by multiplying the camera’s <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Using_quaternion_as_rotations">inverse rotation</a> with each of the targets positions, which will place them as they would if the camera’s axis would be aligned with the world’s axis (identity rotation). Once the camera position is calculated in this transformed space, the camera rotation is multiplied by this position, resulting in the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
 
-<p>{% comment %} 
-This makes the calculations easier, and once the camera position is cal of the camera easier and after </p>
+<p> </p>
 
-<p>|| image sequence: 1. only targets with rotation of inverse camera rotatation
-2. show the camera position (calculated) with the targets there as well, with debug rays
-3. rotate the camera position back (show the rotation of camera and targets)
-||
-{% endcomment %} </p>
-
-<p>{% imgcap /files/camera_multi_target/transformed_space/transformed_space<em>1.png Original targets positions %}
-{% imgcap /files/camera_multi_target/transformed_space/transformed_space</em>2<em>with_captions.png Multiply the camera’s inverse rotation with each of the targets positions %}
-{% imgcap /files/camera_multi_target/transformed_space/transformed_space</em>3.png Calculate the camera position in this transformed space %}
-{% imgcap /files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png Multiply the camera’s rotation with the calculated position in the previous transformed space, which will reveal the final camera position in the original space%}</p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space<em>1.png'><img src='/files/camera_multi_target/transformed_space/transformed_space<em>1.png'></a></center><figcaption class='media-caption'> Original targets positions </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space</em>2<em>with_captions.png'><img src='/files/camera_multi_target/transformed_space/transformed_space</em>2<em>with_captions.png'></a></center><figcaption class='media-caption'> Multiply the camera’s inverse rotation with each of the targets positions </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space</em>3.png'><img src='/files/camera_multi_target/transformed_space/transformed_space</em>3.png'></a></center><figcaption class='media-caption'> Calculate the camera position in this transformed space </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png'><img src='/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png'></a></center><figcaption class='media-caption'> Multiply the camera’s rotation with the calculated position in the previous transformed space, which will reveal the final camera position in the original space</figcaption></figure></p>
 
 <h1 id="implementation">Implementation</h1>
 
@@ -96,52 +73,26 @@ This makes the calculations easier, and once the camera position is cal of the c
 
 <p>For each target, four projections are cast to a plane parallel to the view plane, sliced from the camera’s view frustrum. The line described from the target object to its respective projection is parallel to the camera’s view frustrum edges. Relative to the camera, two of these projections run horizontally, and the other two vertically.</p>
 
-<p>{% comment %} 
-|| 3 image tile. main one is image with the projections mid way, horizontal and vertical; then two completamentary are vertical and horizzpntal views ||</p>
+<p> </p>
 
-<table>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td>image with the projections mid way, horizontal and vertical</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td>another image showing it in the side plane, to see where these projections are, the vertical ones</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>{% endcomment %} </p>
-
-<p>{% imgcap /files/camera_multi_target/projections_intro/projections<em>1.png Perspective view of the targets projections %}
-{% imgcap /files/camera_multi_target/projections_intro/projections</em>2.png Side view of the targets projections %}
-{% imgcap /files/camera_multi_target/projections_intro/projections_3.png Top view of the targets projections %}</p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections<em>1.png'><img src='/files/camera_multi_target/projections_intro/projections<em>1.png'></a></center><figcaption class='media-caption'> Perspective view of the targets projections </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections</em>2.png'><img src='/files/camera_multi_target/projections_intro/projections</em>2.png'></a></center><figcaption class='media-caption'> Side view of the targets projections </figcaption></figure>
+<figure class='image'><center><a href='/files/camera_multi_target/projections_intro/projections_3.png'><img src='/files/camera_multi_target/projections_intro/projections_3.png'></a></center><figcaption class='media-caption'> Top view of the targets projections </figcaption></figure></p>
 
 <p>If any of the target’s projections are outside the camera’s view frustrum (or its sliced plane), then the target object will not be visible. If they are inside, the target object will be visible. This means that the four outermost projections from all targets will define the limit of where the view frustrum must be in order to have all objects in view or partially in view. Adding some padding to these outermost projections (i.e. moving these projections away from the center of the view frustrum plane slice), will result in additional padding between the target object and the camera’s view borders.</p>
 
-<p>{% comment %} 
-|| image showing padding effect ||
-{% endcomment %} </p>
+<p> </p>
 
 <h3 id="vertical-projections">Vertical projections</h3>
-<p>{% comment %} 
-|| image side view with the traingle highlighted, with a question mark on the opposite side ||
-{% endcomment %} </p>
+<p> </p>
 
 <p>For all vertical projections positions, we are interested in finding their Y component. In the figure below, notice the right triangle with one vertex on the target object and another one on the projection. If we discover the length of the side running parallel the projection plane, that value can be added to the Y component of the target’s position, resulting in the Y component for the upper projection.</p>
 
-<p>{% comment %} 
-|| image side view with the traingle highlighted, with a question mark on the opposite side, and angle marked, and adjacent side marked as a-b or something ||
-{% endcomment %} </p>
+<p> </p>
 
-<p>{% imgcap /files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png Side view of the elements needed to calculate the vertical projections %}</p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png'><img src='/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png'></a></center><figcaption class='media-caption'> Side view of the elements needed to calculate the vertical projections </figcaption></figure></p>
 
-<p>{% comment %} 
-If we know the length of any side of the triangle and which is the value of one of its non-right angles, then we can use trigon
-{% endcomment %} </p>
+<p> </p>
 
 <p><script type="math/tex">\theta</script> is equal to half the camera’s vertical field of view angle <script type="math/tex">\theta'</script> (<script type="math/tex">\theta = \frac{\theta'}{2}</script>). The vertical field of view angle <script type="math/tex">\theta'</script> is provided by the camera’s <a href="https://docs.unity3d.com/ScriptReference/Camera-fieldOfView.html"><code>fieldOfView</code></a> in degrees, which needs to be converted to radians for our purposes (<script type="math/tex">\theta' = \theta'_{degrees} \times \frac{\pi}{180º}</script>).</p>
 
@@ -153,25 +104,19 @@ If we know the length of any side of the triangle and which is the value of one 
 
 <h3 id="horizontal-projections">Horizontal projections</h3>
 
-<p>{%comment%}
-|| image from top of the horizontal projections; similar to the picture above of the vertical projections, with the angle and rectagle marked ||
-{%endcomment%}</p>
+<p></p>
 
-<p>{% imgcap /files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png Top view of the elements needed to calculate the horizontal projections %}</p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png'><img src='/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png'></a></center><figcaption class='media-caption'> Top view of the elements needed to calculate the horizontal projections </figcaption></figure></p>
 
 <p>The horizontal projections follow a set of similar set of calculations, difference being that we are now interested in finding the X component (instead of Y), and the horizontal field of view angle is used instead of the vertical one. The horizontal field of view angle <script type="math/tex">\gamma'</script> and its half value <script type="math/tex">\gamma</script> (<script type="math/tex">\gamma = \gamma' \times 2</script>) need some further steps to be computed, which will be detailed in the following section.</p>
 
-<p>{%comment%}
-There is no immediate access to the horizontal field of view angle <script type="math/tex">\gamma'</script>,</p>
-
-<p>so in the following section we will see how this value is calculated.
-{%endcomment%}</p>
+<p></p>
 
 <h4 id="horizontal-field-of-view-angle">Horizontal field of view angle</h4>
 
 <p>Consider the following figure, in which <script type="math/tex">\gamma</script> represents half the horizontal field of view angle, <script type="math/tex">\theta</script> represents half the vertical field of view angle, <script type="math/tex">w</script> the viewport width and <script type="math/tex">h</script> the viewport height:</p>
 
-<p>{% imgcap /files/camera_multi_target/horizontal_fov.png Elements for the calculation of the horizontal field of view angle %} </p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/horizontal_fov.png'><img src='/files/camera_multi_target/horizontal_fov.png'></a></center><figcaption class='media-caption'> Elements for the calculation of the horizontal field of view angle </figcaption></figure> </p>
 
 <p>Using trigonometric ratios, these two equations can be devised:</p>
 
@@ -211,31 +156,25 @@ tan(\gamma) = \frac{w}{h} \times tan(\theta)
   <li><script type="math/tex">p_{vMin}</script> is the projection with the lowest Y component</li>
 </ul>
 
-<p>{%comment%}
-|| image showing the four outermost projections ||
-{%endcomment%}</p>
+<p></p>
 
-<p>{% imgcap /files/camera_multi_target/projections_outermost/projections_outermost.png All outermost projections %} </p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_outermost/projections_outermost.png'><img src='/files/camera_multi_target/projections_outermost/projections_outermost.png'></a></center><figcaption class='media-caption'> All outermost projections </figcaption></figure> </p>
 
 <h2 id="calculating-the-camera-position">Calculating the camera position</h2>
 
 <h3 id="in-the-transformed-space">In the transformed space</h3>
 
-<p>{%comment%}
-//###Camera position in the transformed space
-{%endcomment%}</p>
+<p></p>
 
 <p>The X and Y components of the desired camera position in the transformed space are the midpoints of their respective outermost projections, this is, the midpoint between <script type="math/tex">p_{hMax}</script> and <script type="math/tex">p_{hMin}</script> is the camera’s X position, and the midpoint between <script type="math/tex">p_{vMax}</script> and <script type="math/tex">p_{vMin}</script> is the camera’s Y position.</p>
 
-<p>{%comment%}
-|| image of the p’s, and the X,Y line? label saying that camera will be smowhere along this line ||
-{%endcomment%}</p>
+<p></p>
 
 <p>The Z component of the camera position in the transformed space is calculated by backtracking a view frustrum from the the outermost projections to the camera Z component candidate. The furthest Z component from the projection plane will be the chosen, in order for the final camera position to contain all targets within its view.</p>
 
-<p>{% imgcap /files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png Elements for adjacent<sub>v</sub> calculation %} </p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png'><img src='/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png'></a></center><figcaption class='media-caption'> Elements for adjacent<sub>v</sub> calculation </figcaption></figure> </p>
 
-<p>{% imgcap /files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png Elements for adjacent<sub>h</sub> calculation %} </p>
+<p><figure class='image'><center><a href='/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png'><img src='/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png'></a></center><figcaption class='media-caption'> Elements for adjacent<sub>h</sub> calculation </figcaption></figure> </p>
 
 <p>Once again, trigonometric ratios will be used to calculate these Z position candidates.</p>
 
@@ -247,28 +186,17 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
 
 <p>The highest value between <script type="math/tex">adjacent_{v}</script> and <script type="math/tex">adjacent_{h}</script> will be picked for the camera’s Z position component in the transformed space.</p>
 
-<p>{%comment%}
-|| picture of vertical calculation of Z compoentn candidate; with labels of p’s ||
-|| picture of horizontal calculation of Z compoentn candidate; with labels of p’s ||
-caption saying that the furshest Z from projection plane is picked
-{%endcomment%}</p>
+<p></p>
 
 <h3 id="final-camera-position-in-the-original-space">Final camera position in the original space</h3>
 
 <p>With the camera position calculated in the transformed space, we can now multiply the desired camera rotation with this position, which will provide us with the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
 
-<p>{%comment%}
-|| image of the camera position being roated into place ||
-{%endcomment%}</p>
+<p></p>
 
 <h1 id="where-to-get-it">Where to get it</h1>
 
-<p>{%comment%}
-The library is available on GitHub and will be available in the Unity Asset Store once it is approved<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. An example scene of the library’s usage is included. Feedback is most welcome and I hope this can be useful!</p>
-
-<ul>
-  <li><a href="https://github.com/lopespm/unity-camera-multi-target">GitHub Repository</a>
-{%endcomment%}</li>
+<p></li>
 </ul>
 
 <p>The library is available on GitHub and the Unity Asset Store. An example scene of the library’s usage is included. Feedback is most welcome and I hope this can be useful!</p>
@@ -278,10 +206,7 @@ The library is available on GitHub and will be available in the Unity Asset Stor
   <li><a href="https://assetstore.unity.com/packages/tools/camera/camera-multi-target-dynamic-135922">Unity Asset Store Package</a></li>
 </ul>
 
-<p>{%comment%}
-<br /></p>
-
-<p>{%endcomment%}</p>
+<p></p>
 <div class="footnotes">
   <ol>
     <li id="fn:1">
