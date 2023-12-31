@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apps | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/apps/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-31T13:04:34+00:00</updated>
+  <updated>2023-12-31T13:06:04+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -18,7 +18,13 @@
     <link href="http://lopespm.github.io/apps/2018/03/12/arxiv-papers.html"/>
     <updated>2018-03-12T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/apps/2018/03/12/arxiv-papers</id>
-    <content type="html"><![CDATA[<p>{% imgopt /files/arxiv-papers/arxiv_layout_implementation %} </p>
+    <content type="html"><![CDATA[<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/arxiv-papers/arxiv_layout_implementation.webp">
+             <source type="image/png" srcset="/files/arxiv-papers/arxiv_layout_implementation.png">
+             <img src="/files/arxiv-papers/arxiv_layout_implementation.png">
+           </picture>
+         </center> </p>
 
 <p>ArXiv Papers is an <a href="https://github.com/lopespm/arxiv-papers-mobile">open source</a> mobile application to search, download and save arXiv papers. It was developed using a react native / redux framework and is currently available for smartphone and tablet devices. You can get it on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.arxiv">Google Play</a>.</p>
 
@@ -42,7 +48,7 @@
 
 <h1 id="design">Design</h1>
 
-<p>{% imgcap /files/arxiv-papers/arxiv_layout_mockup.png Final Android smartphone app design, made in Sketch %}</p>
+<p><figure class='image'><center><a href='/files/arxiv-papers/arxiv_layout_mockup.png'><img src='/files/arxiv-papers/arxiv_layout_mockup.png'></a></center><figcaption class='media-caption'> Final Android smartphone app design, made in Sketch </figcaption></figure></p>
 
 <p>After a few iterations, the above design seemed like a good compromise between functionality, breadth and ease of use. Most importantly, it catered to the app’s motif: search, download and save arXiv articles. </p>
 
