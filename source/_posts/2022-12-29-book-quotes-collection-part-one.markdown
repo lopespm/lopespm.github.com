@@ -283,57 +283,61 @@ Books are an immensely valuable source of condensed knowledge and insightful tho
 <br/>
 
 <div class="footnotes">
+
+<i>Note that the following are affiliate links, and as an Amazon Associate I earn from qualifying purchases whose commissions help this small establishment, <u>at no additional cost to you</u>:</i>
+<br/><br/>
+
   <ol>
     <li id="fn:1">
-      <p>Zero to One: Notes on Start Ups, or How to Build the Future (Masters, Blake;Thiel, Peter)<a href="#fnref:1" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/48xMTNd" target="_blank">Zero to One: Notes on Start Ups, or How to Build the Future (Masters, Blake;Thiel, Peter)</a> <a href="#fnref:1" rel="reference">↩</a></p>
     </li>
     <li id="fn:2">
-      <p>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future (Ashlee Vance)<a href="#fnref:2" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3tHbzUA" target="_blank">Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future (Ashlee Vance)</a> <a href="#fnref:2" rel="reference">↩</a></p>
     </li>
     <li id="fn:3">
-      <p>Steve Jobs (Isaacson, Walter)<a href="#fnref:3" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3RHo7Ub" target="_blank">Steve Jobs (Isaacson, Walter)</a> <a href="#fnref:3" rel="reference">↩</a></p>
     </li>
     <li id="fn:4">
-      <p>Methods of Persuasion: How to Use Psychology to Influence Human Behavior (Kolenda, Nick)<a href="#fnref:4" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3RFkGNF" target="_blank">Methods of Persuasion: How to Use Psychology to Influence Human Behavior (Kolenda, Nick)</a> <a href="#fnref:4" rel="reference">↩</a></p>
     </li>
     <li id="fn:5">
-      <p>Sapiens: A Brief History of Humankind (Yuval Noah Harari)<a href="#fnref:5" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3NLtQXY" target="_blank">Sapiens: A Brief History of Humankind (Yuval Noah Harari)</a> <a href="#fnref:5" rel="reference">↩</a></p>
     </li>
     <li id="fn:6">
-      <p>Peter Pan (J. M. Barrie)<a href="#fnref:6" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/47kM7SP" target="_blank">Peter Pan (J. M. Barrie)</a> <a href="#fnref:6" rel="reference">↩</a></p>
     </li>
     <li id="fn:7">
-      <p>1984 (George Orwell)<a href="#fnref:7" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3vpuSlO" target="_blank">1984 (George Orwell)</a> <a href="#fnref:7" rel="reference">↩</a></p>
     </li>
     <li id="fn:8">
-      <p>The 4-Hour Workweek , Escape the 9-5, Live Anywhere and Join the New Rich (Timothy Ferriss)<a href="#fnref:8" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3NHYcdN" target="_blank">The 4-Hour Workweek , Escape the 9-5, Live Anywhere and Join the New Rich (Timothy Ferriss)</a> <a href="#fnref:8" rel="reference">↩</a></p>
     </li>
     <li id="fn:9">
-      <p>Deep Work (Cal Newport)<a href="#fnref:9" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3THv1v0" target="_blank">Deep Work (Cal Newport)</a> <a href="#fnref:9" rel="reference">↩</a></p>
     </li>
     <li id="fn:10">
-      <p>No More Mr. Nice Guy (Robert A. Glover)<a href="#fnref:10" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/47igEjV" target="_blank">No More Mr. Nice Guy (Robert A. Glover)</a> <a href="#fnref:10" rel="reference">↩</a></p>
     </li>
     <li id="fn:11">
-      <p>It Doesn’t Have to Be Crazy at Work (Jason Fried; David Heinemeier Hansson)<a href="#fnref:11" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/48DVFZV" target="_blank">It Doesn’t Have to Be Crazy at Work (Jason Fried; David Heinemeier Hansson)</a> <a href="#fnref:11" rel="reference">↩</a></p>
     </li>
     <li id="fn:12">
-      <p>Man’s Search for Meaning (Viktor E. Frankl)<a href="#fnref:12" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/47dkRWl" target="_blank">Man’s Search for Meaning (Viktor E. Frankl)</a> <a href="#fnref:12" rel="reference">↩</a></p>
     </li>
     <li id="fn:13">
-      <p>The Prophet (Kahlil Gibran)<a href="#fnref:13" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/48iXAn6" target="_blank">The Prophet (Kahlil Gibran)</a> <a href="#fnref:13" rel="reference">↩</a></p>
     </li>
     <li id="fn:14">
-      <p>The Death of Ivan Ilych (Lev Tolstoy)<a href="#fnref:14" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/48eee7f" target="_blank">The Death of Ivan Ilych (Lev Tolstoy)</a> <a href="#fnref:14" rel="reference">↩</a></p>
     </li>
     <li id="fn:15">
-      <p>The Brothers Karamazov (Fyodor Dostoyevsky)<a href="#fnref:15" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3SbjyD7" target="_blank">The Brothers Karamazov (Fyodor Dostoyevsky)</a> <a href="#fnref:15" rel="reference">↩</a></p>
     </li>
     <li id="fn:16">
-      <p>The Manager’s Path: A Guide for Tech Leaders Navigating Growth and Change (Camille Fournier)<a href="#fnref:16" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3S21I5m" target="_blank">The Manager’s Path: A Guide for Tech Leaders Navigating Growth and Change (Camille Fournier)</a> <a href="#fnref:16" rel="reference">↩</a></p>
     </li>
     <li id="fn:17">
-      <p>The Five Dysfunctions of a Team, Enhanced Edition: A Leadership Fable (J-B Lencioni Series) (Patrick M. Lencioni)<a href="#fnref:17" rel="reference">↩</a></p>
+      <p><a href="https://amzn.to/3S2Ky7I" target="_blank">The Five Dysfunctions of a Team, Enhanced Edition: A Leadership Fable (J-B Lencioni Series) (Patrick M. Lencioni)</a> <a href="#fnref:17" rel="reference">↩</a></p>
     </li>
   </ol>
 </div>
