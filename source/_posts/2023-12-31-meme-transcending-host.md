@@ -10,7 +10,7 @@ ogp_image_twitter: "/files/meme_transcending_host/pthumb.png"
 published: true
 ---
 
-There is a natural ephemerality to everything. That includes me, you and this blog. This blog is currently [hosted in GitHub](https://github.com/lopespm/lopespm.github.com), and nothing guarantees that after I'm long gone, or even before, GitHub might cease to exist. How to account for that?
+There is an ephemeral nature to everything. That includes me, you and this blog. This blog is currently [hosted in GitHub](https://github.com/lopespm/lopespm.github.com), and nothing guarantees that after I'm long gone, or even before, GitHub might cease to exist. How to account for that?
 
 One way to keep these writings alive, would be to assign a third person with the task of keeping this establishment online. What happens when that person is gone though? It's turtles all the way down.
 
@@ -40,10 +40,10 @@ Apart from finding the above points inspirational, they also make me think that 
 
 Given the above, here are some action points to put the wheels in motion towards building "physical persistence" via a book, and give better chances for its memes to transcend their host [^3]:
 
-1. I've recently reviewed my "personal performance" for this year's personal goals, which was a good opportunity to reflect on what went well, what went less well, what was achieved, and what was missed. One of the aspects that I aim to implement for the [upcoming year's goals]({% post_url 2023-08-05-real_question_behind_what_you_want %}) is to use numeric goals, where applicable.
-   - One of my 2024 goals is to continue to publish blog articles, videos, etc. The numeric goal I've set for myself is to publish 12 blog notes, about once per month. From these, make the respective [YouTube videos](https://www.youtube.com/channel/UC_VHNCq3yGJrLn82VsdONOg), but this would be a stretch goal (albeit, one that I really enjoy)
+1. My low priority 2024 [goal]({% post_url 2023-08-05-real_question_behind_what_you_want %}) is continuing to publish blog notes and videos. The numeric goal I've set for myself is to publish 12 blog notes, about once per month. From these, make the respective [YouTube videos](https://www.youtube.com/channel/UC_VHNCq3yGJrLn82VsdONOg), but this would be a stretch sub-goal (albeit, one that I really enjoy)
+   - This was a consequence of my recent "personal performance" review for this year's personal goals, which was a good opportunity to reflect on what went well, what went less well, what was achieved, and what was missed. One of the aspects that I aim to implement for the [upcoming year's goals]({% post_url 2023-08-05-real_question_behind_what_you_want %}) is to use numeric goals, where applicable.
 2. Once 50 or 99 meaningful blog notes are written, attempt to compile them into a book.
-   - Why 50 or 99? Upon reaching 50 notes, I might feel that not enough substantial content was generated to be distilled into a book. Once 99 notes are reached however, it would be more certain that enough meaningful content was accumulated (hopefully). I would expect the distillation process to remove several notes that would be deemed to have less quality
+   - Why 50 or 99? Upon reaching 50 notes, I might feel that not enough substantial content was generated to be distilled into a book. Once 99 notes are reached however, it would be more certain that enough meaningful content was accumulated (hopefully). I would expect the distillation process to remove several notes that would be deemed to have less quality.
 
 Looking forward to 2024! 🎉
 
