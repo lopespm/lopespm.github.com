@@ -38,7 +38,7 @@ Apart from finding the above points inspirational, they also make me think that 
 
 ## The Path Towards Physical Persistence
 
-Given the above, here are some action points to put the wheels in motion towards building "physical persistence" via a book, and give better chances for its memes to transcend their host[^3]:
+Given the above, here are some action points to put the wheels in motion towards building "physical persistence" via a book, and give better chances for its memes to transcend their host [^3]:
 
 1. I've recently reviewed my "personal performance" for this year's personal goals, which was a good opportunity to reflect on what went well, what went less well, what was achieved, and what was missed. One of the aspects that I aim to implement for the [upcoming year's goals]({% post_url 2023-08-05-real_question_behind_what_you_want %}) is to use numeric goals, where applicable.
    - One of my 2024 goals is to continue to publish blog articles, videos, etc. The numeric goal I've set for myself is to publish 12 blog notes, about once per month. From these, make the respective [YouTube videos](https://www.youtube.com/channel/UC_VHNCq3yGJrLn82VsdONOg), but this would be a stretch goal (albeit, one that I really enjoy)
