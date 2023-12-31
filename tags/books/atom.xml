@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: books | Byte Tank]]></title>
   <link href="http://lopespm.github.io/tags/books/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-31T13:02:00+00:00</updated>
+  <updated>2023-12-31T13:04:34+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -18,13 +18,7 @@
     <link href="http://lopespm.github.io/2022/12/29/book-quotes-collection-part-one.html"/>
     <updated>2022-12-29T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/2022/12/29/book-quotes-collection-part-one</id>
-    <content type="html"><![CDATA[<p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.webp">
-             <source type="image/png" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.png">
-             <img src="/files/book_quotes<em>1/book_quotes</em>2_705.png">
-           </picture>
-         </center> </p>
+    <content type="html"><![CDATA[<p>{% imgopt /files/book_quotes<em>1/book_quotes</em>2_705 %} </p>
 
 <p><br /></p>
 

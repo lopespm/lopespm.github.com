@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: aggregators | Byte Tank]]></title>
   <link href="http://lopespm.github.io/tags/aggregators/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-31T13:02:00+00:00</updated>
+  <updated>2023-12-31T13:04:34+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -20,13 +20,7 @@
     <id>http://lopespm.github.io/2020/12/25/hackernews-daily</id>
     <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
 
-<p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp">
-             <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png">
-             <img src="/files/hackernews_daily/screenshots_cropped2_705.png">
-           </picture>
-         </center></p>
+<p>{% imgopt /files/hackernews_daily/screenshots_cropped2_705 %}</p>
 
 <!--more-->
 
@@ -42,7 +36,7 @@
 
 <h1 id="architecture">Architecture</h1>
 
-<p><figure class='image'><center><a href='/files/hackernews_daily/hn_daily_diagram.png'><img src='/files/hackernews_daily/hn_daily_diagram.png'></a></center><figcaption class='media-caption'> Information flow diagram between the different components of the system </figcaption></figure></p>
+<p>{% imgcap /files/hackernews_daily/hn_daily_diagram.png Information flow diagram between the different components of the system %}</p>
 
 <p>The basilar idea is to recurrently get the <a href="https://news.ycombinator.com/best">best Hacker News</a> stories via its <a href="https://github.com/HackerNews/API">API</a>; take screenshots of the web pages that these stories link to; and have this workflow executed via <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
 
