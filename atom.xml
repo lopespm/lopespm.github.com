@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-01-27T20:22:35+00:00</updated>
+  <updated>2024-01-27T20:24:27+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -126,7 +126,7 @@
 
 <h2 id="closing-thoughts">Closing Thoughts</h2>
 
-<p>The framework above is quite simple and could potentially be used for several other different use cases. It might also be missing some essential parameters that are missing for your specific goal. If you do find such, I would be happy to know. Regardless, hope the above can be useful on your next roadmapping cycle</p>
+<p>The framework above is quite simple and could potentially be used for several other different use cases. It might also be missing some essential parameters that are relevant for your specific goal. Let me know if you find these, I would be happy to know and review this framwork accordingly. Regardless, hope the above can be useful on your next roadmapping / planning cycle!</p>
 ]]></content>
   </entry>
   
