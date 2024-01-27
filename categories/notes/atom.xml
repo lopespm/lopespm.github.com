@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2023-12-31T13:31:51+00:00</updated>
+  <updated>2024-01-27T19:56:36+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,129 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Project Planning Framework]]></title>
+    <link href="http://lopespm.github.io/notes/2024/01/27/project_planning_framework.html"/>
+    <updated>2024-01-27T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/notes/2024/01/27/project_planning_framework</id>
+    <content type="html"><![CDATA[<p>Different goals require different roadmapping and planning techniques.</p>
+
+<p>In this post, a simple framework is proposed to pin a goal into a spectrum defined by three axes, the combination of which informing the approach taken to reach the goal. The three axes of this framework are:</p>
+
+<ul>
+  <li><strong>Timeline sensitivity</strong>: how much leeway is there to extend the deadline to deliver a goal?</li>
+  <li><strong>Dependency level between goals / projects</strong>: how many steps are needed to reach the goal?</li>
+  <li><strong>Uncertainty of which steps will drive the goal forward</strong>: how sure are we that a given step will move us toward the goal?</li>
+</ul>
+
+<h2 id="example-of-how-to-apply-the-framework">Example of how to apply the Framework</h2>
+
+<h3 id="scenario-1-compliance">Scenario 1: Compliance</h3>
+
+<h4 id="goaling-statement">Goaling Statement</h4>
+
+<p>An external entity (let’s say, government or partner company), has made a set of requirements for which your team must provide compliance for, on a fixed, non-negotiable timeline, with limited team capacity. The “definition of done” is well defined by this entity, and there is a low amount of unknowns of how to reach that goals.</p>
+
+<h4 id="axes">Axes</h4>
+
+<ul>
+  <li><strong>Timeline sensitivity</strong>: High</li>
+  <li><strong>Dependency level between goals / projects</strong>: Low</li>
+  <li><strong>Uncertainty of which steps will drive the goal forward</strong>: Low</li>
+</ul>
+
+<h4 id="approach">Approach</h4>
+
+<p>This goal has sensitive timelines and is archetypal top-down. The deadline will be reached in one way or the other, so all hands are needed on deck to tackle this goal.</p>
+
+<p>Useful approaches could be:</p>
+
+<ul>
+  <li>Use a Gant-style chart, where there is a heavy emphasis on the timeline</li>
+  <li>Stricter project management, more process driven</li>
+</ul>
+
+<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/project_planning_framework/compliance.webp">
+             <source type="image/png" srcset="/files/project_planning_framework/compliance.png">
+             <img src="/files/project_planning_framework/compliance.png">
+           </picture>
+         </center></p>
+
+<h3 id="scenario-2-increase-effectiveness-of-a-user-flow">Scenario 2: Increase Effectiveness of a User Flow</h3>
+
+<h4 id="goaling-statement-1">Goaling Statement</h4>
+
+<p>Your team supports a user flow, such as a check-out flow, for which the goal is the increase the conversion amount by <em>X</em>. There are known levers you have available to drive this metric, but also many others which are unbeknownst and would need experimentation and research. This increase is not business critical, so there is an underlying lenience in case the goal is not hit.</p>
+
+<h4 id="axes-1">Axes</h4>
+
+<ul>
+  <li><strong>Timeline sensitivity</strong>: Low</li>
+  <li><strong>Dependency level between goals / projects</strong>: Low</li>
+  <li><strong>Uncertainty of which steps will drive the goal forward</strong>: High</li>
+</ul>
+
+<h4 id="approach-1">Approach</h4>
+
+<p>Unlike Scenario 1, which is exploitation heavy, this scenario favors an approach which is exploration heavy, due to the high amount of uncertainty of which projects will be able to move the needle towards the successful completion of the goal. To de-risk and address this goal, a high level of adaptability will be needed, and several opportunities will need to be created to discover which levers can be used.</p>
+
+<p>Useful approaches could be:</p>
+
+<ul>
+  <li>Have open ended brainstorming sessions</li>
+  <li>User research and focus groups</li>
+  <li>Looser project management, to allow for quick and less trashier pivots</li>
+</ul>
+
+<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/project_planning_framework/effectiveness.webp">
+             <source type="image/png" srcset="/files/project_planning_framework/effectiveness.png">
+             <img src="/files/project_planning_framework/effectiveness.png">
+           </picture>
+         </center></p>
+
+<h3 id="scenario-3-unification-of-several-systems-into-one">Scenario 3: Unification of Several Systems into One</h3>
+
+<h4 id="goaling-statement-2">Goaling Statement</h4>
+
+<p>Your team is tasked to unify several internal systems into a single one, where several dependencies between different projects exist, and the time each project will take ranges from certain to unknown.</p>
+
+<h4 id="axes-2">Axes</h4>
+
+<ul>
+  <li><strong>Timeline sensitivity</strong>: Low</li>
+  <li><strong>Dependency level between goals / projects</strong>: High</li>
+  <li><strong>Uncertainty of which steps will drive the goal forward</strong>: Low / Medium</li>
+</ul>
+
+<h4 id="approach-2">Approach</h4>
+
+<p>The focus here should be on making clear which are the dependencies between different projects, and allow some leniency towards the completion of each of the projects, while actively managing the team’s capacity to focus on the projects which are discovered to require a heavier lift</p>
+
+<p>Useful approaches could be:</p>
+
+<ul>
+  <li>A full dependency graph, allowing for each of the projects timelines to have some leeway where needed</li>
+  <li>Incentivize highly structured systems design documents and discussions, making sure that all involved parties are aligned on a given approach, and engineers are able to explain not only the system they own, but also the other systems involved in their unification</li>
+</ul>
+
+<p><center>
+          <picture>
+             <source type="image/webp" srcset="/files/project_planning_framework/unification.webp">
+             <source type="image/png" srcset="/files/project_planning_framework/unification.png">
+             <img src="/files/project_planning_framework/unification.png">
+           </picture>
+         </center></p>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>The framework above is quite simple and could potentially be used for several other different use cases. It might also be missing some essential parameters that are missing for your specific goal. If you do find such, I would be happy to know. Regardless, hope the above can be useful on your next roadmapping cycle</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make the meme transcend its host]]></title>
@@ -774,45 +897,6 @@ The same for any other investment you did in the past.</p>
     </li>
   </ol>
 </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Importance of Goal Clarity for Delegation]]></title>
-    <link href="http://lopespm.github.io/notes/2023/09/30/goal_clarity_in_delegation.html"/>
-    <updated>2023-09-30T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/09/30/goal_clarity_in_delegation</id>
-    <content type="html"><![CDATA[<p>Previously, in <a href="/2022/03/22/learnings-software-engineer-techlead.html">“Learnings as a Software Engineer Techlead”</a>, I’ve alluded to the 75/25 rule, where if you are ~75% certain that someone will correctly execute a given project/task, then delegate. The other ~25% is the unknown space that the person needs in order to learn, explore, make errors, innovate and grow.</p>
-
-<p>If the project/task was decided to be delegated, what comes next?</p>
-
-<h2 id="clarity-of-goals">Clarity of Goals</h2>
-
-<p>One common challenge I’ve confronted when delegating was how unpredictable and uncontrollable the results felt upon handing over the work. This unstructured approach often left me thinking how I could decrease the non-completion risk by diminishing the delegated scope, and created confusion on the delegatee side on how they could proceed.</p>
-
-<p>One tidbit of information from the “Who not How” book provided the guidance and structure to unlock this issue:</p>
-
-<blockquote>
-  <p>(…) research has found that teams who have high levels of autonomy but low clarity goals, as well as little performance feedback, perform worse than teams with low autonomy.</p>
-
-  <p><em>― <a href="https://www.amazon.co.uk/Who-Not-How-Accelerating-Teamwork-ebook/dp/B0867ZJ151">Who not How, by Dan Sullivan with Dr. Benjamin Hardy</a></em></p>
-</blockquote>
-
-<p>It is claimed in the above research that teams which have high autonomy, high goal clarity and regular feedback on their results, were observed to have their performance shooting through the roof.</p>
-
-<p>Apart from regular feedback, goal clarity is incredibly important, and even though it might sound obvious, it can be overlooked and drowned out on the process of delegation.</p>
-
-<h2 id="clarity-in-practice">Clarity, in Practice</h2>
-
-<p>After the above realization, I’ve made it a priority for each piece of delegated work to clearly define what was expected as an outcome, its definition of done, important milestones and deadlines, when should an issue be scaled to me, and which are the ownerships for each of the participants.</p>
-
-<p>All of the above communicated in a clear and concise way, and preferably publicly documented to increase accountability and decrease ambiguity (depending on the situation, merely communicating these verbally might be enough, especially if the task is simple).</p>
-
-<h2 id="the-delegation-formula">The Delegation Formula</h2>
-
-<p>Given the above, the proposed formula for delegation is:</p>
-
-<p><em>Delegation = [ 75/25 rule -&gt; Goal Clarity + Autonomy + Regular Feedback ]</em></p>
 ]]></content>
   </entry>
   
