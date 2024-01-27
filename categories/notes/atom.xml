@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-01-27T20:17:38+00:00</updated>
+  <updated>2024-01-27T20:21:10+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -46,9 +46,7 @@
 
 <h4 id="approach">Approach</h4>
 
-<p>This goal has sensitive timelines and is archetypal top-down. The deadline will be reached in one way or the other, so all hands are needed on deck to tackle this goal.</p>
-
-<p>Useful approaches could be:</p>
+<p>This goal has sensitive timelines and is archetypal top-down. The deadline will be reached in one way or the other, so all hands are needed on deck to tackle this goal. In specific:</p>
 
 <ul>
   <li>Use a Gant-style chart, where there is a heavy emphasis on the timeline</li>
@@ -79,9 +77,7 @@
 
 <h4 id="approach-1">Approach</h4>
 
-<p>Unlike Scenario 1, which is exploitation heavy, this scenario favors an approach which is exploration heavy, due to the high amount of uncertainty of which projects will be able to move the needle towards the successful completion of the goal. To de-risk and address this goal, a high level of adaptability will be needed, and several opportunities will need to be created to discover which levers can be used.</p>
-
-<p>Useful approaches could be:</p>
+<p>Unlike Scenario 1, which is exploitation heavy, this scenario favors an approach which is exploration heavy, due to the high amount of uncertainty of which projects will be able to move the needle towards the successful completion of the goal. To de-risk and address this goal, a high level of adaptability will be needed, and several opportunities will need to be created to discover which levers can be used. In specific:</p>
 
 <ul>
   <li>Have open ended brainstorming sessions</li>
@@ -113,12 +109,10 @@
 
 <h4 id="approach-2">Approach</h4>
 
-<p>The focus here should be on making clear which are the dependencies between different projects, and allow some leniency towards the completion of each of the projects, while actively managing the team’s capacity to focus on the projects which are discovered to require a heavier lift</p>
-
-<p>Useful approaches could be:</p>
+<p>The focus here should be on making clear which are the dependencies between different projects, and allow some leniency towards the completion of each of the projects, while actively managing the team’s capacity to focus on the projects which are discovered to require a heavier lift. In specific:</p>
 
 <ul>
-  <li>A full dependency graph, allowing for each of the projects timelines to have some leeway where needed</li>
+  <li>Build a full dependency graph, allowing for each of the projects timelines to have some leeway where needed</li>
   <li>Incentivize highly structured systems design documents and discussions, making sure that all involved parties are aligned on a given approach, and engineers are able to explain not only the system they own, but also the other systems involved in their unification</li>
 </ul>
 
