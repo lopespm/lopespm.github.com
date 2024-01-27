@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-01-27T20:26:49+00:00</updated>
+  <updated>2024-01-27T20:30:06+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -113,7 +113,7 @@
 
 <ul>
   <li>Build a full dependency graph, allowing for each of the projects timelines to have some leeway where needed</li>
-  <li>Incentivize highly structured systems design documents and discussions, making sure that all involved parties are aligned on a given approach, and engineers are able to explain not only the system they own, but also the other systems involved in their unification</li>
+  <li>Incentivize structured system design documents and discussions, making sure that all involved parties are aligned on a given approach, and engineers are able to explain not only the system they own, but also other systems involved in their unification</li>
 </ul>
 
 <center>
@@ -126,7 +126,7 @@
 
 <h2 id="closing-thoughts">Closing Thoughts</h2>
 
-<p>The framework above is quite simple and could potentially be used for several other different use cases. It might also be missing some essential parameters that are relevant for your specific goal. Let me know if you find these, I would be happy to know and review this framwork accordingly. Regardless, hope the above can be useful on your next roadmapping / planning cycle!</p>
+<p>The framework above is quite simple and could potentially be used for several other different use cases. It might also be missing some essential parameters that are relevant for your specific context. Let me know if you find these, I would be happy to review the framework accordingly. Regardless, hope the above can be useful on your next roadmapping / planning cycle!</p>
 ]]></content>
   </entry>
   
