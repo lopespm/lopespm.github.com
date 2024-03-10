@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apps | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/apps/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -19,10 +19,10 @@
     <updated>2018-03-12T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/apps/2018/03/12/arxiv-papers</id>
     <content type="html"><![CDATA[<p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/arxiv-papers/arxiv_layout_implementation.webp">
-             <source type="image/png" srcset="/files/arxiv-papers/arxiv_layout_implementation.png">
-             <img src="/files/arxiv-papers/arxiv_layout_implementation.png">
+          <picture aria-label="Layouts of the ArXiv Papers App">
+             <source type="image/webp" srcset="/files/arxiv-papers/arxiv_layout_implementation.webp" aria-label="Layouts of the ArXiv Papers App">
+             <source type="image/png" srcset="/files/arxiv-papers/arxiv_layout_implementation.png" aria-label="Layouts of the ArXiv Papers App">
+             <img src="/files/arxiv-papers/arxiv_layout_implementation.png" aria-label="Layouts of the ArXiv Papers App">
            </picture>
          </center> </p>
 

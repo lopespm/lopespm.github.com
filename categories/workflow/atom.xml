@@ -4,7 +4,7 @@
   <title><![CDATA[Category: workflow | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/workflow/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -19,10 +19,10 @@
     <updated>2015-01-27T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/workflow/2015/01/27/customizing-terminal</id>
     <content type="html"><![CDATA[<p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/terminal_custom/terminal_before_after.webp">
-             <source type="image/png" srcset="/files/terminal_custom/terminal_before_after.png">
-             <img src="/files/terminal_custom/terminal_before_after.png">
+          <picture aria-label="Terminal before and after">
+             <source type="image/webp" srcset="/files/terminal_custom/terminal_before_after.webp" aria-label="Terminal before and after">
+             <source type="image/png" srcset="/files/terminal_custom/terminal_before_after.png" aria-label="Terminal before and after">
+             <img src="/files/terminal_custom/terminal_before_after.png" aria-label="Terminal before and after">
            </picture>
          </center></p>
 

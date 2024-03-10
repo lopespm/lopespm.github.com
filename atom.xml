@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -159,10 +159,10 @@
 </ul>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/project_planning_framework/compliance.webp" />
-             <source type="image/png" srcset="/files/project_planning_framework/compliance.png" />
-             <img src="http://lopespm.github.io/files/project_planning_framework/compliance.png" />
+          <picture aria-label="Project planning diagram for reaching compliance">
+             <source type="image/webp" srcset="/files/project_planning_framework/compliance.webp" aria-label="Project planning diagram for reaching compliance" />
+             <source type="image/png" srcset="/files/project_planning_framework/compliance.png" aria-label="Project planning diagram for reaching compliance" />
+             <img src="http://lopespm.github.io/files/project_planning_framework/compliance.png" aria-label="Project planning diagram for reaching compliance" />
            </picture>
          </center>
 
@@ -191,10 +191,10 @@
 </ul>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/project_planning_framework/effectiveness.webp" />
-             <source type="image/png" srcset="/files/project_planning_framework/effectiveness.png" />
-             <img src="http://lopespm.github.io/files/project_planning_framework/effectiveness.png" />
+          <picture aria-label="Project planning diagram for increasing effectiveness">
+             <source type="image/webp" srcset="/files/project_planning_framework/effectiveness.webp" aria-label="Project planning diagram for increasing effectiveness" />
+             <source type="image/png" srcset="/files/project_planning_framework/effectiveness.png" aria-label="Project planning diagram for increasing effectiveness" />
+             <img src="http://lopespm.github.io/files/project_planning_framework/effectiveness.png" aria-label="Project planning diagram for increasing effectiveness" />
            </picture>
          </center>
 
@@ -222,10 +222,10 @@
 </ul>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/project_planning_framework/unification.webp" />
-             <source type="image/png" srcset="/files/project_planning_framework/unification.png" />
-             <img src="http://lopespm.github.io/files/project_planning_framework/unification.png" />
+          <picture aria-label="Project planning diagram for unification of systems">
+             <source type="image/webp" srcset="/files/project_planning_framework/unification.webp" aria-label="Project planning diagram for unification of systems" />
+             <source type="image/png" srcset="/files/project_planning_framework/unification.png" aria-label="Project planning diagram for unification of systems" />
+             <img src="http://lopespm.github.io/files/project_planning_framework/unification.png" aria-label="Project planning diagram for unification of systems" />
            </picture>
          </center>
 
@@ -1156,10 +1156,10 @@ The same for any other investment you did in the past.</p>
 <p>I’ve tried several tools to track time. Physical and digital. Complex and simple. One has stuck for several years, and is the only one I use right now: <a href="https://www.klokki.com/">Klokki</a></p>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/custom_pomodoro/timer_full_dialog.webp" />
-             <source type="image/png" srcset="/files/custom_pomodoro/timer_full_dialog.png" />
-             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_full_dialog.png" />
+          <picture aria-label="Screenshot of Klokki timer dialog">
+             <source type="image/webp" srcset="/files/custom_pomodoro/timer_full_dialog.webp" aria-label="Screenshot of Klokki timer dialog" />
+             <source type="image/png" srcset="/files/custom_pomodoro/timer_full_dialog.png" aria-label="Screenshot of Klokki timer dialog" />
+             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_full_dialog.png" aria-label="Screenshot of Klokki timer dialog" />
            </picture>
          </center>
 
@@ -1177,10 +1177,10 @@ The same for any other investment you did in the past.</p>
 <h2 id="the-rules">The rules</h2>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/custom_pomodoro/timer_on_1_minute.webp" />
-             <source type="image/png" srcset="/files/custom_pomodoro/timer_on_1_minute.png" />
-             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_on_1_minute.png" />
+          <picture aria-label="Screenshot of Klokki on the toolbar, when started">
+             <source type="image/webp" srcset="/files/custom_pomodoro/timer_on_1_minute.webp" aria-label="Screenshot of Klokki on the toolbar, when started" />
+             <source type="image/png" srcset="/files/custom_pomodoro/timer_on_1_minute.png" aria-label="Screenshot of Klokki on the toolbar, when started" />
+             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_on_1_minute.png" aria-label="Screenshot of Klokki on the toolbar, when started" />
            </picture>
          </center>
 
@@ -1203,10 +1203,10 @@ The same for any other investment you did in the past.</p>
 </ol>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/custom_pomodoro/timer_off.webp" />
-             <source type="image/png" srcset="/files/custom_pomodoro/timer_off.png" />
-             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_off.png" />
+          <picture aria-label="Screenshot of Klokki on the toolbar, when stopped">
+             <source type="image/webp" srcset="/files/custom_pomodoro/timer_off.webp" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
+             <source type="image/png" srcset="/files/custom_pomodoro/timer_off.png" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
+             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_off.png" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
            </picture>
          </center>
 
@@ -1357,10 +1357,10 @@ The same for any other investment you did in the past.</p>
     <updated>2022-12-29T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/2022/12/29/book-quotes-collection-part-one</id>
     <content type="html"><![CDATA[<center>
-          <picture>
-             <source type="image/webp" srcset="/files/book_quotes_1/book_quotes_2_705.webp" />
-             <source type="image/png" srcset="/files/book_quotes_1/book_quotes_2_705.png" />
-             <img src="http://lopespm.github.io/files/book_quotes_1/book_quotes_2_705.png" />
+          <picture aria-label="Header image of Book Quotes Collection - Part 1">
+             <source type="image/webp" srcset="/files/book_quotes_1/book_quotes_2_705.webp" aria-label="Header image of Book Quotes Collection - Part 1" />
+             <source type="image/png" srcset="/files/book_quotes_1/book_quotes_2_705.png" aria-label="Header image of Book Quotes Collection - Part 1" />
+             <img src="http://lopespm.github.io/files/book_quotes_1/book_quotes_2_705.png" aria-label="Header image of Book Quotes Collection - Part 1" />
            </picture>
          </center>
 
@@ -1871,10 +1871,10 @@ The same for any other investment you did in the past.</p>
     <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp" />
-             <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png" />
-             <img src="http://lopespm.github.io/files/hackernews_daily/screenshots_cropped2_705.png" />
+          <picture aria-label="Screenshot of Hacker News Daily">
+             <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp" aria-label="Screenshot of Hacker News Daily" />
+             <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png" aria-label="Screenshot of Hacker News Daily" />
+             <img src="http://lopespm.github.io/files/hackernews_daily/screenshots_cropped2_705.png" aria-label="Screenshot of Hacker News Daily" />
            </picture>
          </center>
 
@@ -2010,10 +2010,10 @@ The same for any other investment you did in the past.</p>
 
 <div style="margin-bottom: 7px">
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/autocomplete/phigh_level_design.webp" />
-             <source type="image/png" srcset="/files/autocomplete/phigh_level_design.png" />
-             <img src="http://lopespm.github.io/files/autocomplete/phigh_level_design.png" />
+          <picture aria-label="High level design diagram">
+             <source type="image/webp" srcset="/files/autocomplete/phigh_level_design.webp" aria-label="High level design diagram" />
+             <source type="image/png" srcset="/files/autocomplete/phigh_level_design.png" aria-label="High level design diagram" />
+             <img src="http://lopespm.github.io/files/autocomplete/phigh_level_design.png" aria-label="High level design diagram" />
            </picture>
          </center>
 </div>
@@ -2029,10 +2029,10 @@ The same for any other investment you did in the past.</p>
 
 <div style="margin-top: 25px">
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/autocomplete/psystem_design_diagram.webp" />
-             <source type="image/png" srcset="/files/autocomplete/psystem_design_diagram.png" />
-             <img src="http://lopespm.github.io/files/autocomplete/psystem_design_diagram.png" />
+          <picture aria-label="Detailed design diagram">
+             <source type="image/webp" srcset="/files/autocomplete/psystem_design_diagram.webp" aria-label="Detailed design diagram" />
+             <source type="image/png" srcset="/files/autocomplete/psystem_design_diagram.png" aria-label="Detailed design diagram" />
+             <img src="http://lopespm.github.io/files/autocomplete/psystem_design_diagram.png" aria-label="Detailed design diagram" />
            </picture>
          </center>
 </div>
@@ -2219,10 +2219,10 @@ The same for any other investment you did in the past.</p>
 <p>You can interact with the system by accessing <code>http://localhost</code> in your browser. The search suggestions will be provided by the system as you write a query, and you can feed more queries/phrases into the system by submitting more searches.</p>
 
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/autocomplete/pclient_web_705.webp" />
-             <source type="image/png" srcset="/files/autocomplete/pclient_web_705.png" />
-             <img src="http://lopespm.github.io/files/autocomplete/pclient_web_705.png" />
+          <picture aria-label="Client interaction screenshot">
+             <source type="image/webp" srcset="/files/autocomplete/pclient_web_705.webp" aria-label="Client interaction screenshot" />
+             <source type="image/png" srcset="/files/autocomplete/pclient_web_705.png" aria-label="Client interaction screenshot" />
+             <img src="http://lopespm.github.io/files/autocomplete/pclient_web_705.png" aria-label="Client interaction screenshot" />
            </picture>
          </center>
 
@@ -2881,7 +2881,7 @@ The same for any other investment you did in the past.</p>
     <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
     <updated>2018-12-27T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
-    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;">
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;" aria-label="Watch Demo Features of Dynamic Multi Target Camera for Unity">
 	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
 		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
 		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />

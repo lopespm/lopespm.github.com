@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: books | Byte Tank]]></title>
   <link href="http://lopespm.github.io/tags/books/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -19,10 +19,10 @@
     <updated>2022-12-29T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/2022/12/29/book-quotes-collection-part-one</id>
     <content type="html"><![CDATA[<p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.webp">
-             <source type="image/png" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.png">
-             <img src="/files/book_quotes<em>1/book_quotes</em>2_705.png">
+          <picture aria-label="Header image of Book Quotes Collection - Part 1">
+             <source type="image/webp" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.webp" aria-label="Header image of Book Quotes Collection - Part 1">
+             <source type="image/png" srcset="/files/book_quotes<em>1/book_quotes</em>2_705.png" aria-label="Header image of Book Quotes Collection - Part 1">
+             <img src="/files/book_quotes<em>1/book_quotes</em>2_705.png" aria-label="Header image of Book Quotes Collection - Part 1">
            </picture>
          </center> </p>
 

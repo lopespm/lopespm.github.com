@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -159,10 +159,10 @@
 </ul>
 
 <p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/project_planning_framework/compliance.webp">
-             <source type="image/png" srcset="/files/project_planning_framework/compliance.png">
-             <img src="/files/project_planning_framework/compliance.png">
+          <picture aria-label="Project planning diagram for reaching compliance">
+             <source type="image/webp" srcset="/files/project_planning_framework/compliance.webp" aria-label="Project planning diagram for reaching compliance">
+             <source type="image/png" srcset="/files/project_planning_framework/compliance.png" aria-label="Project planning diagram for reaching compliance">
+             <img src="/files/project_planning_framework/compliance.png" aria-label="Project planning diagram for reaching compliance">
            </picture>
          </center></p>
 
@@ -191,10 +191,10 @@
 </ul>
 
 <p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/project_planning_framework/effectiveness.webp">
-             <source type="image/png" srcset="/files/project_planning_framework/effectiveness.png">
-             <img src="/files/project_planning_framework/effectiveness.png">
+          <picture aria-label="Project planning diagram for increasing effectiveness">
+             <source type="image/webp" srcset="/files/project_planning_framework/effectiveness.webp" aria-label="Project planning diagram for increasing effectiveness">
+             <source type="image/png" srcset="/files/project_planning_framework/effectiveness.png" aria-label="Project planning diagram for increasing effectiveness">
+             <img src="/files/project_planning_framework/effectiveness.png" aria-label="Project planning diagram for increasing effectiveness">
            </picture>
          </center></p>
 
@@ -222,10 +222,10 @@
 </ul>
 
 <p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/project_planning_framework/unification.webp">
-             <source type="image/png" srcset="/files/project_planning_framework/unification.png">
-             <img src="/files/project_planning_framework/unification.png">
+          <picture aria-label="Project planning diagram for unification of systems">
+             <source type="image/webp" srcset="/files/project_planning_framework/unification.webp" aria-label="Project planning diagram for unification of systems">
+             <source type="image/png" srcset="/files/project_planning_framework/unification.png" aria-label="Project planning diagram for unification of systems">
+             <img src="/files/project_planning_framework/unification.png" aria-label="Project planning diagram for unification of systems">
            </picture>
          </center></p>
 

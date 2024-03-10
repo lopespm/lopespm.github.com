@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: system design | Byte Tank]]></title>
   <link href="http://lopespm.github.io/tags/system-design/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -64,10 +64,10 @@
 
 <div style="margin-bottom: 7px">
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/autocomplete/phigh_level_design.webp">
-             <source type="image/png" srcset="/files/autocomplete/phigh_level_design.png">
-             <img src="/files/autocomplete/phigh_level_design.png">
+          <picture aria-label="High level design diagram">
+             <source type="image/webp" srcset="/files/autocomplete/phigh_level_design.webp" aria-label="High level design diagram">
+             <source type="image/png" srcset="/files/autocomplete/phigh_level_design.png" aria-label="High level design diagram">
+             <img src="/files/autocomplete/phigh_level_design.png" aria-label="High level design diagram">
            </picture>
          </center>
 </div>
@@ -83,10 +83,10 @@
 
 <div style="margin-top: 25px">
 <center>
-          <picture>
-             <source type="image/webp" srcset="/files/autocomplete/psystem_design_diagram.webp">
-             <source type="image/png" srcset="/files/autocomplete/psystem_design_diagram.png">
-             <img src="/files/autocomplete/psystem_design_diagram.png">
+          <picture aria-label="Detailed design diagram">
+             <source type="image/webp" srcset="/files/autocomplete/psystem_design_diagram.webp" aria-label="Detailed design diagram">
+             <source type="image/png" srcset="/files/autocomplete/psystem_design_diagram.png" aria-label="Detailed design diagram">
+             <img src="/files/autocomplete/psystem_design_diagram.png" aria-label="Detailed design diagram">
            </picture>
          </center>
 </div>
@@ -273,10 +273,10 @@
 <p>You can interact with the system by accessing <code>http://localhost</code> in your browser. The search suggestions will be provided by the system as you write a query, and you can feed more queries/phrases into the system by submitting more searches.</p>
 
 <p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/autocomplete/pclient_web_705.webp">
-             <source type="image/png" srcset="/files/autocomplete/pclient_web_705.png">
-             <img src="/files/autocomplete/pclient_web_705.png">
+          <picture aria-label="Client interaction screenshot">
+             <source type="image/webp" srcset="/files/autocomplete/pclient_web_705.webp" aria-label="Client interaction screenshot">
+             <source type="image/png" srcset="/files/autocomplete/pclient_web_705.png" aria-label="Client interaction screenshot">
+             <img src="/files/autocomplete/pclient_web_705.png" aria-label="Client interaction screenshot">
            </picture>
          </center></p>
 

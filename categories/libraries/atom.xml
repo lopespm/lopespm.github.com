@@ -4,7 +4,7 @@
   <title><![CDATA[Category: libraries | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/libraries/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -18,7 +18,7 @@
     <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
     <updated>2018-12-27T00:00:00+00:00</updated>
     <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
-    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;">
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;" aria-label="Watch Demo Features of Dynamic Multi Target Camera for Unity">
 	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
 		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
 		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />

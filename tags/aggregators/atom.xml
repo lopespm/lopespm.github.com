@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: aggregators | Byte Tank]]></title>
   <link href="http://lopespm.github.io/tags/aggregators/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T00:08:11+00:00</updated>
+  <updated>2024-03-10T01:10:31+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -21,10 +21,10 @@
     <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
 
 <p><center>
-          <picture>
-             <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp">
-             <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png">
-             <img src="/files/hackernews_daily/screenshots_cropped2_705.png">
+          <picture aria-label="Screenshot of Hacker News Daily">
+             <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp" aria-label="Screenshot of Hacker News Daily">
+             <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png" aria-label="Screenshot of Hacker News Daily">
+             <img src="/files/hackernews_daily/screenshots_cropped2_705.png" aria-label="Screenshot of Hacker News Daily">
            </picture>
          </center></p>
 
