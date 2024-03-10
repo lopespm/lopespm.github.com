@@ -32,7 +32,7 @@ Rule of thumb for breaks are to be enough to feel rested, which tends to happen 
 
 I've tried several tools to track time. Physical and digital. Complex and simple. One has stuck for several years, and is the only one I use right now: [Klokki](https://www.klokki.com/)
 
-{% imgopt /files/custom_pomodoro/timer_full_dialog %}
+{% imgopt /files/custom_pomodoro/timer_full_dialog Screenshot of Klokki timer dialog %}
 
 Klokki is a concise Mac application that tracks time and generates nice time reports. It also allows you to track your time automatically, but I don't use that feature.
 
@@ -45,7 +45,7 @@ This is a wonderful tool that fulfills my main requirements:
 
 ## The rules
 
-{% imgopt /files/custom_pomodoro/timer_on_1_minute %}
+{% imgopt /files/custom_pomodoro/timer_on_1_minute Screenshot of Klokki on the toolbar, when started %}
 
 1. Whenever I sit down at the computer and start working, I start the timer. *I converged into using a single category to track all my deep flow blocks, since having multiple categories created too much mental overhead*
 
@@ -57,7 +57,7 @@ This is a wonderful tool that fulfills my main requirements:
 
 5. When the timer is off, scattered tasks, exploration and wandering are allowed and encouraged.
 
-{% imgopt /files/custom_pomodoro/timer_off %}
+{% imgopt /files/custom_pomodoro/timer_off Screenshot of Klokki on the toolbar, when stopped %}
 
 
 ## The benefits

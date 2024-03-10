@@ -39,7 +39,7 @@ This goal has sensitive timelines and is archetypal top-down. The deadline will 
 - Use a Gant-style chart, where there is a heavy emphasis on the timeline
 - Apply stricter project management, more process driven
 
-{% imgopt /files/project_planning_framework/compliance %}
+{% imgopt /files/project_planning_framework/compliance Project planning diagram for reaching compliance %}
 
 ### Scenario 2: Increase Effectiveness of a User Flow
 
@@ -62,7 +62,7 @@ Unlike Scenario 1, which is exploitation heavy, this scenario favors an approach
 - Apply looser project management, to allow for quick and less trashier pivots
 
 
-{% imgopt /files/project_planning_framework/effectiveness %}
+{% imgopt /files/project_planning_framework/effectiveness Project planning diagram for increasing effectiveness %}
 
 ### Scenario 3: Unification of Several Systems into One
 
@@ -83,7 +83,7 @@ The focus here should be on making clear which are the dependencies between diff
 - Build a full dependency graph, allowing for each of the projects timelines to have some leeway where needed
 - Incentivize structured system design documents and discussions, making sure that all involved parties are aligned on a given approach, and engineers are able to explain not only the system they own, but also other systems involved in their unification
 
-{% imgopt /files/project_planning_framework/unification %}
+{% imgopt /files/project_planning_framework/unification Project planning diagram for unification of systems %}
 
 
 ## Closing Thoughts

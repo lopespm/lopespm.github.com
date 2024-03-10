@@ -9,7 +9,7 @@ ogp_image: "/files/camera_multi_target/og-thumb.jpg"
 published: true
 ---
 
-<a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;">
+<a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;" aria-label="Watch Demo Features of Dynamic Multi Target Camera for Unity">
 	<video autoplay loop muted playsinline style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
 		<source src="/files/camera_multi_target/demo.webm" type="video/webm"/>
 		<source src="/files/camera_multi_target/demo.mp4" type="video/mp4"/>

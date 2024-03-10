@@ -51,10 +51,10 @@ module Jekyll
         #exec( "touch #{Dir.pwd}/public#{@img}.asdasdasdas" )
         #exec( "cwebp -q 50 #{Dir.pwd}/public#{@img}.png -o #{Dir.pwd}/public#{@img}.webp" )
         return "<center>
-          <picture>
-             <source type=\"image/webp\" srcset=\"#{@img}.webp\">
-             <source type=\"image/png\" srcset=\"#{@img}.png\">
-             <img src=\"#{@img}.png\">
+          <picture aria-label=\"#{@title_alt}\">
+             <source type=\"image/webp\" srcset=\"#{@img}.webp\" aria-label=\"#{@title_alt}\">
+             <source type=\"image/png\" srcset=\"#{@img}.png\" aria-label=\"#{@title_alt}\">
+             <img src=\"#{@img}.png\" aria-label=\"#{@title_alt}\">
            </picture>
          </center>"
       else

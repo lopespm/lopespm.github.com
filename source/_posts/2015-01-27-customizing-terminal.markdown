@@ -8,7 +8,7 @@ published: true
 ---
 
 
-{% imgopt center /files/terminal_custom/terminal_before_after %}
+{% imgopt center /files/terminal_custom/terminal_before_after Terminal before and after %}
 
 <!--more-->
 

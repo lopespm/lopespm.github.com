@@ -10,7 +10,7 @@ ogp_image_twitter: "/files/book_quotes_1/book_quotes_2_705.png"
 published: true
 ---
 
-{% imgopt /files/book_quotes_1/book_quotes_2_705 %} 
+{% imgopt /files/book_quotes_1/book_quotes_2_705 Header image of Book Quotes Collection - Part 1 %} 
 
 <br/>
 

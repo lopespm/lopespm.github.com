@@ -57,7 +57,7 @@ The main two APIs will be:
 ## High-level Design
 
 <div style="margin-bottom: 7px">
-{% imgopt /files/autocomplete/phigh_level_design %}
+{% imgopt /files/autocomplete/phigh_level_design High level design diagram %}
 </div>
 
 The two main sub-systems are: 
@@ -69,7 +69,7 @@ The two main sub-systems are:
 ## Detailed Design
 
 <div style="margin-top: 25px">
-{% imgopt /files/autocomplete/psystem_design_diagram %}
+{% imgopt /files/autocomplete/psystem_design_diagram Detailed design diagram %}
 </div>
 
 This implementation uses off-the-shelf components like kafka (message broker), hadoop (map reduce and distributed file system), redis (distributed cache) and nginx (load balancing, gateway, reverse proxy), but also has custom services built in python, namely the trie distribution and building services. The trie data structure is custom made as well.
@@ -182,7 +182,7 @@ Note: Access `http://localhost:9870/explorer.html` in your browse while the syst
 
 You can interact with the system by accessing `http://localhost` in your browser. The search suggestions will be provided by the system as you write a query, and you can feed more queries/phrases into the system by submitting more searches.
 
-{% imgopt /files/autocomplete/pclient_web_705 %}
+{% imgopt /files/autocomplete/pclient_web_705 Client interaction screenshot %}
 
 
 # Source Code
