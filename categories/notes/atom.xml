@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-25T00:35:19+00:00</updated>
+  <updated>2024-03-25T00:40:14+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -35,14 +35,14 @@
   <li>Only two functionalities should be easy and quick to use:
     <ul>
       <li>Write text and notes (via Google Keep and Google Docs)</li>
-      <li>Write diagrams and mental maps (via the device’s main app, which has the most snappier performance)</li>
+      <li>Write diagrams and mental maps (via the device’s main app, which has the snappiest performance)</li>
     </ul>
   </li>
   <li>Getting to above functionalities should be as fast as possible, and they should be fast</li>
   <li>The cost to get to other apps and functionalities should be high</li>
 </ul>
 
-<h2 id="de-bloating">De-bloating</h2>
+<h2 id="focusing--debloating">Focusing &amp; Debloating</h2>
 
 <p>The Onyx BOOX Note Air3 B/W is not an incredibly fast device, and comes with several functionalities, apps, and a launcher that increase the distraction degree, and also slow down the device.</p>
 
@@ -94,7 +94,7 @@
   <li>A widget to Onyx Sketch app, which is one the only way I found to have that app directly accessible from the Lawnchair home screen, without having to use Onyx’s launcher to do so. The widget can be added by long pressing on the home screen, then select “Widgets”, and then on the “ContentBrowser” section select one of the “Notes” widgets</li>
 </ul>
 
-<h2 id="disabling-bloatware">Disabling bloatware</h2>
+<h3 id="disabling-bloatware">Disabling bloatware</h3>
 
 <p>With all of the above in place, we could start disabling non-essential apps and services, to prevent them from running in the background.</p>
 
