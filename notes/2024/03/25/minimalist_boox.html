@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Minimalist Onyx BOOX Note Air3 B/W Setup - Byte Tank</title>
+  <meta name="author" content="Pedro Lopes">
+
+  
+  <meta name="description" content="Focused, Debloated Writing and Drawing on BOOX Air3">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="Byte Tank" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js" async></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One&display=swap' rel='stylesheet' type='text/css'>
+<link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
+  <meta property="og:title" content="Minimalist Onyx BOOX Note Air3 B/W Setup - Byte Tank" />
+<meta property="og:description" content="Focused, Debloated Writing and Drawing on BOOX Air3" />
+<meta property="og:url" content="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html" />
+<meta property="og:image" content="http://lopespm.github.io/files/minimalist_boox/pthumb.png" />
+<meta property="og:site_name" content="Byte Tank" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:title" content="Minimalist Onyx BOOX Note Air3 B/W Setup - Byte Tank">
+<meta name="twitter:description" content="Focused, Debloated Writing and Drawing on BOOX Air3">
+
+<meta name="twitter:creator" content="@lopes_pm">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://lopespm.github.io/files/minimalist_boox/pthumb.png">
+
+
+  
+  <script async>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39962763-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+<script defer>
+
+  /* Based on: http://labnol.org/?p=27941 */
+
+  // function onYouTubeIframeAPIReady() {
+  //   initialize();
+  // }
+
+  document.addEventListener("DOMContentLoaded", initialize );
+
+  function initialize() {
+    var div, n,
+      v = document.getElementsByClassName("youtube-player");
+    for (n = 0; n < v.length; n++) {
+      div = document.createElement("div");
+      div.setAttribute("data-id", v[n].dataset.id);
+      div.innerHTML = labnolThumb(v[n].dataset.id, v[n].dataset.thumbsize);
+      div.onclick = labnolIframe;
+
+      v[n].classList.add("ytp-thumbnail-overlay");
+      v[n].classList.add("ytp-cued-thumbnail-overlay");
+
+      v[n].appendChild(div);
+    }
+  }
+
+  function labnolThumb(id, thumbSize) {
+    var thumb = getThumb(thumbSize);
+    var thumbWithId = thumb.replace("ID", id);
+
+    var youtubePlayButton = '<div class="play-youtube-button"><button class="ytp-large-play-button ytp-button" aria-label="Play Video"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z" fill="#1f1f1e" fill-opacity="0.81"></path><path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path><path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path></svg></button></div>';
+
+
+
+    var bg = '<div class="bg" style=\'background-image: url(\"' + thumbWithId + '\')\"></div>';
+    var fadeBg = '<div class="fadeBg"></div>';
+    return bg + fadeBg + youtubePlayButton;
+  }
+
+  function getThumb(thumbSize) {
+    if (thumbSize === "0")
+      return 'https://i.ytimg.com/vi/ID/hqdefault.jpg';
+    if (thumbSize === "1")
+      return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+    else if (thumbSize === "2")
+      return 'https://i.ytimg.com/vi/ID/maxresdefault.jpg';
+    return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+  }
+
+  function labnolIframe() {
+    var container = document.createElement("div");
+
+    var loaderContainerOuter = document.createElement("div");
+    loaderContainerOuter.setAttribute("style", "display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: black; z-index: 200;");
+    var loaderContainerMiddle = document.createElement("div");
+    loaderContainerMiddle.setAttribute("style", "  display: table-cell; vertical-align: middle;");
+    var loaderContainerInner = document.createElement("div");
+    loaderContainerInner.setAttribute("style", "margin-left: auto; margin-right: auto; width: 400px;");
+
+    loaderContainerOuter.appendChild(loaderContainerMiddle);
+    loaderContainerMiddle.appendChild(loaderContainerInner);
+
+    const loader = Rocket.loader({
+      target: loaderContainerInner,
+      size: 'large',
+      type: 'spinner',
+      colour: 'grey-blue-dark'
+      //body: "Loading Video"
+    });
+
+    var containerPlayer = document.createElement("div");
+    container.appendChild(containerPlayer);
+    container.appendChild(loaderContainerOuter);
+
+    this.parentNode.replaceChild(container, this);
+
+    var didLoadAndPlay = 0;
+    player = new YT.Player(containerPlayer, {
+      videoId: this.dataset.id,
+      playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': function(event) {
+          event.target.playVideo();
+
+          // Fallback if onStateChange is not called
+          setInterval(function () {
+            if (didLoadAndPlay === 0) {
+              container.removeChild(loaderContainerOuter);
+              didLoadAndPlay = 1;
+            }
+          }, 5000);
+        },
+        'onStateChange': function (event) {
+          if (didLoadAndPlay === 0) {
+            container.removeChild(loaderContainerOuter);
+            didLoadAndPlay = 1;
+          }
+        }
+      }
+    });
+
+  }
+
+</script>
+
+
+<script src="/javascripts/rocket-loader/tools.min.js" defer></script>
+<script src="/javascripts/rocket-loader/loader.min.js" defer></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config" async>
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript" async></script>
+  <header role="banner">
+    <hgroup>
+      <h1><a href="/">Byte Tank</a></h1>
+      <h2>Pedro Lopes <span class="note-header-subtitle">Notes</span></h2>
+</hgroup>
+</header>
+  <nav role="navigation">
+
+<ul class="subscription">
+  <li><a href="https://www.youtube.com/@lopespm"><img src="/images/cn_youtube_19.png" height="19px" width="19px" alt="Go to YouTube Channel"/></a></li>
+  <li><a href="https://twitter.com/lopes_pm"><img src="/images/cn_twitter_19.png" height="19px" width="19px" alt="Go to Twitter"/></a></li>
+  <li><a href="https://github.com/lopespm"><img src="/images/cn_github_19.png" height="19px" width="19px" alt="Go to GitHub"/></a></li>
+  <li><a href="/atom.xml"><img src="/images/cn_rss_19.png" height="19px" width="19px" alt="RSS Feed"/></a></li>  
+</ul>
+
+  
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/notes">Notes</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="article-full">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Minimalist Onyx BOOX Note Air3 B/W Setup</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-03-25T00:00:00+00:00" pubdate data-updated="true">Mar 25<span>th</span>, 2024</time>
+        <!--
+        
+        -->
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>As part of the plan to banish mobile phones with access to instant rewards from my bedroom (more on this in an upcoming post), I’ve acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<h2 id="house-rules">House Rules</h2>
+
+<p>First of all, <em>why</em> I did get the device in the first place? This was in order to:</p>
+
+<ul>
+  <li>Reduce distractions before going to sleep and after waking up, increase focus on the things that really mattered, block out all other noise, and make it really hard to have access to instant gratification and rewards (such as video consumption)</li>
+  <li>Register any ideas and thoughts that occur to me before and after going to sleep, which is one of my most proficuous times for such, and then have them available on other devices</li>
+</ul>
+
+<p><em>How</em> to achieve this using the BOOX:</p>
+
+<ul>
+  <li>Only two functionalities should be easy and quick to use:
+    <ul>
+      <li>Write text and notes (via Google Keep and Google Docs)</li>
+      <li>Write diagrams and mental maps (via the device’s main app, which has the most snappier performance)</li>
+    </ul>
+  </li>
+  <li>Getting to above functionalities should be as fast as possible, and they should be fast</li>
+  <li>The cost to get to other apps and functionalities should be high</li>
+</ul>
+
+<h2 id="de-bloating">De-bloating</h2>
+
+<p>The Onyx BOOX Note Air3 B/W is not an incredibly fast device, and comes with several functionalities, apps, and a launcher that increase the distraction degree, and also slow down the device.</p>
+
+<h3 id="google-play-google-keep--docs">Google Play, Google Keep &amp; Docs</h3>
+
+<p>The first step towards the objective above was to install Google Play (see <a href="https://help.boox.com/hc/en-us/articles/8569260963732-Google-Play-Store">guide here</a>, and afterwards installed these apps:</p>
+
+<ul>
+  <li>Google Keep</li>
+  <li>Google Docs</li>
+  <li>Android Hidden Settings - this app provides access to several hidden settings, that allow the access of settings such as enabling the Developer Options in Android (useful in the debloating process described below)</li>
+  <li>Lawnchair (see below)</li>
+</ul>
+
+<h3 id="new-launcher-lawnchair">New Launcher: Lawnchair</h3>
+
+<center>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+   <center>
+          <picture aria-label="How the home screen looks like now">
+             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_before.webp" aria-label="How the home screen looks like now" />
+             <source type="image/png" srcset="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now" />
+             <img src="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now" />
+           </picture>
+         </center></div>
+ <p class="media-caption media-caption-two"><b>Before:</b> Default BOOX Launcher <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> </p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+	<center>
+          <picture aria-label="How the home screen looked like before">
+             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_after.webp" aria-label="How the home screen looked like before" />
+             <source type="image/png" srcset="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before" />
+             <img src="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before" />
+           </picture>
+         </center></div>
+ <p class="media-caption media-caption-two"><b>After:</b> Using Lawnchair Launcher<br class="video-br-end" /></p>
+</div>
+</center>
+
+<p>The default device’s launcher was replaced by <a href="https://lawnchair.app/">Lawnchair</a>, which is a lightweight, open-source, highly customizable launcher for Android.</p>
+
+<p>What was added to the Lawnchair’s home screen:</p>
+
+<ul>
+  <li>Shortcut to Google Keep</li>
+  <li>Shortcut to Google Docs</li>
+  <li>Shortcut to Onyx Launcher - for any custom changes that are only accessible on the device’s default launcher, which are are in practice, so this was eventually something I removed from the home screen as I wrote this note</li>
+  <li>Shortcut to Google Calendar - to add any events or reminders</li>
+  <li>A widget to Onyx Sketch app, which is one the only way I found to have that app directly accessible from the Lawnchair home screen, without having to use Onyx’s launcher to do so. The widget can be added by long pressing on the home screen, then select “Widgets”, and then on the “ContentBrowser” section select one of the “Notes” widgets</li>
+</ul>
+
+<h2 id="disabling-bloatware">Disabling bloatware</h2>
+
+<p>With all of the above in place, we could start disabling non-essential apps and services, to prevent them from running in the background.</p>
+
+<p>Here are the steps:</p>
+
+<ol>
+  <li>The first step is to enable “Developer Options”, by accessing the system settings via the “Android Hidden Settings” app above, and then finding the <a href="https://developer.android.com/studio/debug/dev-options">Build Number</a> in order to click it enough times to eventually enable “Developer Options”.</li>
+  <li>Connect the BOOX to the computer</li>
+  <li>On the computer’s terminal run the below commands</li>
+</ol>
+
+<p>In general, these are the commands one can run via the terminal to manage bloat apps:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>// See all packages
+$ adb shell pm list packages
+
+// See all disabled packages
+$ adb shell pm list packages -d
+
+// Disable a package
+$ adb shell pm disable-user --user 0 &lt;package_to_disable&gt;
+
+// Re-enable a package
+$ adb shell pm enable &lt;package_to_disable&gt;
+</pre></div>
+</div>
+</div>
+
+<p><br />
+And these are the specific ones I used in my BOOX to disable bloatware, without any relevant side effects for my usages:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>adb shell pm disable-user --user 0 com.onyx.appmarket
+adb shell pm disable-user --user 0 com.onyx.floatingbutton
+adb shell pm disable-user --user 0 com.onyx.dict
+adb shell pm disable-user --user 0 com.onyx.mail
+adb shell pm disable-user --user 0 com.onyx.igetshop
+adb shell pm disable-user --user 0 com.onyx.easytransfer
+adb shell pm disable-user --user 0 com.onyx.kime
+adb shell pm disable-user --user 0 com.onyx.android.ksync
+adb shell pm disable-user --user 0 com.onyx.calculator
+</pre></div>
+</div>
+</div>
+
+<p><br /></p>
+
+<p>The commands above should be enough to remove all bloatware, and if you wish to learn more, <a href="https://www.kaspersky.co.uk/blog/how-to-disable-and-remove-android-bloatware/26993/">this article</a> and <a href="https://digitaluncoded.com/cpu-usage-android">this article</a> provide a good overview.</p>
+
+<h2 id="using-an-external-keyboard">Using an external keyboard</h2>
+
+<p>Given that this device is meant to be used in bed, and since it is quite unwieldy to write on the on-screen display, I was looking for an external keyboard that could be somehow attached to the BOOX, that would bestable, low-maintenance and allowed for flexibility on the writing position.</p>
+
+<p>From the keyboards and keyboard stands I’ve researched, the most elegant solution I found was to use <a href="https://www.logitech.com/en-gb/products/keyboards/k480-multi-device-wireless.html">Logitech K480</a>, a bluetooth keyboard with an in-built cradle, detachable batteries (i.e. zero issues related internal battery becoming faulty), incredible battery span (some users reported this to be <a href="https://www.youtube.com/watch?v=EoH2bXoNEE0">in the order of years</a>), and wonderful typing experience.</p>
+
+<p>One caveat is that the BOOX slides backward and falls when using the cradle without any other aid. A very simple fix is to get a piece of cardboard, and place it behind the BOOX (see picture below) to create a better fit. It works remarkably well.</p>
+
+<center>
+          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/webp" srcset="/files/minimalist_boox/keyboard_k480_with_boox.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <source type="image/png" srcset="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <img src="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+           </picture>
+         </center>
+<p><br /></p>
+
+<h2 id="writing-and-drawing">Writing and Drawing</h2>
+
+<h3 id="writing">Writing</h3>
+
+<p>Writing is my main use case for the device, and even though it has some lag when doing it, it works great for me, because I tend to write long streams of ranting text, rather than editing it.</p>
+
+<div>
+	<div class="youtube-player" data-id="bYENTrabzXw" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<p>The best mode I’ve found for writing was the “A2” Mode. It has ghosting, but is responsive enough for this use case.</p>
+
+<center>
+          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/webp" srcset="/files/minimalist_boox/configuration_for_writing.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <source type="image/png" srcset="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <img src="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+           </picture>
+         </center>
+<p><br /></p>
+
+<h3 id="drawing">Drawing</h3>
+
+<p>To draw, I use the default Onyx’s Sketch app due to its responsiveness, even though I would have preferred to have a more customizable UI interface and faster ways to share the drawing.</p>
+
+<p>Sharing is one of the downsides of the Onyx Sketch app. You need to either use their cloud service, or export the image in order to get the sketch easily accessible on other devices. I’ve opted to use the export functionality, which allows to directly share the image to a Google Keep note, which fits well into my workflow. I would prefer to not have this extra step, but still, it works well enough.</p>
+
+<div>
+	<div class="youtube-player" data-id="iW3IZ9MnFL8" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>This has been one of the most satisfying devices I’ve added to my routines, and it’s incredibly satisfying to write on this device, almost distraction free. It allows enough customizability for it to be tailored to my use case, but is also limited enough to deter me from falling prey to distractions.</p>
+
+<p>I hope this was useful towards your journey - do let me know your tips for distraction free environments!</p>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<div class="footnotes">
+
+  <ol>
+	<li id="fn:1">
+  	<p>The BOOX Note Air3 B/W is a very capable device, able to do most of the things one would expect from an Android Tablet, but its screen refresh rate, speed and screen drag make it less suited for fast browsing and video usage for example. <a href="#fnref:1" rel="reference">↩</a></p>
+	</li>
+	<li id="fn:2">
+  	<p>The screenshot is from BOOX Tablet Note Air 3 C, the color counterpart of Onyx BOOX Note Air3 B/W, but the layout is the same, save from the color display <a href="#fnref:2" rel="reference">↩</a></p>
+	</li>
+    
+  </ol>
+</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-03-25T00:00:00+00:00" pubdate data-updated="true">Mar 25<span>th</span>, 2024</time>
+      
+      
+
+
+    </p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/notes/2024/02/18/elon_musk_biography.html" title="Previous Post: Musk's biography: why it's interesting">&laquo; Musk's biography: why it's interesting</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <div id="giscus-comments">
+    <script async src="https://giscus.app/client.js"
+        data-repo="lopespm/lopespm.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3MDExOTAxNg=="
+        data-category="Comments"
+        data-category-id="DIC_kwDOBC3uaM4CYFCk"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </section>
+
+<!--
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+-->
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/notes/2024/03/25/minimalist_boox.html">Minimalist Onyx BOOX Note Air3 B/W Setup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2024/02/18/elon_musk_biography.html">Musk's biography: why it's interesting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2024/01/27/project_planning_framework.html">Project Planning Framework</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2023/12/31/meme-transcending-host.html">Make the meme transcend its host</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2023/12/25/nyc.html">New York City Guide</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/lopespm">@lopespm</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'lopespm',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2024 - <a href="/about">Pedro Lopes</a> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>. Theme based on <a href="https://github.com/lucaslew/whitespace"> Whitespace</a>. Subscribe via <a href="/atom.xml">RSS Feed</a>
+</p>
+
+</footer>
+  
+
+
+
+
+
+<script src="/javascripts/anchor.min.js"></script>
+
+<script>
+    anchors.options = {
+      placement: 'left'
+    };
+    anchors.add();
+    anchors.remove('.entry-title');
+    anchors.remove('#byte-tank');
+</script>
+
+
+
+</body>
+</html>

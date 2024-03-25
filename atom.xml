@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="http://lopespm.github.io/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T01:35:09+00:00</updated>
+  <updated>2024-03-25T00:35:19+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,214 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Minimalist Onyx BOOX Note Air3 B/W Setup]]></title>
+    <link href="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html"/>
+    <updated>2024-03-25T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/notes/2024/03/25/minimalist_boox</id>
+    <content type="html"><![CDATA[<p>As part of the plan to banish mobile phones with access to instant rewards from my bedroom (more on this in an upcoming post), I’ve acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<h2 id="house-rules">House Rules</h2>
+
+<p>First of all, <em>why</em> I did get the device in the first place? This was in order to:</p>
+
+<ul>
+  <li>Reduce distractions before going to sleep and after waking up, increase focus on the things that really mattered, block out all other noise, and make it really hard to have access to instant gratification and rewards (such as video consumption)</li>
+  <li>Register any ideas and thoughts that occur to me before and after going to sleep, which is one of my most proficuous times for such, and then have them available on other devices</li>
+</ul>
+
+<p><em>How</em> to achieve this using the BOOX:</p>
+
+<ul>
+  <li>Only two functionalities should be easy and quick to use:
+    <ul>
+      <li>Write text and notes (via Google Keep and Google Docs)</li>
+      <li>Write diagrams and mental maps (via the device’s main app, which has the most snappier performance)</li>
+    </ul>
+  </li>
+  <li>Getting to above functionalities should be as fast as possible, and they should be fast</li>
+  <li>The cost to get to other apps and functionalities should be high</li>
+</ul>
+
+<h2 id="de-bloating">De-bloating</h2>
+
+<p>The Onyx BOOX Note Air3 B/W is not an incredibly fast device, and comes with several functionalities, apps, and a launcher that increase the distraction degree, and also slow down the device.</p>
+
+<h3 id="google-play-google-keep--docs">Google Play, Google Keep &amp; Docs</h3>
+
+<p>The first step towards the objective above was to install Google Play (see <a href="https://help.boox.com/hc/en-us/articles/8569260963732-Google-Play-Store">guide here</a>, and afterwards installed these apps:</p>
+
+<ul>
+  <li>Google Keep</li>
+  <li>Google Docs</li>
+  <li>Android Hidden Settings - this app provides access to several hidden settings, that allow the access of settings such as enabling the Developer Options in Android (useful in the debloating process described below)</li>
+  <li>Lawnchair (see below)</li>
+</ul>
+
+<h3 id="new-launcher-lawnchair">New Launcher: Lawnchair</h3>
+
+<center>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+   <center>
+          <picture aria-label="How the home screen looks like now">
+             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_before.webp" aria-label="How the home screen looks like now" />
+             <source type="image/png" srcset="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now" />
+             <img src="http://lopespm.github.io/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now" />
+           </picture>
+         </center></div>
+ <p class="media-caption media-caption-two"><b>Before:</b> Default BOOX Launcher <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> </p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+	<center>
+          <picture aria-label="How the home screen looked like before">
+             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_after.webp" aria-label="How the home screen looked like before" />
+             <source type="image/png" srcset="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before" />
+             <img src="http://lopespm.github.io/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before" />
+           </picture>
+         </center></div>
+ <p class="media-caption media-caption-two"><b>After:</b> Using Lawnchair Launcher<br class="video-br-end" /></p>
+</div>
+</center>
+
+<p>The default device’s launcher was replaced by <a href="https://lawnchair.app/">Lawnchair</a>, which is a lightweight, open-source, highly customizable launcher for Android.</p>
+
+<p>What was added to the Lawnchair’s home screen:</p>
+
+<ul>
+  <li>Shortcut to Google Keep</li>
+  <li>Shortcut to Google Docs</li>
+  <li>Shortcut to Onyx Launcher - for any custom changes that are only accessible on the device’s default launcher, which are are in practice, so this was eventually something I removed from the home screen as I wrote this note</li>
+  <li>Shortcut to Google Calendar - to add any events or reminders</li>
+  <li>A widget to Onyx Sketch app, which is one the only way I found to have that app directly accessible from the Lawnchair home screen, without having to use Onyx’s launcher to do so. The widget can be added by long pressing on the home screen, then select “Widgets”, and then on the “ContentBrowser” section select one of the “Notes” widgets</li>
+</ul>
+
+<h2 id="disabling-bloatware">Disabling bloatware</h2>
+
+<p>With all of the above in place, we could start disabling non-essential apps and services, to prevent them from running in the background.</p>
+
+<p>Here are the steps:</p>
+
+<ol>
+  <li>The first step is to enable “Developer Options”, by accessing the system settings via the “Android Hidden Settings” app above, and then finding the <a href="https://developer.android.com/studio/debug/dev-options">Build Number</a> in order to click it enough times to eventually enable “Developer Options”.</li>
+  <li>Connect the BOOX to the computer</li>
+  <li>On the computer’s terminal run the below commands</li>
+</ol>
+
+<p>In general, these are the commands one can run via the terminal to manage bloat apps:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>// See all packages
+$ adb shell pm list packages
+
+// See all disabled packages
+$ adb shell pm list packages -d
+
+// Disable a package
+$ adb shell pm disable-user --user 0 &lt;package_to_disable&gt;
+
+// Re-enable a package
+$ adb shell pm enable &lt;package_to_disable&gt;
+</pre></div>
+</div>
+</div>
+
+<p><br />
+And these are the specific ones I used in my BOOX to disable bloatware, without any relevant side effects for my usages:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>adb shell pm disable-user --user 0 com.onyx.appmarket
+adb shell pm disable-user --user 0 com.onyx.floatingbutton
+adb shell pm disable-user --user 0 com.onyx.dict
+adb shell pm disable-user --user 0 com.onyx.mail
+adb shell pm disable-user --user 0 com.onyx.igetshop
+adb shell pm disable-user --user 0 com.onyx.easytransfer
+adb shell pm disable-user --user 0 com.onyx.kime
+adb shell pm disable-user --user 0 com.onyx.android.ksync
+adb shell pm disable-user --user 0 com.onyx.calculator
+</pre></div>
+</div>
+</div>
+
+<p><br /></p>
+
+<p>The commands above should be enough to remove all bloatware, and if you wish to learn more, <a href="https://www.kaspersky.co.uk/blog/how-to-disable-and-remove-android-bloatware/26993/">this article</a> and <a href="https://digitaluncoded.com/cpu-usage-android">this article</a> provide a good overview.</p>
+
+<h2 id="using-an-external-keyboard">Using an external keyboard</h2>
+
+<p>Given that this device is meant to be used in bed, and since it is quite unwieldy to write on the on-screen display, I was looking for an external keyboard that could be somehow attached to the BOOX, that would bestable, low-maintenance and allowed for flexibility on the writing position.</p>
+
+<p>From the keyboards and keyboard stands I’ve researched, the most elegant solution I found was to use <a href="https://www.logitech.com/en-gb/products/keyboards/k480-multi-device-wireless.html">Logitech K480</a>, a bluetooth keyboard with an in-built cradle, detachable batteries (i.e. zero issues related internal battery becoming faulty), incredible battery span (some users reported this to be <a href="https://www.youtube.com/watch?v=EoH2bXoNEE0">in the order of years</a>), and wonderful typing experience.</p>
+
+<p>One caveat is that the BOOX slides backward and falls when using the cradle without any other aid. A very simple fix is to get a piece of cardboard, and place it behind the BOOX (see picture below) to create a better fit. It works remarkably well.</p>
+
+<center>
+          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/webp" srcset="/files/minimalist_boox/keyboard_k480_with_boox.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <source type="image/png" srcset="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <img src="http://lopespm.github.io/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+           </picture>
+         </center>
+<p><br /></p>
+
+<h2 id="writing-and-drawing">Writing and Drawing</h2>
+
+<h3 id="writing">Writing</h3>
+
+<p>Writing is my main use case for the device, and even though it has some lag when doing it, it works great for me, because I tend to write long streams of ranting text, rather than editing it.</p>
+
+<div>
+	<div class="youtube-player" data-id="bYENTrabzXw" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<p>The best mode I’ve found for writing was the “A2” Mode. It has ghosting, but is responsive enough for this use case.</p>
+
+<center>
+          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/webp" srcset="/files/minimalist_boox/configuration_for_writing.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <source type="image/png" srcset="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <img src="http://lopespm.github.io/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+           </picture>
+         </center>
+<p><br /></p>
+
+<h3 id="drawing">Drawing</h3>
+
+<p>To draw, I use the default Onyx’s Sketch app due to its responsiveness, even though I would have preferred to have a more customizable UI interface and faster ways to share the drawing.</p>
+
+<p>Sharing is one of the downsides of the Onyx Sketch app. You need to either use their cloud service, or export the image in order to get the sketch easily accessible on other devices. I’ve opted to use the export functionality, which allows to directly share the image to a Google Keep note, which fits well into my workflow. I would prefer to not have this extra step, but still, it works well enough.</p>
+
+<div>
+	<div class="youtube-player" data-id="iW3IZ9MnFL8" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>This has been one of the most satisfying devices I’ve added to my routines, and it’s incredibly satisfying to write on this device, almost distraction free. It allows enough customizability for it to be tailored to my use case, but is also limited enough to deter me from falling prey to distractions.</p>
+
+<p>I hope this was useful towards your journey - do let me know your tips for distraction free environments!</p>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<div class="footnotes">
+
+  <ol>
+	<li id="fn:1">
+  	<p>The BOOX Note Air3 B/W is a very capable device, able to do most of the things one would expect from an Android Tablet, but its screen refresh rate, speed and screen drag make it less suited for fast browsing and video usage for example. <a href="#fnref:1" rel="reference">↩</a></p>
+	</li>
+	<li id="fn:2">
+  	<p>The screenshot is from BOOX Tablet Note Air 3 C, the color counterpart of Onyx BOOX Note Air3 B/W, but the layout is the same, save from the color display <a href="#fnref:2" rel="reference">↩</a></p>
+	</li>
+    
+  </ol>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Musk's biography: why it's interesting]]></title>
@@ -2871,162 +3079,6 @@ The same for any other investment you did in the past.</p>
     </ul>
   </li>
   <li>I had an amazing experience building this game and am very happy with the final result. Not only did it materialize one of my dreams, but gave me the opportunity to explore and deepen areas outside my professional expertise, such as 3D modeling/texturing, audio production and game design. If you are a game developer or are thinking on becoming one, I hope this testimony was useful for your journey and hopefully brought more clarity into the process 🙌</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Unity: Dynamic Multi Target Camera]]></title>
-    <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
-    <updated>2018-12-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
-    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;" aria-label="Watch Demo Features of Dynamic Multi Target Camera for Unity">
-	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
-		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
-		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />
-		<!--[if lt IE 9]><img src="http://lopespm.github.io/files/camera_multi_target/demo.gif"><![endif]-->
-	</video> 
-</a></p>
-
-<p>Mostly invisible, yet essential, camera work is key to any game with dynamic cameras. This article dissects a concise Unity <a href="https://github.com/lopespm/unity-camera-multi-target">open source</a> library which dynamically keeps a set of objects (e.g. players and important objects) in view, a common problem for a wide range of games.</p>
-
-<p>The library was developed for, and used by my first Steam game, <a href="https://survivalball.com/">Survival Ball</a>. The game has an heavy shared screen local co-op component, which requires the camera to dynamically keep many key elements in view.</p>
-
-<!--more-->
-
-<p>There are good camera resources for Unity, but I found them to either do too much or too little for this specific problem, so I thought this could be a good opportunity to learn a bit more about dynamic camera movement and to share that knowledge and <a href="#where-to-get-it">code</a> with the community.</p>
-
-<h1 id="overview">Overview</h1>
-
-<p>The library is fed with the desired camera rotation (pitch, yaw and roll), the target objects that will be tracked and the camera that will be transformed. </p>
-
-<p>The library’s sole responsibility is to calculate a camera position in which all targets lie inside its view. To achieve this, all target objects are projected onto a slice (plane) of the <a href="https://docs.unity3d.com/Manual/UnderstandingFrustum.html">camera’s view frustrum</a>. The projections located inside the view frustrum will be visible and the others will not. The idea is to trace back a new camera position from the outermost target projections, since this way we are guaranteed to include all projections inside the view.</p>
-
-<p><img class="center" src="http://lopespm.github.io/files/camera_multi_target/side_view_screen_basis_with_captions.png" /></p>
-
-<p>In order to make the bulk of the operations easier to compute, the process starts by multiplying the camera’s <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Using_quaternion_as_rotations">inverse rotation</a> with each of the targets positions, which will place them as they would if the camera’s axis would be aligned with the world’s axis (identity rotation). Once the camera position is calculated in this transformed space, the camera rotation is multiplied by this position, resulting in the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_1.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_1.png" /></a></center><figcaption class="media-caption"> Original targets positions </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_2_with_captions.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_2_with_captions.png" /></a></center><figcaption class="media-caption"> Multiply the camera&#8217;s inverse rotation with each of the targets positions </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_3.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_3.png" /></a></center><figcaption class="media-caption"> Calculate the camera position in this transformed space </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png"><img src="http://lopespm.github.io/files/camera_multi_target/transformed_space/transformed_space_4_with_captions.png" /></a></center><figcaption class="media-caption"> Multiply the camera&#8217;s rotation with the calculated position in the previous transformed space, which will reveal the final camera position in the original space</figcaption></figure>
-
-<h1 id="implementation">Implementation</h1>
-
-<p>Most of the operations are performed in the transformed space where the camera’s axis would be aligned with the world’s axis (identity rotation). After the targets are rotated into the camera’s identity rotation space by multiplying the camera’s inverse rotation with each of the targets positions, the first task is to calculate their projections.</p>
-
-<p>Please note that in all the figures below (with the exception of the <a href="#horizontal-projections"><em>horizontal field of view angle</em></a> section), the camera is present for reference only, as its final desired position will only be uncovered in the final step.</p>
-
-<h2 id="targets-projections">Targets projections</h2>
-
-<p>For each target, four projections are cast to a plane parallel to the view plane, sliced from the camera’s view frustrum. The line described from the target object to its respective projection is parallel to the camera’s view frustrum edges. Relative to the camera, two of these projections run horizontally, and the other two vertically.</p>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_1.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_1.png" /></a></center><figcaption class="media-caption"> Perspective view of the targets projections </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_2.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_2.png" /></a></center><figcaption class="media-caption"> Side view of the targets projections </figcaption></figure>
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_3.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_intro/projections_3.png" /></a></center><figcaption class="media-caption"> Top view of the targets projections </figcaption></figure>
-
-<p>If any of the target’s projections are outside the camera’s view frustrum (or its sliced plane), then the target object will not be visible. If they are inside, the target object will be visible. This means that the four outermost projections from all targets will define the limit of where the view frustrum must be in order to have all objects in view or partially in view. Adding some padding to these outermost projections (i.e. moving these projections away from the center of the view frustrum plane slice), will result in additional padding between the target object and the camera’s view borders.</p>
-
-<h3 id="vertical-projections">Vertical projections</h3>
-
-<p>For all vertical projections positions, we are interested in finding their Y component. In the figure below, notice the right triangle with one vertex on the target object and another one on the projection. If we discover the length of the side running parallel the projection plane, that value can be added to the Y component of the target’s position, resulting in the Y component for the upper projection.</p>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_vertical.png" /></a></center><figcaption class="media-caption"> Side view of the elements needed to calculate the vertical projections </figcaption></figure>
-
-<p><script type="math/tex">\theta</script> is equal to half the camera’s vertical field of view angle <script type="math/tex">\theta'</script> (<script type="math/tex">\theta = \frac{\theta'}{2}</script>). The vertical field of view angle <script type="math/tex">\theta'</script> is provided by the camera’s <a href="https://docs.unity3d.com/ScriptReference/Camera-fieldOfView.html"><code>fieldOfView</code></a> in degrees, which needs to be converted to radians for our purposes (<script type="math/tex">\theta' = \theta'_{degrees} \times \frac{\pi}{180º}</script>).</p>
-
-<p>The triangle’s adjacent edge length (relative to <script type="math/tex">\theta</script>) is known, thus we can find the length of the opposite side of the triangle by using <a href="https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-trig-ratios-intro/a/finding-trig-ratios-in-right-triangles">trigonometric ratios</a>.</p>
-
-<script type="math/tex; mode=display">opposite = tan(\theta) \times adjacent</script>
-
-<p>With this, the upper projection’s Y/Z components can be fully calculated. The bottom projection has the same Z component as the upper one, and its Y component is equal to the target’s Y component minus the calculated opposite triangle edge length.</p>
-
-<h3 id="horizontal-projections">Horizontal projections</h3>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_calc/projections_calc_with_captions_horizontal.png" /></a></center><figcaption class="media-caption"> Top view of the elements needed to calculate the horizontal projections </figcaption></figure>
-
-<p>The horizontal projections follow a set of similar set of calculations, difference being that we are now interested in finding the X component (instead of Y), and the horizontal field of view angle is used instead of the vertical one. The horizontal field of view angle <script type="math/tex">\gamma'</script> and its half value <script type="math/tex">\gamma</script> (<script type="math/tex">\gamma = \gamma' \times 2</script>) need some further steps to be computed, which will be detailed in the following section.</p>
-
-<h4 id="horizontal-field-of-view-angle">Horizontal field of view angle</h4>
-
-<p>Consider the following figure, in which <script type="math/tex">\gamma</script> represents half the horizontal field of view angle, <script type="math/tex">\theta</script> represents half the vertical field of view angle, <script type="math/tex">w</script> the viewport width and <script type="math/tex">h</script> the viewport height:</p>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/horizontal_fov.png"><img src="http://lopespm.github.io/files/camera_multi_target/horizontal_fov.png" /></a></center><figcaption class="media-caption"> Elements for the calculation of the horizontal field of view angle </figcaption></figure>
-
-<p>Using trigonometric ratios, these two equations can be devised:</p>
-
-<script type="math/tex; mode=display">
-\begin{cases}
-tan(\gamma) = \frac{w / 2}{adj} \\ 
-adj = \frac{h / 2}{tan(\theta)}
-\end{cases} 
-</script>
-
-<p>Replacing <script type="math/tex">adj</script> in the first equation with the definition of the second one:</p>
-
-<script type="math/tex; mode=display">
-tan(\gamma) = \frac{w / 2}{\frac{h / 2}{tan(\theta)}} 
-\Leftrightarrow \\
-tan(\gamma) = \frac{w / 2}{h / 2} \times tan(\theta)
-\Leftrightarrow \\
-tan(\gamma) = \frac{w}{h} \times tan(\theta)
-\Leftrightarrow \\
-\gamma = arctan(\frac{w}{h} \times tan(\theta))
-</script>
-
-<p>Unity’s camera has an <a href="https://docs.unity3d.com/ScriptReference/Camera-aspect.html"><code>aspect</code></a> attribute (view canvas width divided by height, i.e. <script type="math/tex">aspect\ ratio = \frac{w}{h}</script>), with which we can finalize our equation and discover the horizontal field of view angle half value.</p>
-
-<script type="math/tex; mode=display">
-\gamma = arctan(aspect\ ratio \times tan(\theta))
-</script>
-
-<h3 id="outermost-projections">Outermost projections</h3>
-
-<p>Having all target projections calculated, the four outermost ones are picked:</p>
-
-<ul>
-  <li><script type="math/tex">p_{hMax}</script> is the projection with the highest X component</li>
-  <li><script type="math/tex">p_{hMin}</script> is the projection with the lowest X component</li>
-  <li><script type="math/tex">p_{vMax}</script> is the projection with the highest Y component</li>
-  <li><script type="math/tex">p_{vMin}</script> is the projection with the lowest Y component</li>
-</ul>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_outermost/projections_outermost.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_outermost/projections_outermost.png" /></a></center><figcaption class="media-caption"> All outermost projections </figcaption></figure>
-
-<h2 id="calculating-the-camera-position">Calculating the camera position</h2>
-
-<h3 id="in-the-transformed-space">In the transformed space</h3>
-
-<p>The X and Y components of the desired camera position in the transformed space are the midpoints of their respective outermost projections, this is, the midpoint between <script type="math/tex">p_{hMax}</script> and <script type="math/tex">p_{hMin}</script> is the camera’s X position, and the midpoint between <script type="math/tex">p_{vMax}</script> and <script type="math/tex">p_{vMin}</script> is the camera’s Y position.</p>
-
-<p>The Z component of the camera position in the transformed space is calculated by backtracking a view frustrum from the the outermost projections to the camera Z component candidate. The furthest Z component from the projection plane will be the chosen, in order for the final camera position to contain all targets within its view.</p>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_vertical.png" /></a></center><figcaption class="media-caption"> Elements for adjacent<sub>v</sub> calculation </figcaption></figure>
-
-<figure class="image"><center><a href="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png"><img src="http://lopespm.github.io/files/camera_multi_target/projections_distance/projections_distance_with_captions_horizontal.png" /></a></center><figcaption class="media-caption"> Elements for adjacent<sub>h</sub> calculation </figcaption></figure>
-
-<p>Once again, trigonometric ratios will be used to calculate these Z position candidates.</p>
-
-<script type="math/tex; mode=display">
-adjacent_{v} = \frac{opposite_{v}}{tan(\theta)}
-\\
-adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
-</script>
-
-<p>The highest value between <script type="math/tex">adjacent_{v}</script> and <script type="math/tex">adjacent_{h}</script> will be picked for the camera’s Z position component in the transformed space.</p>
-
-<h3 id="final-camera-position-in-the-original-space">Final camera position in the original space</h3>
-
-<p>With the camera position calculated in the transformed space, we can now multiply the desired camera rotation with this position, which will provide us with the final desired camera position. The actual camera position is then progressively interpolated towards this desired position, to smooth out the camera movement.</p>
-
-<h1 id="where-to-get-it">Where to get it</h1>
-
-<p>The library is available on GitHub and the Unity Asset Store. An example scene of the library’s usage is included. Feedback is most welcome and I hope this can be useful!</p>
-
-<ul>
-  <li><a href="https://github.com/lopespm/unity-camera-multi-target">GitHub Repository</a></li>
-  <li><a href="https://assetstore.unity.com/packages/tools/camera/camera-multi-target-dynamic-135922">Unity Asset Store Package</a></li>
 </ul>
 
 ]]></content>

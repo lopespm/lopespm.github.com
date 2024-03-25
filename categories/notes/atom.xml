@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
   <link href="http://lopespm.github.io/"/>
-  <updated>2024-03-10T01:35:09+00:00</updated>
+  <updated>2024-03-25T00:35:19+00:00</updated>
   <id>http://lopespm.github.io/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,214 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Minimalist Onyx BOOX Note Air3 B/W Setup]]></title>
+    <link href="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html"/>
+    <updated>2024-03-25T00:00:00+00:00</updated>
+    <id>http://lopespm.github.io/notes/2024/03/25/minimalist_boox</id>
+    <content type="html"><![CDATA[<p>As part of the plan to banish mobile phones with access to instant rewards from my bedroom (more on this in an upcoming post), I’ve acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<h2 id="house-rules">House Rules</h2>
+
+<p>First of all, <em>why</em> I did get the device in the first place? This was in order to:</p>
+
+<ul>
+  <li>Reduce distractions before going to sleep and after waking up, increase focus on the things that really mattered, block out all other noise, and make it really hard to have access to instant gratification and rewards (such as video consumption)</li>
+  <li>Register any ideas and thoughts that occur to me before and after going to sleep, which is one of my most proficuous times for such, and then have them available on other devices</li>
+</ul>
+
+<p><em>How</em> to achieve this using the BOOX:</p>
+
+<ul>
+  <li>Only two functionalities should be easy and quick to use:
+    <ul>
+      <li>Write text and notes (via Google Keep and Google Docs)</li>
+      <li>Write diagrams and mental maps (via the device’s main app, which has the most snappier performance)</li>
+    </ul>
+  </li>
+  <li>Getting to above functionalities should be as fast as possible, and they should be fast</li>
+  <li>The cost to get to other apps and functionalities should be high</li>
+</ul>
+
+<h2 id="de-bloating">De-bloating</h2>
+
+<p>The Onyx BOOX Note Air3 B/W is not an incredibly fast device, and comes with several functionalities, apps, and a launcher that increase the distraction degree, and also slow down the device.</p>
+
+<h3 id="google-play-google-keep--docs">Google Play, Google Keep &amp; Docs</h3>
+
+<p>The first step towards the objective above was to install Google Play (see <a href="https://help.boox.com/hc/en-us/articles/8569260963732-Google-Play-Store">guide here</a>, and afterwards installed these apps:</p>
+
+<ul>
+  <li>Google Keep</li>
+  <li>Google Docs</li>
+  <li>Android Hidden Settings - this app provides access to several hidden settings, that allow the access of settings such as enabling the Developer Options in Android (useful in the debloating process described below)</li>
+  <li>Lawnchair (see below)</li>
+</ul>
+
+<h3 id="new-launcher-lawnchair">New Launcher: Lawnchair</h3>
+
+<center>
+<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+   <center>
+          <picture aria-label="How the home screen looks like now">
+             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_before.webp" aria-label="How the home screen looks like now">
+             <source type="image/png" srcset="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now">
+             <img src="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now">
+           </picture>
+         </center></div>
+ <p class="media-caption media-caption-two"><b>Before:</b> Default BOOX Launcher <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> </p>
+</div>
+<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
+	<center>
+          <picture aria-label="How the home screen looked like before">
+             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_after.webp" aria-label="How the home screen looked like before">
+             <source type="image/png" srcset="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before">
+             <img src="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before">
+           </picture>
+         </center></div>
+ <p class="media-caption media-caption-two"><b>After:</b> Using Lawnchair Launcher<br class="video-br-end" /></p>
+</div>
+</center>
+
+<p>The default device’s launcher was replaced by <a href="https://lawnchair.app/">Lawnchair</a>, which is a lightweight, open-source, highly customizable launcher for Android.</p>
+
+<p>What was added to the Lawnchair’s home screen:</p>
+
+<ul>
+  <li>Shortcut to Google Keep</li>
+  <li>Shortcut to Google Docs</li>
+  <li>Shortcut to Onyx Launcher - for any custom changes that are only accessible on the device’s default launcher, which are are in practice, so this was eventually something I removed from the home screen as I wrote this note</li>
+  <li>Shortcut to Google Calendar - to add any events or reminders</li>
+  <li>A widget to Onyx Sketch app, which is one the only way I found to have that app directly accessible from the Lawnchair home screen, without having to use Onyx’s launcher to do so. The widget can be added by long pressing on the home screen, then select “Widgets”, and then on the “ContentBrowser” section select one of the “Notes” widgets</li>
+</ul>
+
+<h2 id="disabling-bloatware">Disabling bloatware</h2>
+
+<p>With all of the above in place, we could start disabling non-essential apps and services, to prevent them from running in the background.</p>
+
+<p>Here are the steps:</p>
+
+<ol>
+  <li>The first step is to enable “Developer Options”, by accessing the system settings via the “Android Hidden Settings” app above, and then finding the <a href="https://developer.android.com/studio/debug/dev-options">Build Number</a> in order to click it enough times to eventually enable “Developer Options”.</li>
+  <li>Connect the BOOX to the computer</li>
+  <li>On the computer’s terminal run the below commands</li>
+</ol>
+
+<p>In general, these are the commands one can run via the terminal to manage bloat apps:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>// See all packages
+$ adb shell pm list packages
+
+// See all disabled packages
+$ adb shell pm list packages -d
+
+// Disable a package
+$ adb shell pm disable-user --user 0 &lt;package_to_disable&gt;
+
+// Re-enable a package
+$ adb shell pm enable &lt;package_to_disable&gt;
+</pre></div>
+</div>
+</div>
+
+<p><br />
+And these are the specific ones I used in my BOOX to disable bloatware, without any relevant side effects for my usages:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>adb shell pm disable-user --user 0 com.onyx.appmarket
+adb shell pm disable-user --user 0 com.onyx.floatingbutton
+adb shell pm disable-user --user 0 com.onyx.dict
+adb shell pm disable-user --user 0 com.onyx.mail
+adb shell pm disable-user --user 0 com.onyx.igetshop
+adb shell pm disable-user --user 0 com.onyx.easytransfer
+adb shell pm disable-user --user 0 com.onyx.kime
+adb shell pm disable-user --user 0 com.onyx.android.ksync
+adb shell pm disable-user --user 0 com.onyx.calculator
+</pre></div>
+</div>
+</div>
+
+<p><br /></p>
+
+<p>The commands above should be enough to remove all bloatware, and if you wish to learn more, <a href="https://www.kaspersky.co.uk/blog/how-to-disable-and-remove-android-bloatware/26993/">this article</a> and <a href="https://digitaluncoded.com/cpu-usage-android">this article</a> provide a good overview.</p>
+
+<h2 id="using-an-external-keyboard">Using an external keyboard</h2>
+
+<p>Given that this device is meant to be used in bed, and since it is quite unwieldy to write on the on-screen display, I was looking for an external keyboard that could be somehow attached to the BOOX, that would bestable, low-maintenance and allowed for flexibility on the writing position.</p>
+
+<p>From the keyboards and keyboard stands I’ve researched, the most elegant solution I found was to use <a href="https://www.logitech.com/en-gb/products/keyboards/k480-multi-device-wireless.html">Logitech K480</a>, a bluetooth keyboard with an in-built cradle, detachable batteries (i.e. zero issues related internal battery becoming faulty), incredible battery span (some users reported this to be <a href="https://www.youtube.com/watch?v=EoH2bXoNEE0">in the order of years</a>), and wonderful typing experience.</p>
+
+<p>One caveat is that the BOOX slides backward and falls when using the cradle without any other aid. A very simple fix is to get a piece of cardboard, and place it behind the BOOX (see picture below) to create a better fit. It works remarkably well.</p>
+
+<p><center>
+          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/webp" srcset="/files/minimalist_boox/keyboard_k480_with_boox.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/png" srcset="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <img src="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+           </picture>
+         </center>
+<br /></p>
+
+<h2 id="writing-and-drawing">Writing and Drawing</h2>
+
+<h3 id="writing">Writing</h3>
+
+<p>Writing is my main use case for the device, and even though it has some lag when doing it, it works great for me, because I tend to write long streams of ranting text, rather than editing it.</p>
+
+<div>
+	<div class="youtube-player" data-id="bYENTrabzXw" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<p>The best mode I’ve found for writing was the “A2” Mode. It has ghosting, but is responsive enough for this use case.</p>
+
+<p><center>
+          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/webp" srcset="/files/minimalist_boox/configuration_for_writing.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <source type="image/png" srcset="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+             <img src="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
+           </picture>
+         </center>
+<br /></p>
+
+<h3 id="drawing">Drawing</h3>
+
+<p>To draw, I use the default Onyx’s Sketch app due to its responsiveness, even though I would have preferred to have a more customizable UI interface and faster ways to share the drawing.</p>
+
+<p>Sharing is one of the downsides of the Onyx Sketch app. You need to either use their cloud service, or export the image in order to get the sketch easily accessible on other devices. I’ve opted to use the export functionality, which allows to directly share the image to a Google Keep note, which fits well into my workflow. I would prefer to not have this extra step, but still, it works well enough.</p>
+
+<div>
+	<div class="youtube-player" data-id="iW3IZ9MnFL8" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+
+<p>This has been one of the most satisfying devices I’ve added to my routines, and it’s incredibly satisfying to write on this device, almost distraction free. It allows enough customizability for it to be tailored to my use case, but is also limited enough to deter me from falling prey to distractions.</p>
+
+<p>I hope this was useful towards your journey - do let me know your tips for distraction free environments!</p>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<div class="footnotes">
+
+  <ol>
+	<li id="fn:1">
+  	<p>The BOOX Note Air3 B/W is a very capable device, able to do most of the things one would expect from an Android Tablet, but its screen refresh rate, speed and screen drag make it less suited for fast browsing and video usage for example. <a href="#fnref:1" rel="reference">↩</a></p>
+	</li>
+	<li id="fn:2">
+  	<p>The screenshot is from BOOX Tablet Note Air 3 C, the color counterpart of Onyx BOOX Note Air3 B/W, but the layout is the same, save from the color display <a href="#fnref:2" rel="reference">↩</a></p>
+	</li>
+    
+  </ol>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Musk's biography: why it's interesting]]></title>
@@ -866,43 +1074,6 @@
 <p>New York ain’t no DisneyLand, and Elmo’s pictures in Times Square don’t come for free either, so set expectations accordingly. It can be one of the most fulfilling experiences you’ll ever have. I advise you to come prepared and plan accordingly.</p>
 
 <p>Frank Sinatra sang that he wants “to wake up in the city that doesn’t sleep”. That phrase has a deep meaning that only struck me during my trip. The city does not indeed sleep. The Times Square lights, 24 hour subway, the constant movement. Living in NYC wakes you up, not only literally, but also figuratively. It wakes you up to a different reality that keeps you on your toes in several ways. In a way, it’s a celebration of life.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Job Safety in the AI Era]]></title>
-    <link href="http://lopespm.github.io/notes/2023/12/25/job_safety_in_ai_era.html"/>
-    <updated>2023-12-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2023/12/25/job_safety_in_ai_era</id>
-    <content type="html"><![CDATA[<p>Words are cheap and keep getting cheaper. The last notes on this blog could have been written via generative AI, and as time goes by, new generative models will likely create higher quality content than I could ever produce, consistently.</p>
-
-<p>I didn’t use these because the <a href="/notes/2023/07/02/writing-as-a-form-of-thinking.html">writing process comes as a form of thinking</a>, but if there are automated mechanisms that increasingly outperform us humans in so many different areas, what does that leave us?</p>
-
-<h2 id="human-connection">Human connection</h2>
-
-<p>How comfortable would you be in having a relationship with a being that is orders of magnitude more intelligent and capable than you? Not just logical-mathematical intelligence, but emotional, linguistic, musical or even spatial intelligence.</p>
-
-<p>A being so advanced that any form of communication or relationship between you and it would always be severely constrained, even with neural interfaces. A being so advanced that you would never be able to have an essential understanding of it. A being so advanced that you wouldn’t even know that you are being manipulated by it. How many humans do you know who are friends with chimpanzees or bonobos, our closest relatives?</p>
-
-<p>We are still human beings, with all the perks and limitations that come with it.</p>
-
-<p>I would claim that humans will always be attracted to their familiar counterparts. Other beings that share their own struggles and limitations, and by consequence, what they create and share. Machines have their important place in the world, and history has proven to us that life as whole improved as technology evolved to serve us, but it would be healthier for us to think of them as tools, rather than human replacements.</p>
-
-<h2 id="bioengineered">Bioengineered</h2>
-
-<p>We have been fitted with extraordinary senses and tools that allow us to efficiently interact with the world. It took milenea for nature to shape us, and as Leonardo da Vinci puts it when comparing natural to artificial structures: “Nature made the most perfect inventions. There is nothing superfluous, there is nothing lacking” (paraphrased)</p>
-
-<h3 id="our-place">Our place</h3>
-
-<p>Try having a machine fixing the leaky pipe in your bathroom, or to change your desk’s lightbulb. Odds are that you’ll be flooded and in the dark in the nearterm. There will come a point where they will <a href="https://www.youtube.com/watch?v=cpraXaw7dyc">likely do that</a>, but we are still not there.</p>
-
-<p>Machines / tools currently outperform us in several tasks on the digital realm, and in several heavy duty physical tasks. But when it comes to fine digital dexterity, human connection, and interaction with the real world and its complexities, we still have an edge.</p>
-
-<h2 id="future-proofing">Future Proofing</h2>
-
-<p>Take a look at the daily tasks in your job. How repetitive are they? If they are repetíve, how much of a human element is present? Look at your organization and see where rubber meets the road in terms of human connection and physical intervention.</p>
-
-<p>Strive to be closer to that human interface and focus on delivering tangible value to people or businesses (group of people). With this simple mindset, I believe you’ll be in a safer place, surrounded with an abundant supply of meaningful (monetary, emotional, etc) value that you can extract and provide.</p>
 ]]></content>
   </entry>
   
