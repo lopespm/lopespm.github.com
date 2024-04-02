@@ -10,7 +10,7 @@ ogp_image_twitter: "/files/minimalist_boox/pthumb.png"
 published: true
 ---
 
-As part of the plan to banish mobile phones with access to instant rewards from my bedroom (more on this in an upcoming post), I've acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>
+As part of the [plan to banish mobile phones with access to instant rewards from my bedroom]({% post_url 2024-04-01-banishing_mobile_phones_from_bedroom %}), I've acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>
 
 ## House Rules
 
