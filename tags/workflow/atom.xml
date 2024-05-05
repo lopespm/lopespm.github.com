@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Tag: workflow | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/tags/workflow/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/tags/workflow/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Quickly Customize OSX Terminal Style and Functionality]]></title>
-    <link href="http://lopespm.github.io/workflow/2015/01/27/customizing-terminal.html"/>
+    <link href="https://lopespm.com/workflow/2015/01/27/customizing-terminal.html"/>
     <updated>2015-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/workflow/2015/01/27/customizing-terminal</id>
+    <id>https://lopespm.com/workflow/2015/01/27/customizing-terminal</id>
     <content type="html"><![CDATA[<p><center>
           <picture aria-label="Terminal before and after">
              <source type="image/webp" srcset="/files/terminal_custom/terminal_before_after.webp" aria-label="Terminal before and after">

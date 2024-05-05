@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: notes | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/categories/notes/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Let me tell you a story]]></title>
-    <link href="http://lopespm.github.io/notes/2024/05/05/let-me-tell-you-a-story.html"/>
+    <link href="https://lopespm.com/notes/2024/05/05/let-me-tell-you-a-story.html"/>
     <updated>2024-05-05T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2024/05/05/let-me-tell-you-a-story</id>
+    <id>https://lopespm.com/notes/2024/05/05/let-me-tell-you-a-story</id>
     <content type="html"><![CDATA[<blockquote>
   <p>You could never convince a monkey to give you a banana by promising him limitless bananas after death in monkey heaven. How do you cause people to believe in an imagined order such as Christianity, democracy or capitalism? First, you never admit that the order is imagined.</p>
 
@@ -65,9 +65,9 @@
   
   <entry>
     <title type="html"><![CDATA[Banishing mobile phones from bedroom]]></title>
-    <link href="http://lopespm.github.io/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html"/>
+    <link href="https://lopespm.com/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html"/>
     <updated>2024-04-01T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2024/04/01/banishing_mobile_phones_from_bedroom</id>
+    <id>https://lopespm.com/notes/2024/04/01/banishing_mobile_phones_from_bedroom</id>
     <content type="html"><![CDATA[<h2 id="the-problem--why">The Problem / Why</h2>
 
 <p>When <a href="https://youtu.be/K2tGt2XWd9Q?si=h-xh-X90JWxwF1KU&amp;t=2229">asked</a> about which practices supported Chris Williamson into his current position, Chris mentioned that sleeping with his phone outside of the bedroom and getting a plain alarm clock was his number one change.</p>
@@ -171,9 +171,9 @@
   
   <entry>
     <title type="html"><![CDATA[Minimalist Onyx BOOX Note Air3 B/W Setup]]></title>
-    <link href="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html"/>
+    <link href="https://lopespm.com/notes/2024/03/25/minimalist_boox.html"/>
     <updated>2024-03-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2024/03/25/minimalist_boox</id>
+    <id>https://lopespm.com/notes/2024/03/25/minimalist_boox</id>
     <content type="html"><![CDATA[<p>As part of the <a href="/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html">plan to banish mobile phones with access to instant rewards from my bedroom</a>, I’ve acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 
 <h2 id="house-rules">House Rules</h2>
@@ -379,9 +379,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[Musk's biography: why it's interesting]]></title>
-    <link href="http://lopespm.github.io/notes/2024/02/18/elon_musk_biography.html"/>
+    <link href="https://lopespm.com/notes/2024/02/18/elon_musk_biography.html"/>
     <updated>2024-02-18T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2024/02/18/elon_musk_biography</id>
+    <id>https://lopespm.com/notes/2024/02/18/elon_musk_biography</id>
     <content type="html"><![CDATA[<p>I’ve been hearing the <a href="https://amzn.to/3I97bBi">latest Elon Musk biography</a> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> on audiobook, and just like Ashlee Vance’s <a href="https://amzn.to/3I5hUNu">book</a><sup>1</sup>, I’m finding it incredibly interesting. Here’s why:</p>
 
 <h2 id="possibilities-monty-python-costs-whys-and-whos">Possibilities, Monty Python, costs, whys and whos</h2>
@@ -484,9 +484,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[Project Planning Framework]]></title>
-    <link href="http://lopespm.github.io/notes/2024/01/27/project_planning_framework.html"/>
+    <link href="https://lopespm.com/notes/2024/01/27/project_planning_framework.html"/>
     <updated>2024-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2024/01/27/project_planning_framework</id>
+    <id>https://lopespm.com/notes/2024/01/27/project_planning_framework</id>
     <content type="html"><![CDATA[<p>Different goals require different roadmapping and planning techniques.</p>
 
 <p>In this post, a simple framework is proposed to classify a goal using three axes, in order to inform the approach taken towards reaching that goal. The three axes are:</p>

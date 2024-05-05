@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Tag: system design | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/tags/system-design/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/tags/system-design/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Implementation: Autocomplete System Design for Large Scale]]></title>
-    <link href="http://lopespm.github.io/2020/08/03/implementation-autocomplete-system-design.html"/>
+    <link href="https://lopespm.com/2020/08/03/implementation-autocomplete-system-design.html"/>
     <updated>2020-08-03T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/2020/08/03/implementation-autocomplete-system-design</id>
+    <id>https://lopespm.com/2020/08/03/implementation-autocomplete-system-design</id>
     <content type="html"><![CDATA[<p>This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one gets when typing a Google search.</p>
 
 <p>This design was implemented using Docker Compose<sup id="fnref:10"><a href="#fn:10" rel="footnote">1</a></sup>, and you can find the source code here: <a href="https://github.com/lopespm/autocomplete">https://github.com/lopespm/autocomplete</a></p>

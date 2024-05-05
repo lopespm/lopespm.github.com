@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Tag: aggregators | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/tags/aggregators/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/tags/aggregators/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hacker News Daily]]></title>
-    <link href="http://lopespm.github.io/2020/12/25/hackernews-daily.html"/>
+    <link href="https://lopespm.com/2020/12/25/hackernews-daily.html"/>
     <updated>2020-12-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/2020/12/25/hackernews-daily</id>
+    <id>https://lopespm.com/2020/12/25/hackernews-daily</id>
     <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
 
 <p><center>

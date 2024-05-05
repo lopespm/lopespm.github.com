@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://lopespm.github.io/sitemap.xml 
+Sitemap: https://lopespm.com/sitemap.xml 

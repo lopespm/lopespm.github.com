@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Tag: libraries | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/tags/libraries/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/tags/libraries/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,14 +15,14 @@
   
   <entry>
     <title type="html"><![CDATA[Unity: Dynamic Multi Target Camera]]></title>
-    <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
+    <link href="https://lopespm.com/libraries/games/2018/12/27/camera-multi-target.html"/>
     <updated>2018-12-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
+    <id>https://lopespm.com/libraries/games/2018/12/27/camera-multi-target</id>
     <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;" aria-label="Watch Demo Features of Dynamic Multi Target Camera for Unity">
 	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
-		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
-		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />
-		<!--[if lt IE 9]><img src="http://lopespm.github.io/files/camera_multi_target/demo.gif"><![endif]-->
+		<source src="https://lopespm.com/files/camera_multi_target/demo.webm" type="video/webm" />
+		<source src="https://lopespm.com/files/camera_multi_target/demo.mp4" type="video/mp4" />
+		<!--[if lt IE 9]><img src="https://lopespm.com/files/camera_multi_target/demo.gif"><![endif]-->
 	</video> 
 </a></p>
 
@@ -219,9 +219,9 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   
   <entry>
     <title type="html"><![CDATA[React Native Offscreen Toolbar]]></title>
-    <link href="http://lopespm.github.io/libraries/2018/01/25/react-native-offscreen-toolbar.html"/>
+    <link href="https://lopespm.com/libraries/2018/01/25/react-native-offscreen-toolbar.html"/>
     <updated>2018-01-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/libraries/2018/01/25/react-native-offscreen-toolbar</id>
+    <id>https://lopespm.com/libraries/2018/01/25/react-native-offscreen-toolbar</id>
     <content type="html"><![CDATA[<p>In material design, there is a <a href="https://material.io/guidelines/patterns/scrolling-techniques.html#scrolling-techniques-behavior">common scrolling technique</a> in which the toolbar is smoothly tucked away while scrolling down and is made visible again when scrolling up. This behaviour is fairly straightforward to implement when developing a native android app, but for a react native app, the best solution I found was <a href="https://medium.com/appandflow/react-native-collapsible-navbar-e51a049b560a">Janic Duplessis’</a>.</p>
 
 <p>The <a href="https://www.npmjs.com/package/react-native-offscreen-toolbar">library</a> I am releasing today is an encapsulation of this behaviour and its implementation is heavily based on Janic Duplessis’ approach.</p>
@@ -230,15 +230,15 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   <div style="overflow: auto; margin-bottom: 16px">
     <div style="float: left;height: 10px; width:8%;"></div>
         <video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
-        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm" />
-        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4" />
-        <!--[if lt IE 9]><img src="http://lopespm.github.io/files/rn-offscreen-toolbar/simplelist_demo.gif"><![endif]-->
+        <source src="https://lopespm.com/files/rn-offscreen-toolbar/simplelist_demo.webm" type="video/webm" />
+        <source src="https://lopespm.com/files/rn-offscreen-toolbar/simplelist_demo.mp4" type="video/mp4" />
+        <!--[if lt IE 9]><img src="https://lopespm.com/files/rn-offscreen-toolbar/simplelist_demo.gif"><![endif]-->
     </video> 
     <div style="float: left;height: 10px; width:4%;"></div>
     <video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px; float: left;height: auto; width:40%;">
-        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/search_demo.webm" type="video/webm" />
-        <source src="http://lopespm.github.io/files/rn-offscreen-toolbar/search_demo.mp4" type="video/mp4" />
-        <!--[if lt IE 9]><img src="http://lopespm.github.io/files/rn-offscreen-toolbar/search_demo.gif"><![endif]-->
+        <source src="https://lopespm.com/files/rn-offscreen-toolbar/search_demo.webm" type="video/webm" />
+        <source src="https://lopespm.com/files/rn-offscreen-toolbar/search_demo.mp4" type="video/mp4" />
+        <!--[if lt IE 9]><img src="https://lopespm.com/files/rn-offscreen-toolbar/search_demo.gif"><![endif]-->
     </video> 
   </div>
   <figcaption class="media-caption">Library usage in both the <a href="https://github.com/lopespm/react-native-offscreen-toolbar/tree/master/example">example</a> bundled with the library and in the search screen of a to be released application</figcaption>
@@ -306,9 +306,9 @@ export default class YourComponent extends React.Component {
   
   <entry>
     <title type="html"><![CDATA[Compressed Deque in Python]]></title>
-    <link href="http://lopespm.github.io/libraries/2016/08/27/compressed-deque.html"/>
+    <link href="https://lopespm.com/libraries/2016/08/27/compressed-deque.html"/>
     <updated>2016-08-27T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/libraries/2016/08/27/compressed-deque</id>
+    <id>https://lopespm.com/libraries/2016/08/27/compressed-deque</id>
     <content type="html"><![CDATA[<p>This post aims to give some insights about a recently <a href="https://github.com/lopespm/compressed-deque">open-sourced</a> python deque which compresses its items for a decreased volatile and persistent memory footprint.</p>
 
 <!--more-->

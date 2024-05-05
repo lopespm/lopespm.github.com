@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: games | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/categories/games/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/categories/games/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,14 +15,14 @@
   
   <entry>
     <title type="html"><![CDATA[Unity: Dynamic Multi Target Camera]]></title>
-    <link href="http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html"/>
+    <link href="https://lopespm.com/libraries/games/2018/12/27/camera-multi-target.html"/>
     <updated>2018-12-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target</id>
+    <id>https://lopespm.com/libraries/games/2018/12/27/camera-multi-target</id>
     <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=HeJrQkkIfOI" style="white-space: nowrap;" aria-label="Watch Demo Features of Dynamic Multi Target Camera for Unity">
 	<video autoplay="" loop="" muted="" playsinline="" style="width: auto; border: 0px; box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 4px;">
-		<source src="http://lopespm.github.io/files/camera_multi_target/demo.webm" type="video/webm" />
-		<source src="http://lopespm.github.io/files/camera_multi_target/demo.mp4" type="video/mp4" />
-		<!--[if lt IE 9]><img src="http://lopespm.github.io/files/camera_multi_target/demo.gif"><![endif]-->
+		<source src="https://lopespm.com/files/camera_multi_target/demo.webm" type="video/webm" />
+		<source src="https://lopespm.com/files/camera_multi_target/demo.mp4" type="video/mp4" />
+		<!--[if lt IE 9]><img src="https://lopespm.com/files/camera_multi_target/demo.gif"><![endif]-->
 	</video> 
 </a></p>
 
@@ -219,9 +219,9 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   
   <entry>
     <title type="html"><![CDATA[Survival Ball on OUYA]]></title>
-    <link href="http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html"/>
+    <link href="https://lopespm.com/games/2013/09/08/survival-ball-ouya.html"/>
     <updated>2013-09-08T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/games/2013/09/08/survival-ball-ouya</id>
+    <id>https://lopespm.com/games/2013/09/08/survival-ball-ouya</id>
     <content type="html"><![CDATA[<p>Survival Ball in now available on OUYA, and its publishing process was fairly straightforward. From the day of submission (2nd of September) to its approval (5th of September), it took a mere 3 days, counting that a re-submission had to be made in-between.</p>
 
 <p>Survival Ball was already available on <a href="https://play.google.com/store/apps/details?id=com.rockbyte.survivalball">Google Play</a>, <a href="http://www.amazon.com/RockByte-Software-Survival-Ball/dp/B00ARVZ7F0/ref=sr_1_1?s=mobile-apps&amp;ie=UTF8&amp;qid=1378394674&amp;sr=1-1">Amazon </a>and <a href="http://www.kongregate.com/games/rockbyte/survival-ball">Kongregate</a>, but OUYA just felt like the perfect platform for the game. With it, you could just grab the OUYA controller and/or a spare XBox/PS3 controller, and just have a quick match. I really loved the concept, and re-iterated on the previous version of the game to give it more controller friendly menus, better graphics, refined textures, and an overall revamp.</p>
@@ -236,7 +236,7 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
 
 <p>I’ve came to learn during this process, after publishing the game, it first goes to the “Sandbox” section. Only after a major acceptance from the game community, can the game be promoted to the primary categories. So, if you would like to take a quick peek at the game, you can find it at the “Sandbox” section.</p>
 
-<center><iframe width="560" height="315" src="http://lopespm.github.io//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
+<center><iframe width="560" height="315" src="https://lopespm.com//www.youtube.com/embed/ZrqakDKWwjg" frameborder="0" allowfullscreen=""></iframe></center>
 
 <p><br /></p>
 ]]></content>
@@ -244,9 +244,9 @@ adjacent_{h} = \frac{opposite_{h}}{tan(\gamma)}
   
   <entry>
     <title type="html"><![CDATA[Nordic Game Jam’s winners]]></title>
-    <link href="http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners.html"/>
+    <link href="https://lopespm.com/games/2013/01/27/nordic-game-jams-winners.html"/>
     <updated>2013-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners</id>
+    <id>https://lopespm.com/games/2013/01/27/nordic-game-jams-winners</id>
     <content type="html"><![CDATA[<p>This year’s Nordic Game Jam was crowned as the world’s largest game jam with about 470 participants. The winners have been announced, and can see the full list here: <a href="http://nordicgamejam.org/2013/01/21/winners-ngj13/">http://nordicgamejam.org/2013/01/21/winners-ngj13/</a></p>
 
 <p>My personal highlight goes to Stalagflight (<a href="https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html">https://dl.dropbox.com/u/85666/Stalagflight-web/webBuild.html</a>), which is as simple as stupidly fun! Stalagflight can be played with the keyboard, but it is tricky. If you have a gamepad the experience is much better.</p>

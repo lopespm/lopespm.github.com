@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: apps | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/categories/apps/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/categories/apps/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ArXiv Papers: React Native Android App]]></title>
-    <link href="http://lopespm.github.io/apps/2018/03/12/arxiv-papers.html"/>
+    <link href="https://lopespm.com/apps/2018/03/12/arxiv-papers.html"/>
     <updated>2018-03-12T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/apps/2018/03/12/arxiv-papers</id>
+    <id>https://lopespm.com/apps/2018/03/12/arxiv-papers</id>
     <content type="html"><![CDATA[<p><center>
           <picture aria-label="Layouts of the ArXiv Papers App">
              <source type="image/webp" srcset="/files/arxiv-papers/arxiv_layout_implementation.webp" aria-label="Layouts of the ArXiv Papers App">

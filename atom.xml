@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
-  <link href="http://lopespm.github.io/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Let me tell you a story]]></title>
-    <link href="http://lopespm.github.io/notes/2024/05/05/let-me-tell-you-a-story.html"/>
+    <link href="https://lopespm.com/notes/2024/05/05/let-me-tell-you-a-story.html"/>
     <updated>2024-05-05T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2024/05/05/let-me-tell-you-a-story</id>
+    <id>https://lopespm.com/notes/2024/05/05/let-me-tell-you-a-story</id>
     <content type="html"><![CDATA[<blockquote>
   <p>You could never convince a monkey to give you a banana by promising him limitless bananas after death in monkey heaven. How do you cause people to believe in an imagined order such as Christianity, democracy or capitalism? First, you never admit that the order is imagined.</p>
 
@@ -65,9 +65,9 @@
   
   <entry>
     <title type="html"><![CDATA[Banishing mobile phones from bedroom]]></title>
-    <link href="http://lopespm.github.io/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html"/>
+    <link href="https://lopespm.com/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html"/>
     <updated>2024-04-01T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2024/04/01/banishing_mobile_phones_from_bedroom</id>
+    <id>https://lopespm.com/notes/2024/04/01/banishing_mobile_phones_from_bedroom</id>
     <content type="html"><![CDATA[<h2 id="the-problem--why">The Problem / Why</h2>
 
 <p>When <a href="https://youtu.be/K2tGt2XWd9Q?si=h-xh-X90JWxwF1KU&amp;t=2229">asked</a> about which practices supported Chris Williamson into his current position, Chris mentioned that sleeping with his phone outside of the bedroom and getting a plain alarm clock was his number one change.</p>
@@ -101,7 +101,7 @@
           <picture aria-label="Braun BC08B">
              <source type="image/webp" srcset="/files/banish_mobiles_bedroom/alarm_braun.webp" aria-label="Braun BC08B" />
              <source type="image/png" srcset="/files/banish_mobiles_bedroom/alarm_braun.png" aria-label="Braun BC08B" />
-             <img src="http://lopespm.github.io/files/banish_mobiles_bedroom/alarm_braun.png" aria-label="Braun BC08B" />
+             <img src="https://lopespm.com/files/banish_mobiles_bedroom/alarm_braun.png" aria-label="Braun BC08B" />
            </picture>
          </center>
 <p><br /></p>
@@ -139,7 +139,7 @@
       </li>
       <li><a href="https://www.amazon.com/BOOX-Tablet-Note-Air3-ePaper/dp/B0CP3CGG8P">Onyx BOOX Note Air3 B/W</a>:
         <ul>
-          <li>Pros: it can use Google Keep and Google Docs apps, since can do almost everything a normal Android table can, but since it uses a e-ink screen and has limited processing capabilities, it does not make a good fit for browsing the web or seeing videos (which is actually a good thing); the default experience and drawing app are bloated offer too many distractions (<a href="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html">see here how to debloat it</a>); allows for handwriting to text conversion within Onyx drawing app</li>
+          <li>Pros: it can use Google Keep and Google Docs apps, since can do almost everything a normal Android table can, but since it uses a e-ink screen and has limited processing capabilities, it does not make a good fit for browsing the web or seeing videos (which is actually a good thing); the default experience and drawing app are bloated offer too many distractions (<a href="https://lopespm.com/notes/2024/03/25/minimalist_boox.html">see here how to debloat it</a>); allows for handwriting to text conversion within Onyx drawing app</li>
           <li>Cons: noticeable lag when writing; if not using Onyx’s cloud, it requires extra steps to export and share a diagram / drawing</li>
         </ul>
       </li>
@@ -150,13 +150,13 @@
 
 <p>Given the options above, I picked the Onyx BOOX Note Air3 B/W. Note that the <a href="https://www.amazon.co.uk/BOOX-Tablet-Note-Air-ePaper-Dark-grey-green/dp/B0CHF423CP">color screen version of this tablet</a> is available, but I did not pick it because of Air C’s reduced battery life from the always-on BSR (Boox Super Refresh Technology). BSR allows for a smoother and more responsive experience when writing for example, but that is not actually a problem since I mainly use the Boox to write long streams of text / braindumps, rather than text editing; and BSR also takes it a step closer to a general purpose tablet non-eink display, which starts to defeat the initial purpose. Apart from that, I have a personal preference towards the black and white screen feel.</p>
 
-<p>Learn more on how I customized my Boox Air3 <a href="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html">here</a>.</p>
+<p>Learn more on how I customized my Boox Air3 <a href="https://lopespm.com/notes/2024/03/25/minimalist_boox.html">here</a>.</p>
 
 <center>
           <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
              <source type="image/webp" srcset="/files/banish_mobiles_bedroom/keyboard_k480_with_boox.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
              <source type="image/png" srcset="/files/banish_mobiles_bedroom/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
-             <img src="http://lopespm.github.io/files/banish_mobiles_bedroom/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <img src="https://lopespm.com/files/banish_mobiles_bedroom/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
            </picture>
          </center>
 <p><br /></p>
@@ -171,10 +171,10 @@
   
   <entry>
     <title type="html"><![CDATA[Minimalist Onyx BOOX Note Air3 B/W Setup]]></title>
-    <link href="http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html"/>
+    <link href="https://lopespm.com/notes/2024/03/25/minimalist_boox.html"/>
     <updated>2024-03-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2024/03/25/minimalist_boox</id>
-    <content type="html"><![CDATA[<p>As part of the <a href="http://lopespm.github.io/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html">plan to banish mobile phones with access to instant rewards from my bedroom</a>, I’ve acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+    <id>https://lopespm.com/notes/2024/03/25/minimalist_boox</id>
+    <content type="html"><![CDATA[<p>As part of the <a href="https://lopespm.com/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html">plan to banish mobile phones with access to instant rewards from my bedroom</a>, I’ve acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 
 <h2 id="house-rules">House Rules</h2>
 
@@ -221,7 +221,7 @@
           <picture aria-label="How the home screen looks like now">
              <source type="image/webp" srcset="/files/minimalist_boox/home_screen_before.webp" aria-label="How the home screen looks like now" />
              <source type="image/png" srcset="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now" />
-             <img src="http://lopespm.github.io/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now" />
+             <img src="https://lopespm.com/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now" />
            </picture>
          </center></div>
  <p class="media-caption media-caption-two"><b>Before:</b> Default BOOX Launcher <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> </p>
@@ -231,7 +231,7 @@
           <picture aria-label="How the home screen looked like before">
              <source type="image/webp" srcset="/files/minimalist_boox/home_screen_after.webp" aria-label="How the home screen looked like before" />
              <source type="image/png" srcset="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before" />
-             <img src="http://lopespm.github.io/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before" />
+             <img src="https://lopespm.com/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before" />
            </picture>
          </center></div>
  <p class="media-caption media-caption-two"><b>After:</b> Using Lawnchair Launcher<br class="video-br-end" /></p>
@@ -313,7 +313,7 @@ adb shell pm disable-user --user 0 com.onyx.calculator
           <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
              <source type="image/webp" srcset="/files/minimalist_boox/keyboard_k480_with_boox.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
              <source type="image/png" srcset="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
-             <img src="http://lopespm.github.io/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <img src="https://lopespm.com/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
            </picture>
          </center>
 <p><br /></p>
@@ -335,7 +335,7 @@ adb shell pm disable-user --user 0 com.onyx.calculator
           <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
              <source type="image/webp" srcset="/files/minimalist_boox/configuration_for_writing.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
              <source type="image/png" srcset="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
-             <img src="http://lopespm.github.io/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
+             <img src="https://lopespm.com/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard" />
            </picture>
          </center>
 <p><br /></p>
@@ -379,9 +379,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[Musk's biography: why it's interesting]]></title>
-    <link href="http://lopespm.github.io/notes/2024/02/18/elon_musk_biography.html"/>
+    <link href="https://lopespm.com/notes/2024/02/18/elon_musk_biography.html"/>
     <updated>2024-02-18T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2024/02/18/elon_musk_biography</id>
+    <id>https://lopespm.com/notes/2024/02/18/elon_musk_biography</id>
     <content type="html"><![CDATA[<p>I’ve been hearing the <a href="https://amzn.to/3I97bBi">latest Elon Musk biography</a> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> on audiobook, and just like Ashlee Vance’s <a href="https://amzn.to/3I5hUNu">book</a><sup>1</sup>, I’m finding it incredibly interesting. Here’s why:</p>
 
 <h2 id="possibilities-monty-python-costs-whys-and-whos">Possibilities, Monty Python, costs, whys and whos</h2>
@@ -484,9 +484,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[Project Planning Framework]]></title>
-    <link href="http://lopespm.github.io/notes/2024/01/27/project_planning_framework.html"/>
+    <link href="https://lopespm.com/notes/2024/01/27/project_planning_framework.html"/>
     <updated>2024-01-27T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2024/01/27/project_planning_framework</id>
+    <id>https://lopespm.com/notes/2024/01/27/project_planning_framework</id>
     <content type="html"><![CDATA[<p>Different goals require different roadmapping and planning techniques.</p>
 
 <p>In this post, a simple framework is proposed to classify a goal using three axes, in order to inform the approach taken towards reaching that goal. The three axes are:</p>
@@ -526,7 +526,7 @@ adb shell pm disable-user --user 0 com.onyx.calculator
           <picture aria-label="Project planning diagram for reaching compliance">
              <source type="image/webp" srcset="/files/project_planning_framework/compliance.webp" aria-label="Project planning diagram for reaching compliance" />
              <source type="image/png" srcset="/files/project_planning_framework/compliance.png" aria-label="Project planning diagram for reaching compliance" />
-             <img src="http://lopespm.github.io/files/project_planning_framework/compliance.png" aria-label="Project planning diagram for reaching compliance" />
+             <img src="https://lopespm.com/files/project_planning_framework/compliance.png" aria-label="Project planning diagram for reaching compliance" />
            </picture>
          </center>
 
@@ -558,7 +558,7 @@ adb shell pm disable-user --user 0 com.onyx.calculator
           <picture aria-label="Project planning diagram for increasing effectiveness">
              <source type="image/webp" srcset="/files/project_planning_framework/effectiveness.webp" aria-label="Project planning diagram for increasing effectiveness" />
              <source type="image/png" srcset="/files/project_planning_framework/effectiveness.png" aria-label="Project planning diagram for increasing effectiveness" />
-             <img src="http://lopespm.github.io/files/project_planning_framework/effectiveness.png" aria-label="Project planning diagram for increasing effectiveness" />
+             <img src="https://lopespm.com/files/project_planning_framework/effectiveness.png" aria-label="Project planning diagram for increasing effectiveness" />
            </picture>
          </center>
 
@@ -589,7 +589,7 @@ adb shell pm disable-user --user 0 com.onyx.calculator
           <picture aria-label="Project planning diagram for unification of systems">
              <source type="image/webp" srcset="/files/project_planning_framework/unification.webp" aria-label="Project planning diagram for unification of systems" />
              <source type="image/png" srcset="/files/project_planning_framework/unification.png" aria-label="Project planning diagram for unification of systems" />
-             <img src="http://lopespm.github.io/files/project_planning_framework/unification.png" aria-label="Project planning diagram for unification of systems" />
+             <img src="https://lopespm.com/files/project_planning_framework/unification.png" aria-label="Project planning diagram for unification of systems" />
            </picture>
          </center>
 
@@ -601,9 +601,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[Make the meme transcend its host]]></title>
-    <link href="http://lopespm.github.io/notes/2023/12/31/meme-transcending-host.html"/>
+    <link href="https://lopespm.com/notes/2023/12/31/meme-transcending-host.html"/>
     <updated>2023-12-31T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2023/12/31/meme-transcending-host</id>
+    <id>https://lopespm.com/notes/2023/12/31/meme-transcending-host</id>
     <content type="html"><![CDATA[<p>There is an ephemeral nature to everything. That includes me, you and this blog. This blog is currently <a href="https://github.com/lopespm/lopespm.github.com">hosted in GitHub</a>, and nothing guarantees that after I’m long gone, or even before, GitHub might cease to exist. How to account for that?</p>
 
 <p>One way to keep these writings alive, would be to assign a third person with the task of keeping this establishment online. What happens when that person is gone though? It’s turtles all the way down.</p>
@@ -629,7 +629,7 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   <li>After listening to <a href="https://amzn.to/3GYxlq6">Benjamin Franklin’s biography</a> on audiobook, I’ve came to learn that not only was Franklin a statesman, diplomat, scientist and inventor, but also a prolific writer, printer and publisher, which were unbeknownst to me. As a publisher, Benjamin Franklin wrote several dissertations and essays <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> (such as the ones under the pen name of Silence Dogood), which I’m sure to have fed into Franklin’s books, which brought many interesting ideas to a large population, like his own <a href="https://amzn.to/4aG58ly">autobiography</a>, which could be seen as a compilation of several of his ideas and reflections / writings (these go hand in hand).</li>
 </ul>
 
-<p>Apart from finding the above points inspirational, they also make me think that creating a discipline where I consistently share my reflections and experiences via writing or <a href="https://www.youtube.com/channel/UC_VHNCq3yGJrLn82VsdONOg">videos</a>, not only helps me <a href="http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking.html">solidify my thoughts</a> and provides more immediate feedback on how valuable these are to its viewers / readers (which allows me to course correct and iterate <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>), but also provides the building blocks to put together a hopefully meaningful and concise book to help surpass the limited lifespan of the digital medium that hosts this blog and my YouTube videos.</p>
+<p>Apart from finding the above points inspirational, they also make me think that creating a discipline where I consistently share my reflections and experiences via writing or <a href="https://www.youtube.com/channel/UC_VHNCq3yGJrLn82VsdONOg">videos</a>, not only helps me <a href="https://lopespm.com/notes/2023/07/02/writing-as-a-form-of-thinking.html">solidify my thoughts</a> and provides more immediate feedback on how valuable these are to its viewers / readers (which allows me to course correct and iterate <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>), but also provides the building blocks to put together a hopefully meaningful and concise book to help surpass the limited lifespan of the digital medium that hosts this blog and my YouTube videos.</p>
 
 <blockquote>
   <p>No Input, No Output</p>
@@ -642,9 +642,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
 <p>Given the above, here are some action points to put the wheels in motion towards building “physical persistence” via a book, and give better chances for its memes to transcend their host <sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>:</p>
 
 <ol>
-  <li>My low priority 2024 <a href="http://lopespm.github.io/notes/2023/08/05/real_question_behind_what_you_want.html">goal</a> is continuing to publish blog notes and videos. The numeric goal I’ve set for myself is to publish 12 blog notes, about once per month. From these, make the respective <a href="https://www.youtube.com/channel/UC_VHNCq3yGJrLn82VsdONOg">YouTube videos</a>, but this would be a stretch sub-goal (albeit, one that I really enjoy)
+  <li>My low priority 2024 <a href="https://lopespm.com/notes/2023/08/05/real_question_behind_what_you_want.html">goal</a> is continuing to publish blog notes and videos. The numeric goal I’ve set for myself is to publish 12 blog notes, about once per month. From these, make the respective <a href="https://www.youtube.com/channel/UC_VHNCq3yGJrLn82VsdONOg">YouTube videos</a>, but this would be a stretch sub-goal (albeit, one that I really enjoy)
     <ul>
-      <li>This was a consequence of my recent “personal performance” review for this year’s personal goals, which was a good opportunity to reflect on what went well, what went less well, what was achieved, and what was missed. One of the aspects that I aim to implement for the <a href="http://lopespm.github.io/notes/2023/08/05/real_question_behind_what_you_want.html">upcoming year’s goals</a> is to use numeric goals, where applicable.</li>
+      <li>This was a consequence of my recent “personal performance” review for this year’s personal goals, which was a good opportunity to reflect on what went well, what went less well, what was achieved, and what was missed. One of the aspects that I aim to implement for the <a href="https://lopespm.com/notes/2023/08/05/real_question_behind_what_you_want.html">upcoming year’s goals</a> is to use numeric goals, where applicable.</li>
     </ul>
   </li>
   <li>Once 50 or 99 meaningful blog notes are written, attempt to compile them into a book.
@@ -667,7 +667,7 @@ adb shell pm disable-user --user 0 com.onyx.calculator
       <p><em>On the extensive range of writings that Benjamin Franklin did, there are also hilarious examples such as <a href="https://amzn.to/3TErk9B">Fart Proudly</a>, an essay about flatulence written while he was living abroad as United States Ambassador to France</em><a href="#fnref:1" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p><em>One the learnings from <a href="http://lopespm.github.io/2019/02/06/survival-ball-making-the-game.html">making the Survival Ball video game</a>, was that the lack of exposure throughout it’s development process lead to less visibility to the ones who might be interested in it, and less immediate feedback on what worked and what didn’t work, which could have possibly have helped to craft an better product, by virtue of allowing faster / less painful pivots</em><a href="#fnref:2" rel="reference">&#8617;</a></p>
+      <p><em>One the learnings from <a href="https://lopespm.com/2019/02/06/survival-ball-making-the-game.html">making the Survival Ball video game</a>, was that the lack of exposure throughout it’s development process lead to less visibility to the ones who might be interested in it, and less immediate feedback on what worked and what didn’t work, which could have possibly have helped to craft an better product, by virtue of allowing faster / less painful pivots</em><a href="#fnref:2" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:3">
       <p><em>Coined by the British evolutionist Richard Dawkins in his book <a href="https://amzn.to/48vVG20">The Selfish Gene (1976)</a>, a <a href="https://www.oxfordreference.com/display/10.1093/acref/9780195120905.001.0001/acref-9780195120905-e-187">meme</a> is a unit of culture—such as “tunes, ideas, catch‐phrases, clothes fashions, ways of making pots or building arches.” In humans, memes have supposedly taken over much of the evolutionary burden of the traditional units of heredity, the genes. Dawkins introduces them because in his opinion the rate of human cultural evolution is far too rapid to be simply a function of gene‐centered evolution</em>.<a href="#fnref:3" rel="reference">&#8617;</a></p>
@@ -679,9 +679,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[New York City Guide]]></title>
-    <link href="http://lopespm.github.io/notes/2023/12/25/nyc.html"/>
+    <link href="https://lopespm.com/notes/2023/12/25/nyc.html"/>
     <updated>2023-12-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2023/12/25/nyc</id>
+    <id>https://lopespm.com/notes/2023/12/25/nyc</id>
     <content type="html"><![CDATA[<div class="image-mosaic">
   <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/nyc/pPXL_20231216_194118475_2.jpg')"></div>
 </div>
@@ -1235,12 +1235,12 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[Job Safety in the AI Era]]></title>
-    <link href="http://lopespm.github.io/notes/2023/12/25/job_safety_in_ai_era.html"/>
+    <link href="https://lopespm.com/notes/2023/12/25/job_safety_in_ai_era.html"/>
     <updated>2023-12-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/notes/2023/12/25/job_safety_in_ai_era</id>
+    <id>https://lopespm.com/notes/2023/12/25/job_safety_in_ai_era</id>
     <content type="html"><![CDATA[<p>Words are cheap and keep getting cheaper. The last notes on this blog could have been written via generative AI, and as time goes by, new generative models will likely create higher quality content than I could ever produce, consistently.</p>
 
-<p>I didn’t use these because the <a href="http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking.html">writing process comes as a form of thinking</a>, but if there are automated mechanisms that increasingly outperform us humans in so many different areas, what does that leave us?</p>
+<p>I didn’t use these because the <a href="https://lopespm.com/notes/2023/07/02/writing-as-a-form-of-thinking.html">writing process comes as a form of thinking</a>, but if there are automated mechanisms that increasingly outperform us humans in so many different areas, what does that leave us?</p>
 
 <h2 id="human-connection">Human connection</h2>
 
@@ -1272,9 +1272,9 @@ adb shell pm disable-user --user 0 com.onyx.calculator
   
   <entry>
     <title type="html"><![CDATA[Relative Cost / Benefit of an Investment]]></title>
-    <link href="http://lopespm.github.io/notes/2023/10/21/investment_relative_cost_benefit.html"/>
+    <link href="https://lopespm.com/notes/2023/10/21/investment_relative_cost_benefit.html"/>
     <updated>2023-10-21T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/10/21/investment_relative_cost_benefit</id>
+    <id>https://lopespm.com/notes/2023/10/21/investment_relative_cost_benefit</id>
     <content type="html"><![CDATA[<p>Let’s say you spend <span>$</span>1,000 to acquire film equipment (camera, microphones, and lights) to shoot YouTube videos. If you use this equipment to film and publish 2 videos, it means that each of those videos costs <span>$</span>500 to produce. If 100 videos are published, each of them cost <span>$</span>10. If all of these videos are able to generate <span>$</span>10 of revenue, then the entire cost of the initial investment was amortized.</p>
 
 <p>The above is a severely gross simplification<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the key point is that an investment left unused has a high associated cost. In the case above, if only two videos were to be produced, then it would have been a better idea to rent the equipment instead.</p>
@@ -1365,10 +1365,10 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Importance of Goal Clarity for Delegation]]></title>
-    <link href="http://lopespm.github.io/notes/2023/09/30/goal_clarity_in_delegation.html"/>
+    <link href="https://lopespm.com/notes/2023/09/30/goal_clarity_in_delegation.html"/>
     <updated>2023-09-30T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/09/30/goal_clarity_in_delegation</id>
-    <content type="html"><![CDATA[<p>Previously, in <a href="http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead.html">“Learnings as a Software Engineer Techlead”</a>, I’ve alluded to the 75/25 rule, where if you are ~75% certain that someone will correctly execute a given project/task, then delegate. The other ~25% is the unknown space that the person needs in order to learn, explore, make errors, innovate and grow.</p>
+    <id>https://lopespm.com/notes/2023/09/30/goal_clarity_in_delegation</id>
+    <content type="html"><![CDATA[<p>Previously, in <a href="https://lopespm.com/2022/03/22/learnings-software-engineer-techlead.html">“Learnings as a Software Engineer Techlead”</a>, I’ve alluded to the 75/25 rule, where if you are ~75% certain that someone will correctly execute a given project/task, then delegate. The other ~25% is the unknown space that the person needs in order to learn, explore, make errors, innovate and grow.</p>
 
 <p>If the project/task was decided to be delegated, what comes next?</p>
 
@@ -1404,9 +1404,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Life has several exits]]></title>
-    <link href="http://lopespm.github.io/notes/2023/08/19/life_exits.html"/>
+    <link href="https://lopespm.com/notes/2023/08/19/life_exits.html"/>
     <updated>2023-08-19T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/08/19/life_exits</id>
+    <id>https://lopespm.com/notes/2023/08/19/life_exits</id>
     <content type="html"><![CDATA[<p>Life has several exits:</p>
 
 <ul>
@@ -1430,9 +1430,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[The real question behind 'what do you want?']]></title>
-    <link href="http://lopespm.github.io/notes/2023/08/05/real_question_behind_what_you_want.html"/>
+    <link href="https://lopespm.com/notes/2023/08/05/real_question_behind_what_you_want.html"/>
     <updated>2023-08-05T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/08/05/real_question_behind_what_you_want</id>
+    <id>https://lopespm.com/notes/2023/08/05/real_question_behind_what_you_want</id>
     <content type="html"><![CDATA[<p>It’s easy to want something. If you are fortunate enough to be on <a href="https://www.gapminder.org/fw/income-levels/income-level-4/">income level 4</a> living in a peaceful nation, the world has so much to offer, within easy reach. Yet, the currencies required to enjoy them are limited: time, energy, health, money. Even though it is easy to make lists of everything one wants (typically occurring on yearly passages, such as new year’s and anniversaries), only a handful of them are achievable.</p>
 
 <h2 id="smaller-lists-require-sacrifices">Smaller lists require sacrifices</h2>
@@ -1455,9 +1455,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Writing as a form of thinking]]></title>
-    <link href="http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking.html"/>
+    <link href="https://lopespm.com/notes/2023/07/02/writing-as-a-form-of-thinking.html"/>
     <updated>2023-07-02T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking</id>
+    <id>https://lopespm.com/notes/2023/07/02/writing-as-a-form-of-thinking</id>
     <content type="html"><![CDATA[<p>Large language models (LLM) like ChatGPT triggered a remarkable societal and computational shift that feels comparable to the impact from the initial internet era with its first impressive search engines like Google. LLMs are the toast of the town.</p>
 
 <p>Writing emails, reports, school homework, analysis, code, summaries. The list goes on.</p>
@@ -1492,9 +1492,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Custom Pomodoro Technique]]></title>
-    <link href="http://lopespm.github.io/notes/2023/07/02/custom-pomodoro-technique.html"/>
+    <link href="https://lopespm.com/notes/2023/07/02/custom-pomodoro-technique.html"/>
     <updated>2023-07-02T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/07/02/custom-pomodoro-technique</id>
+    <id>https://lopespm.com/notes/2023/07/02/custom-pomodoro-technique</id>
     <content type="html"><![CDATA[<blockquote>
   <p>Time is the most valuable thing a man can spend.</p>
 
@@ -1523,7 +1523,7 @@ The same for any other investment you did in the past.</p>
           <picture aria-label="Screenshot of Klokki timer dialog">
              <source type="image/webp" srcset="/files/custom_pomodoro/timer_full_dialog.webp" aria-label="Screenshot of Klokki timer dialog" />
              <source type="image/png" srcset="/files/custom_pomodoro/timer_full_dialog.png" aria-label="Screenshot of Klokki timer dialog" />
-             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_full_dialog.png" aria-label="Screenshot of Klokki timer dialog" />
+             <img src="https://lopespm.com/files/custom_pomodoro/timer_full_dialog.png" aria-label="Screenshot of Klokki timer dialog" />
            </picture>
          </center>
 
@@ -1544,7 +1544,7 @@ The same for any other investment you did in the past.</p>
           <picture aria-label="Screenshot of Klokki on the toolbar, when started">
              <source type="image/webp" srcset="/files/custom_pomodoro/timer_on_1_minute.webp" aria-label="Screenshot of Klokki on the toolbar, when started" />
              <source type="image/png" srcset="/files/custom_pomodoro/timer_on_1_minute.png" aria-label="Screenshot of Klokki on the toolbar, when started" />
-             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_on_1_minute.png" aria-label="Screenshot of Klokki on the toolbar, when started" />
+             <img src="https://lopespm.com/files/custom_pomodoro/timer_on_1_minute.png" aria-label="Screenshot of Klokki on the toolbar, when started" />
            </picture>
          </center>
 
@@ -1570,7 +1570,7 @@ The same for any other investment you did in the past.</p>
           <picture aria-label="Screenshot of Klokki on the toolbar, when stopped">
              <source type="image/webp" srcset="/files/custom_pomodoro/timer_off.webp" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
              <source type="image/png" srcset="/files/custom_pomodoro/timer_off.png" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
-             <img src="http://lopespm.github.io/files/custom_pomodoro/timer_off.png" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
+             <img src="https://lopespm.com/files/custom_pomodoro/timer_off.png" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
            </picture>
          </center>
 
@@ -1590,9 +1590,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Solving task switching through documentation]]></title>
-    <link href="http://lopespm.github.io/notes/2023/05/18/solving-task-switching-through-documentation.html"/>
+    <link href="https://lopespm.com/notes/2023/05/18/solving-task-switching-through-documentation.html"/>
     <updated>2023-05-18T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/05/18/solving-task-switching-through-documentation</id>
+    <id>https://lopespm.com/notes/2023/05/18/solving-task-switching-through-documentation</id>
     <content type="html"><![CDATA[<p>We don’t actually multitask. We switch-task, rapidly shifting from one thing to another, interrupting ourselves unproductively, and losing time in the process <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. It just so happens that many aspects of our life require managing multiple tasks at the same time, so how to approach it?</p>
 
 <p>One strategy that consistently worked for me has been using documentation to checkpoint each step of a process. Just like in a videogame where the last saved checkpoint can be recalled.</p>
@@ -1646,9 +1646,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[The case for not having a TV]]></title>
-    <link href="http://lopespm.github.io/notes/2023/05/04/the-case-for-not-having-tv.html"/>
+    <link href="https://lopespm.com/notes/2023/05/04/the-case-for-not-having-tv.html"/>
     <updated>2023-05-04T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/05/04/the-case-for-not-having-tv</id>
+    <id>https://lopespm.com/notes/2023/05/04/the-case-for-not-having-tv</id>
     <content type="html"><![CDATA[<p>Listen to <a href="https://www.youtube.com/@DavidSinclairPodcast">David Sinclair</a> or <a href="https://www.youtube.com/@hubermanlab">Andrew Hubberman</a> on how to extend lifespan or improve health markers, and a common trait emerges: the body strives and improves when exposed to just enough stress and struggle. Not too much, though. Cold baths, saunas, fasting, exercise, red light (which disrupts the way that our mitochondria make energy), eating <a href="https://www.youtube.com/watch?v=DO8FJ8i02Xo">stressed greens</a>, are examples of just that.</p>
 
 <p>On the other hand, if you spend your whole day sitting, or typing, always satisfying your hunger, your AMPK and mTOR pathways (which are master regulators of cell metabolism) and sirtuins say: <em>“Hey, times are good. Let’s just grow tissue, go forth, multiply and not build a sustainable body in the long run.”</em></p>
@@ -1669,9 +1669,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[The First Note]]></title>
-    <link href="http://lopespm.github.io/notes/2023/04/07/first-note.html"/>
+    <link href="https://lopespm.com/notes/2023/04/07/first-note.html"/>
     <updated>2023-04-07T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/notes/2023/04/07/first-note</id>
+    <id>https://lopespm.com/notes/2023/04/07/first-note</id>
     <content type="html"><![CDATA[<p>Welcome to <em>Notes</em>!</p>
 
 <p>This is a new space where you will be able to find essays, notes and other quick thoughts, whereas the existing <em>Blog</em> section will remain allocated to denser article pieces.</p>
@@ -1717,14 +1717,14 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Book Quotes Collection - Part 1]]></title>
-    <link href="http://lopespm.github.io/2022/12/29/book-quotes-collection-part-one.html"/>
+    <link href="https://lopespm.com/2022/12/29/book-quotes-collection-part-one.html"/>
     <updated>2022-12-29T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/2022/12/29/book-quotes-collection-part-one</id>
+    <id>https://lopespm.com/2022/12/29/book-quotes-collection-part-one</id>
     <content type="html"><![CDATA[<center>
           <picture aria-label="Header image of Book Quotes Collection - Part 1">
              <source type="image/webp" srcset="/files/book_quotes_1/book_quotes_2_705.webp" aria-label="Header image of Book Quotes Collection - Part 1" />
              <source type="image/png" srcset="/files/book_quotes_1/book_quotes_2_705.png" aria-label="Header image of Book Quotes Collection - Part 1" />
-             <img src="http://lopespm.github.io/files/book_quotes_1/book_quotes_2_705.png" aria-label="Header image of Book Quotes Collection - Part 1" />
+             <img src="https://lopespm.com/files/book_quotes_1/book_quotes_2_705.png" aria-label="Header image of Book Quotes Collection - Part 1" />
            </picture>
          </center>
 
@@ -2139,9 +2139,9 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Learnings as a Software Engineer Techlead]]></title>
-    <link href="http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead.html"/>
+    <link href="https://lopespm.com/2022/03/22/learnings-software-engineer-techlead.html"/>
     <updated>2022-03-22T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead</id>
+    <id>https://lopespm.com/2022/03/22/learnings-software-engineer-techlead</id>
     <content type="html"><![CDATA[<div style="margin-bottom: 20px">
     <div class="youtube-player" data-id="r0nmKZBhcws"></div>
 </div>
@@ -2229,16 +2229,16 @@ The same for any other investment you did in the past.</p>
   
   <entry>
     <title type="html"><![CDATA[Hacker News Daily]]></title>
-    <link href="http://lopespm.github.io/2020/12/25/hackernews-daily.html"/>
+    <link href="https://lopespm.com/2020/12/25/hackernews-daily.html"/>
     <updated>2020-12-25T00:00:00+00:00</updated>
-    <id>http://lopespm.github.io/2020/12/25/hackernews-daily</id>
+    <id>https://lopespm.com/2020/12/25/hackernews-daily</id>
     <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
 
 <center>
           <picture aria-label="Screenshot of Hacker News Daily">
              <source type="image/webp" srcset="/files/hackernews_daily/screenshots_cropped2_705.webp" aria-label="Screenshot of Hacker News Daily" />
              <source type="image/png" srcset="/files/hackernews_daily/screenshots_cropped2_705.png" aria-label="Screenshot of Hacker News Daily" />
-             <img src="http://lopespm.github.io/files/hackernews_daily/screenshots_cropped2_705.png" aria-label="Screenshot of Hacker News Daily" />
+             <img src="https://lopespm.com/files/hackernews_daily/screenshots_cropped2_705.png" aria-label="Screenshot of Hacker News Daily" />
            </picture>
          </center>
 
@@ -2256,7 +2256,7 @@ The same for any other investment you did in the past.</p>
 
 <h1 id="architecture">Architecture</h1>
 
-<figure class="image"><center><a href="http://lopespm.github.io/files/hackernews_daily/hn_daily_diagram.png"><img src="http://lopespm.github.io/files/hackernews_daily/hn_daily_diagram.png" /></a></center><figcaption class="media-caption"> Information flow diagram between the different components of the system </figcaption></figure>
+<figure class="image"><center><a href="https://lopespm.com/files/hackernews_daily/hn_daily_diagram.png"><img src="https://lopespm.com/files/hackernews_daily/hn_daily_diagram.png" /></a></center><figcaption class="media-caption"> Information flow diagram between the different components of the system </figcaption></figure>
 
 <p>The basilar idea is to recurrently get the <a href="https://news.ycombinator.com/best">best Hacker News</a> stories via its <a href="https://github.com/HackerNews/API">API</a>; take screenshots of the web pages that these stories link to; and have this workflow executed via <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
 

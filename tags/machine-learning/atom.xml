@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Tag: machine learning | Byte Tank]]></title>
-  <link href="http://lopespm.github.io/tags/machine-learning/atom.xml" rel="self"/>
-  <link href="http://lopespm.github.io/"/>
-  <updated>2024-05-05T13:09:54+01:00</updated>
-  <id>http://lopespm.github.io/</id>
+  <link href="https://lopespm.com/tags/machine-learning/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2024-05-05T13:19:32+01:00</updated>
+  <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Deep Reinforcement Learning: Playing a Racing Game]]></title>
-    <link href="http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html"/>
+    <link href="https://lopespm.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html"/>
     <updated>2016-10-06T00:00:00+01:00</updated>
-    <id>http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game</id>
+    <id>https://lopespm.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game</id>
     <content type="html"><![CDATA[<center>
  <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
      <div class="youtube-player video-frame-two" data-id="spzYVhOgKBA"></div></div>
@@ -76,7 +76,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
 
 <h1 id="implementation">Implementation</h1>
 
-<center><a href="http://lopespm.github.io/files/dqn_outrun/overall_view_play.png"><img align="center" src="http://lopespm.github.io/files/dqn_outrun/overall_view_play.png" alt="" /></a></center>
+<center><a href="https://lopespm.com/files/dqn_outrun/overall_view_play.png"><img align="center" src="https://lopespm.com/files/dqn_outrun/overall_view_play.png" alt="" /></a></center>
 
 <p />
 
@@ -96,7 +96,7 @@ Let’s take the canonical reinforcement learning example presented by Jacob (gr
   <li>ε-greedy policy to balance exploitation/exploration</li>
 </ul>
 
-<center><a href="http://lopespm.github.io/files/dqn_outrun/overall_view_train_merged.png"><img align="center" src="http://lopespm.github.io/files/dqn_outrun/overall_view_train_merged.png" alt="" /></a></center>
+<center><a href="https://lopespm.com/files/dqn_outrun/overall_view_train_merged.png"><img align="center" src="https://lopespm.com/files/dqn_outrun/overall_view_train_merged.png" alt="" /></a></center>
 
 <p />
 
