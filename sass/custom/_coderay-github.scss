@@ -119,7 +119,7 @@ table.CodeRay {
   .class {
     color: $magenta;
     font-weight:bold;
-    &-variable {
+    &:variable {
      color: $blue;
     }
   }
@@ -227,7 +227,7 @@ table.CodeRay {
   .inline {
     background-color: hsla(0,0%,0%,0.07);
     color: $base01;
-    &-delimiter {
+    &:delimiter {
       font-weight: bold;
       color: $base1;
     }
@@ -297,10 +297,10 @@ table.CodeRay {
   .predefined {
     color: $blue;
     font-weight: bold;
-    &-constant {
+    &:constant {
       color: $blue;
     }
-    &-type {
+    &:type {
       color: $green;
       font-weight: bold;
     }
