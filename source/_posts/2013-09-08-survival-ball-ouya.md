@@ -5,6 +5,7 @@ description: "The release of a Unity game on OUYA"
 category: games
 tags: [games]
 comments: true
+published: true
 ---
 
 Survival Ball in now available on OUYA, and its publishing process was fairly straightforward. From the day of submission (2nd of September) to its approval (5th of September), it took a mere 3 days, counting that a re-submission had to be made in-between.
