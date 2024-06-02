@@ -38,7 +38,7 @@ module Jekyll
     # Instantiates all of the post_filter plugins. This is basically
     # a duplication of the other loaders in Site#setup.
     def load_post_filters
-      self.post_filters = Jekyll::PostFilter.descendants.select do |c|
+      self.post_filters = Jekyll::PostFilter.subclasses.select do |c|
         !self.safe || c.safe
       end.map do |c|
         c.new(self.config)
@@ -48,7 +48,7 @@ module Jekyll
 
   # Monkey patch for the Jekyll Post class. For the original class,
   # see: https://github.com/mojombo/jekyll/blob/master/lib/jekyll/post.rb
-  class Document
+  class Post
 
     # Copy the #write method to #old_write, so we can redefine #write
     # method.
@@ -163,7 +163,6 @@ module Jekyll
     #
     # Returns nothing.
     def do_layout(payload, layouts)
-      #puts "DO LAYOUT" + payload.inspect
       pre_render if respond_to?(:pre_render)
       old_do_layout(payload, layouts)
     end

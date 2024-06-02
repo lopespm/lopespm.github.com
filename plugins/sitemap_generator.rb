@@ -58,11 +58,11 @@ module Jekyll
   CHANGE_FREQUENCY_CUSTOM_VARIABLE_NAME = "change_frequency"
   PRIORITY_CUSTOM_VARIABLE_NAME = "priority"
 
-  class Document
+  class Post
     attr_accessor :name
 
     def full_path_to_source
-      path
+      File.join(@base, @name)
     end
 
     def location_on_server
@@ -89,7 +89,7 @@ module Jekyll
     end
   end
 
-  # Recover from strange exception when starting server without --watch
+  # Recover from strange exception when starting server without --auto
   class SitemapFile < StaticFile
     def write(dest)
       begin
@@ -141,8 +141,8 @@ module Jekyll
     # Returns last_modified_date of latest post
     def fill_posts(site, urlset)
       last_modified_date = nil
-      site.posts.docs.each do |post|
-        if !excluded?(post.basename)
+      site.posts.each do |post|
+        if !excluded?(post.name)
           url = fill_url(site, post)
           urlset.add_element(url)
         end

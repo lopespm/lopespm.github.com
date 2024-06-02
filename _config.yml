@@ -30,12 +30,12 @@ root: /
 #permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
-plugins_dir: plugins
+plugins: plugins
 code_dir: downloads/code
 category_dir: categories
 tag_dir: tags
 #markdown: rdiscount
-highlighter: false # default python pygments have been replaced by pygments.rb
+pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
@@ -53,9 +53,6 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # blog_index_asides:
 # post_asides:
 # page_asides:
-
-# Support for pagination (https://stackoverflow.com/questions/35639303/jekyll-getting-an-error-when-i-have-paginate-in-my-project)
-gems: [jekyll-paginate]
 
 # ----------------------- #
 #   3rd Party Settings    #
@@ -105,7 +102,7 @@ twitter_creator: lopes_pm
 # Markdown; highlighting
 markdown: kramdown
 kramdown:
-  enable_coderay: true
+  use_coderay: true
   coderay:
     coderay_line_numbers: nil
     coderay_css: class

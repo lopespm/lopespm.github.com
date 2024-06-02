@@ -1,4 +1,4 @@
-require 'simplabs/highlight'
+require 'pygments'
 require 'fileutils'
 require 'digest/md5'
 
