@@ -24,13 +24,11 @@ module Jekyll
   class ContentFilters < PostFilter
     include OctopressFilters
     def pre_render(post)
-      puts "THIS IS pre RENDER FOR POST" + post.inspect
       if post.ext.match('html|textile|markdown|md|haml|slim|xml')
         post.content = pre_filter(post.content)
       end
     end
     def post_render(post)
-      puts "THIS IS POST RENDER FOR POST" + post.inspect
       if post.ext.match('html|textile|markdown|md|haml|slim|xml')
         post.content = post_filter(post.content)
       end
@@ -80,7 +78,6 @@ module OctopressLiquidFilters
   # Replaces relative urls with full urls
   def expand_urls(input, url='')
     url ||= '/'
-    puts "INSPECT" + input.inspect + input.class.method_defined?(:content).to_s
     input.gsub /(\s+(href|src)\s*=\s*["|']{1})(\/[^\"'>]*)/ do
       $1+url+$3
     end
