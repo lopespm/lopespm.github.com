@@ -1,159 +1,155 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://lopespm.github.io/games/2013/01/27/nordic-game-jams-winners.html</loc>
-        <lastmod>2023-07-24T00:02:41+01:00</lastmod>
+        <loc>https://lopespm.com/games/2013/01/27/nordic-game-jams-winners.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/games/2013/09/08/survival-ball-ouya.html</loc>
-        <lastmod>2023-07-24T00:02:41+01:00</lastmod>
+        <loc>https://lopespm.com/games/2013/09/08/survival-ball-ouya.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/workflow/2015/01/27/customizing-terminal.html</loc>
-        <lastmod>2024-03-10T00:48:39+00:00</lastmod>
+        <loc>https://lopespm.com/workflow/2015/01/27/customizing-terminal.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/audio/2015/12/08/gopro-heartbeat.html</loc>
-        <lastmod>2023-07-24T00:02:41+01:00</lastmod>
+        <loc>https://lopespm.com/audio/2015/12/08/gopro-heartbeat.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/libraries/2016/08/27/compressed-deque.html</loc>
-        <lastmod>2023-07-24T00:02:41+01:00</lastmod>
+        <loc>https://lopespm.com/libraries/2016/08/27/compressed-deque.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
     </url>
     <url>
         <loc>
-            http://lopespm.github.io/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html
+            https://lopespm.com/machine_learning/2016/10/06/deep-reinforcement-learning-racing-game.html
         </loc>
-        <lastmod>2023-07-24T00:02:41+01:00</lastmod>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/libraries/2018/01/25/react-native-offscreen-toolbar.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/apps/2018/03/12/arxiv-papers.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/libraries/games/2018/12/27/camera-multi-target.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/2019/02/06/survival-ball-making-the-game.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/2020/08/03/implementation-autocomplete-system-design.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/2020/12/25/hackernews-daily.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/2022/03/22/learnings-software-engineer-techlead.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/2022/12/29/book-quotes-collection-part-one.html</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/notes/2023/04/07/first-note.html</loc>
+        <lastmod>2023-07-23T23:02:14+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/notes/2023/05/04/the-case-for-not-having-tv.html</loc>
+        <lastmod>2023-07-23T23:02:14+00:00</lastmod>
     </url>
     <url>
         <loc>
-            http://lopespm.github.io/libraries/2018/01/25/react-native-offscreen-toolbar.html
-        </loc>
-        <lastmod>2023-07-24T00:02:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/apps/2018/03/12/arxiv-papers.html</loc>
-        <lastmod>2024-03-10T00:50:08+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/libraries/games/2018/12/27/camera-multi-target.html</loc>
-        <lastmod>2024-03-10T00:25:08+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/2019/02/06/survival-ball-making-the-game.html</loc>
-        <lastmod>2023-07-24T00:02:41+01:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://lopespm.github.io/2020/08/03/implementation-autocomplete-system-design.html
-        </loc>
-        <lastmod>2024-03-10T00:51:56+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/2020/12/25/hackernews-daily.html</loc>
-        <lastmod>2024-03-10T00:52:26+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/2022/03/22/learnings-software-engineer-techlead.html</loc>
-        <lastmod>2023-07-24T00:28:55+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/2022/12/29/book-quotes-collection-part-one.html</loc>
-        <lastmod>2024-03-10T00:52:56+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/notes/2023/04/07/first-note.html</loc>
-        <lastmod>2023-07-24T00:02:14+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://lopespm.github.io/notes/2023/05/04/the-case-for-not-having-tv.html</loc>
-        <lastmod>2023-07-24T00:02:14+01:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://lopespm.github.io/notes/2023/05/18/solving-task-switching-through-documentation.html
+            https://lopespm.com/notes/2023/05/18/solving-task-switching-through-documentation.html
         </loc>
         <lastmod>2023-12-31T03:35:46+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/07/02/custom-pomodoro-technique.html</loc>
+        <loc>https://lopespm.com/notes/2023/07/02/custom-pomodoro-technique.html</loc>
         <lastmod>2024-03-10T00:54:59+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/07/02/writing-as-a-form-of-thinking.html</loc>
-        <lastmod>2023-07-24T00:02:14+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2023/07/02/writing-as-a-form-of-thinking.html</loc>
+        <lastmod>2023-07-23T23:02:14+00:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://lopespm.github.io/notes/2023/08/05/real_question_behind_what_you_want.html
-        </loc>
-        <lastmod>2023-08-05T11:01:34+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2023/08/05/real_question_behind_what_you_want.html</loc>
+        <lastmod>2023-08-05T10:01:34+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/08/19/life_exits.html</loc>
-        <lastmod>2023-08-19T20:50:51+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2023/08/19/life_exits.html</loc>
+        <lastmod>2023-08-19T19:50:51+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/09/30/goal_clarity_in_delegation.html</loc>
-        <lastmod>2023-09-30T20:38:27+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2023/09/30/goal_clarity_in_delegation.html</loc>
+        <lastmod>2023-09-30T19:38:27+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/10/21/investment_relative_cost_benefit.html</loc>
-        <lastmod>2023-10-21T13:55:32+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2023/10/21/investment_relative_cost_benefit.html</loc>
+        <lastmod>2023-10-21T12:55:32+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/12/25/job_safety_in_ai_era.html</loc>
+        <loc>https://lopespm.com/notes/2023/12/25/job_safety_in_ai_era.html</loc>
         <lastmod>2023-12-25T15:10:26+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/12/25/nyc.html</loc>
+        <loc>https://lopespm.com/notes/2023/12/25/nyc.html</loc>
         <lastmod>2023-12-31T00:42:46+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2023/12/31/meme-transcending-host.html</loc>
+        <loc>https://lopespm.com/notes/2023/12/31/meme-transcending-host.html</loc>
         <lastmod>2023-12-31T19:28:46+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2024/01/27/project_planning_framework.html</loc>
+        <loc>https://lopespm.com/notes/2024/01/27/project_planning_framework.html</loc>
         <lastmod>2024-03-10T00:57:11+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2024/02/18/elon_musk_biography.html</loc>
+        <loc>https://lopespm.com/notes/2024/02/18/elon_musk_biography.html</loc>
         <lastmod>2024-02-18T12:15:58+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2024/03/25/minimalist_boox.html</loc>
-        <lastmod>2024-04-01T16:18:56+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2024/03/25/minimalist_boox.html</loc>
+        <lastmod>2024-04-01T15:18:56+00:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://lopespm.github.io/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html
-        </loc>
-        <lastmod>2024-04-01T16:18:38+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html</loc>
+        <lastmod>2024-04-01T15:18:38+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/2024/05/05/let-me-tell-you-a-story.html</loc>
-        <lastmod>2024-05-05T15:15:34+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2024/05/05/let-me-tell-you-a-story.html</loc>
+        <lastmod>2024-05-05T14:17:09+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/about/</loc>
-        <lastmod>2023-07-22T02:17:18+01:00</lastmod>
+        <loc>https://lopespm.com/notes/2024/06/09/aloof.html</loc>
+        <lastmod>2024-06-09T18:40:17+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/blog/archives/</loc>
-        <lastmod>2024-05-05T15:15:34+01:00</lastmod>
+        <loc>https://lopespm.com/about/</loc>
+        <lastmod>2024-06-02T16:54:47+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/</loc>
-        <lastmod>2024-05-05T15:15:34+01:00</lastmod>
+        <loc>https://lopespm.com/blog/archives/</loc>
+        <lastmod>2024-06-09T18:40:17+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/notes/</loc>
-        <lastmod>2024-05-05T15:15:34+01:00</lastmod>
+        <loc>https://lopespm.com/</loc>
+        <lastmod>2024-06-09T18:40:17+00:00</lastmod>
     </url>
     <url>
-        <loc>http://lopespm.github.io/robots.txt</loc>
-        <lastmod>2023-04-08T02:46:44+01:00</lastmod>
+        <loc>https://lopespm.com/notes/</loc>
+        <lastmod>2024-06-09T18:40:17+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://lopespm.com/robots.txt</loc>
+        <lastmod>2023-04-08T01:46:44+00:00</lastmod>
     </url>
 </urlset>

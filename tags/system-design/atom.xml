@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: system design | Byte Tank]]></title>
   <link href="https://lopespm.com/tags/system-design/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-05-05T15:15:41+01:00</updated>
+  <updated>2024-06-09T18:55:30+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Implementation: Autocomplete System Design for Large Scale]]></title>
     <link href="https://lopespm.com/2020/08/03/implementation-autocomplete-system-design.html"/>
-    <updated>2020-08-03T00:00:00+01:00</updated>
+    <updated>2020-08-03T00:00:00+00:00</updated>
     <id>https://lopespm.com/2020/08/03/implementation-autocomplete-system-design</id>
     <content type="html"><![CDATA[<p>This article will go through my implementation/design of a large scale autocomplete/typeahead suggestions system design, like the suggestions one gets when typing a Google search.</p>
 
