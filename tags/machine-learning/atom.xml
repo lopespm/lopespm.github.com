@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: machine learning | Byte Tank]]></title>
   <link href="https://lopespm.com/tags/machine-learning/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-06-24T21:10:12+00:00</updated>
+  <updated>2024-06-24T21:11:35+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -387,7 +387,7 @@ Most of the time was spent (...)
 
 <h2 id="embedding-model">Embedding model</h2>
 
-<p>As we <a href="##text-embeddings">discussed above</a>, embedding models can be trained have their embedding representation to be optimized and better suit the problem at hand. In general, there are several types of tasks a embedding can be better or worse at, so testing each single model against our problem would certainly inefficient.</p>
+<p>As we <a href="/machine_learning/2024/06/24/personal-llm.html#text-embeddings">discussed above</a>, embedding models can be trained have their embedding representation to be optimized and better suit the problem at hand. In general, there are several types of tasks a embedding can be better or worse at, so testing each single model against our problem would certainly inefficient.</p>
 
 <p>Fortunately, a Massive Text Embedding Benchmark was been made and its results are freely available <a href="https://huggingface.co/spaces/mteb/leaderboard">in this dashboard</a>, which compares several models against capabilities such as classification, clustering and reranking.</p>
 
@@ -418,7 +418,7 @@ Most of the time was spent (...)
 
 <h3 id="the-main-ai-assistant-llm">1. The main AI Assistant LLM</h3>
 
-<p>Upon starting the above script, a Llama3 8B model (<a href="https://huggingface.co/mlx-community/Meta-Llama-3-8B-Instruct-4bit">mlx-community/Meta-Llama-3-8B-Instruct-4bit</a>) is loaded into memory and is instructed to behave as AI assistant / philosopher / psychotherapist (or any other role one so wishes, as <a href="##results">seen below</a>, and the user is greeted with an initial message, and is able to start inserting a prompt.</p>
+<p>Upon starting the above script, a Llama3 8B model (<a href="https://huggingface.co/mlx-community/Meta-Llama-3-8B-Instruct-4bit">mlx-community/Meta-Llama-3-8B-Instruct-4bit</a>) is loaded into memory and is instructed to behave as AI assistant / philosopher / psychotherapist (or any other role one so wishes, as <a href="/machine_learning/2024/06/24/personal-llm.html#results">seen below</a>, and the user is greeted with an initial message, and is able to start inserting a prompt.</p>
 
 <p><figure class='image'><center><a href='/files/personal_llm/greeting.png'><img src='/files/personal_llm/greeting.png'></a></center><figcaption class='media-caption'> Greeting message from the AI assistant </figcaption></figure></p>
 
@@ -428,7 +428,7 @@ Most of the time was spent (...)
 
 <p>Once the user inserts their prompt, the entire conversation is provided to an auxiliary “document keeper” LLM, which has only one job: transform the entire conversation the user is having with the main AI assistant into concise sentence that aims to represent the information we are interested to provide as context on the upcoming reply.</p>
 
-<p>The document keeper LLM produces a query sentence <a href="##transforming-a-conversation-into-a-query">using the previously described process</a> (related <a href="https://github.com/lopespm/personal_llm/blob/main/formulate_query_for_retrieving_content.py">source code</a>), and then transforms it into a vector using the <a href="##embedding-model">embedding model</a>.</p>
+<p>The document keeper LLM produces a query sentence <a href="/machine_learning/2024/06/24/personal-llm.html#transforming-a-conversation-into-a-query">using the previously described process</a> (related <a href="https://github.com/lopespm/personal_llm/blob/main/formulate_query_for_retrieving_content.py">source code</a>), and then transforms it into a vector using the <a href="/machine_learning/2024/06/24/personal-llm.html#embedding-model">embedding model</a>.</p>
 
 <p>Now we have everything we need. Using this vector representation of the query, we can ask the database which are the top 10 entries which have their respective vectors closest to the query vector.</p>
 
@@ -445,7 +445,7 @@ Most of the time was spent (...)
 
 <h3 id="retrieved-entries-are-added-as-context-on-the-main-ai-llm-prompt">3. Retrieved entries are added as context on the main AI LLM prompt</h3>
 
-<p>Now that we have the retrieved a set of relevant entries we want the main AI assistant LLM to consider towards its reply, we now can add them as context for the prompt for the main AI assistant LLM, very similarly to what was <a href="##insert-all-documents-into-the-prompt-as-context">described above</a>:</p>
+<p>Now that we have the retrieved a set of relevant entries we want the main AI assistant LLM to consider towards its reply, we now can add them as context for the prompt for the main AI assistant LLM, very similarly to what was <a href="/machine_learning/2024/06/24/personal-llm.html#insert-all-documents-into-the-prompt-as-context">described above</a>:</p>
 
 <div><div class="CodeRay">
   <div class="code"><pre>
