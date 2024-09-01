@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-08-26T21:14:56+00:00</updated>
+  <updated>2024-09-01T18:12:38+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,168 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Investment Tracker - Free Spreadsheet Template]]></title>
+    <link href="https://lopespm.com/notes/2024/09/01/investment-tracker.html"/>
+    <updated>2024-09-01T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2024/09/01/investment-tracker</id>
+    <content type="html"><![CDATA[<p>Do you know:</p>
+
+<ul>
+  <li>Your current net worth?</li>
+  <li>How much money do you have in the bank?</li>
+  <li>Which are your most profitable investments?</li>
+  <li>Which investments do you currently have?</li>
+  <li>How much of your revenue (e.g. salary) contributes to your wealth?</li>
+  <li>How did the above evolve over time?</li>
+</ul>
+
+<p>If coming up with the above answers is hard, or their values are fuzzy, then it might be time to revamp your <a href="/notes/2024/08/26/uk-investment-guide.html">investment</a> tracking.</p>
+
+<p>This article will:</p>
+
+<ul>
+  <li>share a Google Spreadsheet template to track your investments, and explain it</li>
+  <li>provide a guide on how to use it</li>
+  <li>suggest a simple process to make sure the above questions will not be a problem anymore</li>
+</ul>
+
+<!--more-->
+
+<h1 id="the-template">The Template</h1>
+
+<h2 id="get-it">Get it</h2>
+
+<ul>
+  <li><strong>Download / copy the <a href="https://docs.google.com/spreadsheets/d/1cR0oOcvwQIXsdOEbtFBoneOfdzrVYB_QkADc1h0BTBk/edit?usp=sharing">Google Sheet Template here</a></strong></li>
+  <li><a href="/notes/2024/09/01/investment-tracker.html#how-to-use-it">How to use it</a></li>
+</ul>
+
+<h2 id="how-it-is-structured">How it is structured</h2>
+
+<p>The template has several sheets, which are built to have the essential tracking elements that can be immediately used, while also allowing for extensibility for your own custom case.</p>
+
+<h3 id="dates-sheet">Dates sheet</h3>
+
+<p><center>
+          <picture aria-label="Dates Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/pdates.webp" aria-label="Dates Sheet">
+             <source type="image/png" srcset="/files/investment-tracker/pdates.png" aria-label="Dates Sheet">
+             <img src="/files/investment-tracker/pdates.png" aria-label="Dates Sheet">
+           </picture>
+         </center></p>
+
+<p>The entire sheeet revolves around these dates. Each of these represents the temporal <em>snapshot</em> of all your assets. All the other sheets use these dates as the starting point for their values, and this would be first thing you would add whenever entering a new series of entries</p>
+
+<h3 id="revenue-sheet">Revenue sheet</h3>
+
+<p><center>
+          <picture aria-label="Revenue Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/prevenue.webp" aria-label="Revenue Sheet">
+             <source type="image/png" srcset="/files/investment-tracker/prevenue.png" aria-label="Revenue Sheet">
+             <img src="/files/investment-tracker/prevenue.png" aria-label="Revenue Sheet">
+           </picture>
+         </center></p>
+
+<p>Represents all the resources <em>coming in</em>, which are not a result of your investments. This could be the income from your salary, side-hustle, the app you are selling on the app store, etc.</p>
+
+<h3 id="account-sheet">Account sheet</h3>
+
+<p><center>
+          <picture aria-label="Account Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/paccount.webp" aria-label="Account Sheet">
+             <source type="image/png" srcset="/files/investment-tracker/paccount.png" aria-label="Account Sheet">
+             <img src="/files/investment-tracker/paccount.png" aria-label="Account Sheet">
+           </picture>
+         </center></p>
+
+<p>There are two example account sheets provided with the template, each representing a different account on your portfolio, but you can add how many you would need. These could be your bank account, transaction broker, private pension, etc. To create a new one, grab one of the example account sheets, and copy it into a new spreadsheet.</p>
+
+<p>On the template, the <em>Example Account1</em> shows how a bank account could roughly look like, and <em>Example Account2</em> how an investment platform (such as Vanguard) could look like.</p>
+
+<p>Each of the account sheets is structured in the following way:</p>
+
+<ul>
+  <li>Current status: a look at the present, and comparison with the last update
+    <ul>
+      <li><strong>Date Column</strong>: referenced from the <a href="/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a>, representing the date of this current <em>snapshot</em></li>
+      <li><strong>Top up movement</strong>: any money that you deposited in this account since the last date, would be accounted for here. For example, salary that is deposited, on deposits made in an investment broker. The objective here is to keep track of the money coming into a specific account, so that its performance doesnt look better than it really is.</li>
+      <li><strong>Not Invested</strong>: all uninvested money sitting in the account. For example, money in a bank account which does not yield interest.</li>
+      <li><strong>Invested</strong>: all money invested in this account. For example, the amount of money invested in a transaction broker, which is currently invested in stocks or ETFs.</li>
+      <li><strong>Investment Delta</strong>: the investment difference between the current date and the last date.</li>
+      <li><strong>Investment Delta, minus topup</strong>: the investment difference between the current date and the last date, minus the top up. This value attempts to represent how much money was actually generated by the investment since the last date.</li>
+      <li><strong>Total</strong>: the total invested and not invested amount in the account.</li>
+      <li><strong>Total Delta</strong>: total difference between current date and last date.</li>
+    </ul>
+  </li>
+  <li>Expected gains: predictions of investment gains
+    <ul>
+      <li><strong>Expected Yearly Growth % (Gross)</strong>: for example, if overall the invested money is in a Fixed Term Deposit, this value would represent the gross yearly interest accrued from it, pre-taxes.</li>
+      <li><strong>Expected Yearly Growth % (Net)</strong>: this value represents the actual expected gains from this investment. For example, taking the Fixed Term Deposit example above, this would be the expected yearly interest, after taxes.</li>
+      <li><strong>Expected gains 6 months / 1 year / etc</strong>: taking into consideration the <em>Expected Yearly Growth % (Net)</em>, which would accrue gains from the investment over these time spans.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="summary-sheet">Summary sheet</h3>
+
+<p><center>
+          <picture aria-label="Summary Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/psummary.webp" aria-label="Summary Sheet">
+             <source type="image/png" srcset="/files/investment-tracker/psummary.png" aria-label="Summary Sheet">
+             <img src="/files/investment-tracker/psummary.png" aria-label="Summary Sheet">
+           </picture>
+         </center></p>
+
+<p>This is where it all comes together. All the accounts are summed up, resulting in these new relevant columns:</p>
+
+<ul>
+  <li><strong>Total</strong>: the total across all investments, for a given date</li>
+  <li><strong>Total Delta</strong>: total difference between current date and last date.</li>
+  <li><strong>Total Delta minus Revenue (i.e. profit / loss)</strong>: the aim of this column is to roughly represent how much of your net worth is being eaten up by your expenses:
+    <ul>
+      <li>If this value is negative, it means that either your costs are too high, your investments are not yielding yet high values, or both.</li>
+      <li>If this value is neutral, it means that your overall investments are completely covering your costs.</li>
+      <li>If this value is positive, it means that your overall investments are not only covering your costs, but are also increasing your net worth on top.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-to-use-it">How to use it</h2>
+
+<h3 id="set-up">Set up</h3>
+
+<ol>
+  <li><a href="/notes/2024/09/01/investment-tracker.html#get-it">Copy the template</a>, by opening it and clicking on <em>File -&gt; Make a Copy</em></li>
+  <li>Go to the <a href="/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a>, and leave only the top two dates. The first date would be the previous month, and the second would be the current month. Delete the rest.</li>
+  <li>Go to the other sheets, and delete all the rows which don’t have a date now</li>
+  <li>Zero out the first line on each of the <a href="/notes/2024/09/01/investment-tracker.html#account-sheet">account sheets</a> for <em>Top up Investment</em>, <em>Not Invested</em> and <em>Invested</em>.</li>
+  <li>Zero out the first line of the <a href="/notes/2024/09/01/investment-tracker.html#revenue-sheet">revenue sheet</a>; or add your revenue from that month.</li>
+  <li>Use the existing example accounts to host your own accounts. If a new account is needed:
+    <ul>
+      <li>Copy one of the account sheets, by right clicking on the sheet’s tab, and selecting <em>Duplicate</em></li>
+      <li>Add a new column to the <a href="/notes/2024/09/01/investment-tracker.html#summary-sheet">summary sheets</a>, representing the new account. Change its formula’s value to get the information from your new sheet. You can do this by selecting the cell and changing the name of the referenced sheet, to the name of your new sheet. For example, from <code>'Example Account 2'!G2</code> to <code>'Monzo Bank Account'!G2</code>.</li>
+      <li>Still in the <a href="/notes/2024/09/01/investment-tracker.html#summary-sheet">summary sheets</a>, double click the chart, select the <em>Setup</em> tab, and add the range of the new column to the list. For example, if the new column was on the <em>D</em> column, then the data range would change from <em>H7,A2:A1000,B1:B1000,C1:C1000,G1:G1000</em> to <em>H7,A2:1000,B1:B1000,C1:C1000,<strong>D1:D1000</strong>,G1:G1000</em>. Then, on the <em>Series</em> section of the <em>Setup</em> tab, click on <em>Add Series</em> and add the one from your new account.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="recurrent-workflow">Recurrent workflow</h3>
+
+<p>Once you have the above set up, I suggest that on the first days of every month, right after your main source of income is deposited (e.g. salary), that the sheet with the current values of each of the accounts. This is key. If this update is not made periodically, eventually there will be gaps in the tracking, and its data will lose relevance. The process would look something like this:</p>
+
+<ol>
+  <li>Add the current date to the <a href="/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a></li>
+  <li>On each the the accounts, expand the date to the new one, and fill in the current <em>Top up Investment</em>, <em>Not Invested</em> and <em>Invested</em> values</li>
+  <li>All done!</li>
+</ol>
+
+<h1 id="final-thoughts">Final thoughts</h1>
+
+<p>Feel free to expand and customize the above tracker to your needs, and let me know how it could be improved and which was its impact on your investment tracking. Would love to hear your thoughts about it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[UK Investment Guide]]></title>
@@ -442,214 +604,6 @@
 <p>I have now transitioned to not having any mobile phones in my bedroom, and only having the Boox Air 3, the Braun alarm clock, physical books and my Kindle. I am pretty satisfied with this change, which I’ve noticed to provide more focus time after waking up, more time to think, plan my day, reflect, write my thoughts, read, and wind down.</p>
 
 <p>The most fundamental aspect was having more time to focus on my plan for the day, which translated into a substantial improvement on how productive and consequential my days have become. I welcome anyone to give it a try!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Minimalist Onyx BOOX Note Air3 B/W Setup]]></title>
-    <link href="https://lopespm.com/notes/2024/03/25/minimalist_boox.html"/>
-    <updated>2024-03-25T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2024/03/25/minimalist_boox</id>
-    <content type="html"><![CDATA[<p>As part of the <a href="/notes/2024/04/01/banishing_mobile_phones_from_bedroom.html">plan to banish mobile phones with access to instant rewards from my bedroom</a>, I’ve acquired a Onyx BOOX Note Air3 B/W, which is a Android tablet with a black and white e-ink screen that is focused on writing and reading <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-
-<h2 id="house-rules">House Rules</h2>
-
-<p>First of all, <em>why</em> I did get the device in the first place? This was in order to:</p>
-
-<ul>
-  <li>Reduce distractions before going to sleep and after waking up, increase focus on the things that really mattered, block out all other noise, and make it really hard to have access to instant gratification and rewards (such as video consumption)</li>
-  <li>Register any ideas and thoughts that occur to me before and after going to sleep, which is one of my most proficuous times for such, and then have them available on other devices</li>
-</ul>
-
-<p><em>How</em> to achieve this using the BOOX:</p>
-
-<ul>
-  <li>Only two functionalities should be easy and quick to use:
-    <ul>
-      <li>Write text and notes (via Google Keep and Google Docs)</li>
-      <li>Write diagrams and mental maps (via the device’s main app, which has the snappiest performance)</li>
-    </ul>
-  </li>
-  <li>Getting to above functionalities should be as fast as possible, and they should be fast</li>
-  <li>The cost to get to other apps and functionalities should be high</li>
-</ul>
-
-<h2 id="focusing--debloating">Focusing &amp; Debloating</h2>
-
-<p>The Onyx BOOX Note Air3 B/W is not an incredibly fast device, and comes with several functionalities, apps, and a launcher that increase the distraction degree, and also slow down the device.</p>
-
-<h3 id="google-play-google-keep--docs">Google Play, Google Keep &amp; Docs</h3>
-
-<p>The first step towards the objective above was to install Google Play (see <a href="https://help.boox.com/hc/en-us/articles/8569260963732-Google-Play-Store">guide here</a>, and afterwards installed these apps:</p>
-
-<ul>
-  <li>Google Keep</li>
-  <li>Google Docs</li>
-  <li>Android Hidden Settings - this app provides access to several hidden settings, that allow the access of settings such as enabling the Developer Options in Android (useful in the debloating process described below)</li>
-  <li>Lawnchair (see below)</li>
-</ul>
-
-<h3 id="new-launcher-lawnchair">New Launcher: Lawnchair</h3>
-
-<center>
-<div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
-   <center>
-          <picture aria-label="How the home screen looks like now">
-             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_before.webp" aria-label="How the home screen looks like now">
-             <source type="image/png" srcset="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now">
-             <img src="/files/minimalist_boox/home_screen_before.png" aria-label="How the home screen looks like now">
-           </picture>
-         </center></div>
- <p class="media-caption media-caption-two"><b>Before:</b> Default BOOX Launcher <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> </p>
-</div>
-<div class="video-media-caption-wrapper-two"> <div class="video-wrapper-two">
-	<center>
-          <picture aria-label="How the home screen looked like before">
-             <source type="image/webp" srcset="/files/minimalist_boox/home_screen_after.webp" aria-label="How the home screen looked like before">
-             <source type="image/png" srcset="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before">
-             <img src="/files/minimalist_boox/home_screen_after.png" aria-label="How the home screen looked like before">
-           </picture>
-         </center></div>
- <p class="media-caption media-caption-two"><b>After:</b> Using Lawnchair Launcher<br class="video-br-end" /></p>
-</div>
-</center>
-
-<p>The default device’s launcher was replaced by <a href="https://lawnchair.app/">Lawnchair</a>, which is a lightweight, open-source, highly customizable launcher for Android.</p>
-
-<p>What was added to the Lawnchair’s home screen:</p>
-
-<ul>
-  <li>Shortcut to Google Keep</li>
-  <li>Shortcut to Google Docs</li>
-  <li>Shortcut to Onyx Launcher - for any custom changes that are only accessible on the device’s default launcher, which are are in practice, so this was eventually something I removed from the home screen as I wrote this note</li>
-  <li>Shortcut to Google Calendar - to add any events or reminders</li>
-  <li>A widget to Onyx Sketch app, which is one the only way I found to have that app directly accessible from the Lawnchair home screen, without having to use Onyx’s launcher to do so. The widget can be added by long pressing on the home screen, then select “Widgets”, and then on the “ContentBrowser” section select one of the “Notes” widgets</li>
-</ul>
-
-<h3 id="disabling-bloatware">Disabling bloatware</h3>
-
-<p>With all of the above in place, we could start disabling non-essential apps and services, to prevent them from running in the background.</p>
-
-<p>Here are the steps:</p>
-
-<ol>
-  <li>The first step is to enable “Developer Options”, by accessing the system settings via the “Android Hidden Settings” app above, and then finding the <a href="https://developer.android.com/studio/debug/dev-options">Build Number</a> in order to click it enough times to eventually enable “Developer Options”.</li>
-  <li>Connect the BOOX to the computer</li>
-  <li>On the computer’s terminal run the below commands</li>
-</ol>
-
-<p>In general, these are the commands one can run via the terminal to manage bloat apps:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>// See all packages
-$ adb shell pm list packages
-
-// See all disabled packages
-$ adb shell pm list packages -d
-
-// Disable a package
-$ adb shell pm disable-user --user 0 &lt;package_to_disable&gt;
-
-// Re-enable a package
-$ adb shell pm enable &lt;package_to_disable&gt;
-</pre></div>
-</div>
-</div>
-
-<p><br />
-And these are the specific ones I used in my BOOX to disable bloatware, without any relevant side effects for my usages:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre>adb shell pm disable-user --user 0 com.onyx.appmarket
-adb shell pm disable-user --user 0 com.onyx.floatingbutton
-adb shell pm disable-user --user 0 com.onyx.dict
-adb shell pm disable-user --user 0 com.onyx.mail
-adb shell pm disable-user --user 0 com.onyx.igetshop
-adb shell pm disable-user --user 0 com.onyx.easytransfer
-adb shell pm disable-user --user 0 com.onyx.kime
-adb shell pm disable-user --user 0 com.onyx.android.ksync
-adb shell pm disable-user --user 0 com.onyx.calculator
-</pre></div>
-</div>
-</div>
-
-<p><br /></p>
-
-<p>The commands above should be enough to remove all bloatware, and if you wish to learn more, <a href="https://www.kaspersky.co.uk/blog/how-to-disable-and-remove-android-bloatware/26993/">this article</a> and <a href="https://digitaluncoded.com/cpu-usage-android">this article</a> provide a good overview.</p>
-
-<h2 id="using-an-external-keyboard">Using an external keyboard</h2>
-
-<p>Given that this device is meant to be used in bed, and since it is quite unwieldy to write on the on-screen display, I was looking for an external keyboard that could be somehow attached to the BOOX, that would bestable, low-maintenance and allowed for flexibility on the writing position.</p>
-
-<p>From the keyboards and keyboard stands I’ve researched, the most elegant solution I found was to use <a href="https://www.logitech.com/en-gb/products/keyboards/k480-multi-device-wireless.html">Logitech K480</a>, a bluetooth keyboard with an in-built cradle, detachable batteries (i.e. zero issues related internal battery becoming faulty), incredible battery span (some users reported this to be <a href="https://www.youtube.com/watch?v=EoH2bXoNEE0">in the order of years</a>), and wonderful typing experience.</p>
-
-<p>One caveat is that the BOOX slides backward and falls when using the cradle without any other aid. A very simple fix is to get a piece of cardboard, and place it behind the BOOX (see picture below) to create a better fit. It works remarkably well.</p>
-
-<p><center>
-          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-             <source type="image/webp" srcset="/files/minimalist_boox/keyboard_k480_with_boox.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-             <source type="image/png" srcset="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-             <img src="/files/minimalist_boox/keyboard_k480_with_boox.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-           </picture>
-         </center>
-<br /></p>
-
-<h2 id="writing-and-drawing">Writing and Drawing</h2>
-
-<h3 id="writing">Writing</h3>
-
-<p>Writing is my main use case for the device, and even though it has some lag when doing it, it works great for me, because I tend to write long streams of ranting text, rather than editing it.</p>
-
-<div>
-	<div class="youtube-player" data-id="bYENTrabzXw" data-thumbsize="1"></div>
-</div>
-<p><br /></p>
-
-<p>The best mode I’ve found for writing was the “A2” Mode. It has ghosting, but is responsive enough for this use case.</p>
-
-<p><center>
-          <picture aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-             <source type="image/webp" srcset="/files/minimalist_boox/configuration_for_writing.webp" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-             <source type="image/png" srcset="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-             <img src="/files/minimalist_boox/configuration_for_writing.png" aria-label="BOOX attached to Logitech K480 cradle, with and added piece of cardboard">
-           </picture>
-         </center>
-<br /></p>
-
-<h3 id="drawing">Drawing</h3>
-
-<p>To draw, I use the default Onyx’s Sketch app due to its responsiveness, even though I would have preferred to have a more customizable UI interface and faster ways to share the drawing.</p>
-
-<p>Sharing is one of the downsides of the Onyx Sketch app. You need to either use their cloud service, or export the image in order to get the sketch easily accessible on other devices. I’ve opted to use the export functionality, which allows to directly share the image to a Google Keep note, which fits well into my workflow. I would prefer to not have this extra step, but still, it works well enough.</p>
-
-<div>
-	<div class="youtube-player" data-id="iW3IZ9MnFL8" data-thumbsize="1"></div>
-</div>
-<p><br /></p>
-
-<h2 id="closing-thoughts">Closing Thoughts</h2>
-
-<p>This has been one of the most satisfying devices I’ve added to my routines, and it’s incredibly satisfying to write on this device, almost distraction free. It allows enough customizability for it to be tailored to my use case, but is also limited enough to deter me from falling prey to distractions.</p>
-
-<p>I hope this was useful towards your journey - do let me know your tips for distraction free environments!</p>
-
-<p><br /></p>
-<hr />
-
-<p><br /></p>
-
-<div class="footnotes">
-
-  <ol>
-	<li id="fn:1">
-  	<p>The BOOX Note Air3 B/W is a very capable device, able to do most of the things one would expect from an Android Tablet, but its screen refresh rate, speed and screen drag make it less suited for fast browsing and video usage for example. <a href="#fnref:1" rel="reference">↩</a></p>
-	</li>
-	<li id="fn:2">
-  	<p>The screenshot is from BOOX Tablet Note Air 3 C, the color counterpart of Onyx BOOX Note Air3 B/W, but the layout is the same, save from the color display <a href="#fnref:2" rel="reference">↩</a></p>
-	</li>
-    
-  </ol>
-</div>
 ]]></content>
   </entry>
   

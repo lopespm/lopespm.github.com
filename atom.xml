@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-08-26T21:14:56+00:00</updated>
+  <updated>2024-09-01T18:12:38+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,168 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Investment Tracker - Free Spreadsheet Template]]></title>
+    <link href="https://lopespm.com/notes/2024/09/01/investment-tracker.html"/>
+    <updated>2024-09-01T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2024/09/01/investment-tracker</id>
+    <content type="html"><![CDATA[<p>Do you know:</p>
+
+<ul>
+  <li>Your current net worth?</li>
+  <li>How much money do you have in the bank?</li>
+  <li>Which are your most profitable investments?</li>
+  <li>Which investments do you currently have?</li>
+  <li>How much of your revenue (e.g. salary) contributes to your wealth?</li>
+  <li>How did the above evolve over time?</li>
+</ul>
+
+<p>If coming up with the above answers is hard, or their values are fuzzy, then it might be time to revamp your <a href="https://lopespm.com/notes/2024/08/26/uk-investment-guide.html">investment</a> tracking.</p>
+
+<p>This article will:</p>
+
+<ul>
+  <li>share a Google Spreadsheet template to track your investments, and explain it</li>
+  <li>provide a guide on how to use it</li>
+  <li>suggest a simple process to make sure the above questions will not be a problem anymore</li>
+</ul>
+
+<!--more-->
+
+<h1 id="the-template">The Template</h1>
+
+<h2 id="get-it">Get it</h2>
+
+<ul>
+  <li><strong>Download / copy the <a href="https://docs.google.com/spreadsheets/d/1cR0oOcvwQIXsdOEbtFBoneOfdzrVYB_QkADc1h0BTBk/edit?usp=sharing">Google Sheet Template here</a></strong></li>
+  <li><a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#how-to-use-it">How to use it</a></li>
+</ul>
+
+<h2 id="how-it-is-structured">How it is structured</h2>
+
+<p>The template has several sheets, which are built to have the essential tracking elements that can be immediately used, while also allowing for extensibility for your own custom case.</p>
+
+<h3 id="dates-sheet">Dates sheet</h3>
+
+<center>
+          <picture aria-label="Dates Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/pdates.webp" aria-label="Dates Sheet" />
+             <source type="image/png" srcset="/files/investment-tracker/pdates.png" aria-label="Dates Sheet" />
+             <img src="https://lopespm.com/files/investment-tracker/pdates.png" aria-label="Dates Sheet" />
+           </picture>
+         </center>
+
+<p>The entire sheeet revolves around these dates. Each of these represents the temporal <em>snapshot</em> of all your assets. All the other sheets use these dates as the starting point for their values, and this would be first thing you would add whenever entering a new series of entries</p>
+
+<h3 id="revenue-sheet">Revenue sheet</h3>
+
+<center>
+          <picture aria-label="Revenue Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/prevenue.webp" aria-label="Revenue Sheet" />
+             <source type="image/png" srcset="/files/investment-tracker/prevenue.png" aria-label="Revenue Sheet" />
+             <img src="https://lopespm.com/files/investment-tracker/prevenue.png" aria-label="Revenue Sheet" />
+           </picture>
+         </center>
+
+<p>Represents all the resources <em>coming in</em>, which are not a result of your investments. This could be the income from your salary, side-hustle, the app you are selling on the app store, etc.</p>
+
+<h3 id="account-sheet">Account sheet</h3>
+
+<center>
+          <picture aria-label="Account Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/paccount.webp" aria-label="Account Sheet" />
+             <source type="image/png" srcset="/files/investment-tracker/paccount.png" aria-label="Account Sheet" />
+             <img src="https://lopespm.com/files/investment-tracker/paccount.png" aria-label="Account Sheet" />
+           </picture>
+         </center>
+
+<p>There are two example account sheets provided with the template, each representing a different account on your portfolio, but you can add how many you would need. These could be your bank account, transaction broker, private pension, etc. To create a new one, grab one of the example account sheets, and copy it into a new spreadsheet.</p>
+
+<p>On the template, the <em>Example Account1</em> shows how a bank account could roughly look like, and <em>Example Account2</em> how an investment platform (such as Vanguard) could look like.</p>
+
+<p>Each of the account sheets is structured in the following way:</p>
+
+<ul>
+  <li>Current status: a look at the present, and comparison with the last update
+    <ul>
+      <li><strong>Date Column</strong>: referenced from the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a>, representing the date of this current <em>snapshot</em></li>
+      <li><strong>Top up movement</strong>: any money that you deposited in this account since the last date, would be accounted for here. For example, salary that is deposited, on deposits made in an investment broker. The objective here is to keep track of the money coming into a specific account, so that its performance doesnt look better than it really is.</li>
+      <li><strong>Not Invested</strong>: all uninvested money sitting in the account. For example, money in a bank account which does not yield interest.</li>
+      <li><strong>Invested</strong>: all money invested in this account. For example, the amount of money invested in a transaction broker, which is currently invested in stocks or ETFs.</li>
+      <li><strong>Investment Delta</strong>: the investment difference between the current date and the last date.</li>
+      <li><strong>Investment Delta, minus topup</strong>: the investment difference between the current date and the last date, minus the top up. This value attempts to represent how much money was actually generated by the investment since the last date.</li>
+      <li><strong>Total</strong>: the total invested and not invested amount in the account.</li>
+      <li><strong>Total Delta</strong>: total difference between current date and last date.</li>
+    </ul>
+  </li>
+  <li>Expected gains: predictions of investment gains
+    <ul>
+      <li><strong>Expected Yearly Growth % (Gross)</strong>: for example, if overall the invested money is in a Fixed Term Deposit, this value would represent the gross yearly interest accrued from it, pre-taxes.</li>
+      <li><strong>Expected Yearly Growth % (Net)</strong>: this value represents the actual expected gains from this investment. For example, taking the Fixed Term Deposit example above, this would be the expected yearly interest, after taxes.</li>
+      <li><strong>Expected gains 6 months / 1 year / etc</strong>: taking into consideration the <em>Expected Yearly Growth % (Net)</em>, which would accrue gains from the investment over these time spans.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="summary-sheet">Summary sheet</h3>
+
+<center>
+          <picture aria-label="Summary Sheet">
+             <source type="image/webp" srcset="/files/investment-tracker/psummary.webp" aria-label="Summary Sheet" />
+             <source type="image/png" srcset="/files/investment-tracker/psummary.png" aria-label="Summary Sheet" />
+             <img src="https://lopespm.com/files/investment-tracker/psummary.png" aria-label="Summary Sheet" />
+           </picture>
+         </center>
+
+<p>This is where it all comes together. All the accounts are summed up, resulting in these new relevant columns:</p>
+
+<ul>
+  <li><strong>Total</strong>: the total across all investments, for a given date</li>
+  <li><strong>Total Delta</strong>: total difference between current date and last date.</li>
+  <li><strong>Total Delta minus Revenue (i.e. profit / loss)</strong>: the aim of this column is to roughly represent how much of your net worth is being eaten up by your expenses:
+    <ul>
+      <li>If this value is negative, it means that either your costs are too high, your investments are not yielding yet high values, or both.</li>
+      <li>If this value is neutral, it means that your overall investments are completely covering your costs.</li>
+      <li>If this value is positive, it means that your overall investments are not only covering your costs, but are also increasing your net worth on top.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-to-use-it">How to use it</h2>
+
+<h3 id="set-up">Set up</h3>
+
+<ol>
+  <li><a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#get-it">Copy the template</a>, by opening it and clicking on <em>File -&gt; Make a Copy</em></li>
+  <li>Go to the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a>, and leave only the top two dates. The first date would be the previous month, and the second would be the current month. Delete the rest.</li>
+  <li>Go to the other sheets, and delete all the rows which don’t have a date now</li>
+  <li>Zero out the first line on each of the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#account-sheet">account sheets</a> for <em>Top up Investment</em>, <em>Not Invested</em> and <em>Invested</em>.</li>
+  <li>Zero out the first line of the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#revenue-sheet">revenue sheet</a>; or add your revenue from that month.</li>
+  <li>Use the existing example accounts to host your own accounts. If a new account is needed:
+    <ul>
+      <li>Copy one of the account sheets, by right clicking on the sheet’s tab, and selecting <em>Duplicate</em></li>
+      <li>Add a new column to the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#summary-sheet">summary sheets</a>, representing the new account. Change its formula’s value to get the information from your new sheet. You can do this by selecting the cell and changing the name of the referenced sheet, to the name of your new sheet. For example, from <code>'Example Account 2'!G2</code> to <code>'Monzo Bank Account'!G2</code>.</li>
+      <li>Still in the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#summary-sheet">summary sheets</a>, double click the chart, select the <em>Setup</em> tab, and add the range of the new column to the list. For example, if the new column was on the <em>D</em> column, then the data range would change from <em>H7,A2:A1000,B1:B1000,C1:C1000,G1:G1000</em> to <em>H7,A2:1000,B1:B1000,C1:C1000,<strong>D1:D1000</strong>,G1:G1000</em>. Then, on the <em>Series</em> section of the <em>Setup</em> tab, click on <em>Add Series</em> and add the one from your new account.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="recurrent-workflow">Recurrent workflow</h3>
+
+<p>Once you have the above set up, I suggest that on the first days of every month, right after your main source of income is deposited (e.g. salary), that the sheet with the current values of each of the accounts. This is key. If this update is not made periodically, eventually there will be gaps in the tracking, and its data will lose relevance. The process would look something like this:</p>
+
+<ol>
+  <li>Add the current date to the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a></li>
+  <li>On each the the accounts, expand the date to the new one, and fill in the current <em>Top up Investment</em>, <em>Not Invested</em> and <em>Invested</em> values</li>
+  <li>All done!</li>
+</ol>
+
+<h1 id="final-thoughts">Final thoughts</h1>
+
+<p>Feel free to expand and customize the above tracker to your needs, and let me know how it could be improved and which was its impact on your investment tracking. Would love to hear your thoughts about it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[UK Investment Guide]]></title>
@@ -2505,54 +2667,6 @@ The same for any other investment you did in the past.</p>
 <p>I love it. I don’t love the fact that I’m blocking myself away from those satisfactions. No, I relish the long term results. The time it opens up to actively read, write (this post for example), create, think, be present with others, and even watch podcasts (of which I make an effort to pick an episode outside the normal recommendations). I’m not perfect, and the above serves as a rule for me. And rules do have exceptions, and that’s ok. </p>
 
 <p>Still, this is the case for not having a TV.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The First Note]]></title>
-    <link href="https://lopespm.com/notes/2023/04/07/first-note.html"/>
-    <updated>2023-04-07T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2023/04/07/first-note</id>
-    <content type="html"><![CDATA[<p>Welcome to <em>Notes</em>!</p>
-
-<p>This is a new space where you will be able to find essays, notes and other quick thoughts, whereas the existing <em>Blog</em> section will remain allocated to denser article pieces.</p>
-
-<h2 id="why">Why?</h2>
-
-<h3 id="the-recurrent-idea">The Recurrent Idea</h3>
-
-<p>I have a rule when buying non-essential items for my house: if I’ve been recurrently thinking about buying something over a span of multiple days, then it’s a good purchasing signal. The thought process for writing articles for this blog is similar.</p>
-
-<p>The downside of this approach is that the ideas and thoughts that don’t make it to a blog article are relegated into the realm of personal writings and/or conversations with others, but never exposed to the public. On the other hand, this very same thirst to share quick thoughts was recurrent by itself.</p>
-
-<h3 id="framing">Framing</h3>
-
-<p>The yearning towards developing this concept was there, but a satisfactory hosting plaform was missing still:</p>
-
-<ul>
-  <li>Twitter: although it allowed for volume and looser thoughts, the character restriction would limit the exploration of a topic, and all the content would not be owned by me.</li>
-  <li>New self-hosted space: this allowed me to own the contents and have a clear separation between dense blog articles and quick thoughts, but the maintenance cost was prohibitive.</li>
-</ul>
-
-<p>The third option was to host them here, in <em>Byte Tank</em>, which was customized over several years and already had the workflow and components I strived for. But how to frame this new concept into the existing structure?</p>
-
-<p>The answer came from <a href="https://notes.alinpanaitiu.com/How%20I%20write%20this%20blog%20on%20my%20iPhone%20in%20a%20train">Alin Panaitiu</a>. On his website, Alin has a separate section for <em>Notes</em>, which makes perfect sense to me. <em>Notes</em> sets the expectation that they are not fully fledged articles, and that they cater towards volume, rather than density.</p>
-
-<h3 id="making-it-a-reality">Making it a reality</h3>
-
-<p>An idea is only worth for its implementation, and these were the last nudges that incentivized me to bring it to life:</p>
-
-<ul>
-  <li>The inspiring examples presented in several of the comments in <a href="https://news.ycombinator.com/item?id=35164819">Ask HN: What has your personal website/blog done for you?</a>. One of them being a reference to <a href="https://www.benkuhn.net/writing/">Why and how to write things on the Internet</a>, the other one being Alin’s website (see above).</li>
-  <li>The spirit of the earlier Internet. I remember the earlier times of the Internet where there was this widespread fascination with the fact that with a telephone connection, one could have access to its immense world, and had the possibility to create their own virtual home, that anyone could visit. That is one of the many beauties of this massive network. Low cost, virtually no gatekeepers, nearly boundless. I find this idea incredibly exciting and empowering.</li>
-  <li>Even in an era where text content is now produced for a low cost and in massive amounts (GPT and other LLMs), I believe there is still space for <em>artisanal</em> human baked opinions. The human relatableness, its connection with the environment, biology and even its limitations are still charming on their own.</li>
-  <li>The incentive to create notes in volume could be a great way to generate more source material that can be coalesced into new blog articles</li>
-  <li>Exposing looser thoughts publicly forces me to structure then, and I believe this process can make me better equipped to navigate the complex universe of human interactions, in which having a more structured mindset can make a world of a difference. Personally and professionally.</li>
-</ul>
-
-<h2 id="going-forward">Going Forward</h2>
-
-<p>This is an exciting new phase for this modest establishment, and I’m looking forward to populating this section with new content. Until then!</p>
 ]]></content>
   </entry>
   
