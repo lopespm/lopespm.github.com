@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-09-01T18:12:38+00:00</updated>
+  <updated>2024-09-01T22:51:54+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -38,6 +38,11 @@
   <li>provide a guide on how to use it</li>
   <li>suggest a simple process to make sure the above questions will not be a problem anymore</li>
 </ul>
+
+<div>
+  <div class="youtube-player" data-id="dX2UVWU97vc" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
 
 <!--more-->
 
@@ -161,7 +166,7 @@
 
 <h3 id="recurrent-workflow">Recurrent workflow</h3>
 
-<p>Once you have the above set up, I suggest that on the first days of every month, right after your main source of income is deposited (e.g. salary), that the sheet with the current values of each of the accounts. This is key. If this update is not made periodically, eventually there will be gaps in the tracking, and its data will lose relevance. The process would look something like this:</p>
+<p>Once you have the above set up, I suggest that on the first days of every month, right after your main source of income is deposited (e.g. salary), that the sheet is updated with the current values of each of the accounts. This is key, and using a recurrent calendar event will help you make sure this is done. If this update is not made periodically, eventually there will be gaps in the tracking, and its data will lose relevance. The process would look something like this:</p>
 
 <ol>
   <li>Add the current date to the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a></li>
