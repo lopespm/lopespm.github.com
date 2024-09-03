@@ -7,7 +7,8 @@ title: Byte Tank
 subtitle: Pedro Lopes Blog
 author: Pedro Lopes
 simple_search:
-description:
+description: Thoughts on technology, software engineering, designs, media, people, the world.
+default_ogp_image: /files/blog/pthumb.png
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

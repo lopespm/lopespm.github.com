@@ -1,13 +1,13 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" />
-<meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}" />
+<meta property="og:description" content="{% if page.description %}{{ description | strip_html | condense_spaces | truncate:150 }}{% else %}{{ site.description }}{% endif %}" />
 <meta property="og:url" content="{{ canonical }}" />
-<meta property="og:image" content="{% if page.ogp_image %}{{ site.url }}{{ page.ogp_image }}{% else %}{{ site.default_ogp_image }}{% endif %}" />
+<meta property="og:image" content="{% if page.ogp_image %}{{ site.url }}{{ page.ogp_image }}{% else %}{{ site.url }}{{ site.default_ogp_image }}{% endif %}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:locale" content="{{ site.facebook_locale }}" />
 <meta property="og:type" content="{% if page.index %}blog{% else %}article{% endif %}" />
 
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-<meta name="twitter:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+<meta name="twitter:description" content="{% if page.description %}{{ description | strip_html | condense_spaces | truncate:150 }}{% else %}{{ site.description }}{% endif %}">
 
 {% if site.twitter_creator %}<meta name="twitter:creator" content="@{{ site.twitter_creator }}">{% endif %}
 
