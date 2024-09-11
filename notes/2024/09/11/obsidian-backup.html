@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Obsidian Encrypted Backup - Google Drive, Dropbox, OneDrive - Byte Tank</title>
+  <meta name="author" content="Pedro Lopes">
+
+  
+  <meta name="description" content="Custom, safe, encrypted backup, fully owned by you, for your Obsidian Notes">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="https://lopespm.com/notes/2024/09/11/obsidian-backup.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="Byte Tank" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js" async></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One&display=swap' rel='stylesheet' type='text/css'>
+<link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
+  <meta property="og:title" content="Obsidian Encrypted Backup - Google Drive, Dropbox, OneDrive - Byte Tank" />
+<meta property="og:description" content="Custom, safe, encrypted backup, fully owned by you, for your Obsidian Notes" />
+<meta property="og:url" content="https://lopespm.com/notes/2024/09/11/obsidian-backup.html" />
+<meta property="og:image" content="https://lopespm.com/files/obsidian_backup/pthumb.png" />
+<meta property="og:site_name" content="Byte Tank" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:title" content="Obsidian Encrypted Backup - Google Drive, Dropbox, OneDrive - Byte Tank">
+<meta name="twitter:description" content="Custom, safe, encrypted backup, fully owned by you, for your Obsidian Notes">
+
+<meta name="twitter:creator" content="@lopes_pm">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lopespm.com/files/obsidian_backup/pthumb.png">
+
+
+  
+  <script async>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39962763-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+<script defer>
+
+  /* Based on: http://labnol.org/?p=27941 */
+
+  // function onYouTubeIframeAPIReady() {
+  //   initialize();
+  // }
+
+  document.addEventListener("DOMContentLoaded", initialize );
+
+  function initialize() {
+    var div, n,
+      v = document.getElementsByClassName("youtube-player");
+    for (n = 0; n < v.length; n++) {
+      div = document.createElement("div");
+      div.setAttribute("data-id", v[n].dataset.id);
+      div.innerHTML = labnolThumb(v[n].dataset.id, v[n].dataset.thumbsize);
+      div.onclick = labnolIframe;
+
+      v[n].classList.add("ytp-thumbnail-overlay");
+      v[n].classList.add("ytp-cued-thumbnail-overlay");
+
+      v[n].appendChild(div);
+    }
+  }
+
+  function labnolThumb(id, thumbSize) {
+    var thumb = getThumb(thumbSize);
+    var thumbWithId = thumb.replace("ID", id);
+
+    var youtubePlayButton = '<div class="play-youtube-button"><button class="ytp-large-play-button ytp-button" aria-label="Play Video"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z" fill="#1f1f1e" fill-opacity="0.81"></path><path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path><path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path></svg></button></div>';
+
+
+
+    var bg = '<div class="bg" style=\'background-image: url(\"' + thumbWithId + '\')\"></div>';
+    var fadeBg = '<div class="fadeBg"></div>';
+    return bg + fadeBg + youtubePlayButton;
+  }
+
+  function getThumb(thumbSize) {
+    if (thumbSize === "0")
+      return 'https://i.ytimg.com/vi/ID/hqdefault.jpg';
+    if (thumbSize === "1")
+      return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+    else if (thumbSize === "2")
+      return 'https://i.ytimg.com/vi/ID/maxresdefault.jpg';
+    return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+  }
+
+  function labnolIframe() {
+    var container = document.createElement("div");
+
+    var loaderContainerOuter = document.createElement("div");
+    loaderContainerOuter.setAttribute("style", "display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: black; z-index: 200;");
+    var loaderContainerMiddle = document.createElement("div");
+    loaderContainerMiddle.setAttribute("style", "  display: table-cell; vertical-align: middle;");
+    var loaderContainerInner = document.createElement("div");
+    loaderContainerInner.setAttribute("style", "margin-left: auto; margin-right: auto; width: 400px;");
+
+    loaderContainerOuter.appendChild(loaderContainerMiddle);
+    loaderContainerMiddle.appendChild(loaderContainerInner);
+
+    const loader = Rocket.loader({
+      target: loaderContainerInner,
+      size: 'large',
+      type: 'spinner',
+      colour: 'grey-blue-dark'
+      //body: "Loading Video"
+    });
+
+    var containerPlayer = document.createElement("div");
+    container.appendChild(containerPlayer);
+    container.appendChild(loaderContainerOuter);
+
+    this.parentNode.replaceChild(container, this);
+
+    var didLoadAndPlay = 0;
+    player = new YT.Player(containerPlayer, {
+      videoId: this.dataset.id,
+      playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': function(event) {
+          event.target.playVideo();
+
+          // Fallback if onStateChange is not called
+          setInterval(function () {
+            if (didLoadAndPlay === 0) {
+              container.removeChild(loaderContainerOuter);
+              didLoadAndPlay = 1;
+            }
+          }, 5000);
+        },
+        'onStateChange': function (event) {
+          if (didLoadAndPlay === 0) {
+            container.removeChild(loaderContainerOuter);
+            didLoadAndPlay = 1;
+          }
+        }
+      }
+    });
+
+  }
+
+</script>
+
+
+<script src="/javascripts/rocket-loader/tools.min.js" defer></script>
+<script src="/javascripts/rocket-loader/loader.min.js" defer></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config" async>
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript" async></script>
+  <header role="banner">
+    <hgroup>
+      <h1><a href="/">Byte Tank</a></h1>
+      <h2>Pedro Lopes <span class="note-header-subtitle">Notes</span></h2>
+</hgroup>
+</header>
+  <nav role="navigation">
+
+<ul class="subscription">
+  <li><a href="https://www.youtube.com/@lopespm"><img src="/images/cn_youtube_19.png" height="19px" width="19px" alt="Go to YouTube Channel"/></a></li>
+  <li><a href="https://twitter.com/lopes_pm"><img src="/images/cn_twitter_19.png" height="19px" width="19px" alt="Go to Twitter"/></a></li>
+  <li><a href="https://github.com/lopespm"><img src="/images/cn_github_19.png" height="19px" width="19px" alt="Go to GitHub"/></a></li>
+  <li><a href="/atom.xml"><img src="/images/cn_rss_19.png" height="19px" width="19px" alt="RSS Feed"/></a></li>  
+</ul>
+
+  
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/notes">Notes</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="article-full">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Obsidian Encrypted Backup - Google Drive, Dropbox, OneDrive</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-09-11T00:00:00+00:00" pubdate data-updated="true">Sep 11<span>th</span>, 2024</time>
+        <!--
+        
+        -->
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>After several years using Evernote, I’ve eventually migrated all my notes into Obsidian, which allowed me to have full control of my notes, in a format that I could use, move, or <a href="/machine_learning/2024/06/24/personal-llm.html">leverage upon</a>. As a consequence, my notes would no longer live in the cloud and my personal device, so any redundancy and backups would need to be guaranteed by me, via my personal periodic backups.</p>
+
+<p>Having more than a decade’s worth of notes relying on a single redundancy made me somewhat uneasy, so the options I could think of were either:</p>
+
+<ol>
+  <li>Subscribe to <a href="https://obsidian.md/sync">Obsidian’s Sync service</a>, which would recurrently cost $4 every month, <em>every month</em>. My encrypted notes would be tethered to Obsidian’s cloud service</li>
+  <li>Have a custom solution that leverage’s Obsidian’s outstanding customizability, compress and encrypt all my notes, and use a cloud service to host this archive. I would have the flexibility to choose any cloud provider I would desire.</li>
+</ol>
+
+<p>I’ve chosen option 2., using the Google Drive cloud service, and in this note will share how you can too.</p>
+
+<!--more-->
+
+<h1 id="how-to-do-it">How to do it</h1>
+
+<p>The idea is simple: use the <a href="https://obsidian.md/plugins?search=obsidian-shellcommands">obsidian-shellcommands</a> shell plugin to run a custom script, whenever Obsidian quits (this event is configurable, but I find the application).</p>
+
+<h2 id="step-1-custom-script-that-encrypts-and-backs-up-all-notes">Step 1. Custom script that encrypts and backs up all notes</h2>
+
+<p>First, save the below script into a folder in your computer (for example, at <code>/Users/yourunixname/backups/my_backup_script.sh</code>), and update it with your own Obsidian, backup destination folders and your own archive password:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>#!/bin/zsh
+
+obsidian_notes_folder=&quot;&lt;your_obsidian_folder&gt;&quot; ; # For example, /Users/yourusername/Library/Application Support/obsidian
+obsidian_notes_tar_archive=&quot;${obsidian_notes_folder}/obsidian_backup.tar.gz&quot; ;
+backup_folder=&quot;&lt;folder_where_the_final_encrypted_backup_will_be_placed&gt;&quot;; # For example, /Users/yourusername/Library/CloudStorage/GoogleDrive/MyDrive/backup_folder
+
+echo &quot;Starting to compress obsidian notes...&quot; ;
+
+# Create a .tar archive that contains all the contents inside the obsidian folder
+tar -czf ${obsidian_notes_tar_archive} ${obsidian_notes_folder}/obsidian_backup
+
+# Compress the .tar archive into an encrypted .7z with password &quot;PasswordOfYourChoosing&quot;
+# In this example, 7za installed from the nix package manager is used
+/Users/yourusername/.nix-profile/bin/7za a -tzip -mem=AES256 -mx=0 -mmt=12 -pPasswordOfYourChoosing ${obsidian_notes_folder}/obsidian_backup.7z ${obsidian_notes_tar_archive} ;
+
+# Move the .7z file into the the backup folder (e.g. your Google Drive / Dropbox / OneDrive folder)
+mv ${obsidian_notes_folder}/obsidian_pedrolopes_nodes_backup.7z ${backup_folder}/obsidian_backup.7z ;
+
+echo &quot;Finished compressing and moving to backup folder&quot;
+</pre></div>
+</div>
+</div>
+
+<p>The comments are mostly self-explanatory, but essentially this is what the script does:</p>
+
+<ol>
+  <li>First create a .tar archive that contains all the contents inside the obsidian folder</li>
+  <li>Compresses the .tar archive into a password encrypted <code>.7z</code> file. Remember to update the password with your own private password</li>
+  <li>Moves the <code>.7z</code> file into the destination folder, which could be the folder used by your cloud storage sync folder of choice (e.g. your Google Drive / Dropbox / OneDrive folder).</li>
+</ol>
+
+<p>Since the final file name on <code>3.</code> is always the same, it will be re-written, but likely your cloud storage sync will keep track of the different versions, as they change, which could progressively inflate your quota usage. If that is a problem, just purge them periodically using your cloud storage interface.</p>
+
+<p>You can test drive your script by granting execution privileges to your script (<code>chmod +x &lt;script_file_name&gt;</code>), and running <code>./&lt;your_script_name&gt;</code>. Your final encrypted archive should appear on the final <code>backup_folder</code></p>
+
+<h2 id="step-2-run-the-script-when-obsidian-quits">Step 2. Run the script when Obsidian quits</h2>
+
+<p>Now that we have the script ready, it makes our life easier if it is run automatically, upon a given Obsidian event, such as when Obsidian quits. Running a shell script upon a given Obsidian event is made easy by using the <a href="https://obsidian.md/plugins?search=obsidian-shellcommands">obsidian-shellcommands</a>. These are the steps to set it up:</p>
+
+<p><strong>1.</strong> Go to Obsidian -&gt; Settings. Then select the “Community Plugins” option.</p>
+
+<center>
+          <picture aria-label="Community Plugins">
+             <source type="image/webp" srcset="/files/obsidian_backup/p0.webp" aria-label="Community Plugins" />
+             <source type="image/png" srcset="/files/obsidian_backup/p0.png" aria-label="Community Plugins" />
+             <img src="/files/obsidian_backup/p0.png" aria-label="Community Plugins" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<p><strong>1.1.</strong> On the “Community Plugins” option, click “Browse”. There, search for “Shell”. The one you want to install is <a href="(https://obsidian.md/plugins?search=obsidian-shellcommands)">Shell Commands by Jarkko Linnanvirta</a></p>
+
+<center>
+          <picture aria-label="Browse for Shell Commands">
+             <source type="image/webp" srcset="/files/obsidian_backup/p2.webp" aria-label="Browse for Shell Commands" />
+             <source type="image/png" srcset="/files/obsidian_backup/p2.png" aria-label="Browse for Shell Commands" />
+             <img src="/files/obsidian_backup/p2.png" aria-label="Browse for Shell Commands" />
+           </picture>
+         </center>
+
+<center>
+          <picture aria-label="Selected Shell Commands Plugin by Jarkko Linnanvirta">
+             <source type="image/webp" srcset="/files/obsidian_backup/p3.webp" aria-label="Selected Shell Commands Plugin by Jarkko Linnanvirta" />
+             <source type="image/png" srcset="/files/obsidian_backup/p3.png" aria-label="Selected Shell Commands Plugin by Jarkko Linnanvirta" />
+             <img src="/files/obsidian_backup/p3.png" aria-label="Selected Shell Commands Plugin by Jarkko Linnanvirta" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<p><strong>2.</strong> Now that the plugin is installed, go again to Obsidian -&gt; Settings. You should see in the bottom left, under the “Community plugins” pane, an option named “Shell commands”. Click it.</p>
+
+<center>
+          <picture aria-label="Shell Commands Plugin entrypoint">
+             <source type="image/webp" srcset="/files/obsidian_backup/p4.webp" aria-label="Shell Commands Plugin entrypoint" />
+             <source type="image/png" srcset="/files/obsidian_backup/p4.png" aria-label="Shell Commands Plugin entrypoint" />
+             <img src="/files/obsidian_backup/p4.png" aria-label="Shell Commands Plugin entrypoint" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<p><strong>3.1.</strong> On the “Shell commands” plugin, select the “Shell commands” tab, and inside it, click “New shell command”, and the created row, click its respective cog icon. This will show you a new modal with several tabs.</p>
+
+<p><strong>3.2.</strong> On this command modal, select the “Environments” tab and insert on the “Default shell command” something like this: <code>zsh /Users/yourunixname/backups/my_backup_script.sh</code>. This assumes that your script is located at <code>/Users/yourunixname/backups/my_backup_script.sh</code></p>
+
+<center>
+          <picture aria-label="New shell commands on the Environment tab">
+             <source type="image/webp" srcset="/files/obsidian_backup/p5.webp" aria-label="New shell commands on the Environment tab" />
+             <source type="image/png" srcset="/files/obsidian_backup/p5.png" aria-label="New shell commands on the Environment tab" />
+             <img src="/files/obsidian_backup/p5.png" aria-label="New shell commands on the Environment tab" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<p><strong>3.3.</strong> Still on this command modal, select the “Events” tab. There you can choose when should the script execution be done. For example, search for “Obsidian quits”, and enable it (there is a toggle in the right)</p>
+
+<center>
+          <picture aria-label="New shell commands on the Events tab">
+             <source type="image/webp" srcset="/files/obsidian_backup/p6.webp" aria-label="New shell commands on the Events tab" />
+             <source type="image/png" srcset="/files/obsidian_backup/p6.png" aria-label="New shell commands on the Events tab" />
+             <img src="/files/obsidian_backup/p6.png" aria-label="New shell commands on the Events tab" />
+           </picture>
+         </center>
+
+<center>
+          <picture aria-label="How Shell Commands looks like when everything is configured">
+             <source type="image/webp" srcset="/files/obsidian_backup/p7.webp" aria-label="How Shell Commands looks like when everything is configured" />
+             <source type="image/png" srcset="/files/obsidian_backup/p7.png" aria-label="How Shell Commands looks like when everything is configured" />
+             <img src="/files/obsidian_backup/p7.png" aria-label="How Shell Commands looks like when everything is configured" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<p>All done! After performing these steps, your backup script will run whenever you chose to, and the encrypted backup will be created and placed in the location that you chose on <a href="/notes/2024/09/11/obsidian-backup.html#step-1-custom-script-that-encrypts-and-backs-up-all-notes">Step 1.</a> above 🎉</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2024-09-11T00:00:00+00:00" pubdate data-updated="true">Sep 11<span>th</span>, 2024</time>
+      
+      
+
+
+    </p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/notes/2024/09/01/investment-tracker.html" title="Previous Post: Investment Tracker - Free Spreadsheet Template">&laquo; Investment Tracker - Free Spreadsheet Template</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <div id="giscus-comments">
+    <script async src="https://giscus.app/client.js"
+        data-repo="lopespm/lopespm.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3MDExOTAxNg=="
+        data-category="Comments"
+        data-category-id="DIC_kwDOBC3uaM4CYFCk"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </section>
+
+<!--
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+-->
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/notes/2024/09/11/obsidian-backup.html">Obsidian Encrypted Backup - Google Drive, Dropbox, OneDrive</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2024/09/01/investment-tracker.html">Investment Tracker - Free Spreadsheet Template</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2024/08/26/uk-investment-guide.html">UK Investment Guide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/machine_learning/2024/06/24/personal-llm.html">Personal Local (Llama3 8B) LLM extended with WhatsApp + Obsidian Data</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2024/06/09/aloof.html">Aloof</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/lopespm">@lopespm</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'lopespm',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2024 - <a href="/about">Pedro Lopes</a> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>. Theme based on <a href="https://github.com/lucaslew/whitespace"> Whitespace</a>. Subscribe via <a href="/atom.xml">RSS Feed</a>
+</p>
+
+</footer>
+  
+
+
+
+
+
+<script src="/javascripts/anchor.min.js"></script>
+
+<script>
+    anchors.options = {
+      placement: 'left'
+    };
+    anchors.add();
+    anchors.remove('.entry-title');
+    anchors.remove('#byte-tank');
+</script>
+
+
+
+</body>
+</html>
