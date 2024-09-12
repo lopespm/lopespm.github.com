@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-09-11T23:30:07+00:00</updated>
+  <updated>2024-09-12T06:09:57+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -33,7 +33,7 @@
 
 <h1 id="how-to-do-it">How to do it</h1>
 
-<p>The idea is simple: use the <a href="https://obsidian.md/plugins?search=obsidian-shellcommands">obsidian-shellcommands</a> shell plugin to run a custom script, whenever Obsidian quits (this event is configurable, but I find the application).</p>
+<p>The idea is simple: use the <a href="https://obsidian.md/plugins?search=obsidian-shellcommands">obsidian-shellcommands</a> shell plugin to run a custom script, whenever Obsidian quits. This event is configurable, but I find the application quit event to have the necessary periodicity for my use case, since I often just open Obsidian, write on it, and then exit the application.</p>
 
 <h2 id="step-1-custom-script-that-encrypts-and-backs-up-all-notes">Step 1. Custom script that encrypts and backs up all notes</h2>
 
@@ -52,11 +52,11 @@ echo &quot;Starting to compress obsidian notes...&quot; ;
 tar -czf ${obsidian_notes_tar_archive} ${obsidian_notes_folder}/obsidian_backup
 
 # Compress the .tar archive into an encrypted .7z with password &quot;PasswordOfYourChoosing&quot;
-# In this example, 7za installed from the nix package manager is used
+# In this example, 7za installed from the nix package manager is used (https://nixos.org/), but you can use 7za from any other reputable source
 /Users/yourusername/.nix-profile/bin/7za a -tzip -mem=AES256 -mx=0 -mmt=12 -pPasswordOfYourChoosing ${obsidian_notes_folder}/obsidian_backup.7z ${obsidian_notes_tar_archive} ;
 
 # Move the .7z file into the the backup folder (e.g. your Google Drive / Dropbox / OneDrive folder)
-mv ${obsidian_notes_folder}/obsidian_pedrolopes_nodes_backup.7z ${backup_folder}/obsidian_backup.7z ;
+mv ${obsidian_notes_folder}/obsidian_backup.7z ${backup_folder}/obsidian_backup.7z ;
 
 echo &quot;Finished compressing and moving to backup folder&quot;
 </pre></div>
