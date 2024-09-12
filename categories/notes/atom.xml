@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-09-12T06:22:49+00:00</updated>
+  <updated>2024-09-12T20:48:10+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -610,7 +610,12 @@ echo &quot;Finished compressing and moving to backup folder&quot;
     <link href="https://lopespm.com/notes/2024/05/05/let-me-tell-you-a-story.html"/>
     <updated>2024-05-05T00:00:00+00:00</updated>
     <id>https://lopespm.com/notes/2024/05/05/let-me-tell-you-a-story</id>
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<div>
+  <div class="youtube-player" data-id="EVn6VGlig1s" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<blockquote>
   <p>You could never convince a monkey to give you a banana by promising him limitless bananas after death in monkey heaven. How do you cause people to believe in an imagined order such as Christianity, democracy or capitalism? First, you never admit that the order is imagined.</p>
 
   <p><em>― Yuval Noah Harari</em></p>
