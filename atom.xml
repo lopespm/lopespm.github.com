@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-09-12T22:11:39+00:00</updated>
+  <updated>2024-09-15T17:47:43+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Connection with reality]]></title>
+    <link href="https://lopespm.com/notes/2024/09/15/connection_with_reality.html"/>
+    <updated>2024-09-15T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2024/09/15/connection_with_reality</id>
+    <content type="html"><![CDATA[<div>
+  <div class="youtube-player" data-id="wk2DwbfgmMU" data-thumbsize="1"></div>
+</div>
+<p><br /></p>
+
+<p>As we experience an increase of massive amounts of AI generated content, this note will go through the role and added value that a connection with reality and nature brings not only to your business and craft, but also to yourself.</p>
+
+<h2 id="striking-a-balance">Striking a balance</h2>
+
+<p>Walking or hiking has been a recurrent weekly habit of mine for several years, and its one of my favorite activities.</p>
+
+<p>I find it essential to have a walk outside the office / home and be in contact with the surrounding world, be it in nature or around the city. This is especially relevant for those, like me, who have their daily jobs working at the computer.</p>
+
+<p>I love to be enthralled in the digital world, think about abstract concepts, and use digital devices to, for example, communicate this content to you. But like anything else, a balance needs to be kept, and a balance between the digital and real domains seems essential.</p>
+
+<!--more-->
+
+<h2 id="the-added-value-of-connecting-with-reality">The added value of (connecting with) reality</h2>
+
+<p>As generative models get better, more and more people will just assume that a given piece of text, image or video is likely fake, and I believe there will be an increased demand for a connection with the real world through experiences such as in-person events, travel, spirituality, or consumption of digital content by certified entities.</p>
+
+<p>Businesses and creators that prove their connection with the real world and real people, will likely have an edge and rise against the noise.</p>
+
+<p>So if you’re creating a business, a piece of content, anything really, think how it relates with the real world. Ask yourself: how can you provide that connection? How can you provide <em>reality as a service</em>?</p>
+
+<h2 id="keep-yourself-connected-with-reality">Keep yourself connected with reality</h2>
+
+<p>Apart from all this, and just as important, it’s for <em>you</em> to maintain <em>your</em> contact with reality.</p>
+
+<p>So if you feel you spend too much time around the internet, digital devices, TV series, etc, I invite you to the outdoors, the world outside. It’s free, it’s accessible. You just need to open the door and step out, provided you are fortunate enough to have the required physical capabilities. I’m pretty sure that it will make your life much better.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Interview Learnings from former CIA Intelligence Officer]]></title>
@@ -2831,104 +2869,6 @@ The same for any other investment you did in the past.</p>
 
   <p><em>― <a href="https://youtu.be/eTFy8RnUkoU?t=11">Bill Gates</a></em></p>
 </blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Custom Pomodoro Technique]]></title>
-    <link href="https://lopespm.com/notes/2023/07/02/custom-pomodoro-technique.html"/>
-    <updated>2023-07-02T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2023/07/02/custom-pomodoro-technique</id>
-    <content type="html"><![CDATA[<blockquote>
-  <p>Time is the most valuable thing a man can spend.</p>
-
-  <p><em>― Theophrastus</em></p>
-</blockquote>
-
-<p>There are countless articles, books, <a href="https://www.youtube.com/watch?v=aXvDEmo6uS4">videos</a> and lectures about time management. Since all of us have different needs, goals and environments, it is best to face them as guidances, where we take the ones we need, and leave the others in our toolbelt for another time.</p>
-
-<p>One of these methodologies is the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a>, in which a kitchen timer is used to break work into intervals, typically 25 minutes in length, separated by short breaks. </p>
-
-<p>This doesn’t work for me, so here is my <em>Custom Pomodoro Technique</em>.</p>
-
-<h2 id="how-it-works">How it works</h2>
-
-<p>I usually need long bouts of deep focus during my work or any complex tasks. This can be reading / writing code, aligning with partners, structuring plans, going through my finances, etc. 25 minutes is typically not enough, since it coincides with where most of my flow peaks happen.</p>
-
-<p>One hour is my target for continuous focused work. Below that, I know that I can still take advantage of the remaining time to productively go through a problem. Above that, I start to prepare to wind down and take a break.</p>
-
-<p>Rule of thumb for breaks are to be enough to feel rested, which tends to happen in less than 15 minutes.</p>
-
-<h2 id="tools">Tools</h2>
-
-<p>I’ve tried several tools to track time. Physical and digital. Complex and simple. One has stuck for several years, and is the only one I use right now: <a href="https://www.klokki.com/">Klokki</a></p>
-
-<center>
-          <picture aria-label="Screenshot of Klokki timer dialog">
-             <source type="image/webp" srcset="/files/custom_pomodoro/timer_full_dialog.webp" aria-label="Screenshot of Klokki timer dialog" />
-             <source type="image/png" srcset="/files/custom_pomodoro/timer_full_dialog.png" aria-label="Screenshot of Klokki timer dialog" />
-             <img src="https://lopespm.com/files/custom_pomodoro/timer_full_dialog.png" aria-label="Screenshot of Klokki timer dialog" />
-           </picture>
-         </center>
-
-<p>Klokki is a concise Mac application that tracks time and generates nice time reports. It also allows you to track your time automatically, but I don’t use that feature.</p>
-
-<p>This is a wonderful tool that fulfills my main requirements:</p>
-
-<ul>
-  <li>Being able to start and stop the timer with a single click.</li>
-  <li>The timer should be always visible, but also non-obtrusive.</li>
-  <li>Simple usage, with a low UI footprint. No distractions.</li>
-  <li>Concise time reports, which allow me to know how much time (and energy) I’ve used throughout the week. This is important for pacing calibration.</li>
-</ul>
-
-<h2 id="the-rules">The rules</h2>
-
-<center>
-          <picture aria-label="Screenshot of Klokki on the toolbar, when started">
-             <source type="image/webp" srcset="/files/custom_pomodoro/timer_on_1_minute.webp" aria-label="Screenshot of Klokki on the toolbar, when started" />
-             <source type="image/png" srcset="/files/custom_pomodoro/timer_on_1_minute.png" aria-label="Screenshot of Klokki on the toolbar, when started" />
-             <img src="https://lopespm.com/files/custom_pomodoro/timer_on_1_minute.png" aria-label="Screenshot of Klokki on the toolbar, when started" />
-           </picture>
-         </center>
-
-<ol>
-  <li>
-    <p>Whenever I sit down at the computer and start working, I start the timer. <em>I converged into using a single category to track all my deep flow blocks, since having multiple categories created too much mental overhead</em></p>
-  </li>
-  <li>
-    <p>Whenever the timer is on, I’m in productivity / work mode, and no distractions outside my goals are allowed.</p>
-  </li>
-  <li>
-    <p>Refrain from stopping the flow session before the one hour mark. Start preparing to stop the flow session after the 1 hour mark.</p>
-  </li>
-  <li>
-    <p>Take breaks in-between flow sessions, until I feel rested. Normally less than 15 minutes.</p>
-  </li>
-  <li>
-    <p>When the timer is off, scattered tasks, exploration and wandering are allowed and encouraged.</p>
-  </li>
-</ol>
-
-<center>
-          <picture aria-label="Screenshot of Klokki on the toolbar, when stopped">
-             <source type="image/webp" srcset="/files/custom_pomodoro/timer_off.webp" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
-             <source type="image/png" srcset="/files/custom_pomodoro/timer_off.png" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
-             <img src="https://lopespm.com/files/custom_pomodoro/timer_off.png" aria-label="Screenshot of Klokki on the toolbar, when stopped" />
-           </picture>
-         </center>
-
-<h2 id="the-benefits">The benefits</h2>
-
-<p>This is an incredibly simple methodology that I’ve been using throughout the past years. The recurrent benefits I’ve captured from it were:</p>
-
-<ul>
-  <li>Clear boundaries between focus time and exploration.</li>
-  <li>Simple, easy to follow process, allowing for flexibility on how time blocks are managed. Easy to consistently abide by.</li>
-  <li>Pacing: prevents over-working or under-utilization of my energy / time.</li>
-</ul>
-
-<p>Feel free to use this guidance / methodology and experiment with it, Or not 🙏</p>
 ]]></content>
   </entry>
   
