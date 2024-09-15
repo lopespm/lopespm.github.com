@@ -23,7 +23,7 @@ I've chosen option 2., using the Google Drive cloud service, and in this note wi
 
 # How to do it
 
-The idea is simple: use the [obsidian-shellcommands](https://obsidian.md/plugins?search=obsidian-shellcommands) shell plugin to run a custom script, whenever Obsidian quits (this event is configurable, but I find the application).
+The idea is simple: use the [obsidian-shellcommands](https://obsidian.md/plugins?search=obsidian-shellcommands) shell plugin to run a custom script, whenever Obsidian quits. This event is configurable, but I find the application quit event to have the necessary periodicity for my use case, since I often sporadically open Obsidian, write on it, and exit the application straight after.
 
 ## Step 1. Custom script that encrypts and backs up all notes
 
@@ -42,15 +42,16 @@ echo "Starting to compress obsidian notes..." ;
 tar -czf ${obsidian_notes_tar_archive} ${obsidian_notes_folder}/obsidian_backup
 
 # Compress the .tar archive into an encrypted .7z with password "PasswordOfYourChoosing"
-# In this example, 7za installed from the nix package manager is used
+# In this example, 7za installed from the nix package manager is used (https://nixos.org/), but you can use 7za from any other reputable source
 /Users/yourusername/.nix-profile/bin/7za a -tzip -mem=AES256 -mx=0 -mmt=12 -pPasswordOfYourChoosing ${obsidian_notes_folder}/obsidian_backup.7z ${obsidian_notes_tar_archive} ;
 
 # Move the .7z file into the the backup folder (e.g. your Google Drive / Dropbox / OneDrive folder)
-mv ${obsidian_notes_folder}/obsidian_pedrolopes_nodes_backup.7z ${backup_folder}/obsidian_backup.7z ;
+mv ${obsidian_notes_folder}/obsidian_backup.7z ${backup_folder}/obsidian_backup.7z ;
 
 echo "Finished compressing and moving to backup folder"
 ~~~
 {:lang="bash"}
+*(Download this [script from GitHub Gists](https://gist.github.com/lopespm/fcfceebc311d8ba364919cdf4fa61e8d))*
 
 
 The comments are mostly self-explanatory, but essentially this is what the script does:

@@ -10,6 +10,11 @@ ogp_image_twitter: "/files/goal_clarity_in_delegation/goal_clarity_in_delegation
 published: true
 ---
 
+<div>
+  <div class="youtube-player" data-id="gaR6OHEIp_o" data-thumbsize="1"/>
+</div>
+<br/>
+
 Previously, in ["Learnings as a Software Engineer Techlead"]({% post_url 2022-03-22-learnings-software-engineer-techlead %}), I've alluded to the 75/25 rule, where if you are ~75% certain that someone will correctly execute a given project/task, then delegate. The other ~25% is the unknown space that the person needs in order to learn, explore, make errors, innovate and grow.
 
 If the project/task was decided to be delegated, what comes next?

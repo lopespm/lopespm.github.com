@@ -10,6 +10,11 @@ ogp_image_twitter: "/files/let_me_tell_you_a_story/pthumb.png"
 published: true
 ---
 
+<div>
+  <div class="youtube-player" data-id="EVn6VGlig1s" data-thumbsize="1"/>
+</div>
+<br/>
+
 > You could never convince a monkey to give you a banana by promising him limitless bananas after death in monkey heaven. How do you cause people to believe in an imagined order such as Christianity, democracy or capitalism? First, you never admit that the order is imagined.
 >
 > *― Yuval Noah Harari*

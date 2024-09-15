@@ -10,6 +10,11 @@ ogp_image_twitter: "/files/job_safety_ai_era/pthumb.png"
 published: true
 ---
 
+<div>
+  <div class="youtube-player" data-id="j6uRQF6rL8s" data-thumbsize="1"/>
+</div>
+<br/>
+
 Words are cheap and keep getting cheaper. The last notes on this blog could have been written via generative AI, and as time goes by, new generative models will likely create higher quality content than I could ever produce, consistently.
 
 I didn't use these because the [writing process comes as a form of thinking]({% post_url 2023-07-02-writing-as-a-form-of-thinking %}), but if there are automated mechanisms that increasingly outperform us humans in so many different areas, what does that leave us?

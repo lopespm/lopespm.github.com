@@ -10,6 +10,11 @@ ogp_image_twitter: "/files/project_planning_framework/pthumb.png"
 published: true
 ---
 
+<div>
+  <div class="youtube-player" data-id="TfbYWb8YCyo" data-thumbsize="1"/>
+</div>
+<br/>
+
 Different goals require different roadmapping and planning techniques.
 
 In this post, a simple framework is proposed to classify a goal using three axes, in order to inform the approach taken towards reaching that goal. The three axes are:

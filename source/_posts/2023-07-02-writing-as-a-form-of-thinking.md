@@ -8,6 +8,11 @@ description: "The cost of delegating the writing process to other entities (like
 published: true
 ---
 
+<div>
+  <div class="youtube-player" data-id="gFSjnRAPC7Y" data-thumbsize="1"/>
+</div>
+<br/>
+
 Large language models (LLM) like ChatGPT triggered a remarkable societal and computational shift that feels comparable to the impact from the initial internet era with its first impressive search engines like Google. LLMs are the toast of the town.
 
 Writing emails, reports, school homework, analysis, code, summaries. The list goes on.
