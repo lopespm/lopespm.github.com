@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-12-21T13:19:58+00:00</updated>
+  <updated>2024-12-21T13:23:34+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -44,9 +44,9 @@
 
 <center>
           <picture aria-label="Lasting more than your last relationship ad">
-             <source type="image/webp" srcset="/files/self_worth/p5.webp" aria-label="Lasting more than your last relationship ad" />
-             <source type="image/png" srcset="/files/self_worth/p5.png" aria-label="Lasting more than your last relationship ad" />
-             <img src="https://lopespm.com/files/self_worth/p5.png" aria-label="Lasting more than your last relationship ad" />
+             <source type="image/webp" srcset="/files/feeling_seen/p5.webp" aria-label="Lasting more than your last relationship ad" />
+             <source type="image/png" srcset="/files/feeling_seen/p5.png" aria-label="Lasting more than your last relationship ad" />
+             <img src="https://lopespm.com/files/feeling_seen/p5.png" aria-label="Lasting more than your last relationship ad" />
            </picture>
          </center>
 
@@ -66,9 +66,9 @@
 
 <center>
           <picture aria-label="Makeup in the tube ad">
-             <source type="image/webp" srcset="/files/self_worth/p3.webp" aria-label="Makeup in the tube ad" />
-             <source type="image/png" srcset="/files/self_worth/p3.png" aria-label="Makeup in the tube ad" />
-             <img src="https://lopespm.com/files/self_worth/p3.png" aria-label="Makeup in the tube ad" />
+             <source type="image/webp" srcset="/files/feeling_seen/p3.webp" aria-label="Makeup in the tube ad" />
+             <source type="image/png" srcset="/files/feeling_seen/p3.png" aria-label="Makeup in the tube ad" />
+             <img src="https://lopespm.com/files/feeling_seen/p3.png" aria-label="Makeup in the tube ad" />
            </picture>
          </center>
 
@@ -86,9 +86,9 @@
 
 <center>
           <picture aria-label="Mind the ouch ad">
-             <source type="image/webp" srcset="/files/self_worth/p2.webp" aria-label="Mind the ouch ad" />
-             <source type="image/png" srcset="/files/self_worth/p2.png" aria-label="Mind the ouch ad" />
-             <img src="https://lopespm.com/files/self_worth/p2.png" aria-label="Mind the ouch ad" />
+             <source type="image/webp" srcset="/files/feeling_seen/p2.webp" aria-label="Mind the ouch ad" />
+             <source type="image/png" srcset="/files/feeling_seen/p2.png" aria-label="Mind the ouch ad" />
+             <img src="https://lopespm.com/files/feeling_seen/p2.png" aria-label="Mind the ouch ad" />
            </picture>
          </center>
 
