@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-12-28T16:45:24+00:00</updated>
+  <updated>2024-12-28T16:48:13+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -159,15 +159,15 @@
     <ul>
       <li>Apply the pre-mortem process to visualize and attempt to preempt failures in your plan. This will mitigate risk and likely increase your prediction accuracy.</li>
       <li>A <a href="https://hbr.org/2007/09/performing-a-project-premortem">1989 study</a> found that prospective hindsight—imagining that an event has already occurred—increases the ability to correctly identify reasons for future outcomes by 30%.</li>
-      <li>Steven Bartlett’s pre-mortem method</li>
-      <li>Set the stage: the objective of the exercises. It is to uncover risks, not to look for escape goats</li>
-      <li>Fast forward to failure. Ask team to visualize failure as clearly as possible</li>
-      <li>Brainstorm reasons for failure.
+      <li>Steven Bartlett’s pre-mortem method:
         <ul>
-          <li>Ideate independently, then Share and discuss</li>
+          <li>Set the stage: the objective of the exercises. It is to uncover risks, not to look for escape goats.</li>
+          <li>Fast forward to failure. Ask team to visualize failure as clearly as possible.</li>
+          <li>Brainstorm reasons for failure.</li>
+          <li>Ideate independently, and then share and discuss.</li>
+          <li>Develop contingency plans.</li>
         </ul>
       </li>
-      <li>Develop contingency plans.</li>
     </ul>
   </li>
   <li>Share experiment failures, so that their knowledge can be leveraged when building new experiments.</li>
