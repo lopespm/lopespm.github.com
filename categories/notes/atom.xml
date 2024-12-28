@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-12-28T16:48:13+00:00</updated>
+  <updated>2024-12-28T16:50:09+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -92,18 +92,15 @@
 
 <h2 id="pressure-only-comes-to-those-who-earn-it">Pressure only comes to those who earn it</h2>
 <ul>
-  <li><a href="https://www.usopen.org/en_US/news/articles/2024-07-19/billie_jean_king_reveals_origin_of_iconic_quote_pressure_is_a_privilege.html"><em>“Pressure is a privilege, and champions adjust”</em></a> - Billy Jean King (BJK)
-    <ul>
-      <li>Pressure is external, stress is internal.</li>
-      <li>How you handle pressure and its resulting stress is essential, and makes a difference between positive and negative outcomes.</li>
-      <li>Great pressure moments often precede great privileges.</li>
-      <li>Life without pressure is a life without purpose.</li>
-      <li>Pressure is neither good nor bad. It’s what we do with it that matters.</li>
-      <li><a href="https://www.businessinsider.com/kelly-mcgonigals-ted-talk-on-stress-2014-3#in-the-first-study-mcgonigal-looked-at-university-of-wisconsin-researchers-tracked-30000-american-adults-for-eight-years-they-found-that-subjects-with-a-lot-of-stress-had-a-43-increased-risk-of-dying--but-only-if-they-believed-stress-was-harmful-1">Kelly McGonigal</a> looked at a study made for 30k American adults, and noticed that people who experienced a lot of stress during their lives had 43% increased risk of dying, but this was only true for the ones who perceived stress as harmful. The ones that did not perceive it as harmful had the lowest risk of dying, even when compared to the ones who experienced relatively little stress.</li>
-      <li>Objective is not to get rid of pressure, it’s to change your relationship with it altogether.</li>
-      <li><a href="https://www.goodreads.com/quotes/7-it-is-not-the-critic-who-counts-not-the-man"><em>“It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat”</em></a> - Theodore Roosevelt</li>
-    </ul>
-  </li>
+  <li><a href="https://www.usopen.org/en_US/news/articles/2024-07-19/billie_jean_king_reveals_origin_of_iconic_quote_pressure_is_a_privilege.html"><em>“Pressure is a privilege, and champions adjust”</em></a> - Billy Jean King (BJK)</li>
+  <li>Pressure is external, stress is internal.</li>
+  <li>How you handle pressure and its resulting stress is essential, and makes a difference between positive and negative outcomes.</li>
+  <li>Great pressure moments often precede great privileges.</li>
+  <li>Life without pressure is a life without purpose.</li>
+  <li>Pressure is neither good nor bad. It’s what we do with it that matters.</li>
+  <li><a href="https://www.businessinsider.com/kelly-mcgonigals-ted-talk-on-stress-2014-3#in-the-first-study-mcgonigal-looked-at-university-of-wisconsin-researchers-tracked-30000-american-adults-for-eight-years-they-found-that-subjects-with-a-lot-of-stress-had-a-43-increased-risk-of-dying--but-only-if-they-believed-stress-was-harmful-1">Kelly McGonigal</a> looked at a study made for 30k American adults, and noticed that people who experienced a lot of stress during their lives had 43% increased risk of dying, but this was only true for the ones who perceived stress as harmful. The ones that did not perceive it as harmful had the lowest risk of dying, even when compared to the ones who experienced relatively little stress.</li>
+  <li>Objective is not to get rid of pressure, it’s to change your relationship with it altogether.</li>
+  <li><a href="https://www.goodreads.com/quotes/7-it-is-not-the-critic-who-counts-not-the-man"><em>“It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat”</em></a> - Theodore Roosevelt</li>
 </ul>
 
 <h2 id="building-good-habits">Building good habits</h2>
@@ -155,9 +152,9 @@
 
 <h2 id="failure-as-an-advantage">Failure as an advantage</h2>
 <ul>
-  <li>Ask the questions: Why will this fail? Why is this a bad idea?
+  <li>Ask the questions: Why will this fail? Why is this a bad idea?</li>
+  <li>Apply the pre-mortem process to visualize and attempt to preempt failures in your plan. This will mitigate risk and likely increase your prediction accuracy.
     <ul>
-      <li>Apply the pre-mortem process to visualize and attempt to preempt failures in your plan. This will mitigate risk and likely increase your prediction accuracy.</li>
       <li>A <a href="https://hbr.org/2007/09/performing-a-project-premortem">1989 study</a> found that prospective hindsight—imagining that an event has already occurred—increases the ability to correctly identify reasons for future outcomes by 30%.</li>
       <li>Steven Bartlett’s pre-mortem method:
         <ul>
