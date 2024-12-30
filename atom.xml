@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-12-30T23:20:46+00:00</updated>
+  <updated>2024-12-30T23:22:03+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Note Taking]]></title>
+    <link href="https://lopespm.com/notes/2024/12/30/note-taking.html"/>
+    <updated>2024-12-30T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2024/12/30/note-taking</id>
+    <content type="html"><![CDATA[<center>
+          <picture aria-label="Stack of notebooks">
+             <source type="image/webp" srcset="/files/note_taking/note_stack.webp" aria-label="Stack of notebooks" />
+             <source type="image/png" srcset="/files/note_taking/note_stack.png" aria-label="Stack of notebooks" />
+             <img src="https://lopespm.com/files/note_taking/note_stack.png" aria-label="Stack of notebooks" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<p>Over the past 4 years, I&rsquo;ve written about 1820 pages on the 13 A5 notebooks shown in the picture above. This tool has become essential for my job, and in this article I&rsquo;ll describe the simple process behind it, which I&rsquo;ve found to deliver consistent results, reliably.</p>
+
+<!--more-->
+
+<h2 id="write-consolidate-repeat">Write, Consolidate, Repeat</h2>
+
+<p>The process I&rsquo;ve been using for several years is based on <a href="https://lopespm.com/notes/2023/05/18/solving-task-switching-through-documentation.html">Option 3. of Solving Task Switching Through Documentation</a>, and is broken down in three steps:</p>
+
+<p><strong>1. Write</strong></p>
+
+<ul>
+  <li><strong>Material</strong>: A5 spiral notebook (it makes it easier to be written anywhere, because the pages can always be flipped around in a way that only the writing page is facing up, and the rest of the pages serving as a solid writing surface; plus the notebook&rsquo;s rings are great for carrying your pen or pencil reliably), with clear pages (this allows for diagrams, phrases, texts, tidbits, collaborations to happen without any formal restriction). Have another backup notebook within reach, to replace the main one when it runs out.</li>
+  <li><strong>When</strong>: Make sure to always have your notebook and pen / pencil at your desk, meetings, conferences, 1:1s, and any environment where a collaboration is made, within reason.</li>
+  <li><strong>What</strong>: Write down your thoughts, key points that coworkers communicate, ideas, anything else you find relevant. They are your notes, so allow yourself to expand and experiment.</li>
+</ul>
+
+<p><strong>2. Consolidate</strong></p>
+
+<p>With several notes written, their consolidation can happen in three different time spans:</p>
+
+<ul>
+  <li><strong>Immediately</strong>:
+    <ul>
+      <li>The mere act of writing often helps the thought process, since it forces ethereal concepts to be materialized into paper. Expect that a good portion of the written notes to not be read ever again.</li>
+    </ul>
+  </li>
+  <li><strong>Shortly after they are written</strong>:
+    <ul>
+      <li>Keeping track of conversations: has it ever happened to you that suddenly you completely lost track of the discussion, especially a complex / ambiguous one? Refer back to the jotted down key points to quickly recall and connect points. Soon after you will be back on track, and maybe with new insights.</li>
+      <li>Summarization of conversation segments, usually at the end of a meeting: leverage the written notes to summarize key takeaways and action points. There is nothing worse than spending 30 minutes in a discussion without material end results or follow ups.</li>
+    </ul>
+  </li>
+  <li><strong>Some time after notes are written</strong>: I avoid this period to be longer than one day.
+    <ul>
+      <li>Transcribe key points into a structured medium, such as a document, article, or personal log (I use a simple text file where I log important events during the day; this text file has been consistently updated for 4 years, and is a personal historical treasure trove spanning several thousands of lines).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>3. Repeat</strong></p>
+
+<p>Just like other processes, their value only becomes apparent after they have been used several times. Build a habit. It will then become immediately apparent whenever a notebook is not at hand, or when structured notes are not written down.</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Diary of a CEO Book: Lessons]]></title>
@@ -3302,99 +3363,6 @@ adb shell pm disable-user --user 0 com.onyx.calculator
 <p>Take a look at the daily tasks in your job. How repetitive are they? If they are repetíve, how much of a human element is present? Look at your organization and see where rubber meets the road in terms of human connection and physical intervention.</p>
 
 <p>Strive to be closer to that human interface and focus on delivering tangible value to people or businesses (group of people). With this simple mindset, I believe you’ll be in a safer place, surrounded with an abundant supply of meaningful (monetary, emotional, etc) value that you can extract and provide.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Relative Cost / Benefit of an Investment]]></title>
-    <link href="https://lopespm.com/notes/2023/10/21/investment_relative_cost_benefit.html"/>
-    <updated>2023-10-21T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2023/10/21/investment_relative_cost_benefit</id>
-    <content type="html"><![CDATA[<p>Let’s say you spend <span>$</span>1,000 to acquire film equipment (camera, microphones, and lights) to shoot YouTube videos. If you use this equipment to film and publish 2 videos, it means that each of those videos costs <span>$</span>500 to produce. If 100 videos are published, each of them cost <span>$</span>10. If all of these videos are able to generate <span>$</span>10 of revenue, then the entire cost of the initial investment was amortized.</p>
-
-<p>The above is a severely gross simplification<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, but the key point is that an investment left unused has a high associated cost. In the case above, if only two videos were to be produced, then it would have been a better idea to rent the equipment instead.</p>
-
-<p>This simple heuristic of mapping the investment cost to its usage and upside, can be a potential rule of thumb in different scenarios.</p>
-
-<h2 id="other-examples">Other Examples</h2>
-
-<ul>
-  <li><strong>Apartment Rent</strong>
-    <ul>
-      <li>You are renting an apartment for <span>$</span>1,000 per month. During the week you work in an office, on weekends you are sometimes out, and during the year you take sporadic vacations outside. Let’s say that, on average, you spend 14 hours per day on your apartment, including sleep → 14 hours * 30 days = 420 hours.</li>
-      <li>This means that it costs costs about <span>$</span>33 per day to live in the apartment, or <span>$</span>2.3 per hour.</li>
-    </ul>
-  </li>
-  <li><strong>Study → Work → Net Worth Gain</strong>
-    <ul>
-      <li>You studied 30 hours per week for 3 years (30 hours per week * 52 weeks * 3 years = 4680 hours) to land a job that increases your net worth <span>$</span>10.000 every year (on average), for 30 years. A total of <span>$</span>300,000 of networth gains.</li>
-      <li>This means that you will gain about <span>$</span>64 for each hour invested in studying, or $274 per day.</li>
-    </ul>
-  </li>
-  <li><strong>Clothing</strong>
-    <ul>
-      <li>You buy pair of trousers for <span>$</span>50, and wear them twice per month throughout for 2 years (24 months * 2 times per month = 48 times these were used).</li>
-      <li>This means that it costs about <span>$</span>1 to wear them each time.
-        <ul>
-          <li>By contrast, if these trousers were only used <a href="https://www.vox.com/2019/9/12/20860620/fast-fashion-zara-hm-forever-21-boohoo-environment-cost">7 times</a>, it would cost about <span>$</span>7.14 to wear them each time.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Gaming</strong>
-    <ul>
-      <li>You buy a Playstation 5 for <a href="https://direct.playstation.com/en-us/buy-consoles/playstation5-console"><span>$</span>499.99</a> and <a href="https://www.pushsquare.com/news/2019/01/ps4_has_a_very_high_software_attach_rate_average_player_owns_around_ten_games">10 games</a> (<span>$</span>60 each) totalling <span>$</span>1.100. You play <a href="https://www.reddit.com/r/playstation/comments/ld7zuo/what_was_your_total_amount_of_hours_played_in_2020/">60 hours per year</a> during 5 years (60 hours * 5 years = 300 hours).</li>
-      <li>This means that each playing hour costs about <span>$</span>3.6.</li>
-    </ul>
-  </li>
-  <li><strong>Phone</strong>
-    <ul>
-      <li>You buy an iPhone 15 Pro for <span>$</span>999, and use it <a href="https://www.bbc.co.uk/news/technology-59952557">4.8 hours per day</a> during <a href="https://www.iphonelife.com/content/how-long-do-iphone-last-how-to-know-when-to-upgrade-your-iphone">2 years</a> (4.8 hours * 365 days * 2 years = 3504 hours).</li>
-      <li>This means that it costs <span>$</span>0.29 per hour of active usage.</li>
-    </ul>
-  </li>
-  <li><strong>Computer</strong>
-    <ul>
-      <li>You buy a MacBook Pro 13” for <span>$</span>$1299, and <a href="https://mediapeanut.com/how-long-should-a-macbook-pro-last/">use it</a> 3 times per week for 2.5 hours per session, throughout 7 years (3 times per week * 2.5 hours * 52 weeks per year * 7 years = 2730 hours)</li>
-      <li>This means that it costs <span>$</span>0.48 per hour of usage.</li>
-    </ul>
-  </li>
-  <li><strong>Musical Instrument</strong>
-    <ul>
-      <li>You buy a guitar for <span>$</span>100. You play the guitar once per week, for one hour, during 2 years. 52 weeks * 1 hour * 2 years = 104 hours.</li>
-      <li>This means that each hour playing the guitar has a cost of <span>$</span>1.</li>
-    </ul>
-  </li>
-  <li><strong>Video Streaming</strong>
-    <ul>
-      <li>You have a standard Netflix subscription that costs <a href="https://help.netflix.com/en/node/24926/us"><span>$</span>15.99 per month</a>, and watch <a href="https://www.independent.co.uk/advisor/vpn/netflix-statistics">3.2 hours</a> (3.2 hours * 30 days = 96 hours per month) of videos throughout that month.</li>
-      <li>This mean that each hour costs about $0.17.</li>
-    </ul>
-  </li>
-  <li><strong>Audio Streaming</strong>
-    <ul>
-      <li>You have a premium Spotify subscription that costs <a href="https://www.spotify.com/us/premium/"><span>$</span>10.99 per month</a>, and listen to about <a href="https://www.statista.com/statistics/813876/spotify-monthly-active-users-time-spent-listening/">25 hours</a> of music and podcasts throughout that month.</li>
-      <li>This means that each hour costs about <span>$</span>0.44.</li>
-    </ul>
-  </li>
-</ul>
-
-<p>We could go on with further examples, as this simple heuristic could be applied to several scenarios, and the cost cost benefit analysis could have any perspective one so desires, but I would invite you to visit your storage and search for something you acquired long ago that got used less times than expected, and do a rough calculation of what was it’s relative cost / benefit.
-The same for any other investment you did in the past.</p>
-
-<p>Was it a surprising result?</p>
-
-<p>How did it stack up against your initial expectations?</p>
-
-<p><br /></p>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><em>This gross simplification is meant to keep the example simple, and does not take into account other direct and indirect costs, such as the computer needed to edit the videos, electricity costs, office space costs, labor costs. It also does not take into account the gained equity, this is, you could sell the equipment and get some of that investment back. This was not considered because if the equipment breaks its value is rendered to zero, and when / if it is sold, it would be for a fraction at the initial value, not only because its inherent value would likely decrease through the years, but also because of inflation.</em><a href="#fnref:1" rel="reference">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 ]]></content>
   </entry>
   

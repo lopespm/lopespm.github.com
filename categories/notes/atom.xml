@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-12-30T23:20:46+00:00</updated>
+  <updated>2024-12-30T23:22:03+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Note Taking]]></title>
+    <link href="https://lopespm.com/notes/2024/12/30/note-taking.html"/>
+    <updated>2024-12-30T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2024/12/30/note-taking</id>
+    <content type="html"><![CDATA[<p><center>
+          <picture aria-label="Stack of notebooks">
+             <source type="image/webp" srcset="/files/note_taking/note_stack.webp" aria-label="Stack of notebooks">
+             <source type="image/png" srcset="/files/note_taking/note_stack.png" aria-label="Stack of notebooks">
+             <img src="/files/note_taking/note_stack.png" aria-label="Stack of notebooks">
+           </picture>
+         </center></p>
+
+<p><br /></p>
+
+<p>Over the past 4 years, I’ve written about 1820 pages on the 13 A5 notebooks shown in the picture above. This tool has become essential for my job, and in this article I’ll describe the simple process behind it, which I’ve found to deliver consistent results, reliably.</p>
+
+<!--more-->
+
+<h2 id="write-consolidate-repeat">Write, Consolidate, Repeat</h2>
+
+<p>The process I’ve been using for several years is based on <a href="/notes/2023/05/18/solving-task-switching-through-documentation.html">Option 3. of Solving Task Switching Through Documentation</a>, and is broken down in three steps:</p>
+
+<p><strong>1. Write</strong></p>
+
+<ul>
+  <li><strong>Material</strong>: A5 spiral notebook (it makes it easier to be written anywhere, because the pages can always be flipped around in a way that only the writing page is facing up, and the rest of the pages serving as a solid writing surface; plus the notebook’s rings are great for carrying your pen or pencil reliably), with clear pages (this allows for diagrams, phrases, texts, tidbits, collaborations to happen without any formal restriction). Have another backup notebook within reach, to replace the main one when it runs out.</li>
+  <li><strong>When</strong>: Make sure to always have your notebook and pen / pencil at your desk, meetings, conferences, 1:1s, and any environment where a collaboration is made, within reason.</li>
+  <li><strong>What</strong>: Write down your thoughts, key points that coworkers communicate, ideas, anything else you find relevant. They are your notes, so allow yourself to expand and experiment.</li>
+</ul>
+
+<p><strong>2. Consolidate</strong></p>
+
+<p>With several notes written, their consolidation can happen in three different time spans:</p>
+
+<ul>
+  <li><strong>Immediately</strong>:
+    <ul>
+      <li>The mere act of writing often helps the thought process, since it forces ethereal concepts to be materialized into paper. Expect that a good portion of the written notes to not be read ever again.</li>
+    </ul>
+  </li>
+  <li><strong>Shortly after they are written</strong>:
+    <ul>
+      <li>Keeping track of conversations: has it ever happened to you that suddenly you completely lost track of the discussion, especially a complex / ambiguous one? Refer back to the jotted down key points to quickly recall and connect points. Soon after you will be back on track, and maybe with new insights.</li>
+      <li>Summarization of conversation segments, usually at the end of a meeting: leverage the written notes to summarize key takeaways and action points. There is nothing worse than spending 30 minutes in a discussion without material end results or follow ups.</li>
+    </ul>
+  </li>
+  <li><strong>Some time after notes are written</strong>: I avoid this period to be longer than one day.
+    <ul>
+      <li>Transcribe key points into a structured medium, such as a document, article, or personal log (I use a simple text file where I log important events during the day; this text file has been consistently updated for 4 years, and is a personal historical treasure trove spanning several thousands of lines).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>3. Repeat</strong></p>
+
+<p>Just like other processes, their value only becomes apparent after they have been used several times. Build a habit. It will then become immediately apparent whenever a notebook is not at hand, or when structured notes are not written down.</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Diary of a CEO Book: Lessons]]></title>
@@ -678,44 +739,6 @@
     </li>
   </ol>
 </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Connection with reality]]></title>
-    <link href="https://lopespm.com/notes/2024/09/15/connection_with_reality.html"/>
-    <updated>2024-09-15T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2024/09/15/connection_with_reality</id>
-    <content type="html"><![CDATA[<div>
-  <div class="youtube-player" data-id="wk2DwbfgmMU" data-thumbsize="1"></div>
-</div>
-<p><br /></p>
-
-<p>As we experience an increase of massive amounts of AI generated content, this note will go through the role and added value that a connection with reality and nature brings not only to your business and craft, but also to yourself.</p>
-
-<h2 id="striking-a-balance">Striking a balance</h2>
-
-<p>Walking or hiking has been a recurrent weekly habit of mine for several years, and its one of my favorite activities.</p>
-
-<p>I find it essential to have a walk outside the office / home and be in contact with the surrounding world, be it in nature or around the city. This is especially relevant for those, like me, who have their daily jobs working at the computer.</p>
-
-<p>I love to be enthralled in the digital world, think about abstract concepts, and use digital devices to, for example, communicate this content to you. But like anything else, a balance needs to be kept, and a balance between the digital and real domains seems essential.</p>
-
-<!--more-->
-
-<h2 id="the-added-value-of-connecting-with-reality">The added value of (connecting with) reality</h2>
-
-<p>As generative models get better, more and more people will just assume that a given piece of text, image or video is likely fake, and I believe there will be an increased demand for a connection with the real world through experiences such as in-person events, travel, spirituality, or consumption of digital content by certified entities.</p>
-
-<p>Businesses and creators that prove their connection with the real world and real people, will likely have an edge and rise against the noise.</p>
-
-<p>So if you’re creating a business, a piece of content, anything really, think how it relates with the real world. Ask yourself: how can you provide that connection? How can you provide <em>reality as a service</em>?</p>
-
-<h2 id="keep-yourself-connected-with-reality">Keep yourself connected with reality</h2>
-
-<p>Apart from all this, and just as important, it’s for <em>you</em> to maintain <em>your</em> contact with reality.</p>
-
-<p>So if you feel you spend too much time around the internet, digital devices, TV series, etc, I invite you to the outdoors, the world outside. It’s free, it’s accessible. You just need to open the door and step out, provided you are fortunate enough to have the required physical capabilities. I’m pretty sure that it will make your life much better.</p>
 ]]></content>
   </entry>
   
