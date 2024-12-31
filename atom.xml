@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2024-12-30T23:22:03+00:00</updated>
+  <updated>2024-12-31T02:06:23+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2024 Lookback]]></title>
+    <link href="https://lopespm.com/notes/2024/12/31/2024-lookback.html"/>
+    <updated>2024-12-31T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2024/12/31/2024-lookback</id>
+    <content type="html"><![CDATA[<p>It’s time to wrap up and celebrate 2024, an eventful year that fueled my yearning for internal growth and curiosity, with challenges and lessons I am grateful for.</p>
+
+<!--more-->
+
+<p>I’ve recently built a set of <a href="https://grafana.com/">Grafana</a> dashboards to track my personal goals, which I’ve been finding incredibly interesting to explore and visualise (something that might be interesting to share in a later post).</p>
+
+<h2 id="final-tally">Final Tally</h2>
+
+<p>There are other metrics I track, but specifically to 2024 content creation, these are the final statistics<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>:</p>
+
+<center>
+          <picture aria-label="2024 Stats">
+             <source type="image/webp" srcset="/files/2024_lookback/stats.webp" aria-label="2024 Stats" />
+             <source type="image/png" srcset="/files/2024_lookback/stats.png" aria-label="2024 Stats" />
+             <img src="https://lopespm.com/files/2024_lookback/stats.png" aria-label="2024 Stats" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<ul>
+  <li>17 posts on this blog, 16 of them being <a href="https://lopespm.com/notes/">notes</a> (not counting this one), and one of them being a full blog article sharing how to build a <a href="https://lopespm.com/machine_learning/2024/06/24/personal-llm.html">personal local (Llama3 8B) LLM, extended with WhatsApp and Obsidian data</a></li>
+  <li>10 YouTube videos on my <a href="https://www.youtube.com/@lopespm">main channel</a>. 8 of them being long form, the other 2 being shorts.</li>
+  <li>5 YouTube videos on <a href="https://www.youtube.com/@out-and-about-channel">Out and About</a>, a recently created channel where I share random experiences on activities such as walking / hiking around or driving.</li>
+</ul>
+
+<p>Notice that the tracked metrics are on the volume of content produced, not their number of views, subscribers, likes. Although keeping track of topline metrics makes sense for a full fledged business, I chose instead to track what I <em>can</em> control, which is my output. At the end of the day, this is a hobby, a labor of love.</p>
+
+<p>If I can influence someone’s life for the better, that will already fill my heart to the brim. This, added to how important posting these contents has become to consolidate and structure my thoughts, and serendipitous opportunities they randomly opened, make this an incredibly satisfying endeavor.</p>
+
+<p>I’ve experienced time and time again that consistency eventually bears wonderful fruits. Who knows which doors might open one day later? I don’t, but I’m curious to find out.</p>
+
+<h2 id="one-day-away">2025, one day away</h2>
+
+<p>With 2024 wrapped up, let’s welcome 2025. <a href="https://lopespm.com/notes/2023/08/05/real_question_behind_what_you_want.html#an-example">I’ve pinned down next year’s goals</a> and will be looking forward to sharing what I learn along the way. Happy new year, and see you on the other side! 🫡</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><em>This dashboard was produced using a custom Grafana dashboard, where the RSS feeds for this blog and YouTube channels were tracked, transformed and presented in simple gauge widgets</em><a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Note Taking]]></title>
@@ -3321,48 +3372,6 @@ adb shell pm disable-user --user 0 com.onyx.calculator
 <p>New York ain’t no DisneyLand, and Elmo’s pictures in Times Square don’t come for free either, so set expectations accordingly. It can be one of the most fulfilling experiences you’ll ever have. I advise you to come prepared and plan accordingly.</p>
 
 <p>Frank Sinatra sang that he wants “to wake up in the city that doesn’t sleep”. That phrase has a deep meaning that only struck me during my trip. The city does not indeed sleep. The Times Square lights, 24 hour subway, the constant movement. Living in NYC wakes you up, not only literally, but also figuratively. It wakes you up to a different reality that keeps you on your toes in several ways. In a way, it’s a celebration of life.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Job Safety in the AI Era]]></title>
-    <link href="https://lopespm.com/notes/2023/12/25/job_safety_in_ai_era.html"/>
-    <updated>2023-12-25T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2023/12/25/job_safety_in_ai_era</id>
-    <content type="html"><![CDATA[<div>
-  <div class="youtube-player" data-id="j6uRQF6rL8s" data-thumbsize="1"></div>
-</div>
-<p><br /></p>
-
-<p>Words are cheap and keep getting cheaper. The last notes on this blog could have been written via generative AI, and as time goes by, new generative models will likely create higher quality content than I could ever produce, consistently.</p>
-
-<p>I didn’t use these because the <a href="https://lopespm.com/notes/2023/07/02/writing-as-a-form-of-thinking.html">writing process comes as a form of thinking</a>, but if there are automated mechanisms that increasingly outperform us humans in so many different areas, what does that leave us?</p>
-
-<h2 id="human-connection">Human connection</h2>
-
-<p>How comfortable would you be in having a relationship with a being that is orders of magnitude more intelligent and capable than you? Not just logical-mathematical intelligence, but emotional, linguistic, musical or even spatial intelligence.</p>
-
-<p>A being so advanced that any form of communication or relationship between you and it would always be severely constrained, even with neural interfaces. A being so advanced that you would never be able to have an essential understanding of it. A being so advanced that you wouldn’t even know that you are being manipulated by it. How many humans do you know who are friends with chimpanzees or bonobos, our closest relatives?</p>
-
-<p>We are still human beings, with all the perks and limitations that come with it.</p>
-
-<p>I would claim that humans will always be attracted to their familiar counterparts. Other beings that share their own struggles and limitations, and by consequence, what they create and share. Machines have their important place in the world, and history has proven to us that life as whole improved as technology evolved to serve us, but it would be healthier for us to think of them as tools, rather than human replacements.</p>
-
-<h2 id="bioengineered">Bioengineered</h2>
-
-<p>We have been fitted with extraordinary senses and tools that allow us to efficiently interact with the world. It took milenea for nature to shape us, and as Leonardo da Vinci puts it when comparing natural to artificial structures: “Nature made the most perfect inventions. There is nothing superfluous, there is nothing lacking” (paraphrased)</p>
-
-<h3 id="our-place">Our place</h3>
-
-<p>Try having a machine fixing the leaky pipe in your bathroom, or to change your desk’s lightbulb. Odds are that you’ll be flooded and in the dark in the nearterm. There will come a point where they will <a href="https://www.youtube.com/watch?v=cpraXaw7dyc">likely do that</a>, but we are still not there.</p>
-
-<p>Machines / tools currently outperform us in several tasks on the digital realm, and in several heavy duty physical tasks. But when it comes to fine digital dexterity, human connection, and interaction with the real world and its complexities, we still have an edge.</p>
-
-<h2 id="future-proofing">Future Proofing</h2>
-
-<p>Take a look at the daily tasks in your job. How repetitive are they? If they are repetíve, how much of a human element is present? Look at your organization and see where rubber meets the road in terms of human connection and physical intervention.</p>
-
-<p>Strive to be closer to that human interface and focus on delivering tangible value to people or businesses (group of people). With this simple mindset, I believe you’ll be in a safer place, surrounded with an abundant supply of meaningful (monetary, emotional, etc) value that you can extract and provide.</p>
 ]]></content>
   </entry>
   
