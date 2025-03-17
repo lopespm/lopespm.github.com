@@ -273,5 +273,5 @@ The library is available on GitHub and the Unity Asset Store. An example scene o
 {%comment%}
 <br/>
 
-[^1]: *I have been informed that the Unity Asset Store team is experiencing longer than normal review times. From the information I gathered online, it might take a couple of weeks until it is available. I will post an update on my twitter [@lopes_pm](https://twitter.com/lopes_pm) once it is published.*
+[^1]: *I have been informed that the Unity Asset Store team is experiencing longer than normal review times. From the information I gathered online, it might take a couple of weeks until it is available. I will post an update on my twitter [@lopes_pm](https://x.com/lopes_pm) once it is published.*
 {%endcomment%}
