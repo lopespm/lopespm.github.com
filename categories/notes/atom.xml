@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2025-08-31T20:26:21+00:00</updated>
+  <updated>2025-09-16T23:20:09+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why is my kitchen so clean?]]></title>
+    <link href="https://lopespm.com/notes/2025/09/16/why_is_my_kitchen_so_clean.html"/>
+    <updated>2025-09-16T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2025/09/16/why_is_my_kitchen_so_clean</id>
+    <content type="html"><![CDATA[<p>If you had a video call with me, if you happened to see my videos, or if you visited my flat, odds are that a question came up to your mind. The same question that I’ve been asked at least 8 times (and counting) over these past years: <em>“How do you keep your kitchen so clean?”</em> With a possible follow up of <em>“Do you even cook?”</em> or <em>“Have you just moved in?”</em>, amongst others.</p>
+
+<p><center>
+          <picture aria-label="What you would see during a video call">
+             <source type="image/webp" srcset="/files/why_is_my_kitchen_so_clean/pvc.webp" aria-label="What you would see during a video call">
+             <source type="image/png" srcset="/files/why_is_my_kitchen_so_clean/pvc.png" aria-label="What you would see during a video call">
+             <img src="/files/why_is_my_kitchen_so_clean/pvc.png" aria-label="What you would see during a video call">
+           </picture>
+         </center></p>
+
+<p><br /></p>
+
+<p>I’m of the opinion that once you get asked multiple times the same question, then it’s time to document it and have it available for the next person.</p>
+
+<p>It’s time to address it.</p>
+
+<!--more-->
+
+<h2 id="behind-the-scenes">Behind the scenes</h2>
+
+<p>This is how my kitchen stand looks on an average work day. I didn’t prop it up for the picture.</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/pkitchen.jpg')"></div>
+</div>
+
+<p>In case you are wondering, the container in the center is soaking buckwheat groats, which after a day of soaking I grind, mix condiments and sometimes small vegetables, put in the oven, resulting in a delicious loaf of buckwheat bread that I use as a replacement for bread. I highly recommend it.</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p1.jpg')"></div>
+</div>
+
+<p>That should answer the question that yes, I do cook.</p>
+
+<div class="image-mosaic">
+  <div class="image-mosaic-card image-mosaic-card-tall" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p2.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p3.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p4.jpg')"></div>
+  <div class="image-mosaic-card image-mosaic-card-tall" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p5.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p6.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p7.jpg')"></div>
+    <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p8.jpg')"></div>
+  <div class="image-mosaic-card image-mosaic-card-tall" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p9.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p10.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p11.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p12.jpg')"></div>
+  <div class="image-mosaic-card" style="background-image: url('/files/why_is_my_kitchen_so_clean/cooking/p13.jpg')"></div>
+</div>
+
+<h2 id="why">Why</h2>
+
+<p>There are 3 reasons why my kitchen looks virtually the same, every time.</p>
+
+<ol>
+  <li><strong>I like to have my environment organized and free of clutter and distractions.</strong> I’ve had a long, conscious effort to reduce clutter and inconsequential distractions from my life, stemming from an experience that I might write about in a later day. 
+    <ul>
+      <li>The positive ramifications of consistently living and being surrounded by an environment and stimulus of objects that really matter, are more than I could ever describe in words.</li>
+      <li>It’s a small present for my future self: when I cook, do something in the kitchen, or at home, I have a deeply ingrained habit of sorting and cleaning everything out before moving to the next thing. That way, my <em>full energy</em> can be allocated and focused towards a single place.</li>
+      <li>This goes beyond the physical realm. Both my personal and work laptop, it is rare that I have more than 3 browser windows open, each one often having less than 10 tabs. Whenever those numbers temporarily increase, I document their state, close them down, and arrive at a clean state again. Essentially using <a href="/notes/2023/05/18/solving-task-switching-through-documentation.html">documentation as a checkpoint mechanism</a></li>
+      <li>There are other examples of this. In case you follow <a href="https://www.youtube.com/@TechIngredients">Tech ingredients</a>, you’ll notice that their laboratory and space is quite neat, regardless of the outstanding breadth of experiments done in the channel. I found it amusing that some years ago they were once asked by some viewers <em>“how do they keep their lab so clean”</em>, to which the main presenter replied that “we are not hiding anything, we just take care to tidy and store the components we are not working on” (paraphrased).</li>
+    </ul>
+  </li>
+  <li><strong>The rest of the utensils are away from camera sight.</strong> When I am having a meeting or sharing my thoughts via video, I want to get things done and not have my mind occupied with non-consequential thoughts such as <em>“Oh, my background looks a bit a messy. That piece looks out place. I wonder how that looks for someone else”</em>, nor do I want to distract my interlocutors with something irrelevant in the background. There are video filters which blur out the background, but I don’t like the way they look, not do I want to have yet another moving component in my workflow that might (or might not) work. If my background is relatively the same and neutral, then I don’t have to worry about it, and can focus my energies on the the things that <em>really matter</em>.</li>
+  <li>Apart from my weekly buckwheat bread, <strong>I only cook at weekends</strong>, since I am fortunate enough to often cook for pleasure, rather than necessity. The rest of the week I either get to have my meals at the office, or through <a href="https://planty.uk/">Planty</a>, a plant based clean food subscription.</li>
+</ol>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Produce more than you consume]]></title>
@@ -803,57 +876,6 @@
     </li>
     <li id="fn:6">
       <p>For example, Hepatitis A virus stimulates T helper 1 cells, which suppress the number of T helper 2 cells<a href="#fnref:6" rel="reference">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[2024 Lookback]]></title>
-    <link href="https://lopespm.com/notes/2024/12/31/2024-lookback.html"/>
-    <updated>2024-12-31T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2024/12/31/2024-lookback</id>
-    <content type="html"><![CDATA[<p>It’s time to wrap up and celebrate 2024, an eventful year that fueled my yearning for internal growth and curiosity, with challenges and lessons I am grateful for.</p>
-
-<!--more-->
-
-<p>I’ve recently built a set of <a href="https://grafana.com/">Grafana</a> dashboards to track my personal goals, which I’ve been finding incredibly interesting to explore and visualise (something that might be interesting to share in a later post).</p>
-
-<h2 id="final-tally">Final Tally</h2>
-
-<p>There are other metrics I track, but specifically to 2024 content creation, these are the final statistics<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>:</p>
-
-<p><center>
-          <picture aria-label="2024 Stats">
-             <source type="image/webp" srcset="/files/2024_lookback/stats.webp" aria-label="2024 Stats">
-             <source type="image/png" srcset="/files/2024_lookback/stats.png" aria-label="2024 Stats">
-             <img src="/files/2024_lookback/stats.png" aria-label="2024 Stats">
-           </picture>
-         </center></p>
-
-<p><br /></p>
-
-<ul>
-  <li>17 posts on this blog, 16 of them being <a href="https://lopespm.com/notes/">notes</a> (not counting this one), and one of them being a full blog article sharing how to build a <a href="/machine_learning/2024/06/24/personal-llm.html">personal local (Llama3 8B) LLM, extended with WhatsApp and Obsidian data</a></li>
-  <li>10 YouTube videos on my <a href="https://www.youtube.com/@lopespm">main channel</a>. 8 of them being long form, the other 2 being shorts.</li>
-  <li>5 YouTube videos on <a href="https://www.youtube.com/@out-and-about-channel">Out and About</a>, a recently created channel where I share random experiences on activities such as walking / hiking around or driving.</li>
-</ul>
-
-<p>Notice that the tracked metrics are on the volume of content produced, not their number of views, subscribers, likes. Although keeping track of topline metrics makes sense for a full fledged business, I chose instead to track what I <em>can</em> control, which is my output. At the end of the day, this is a hobby, a labor of love.</p>
-
-<p>If I can influence someone’s life for the better, that will already fill my heart to the brim. This, added to how important posting these contents has become to consolidate and structure my thoughts, and serendipitous opportunities they randomly opened, make this an incredibly satisfying endeavor.</p>
-
-<p>I’ve experienced time and time again that consistency eventually bears wonderful fruits. Who knows which doors might open one day later? I don’t, but I’m curious to find out.</p>
-
-<h2 id="one-day-away">2025, one day away</h2>
-
-<p>With 2024 wrapped up, let’s welcome 2025. <a href="/notes/2023/08/05/real_question_behind_what_you_want.html#an-example">I’ve pinned down next year’s goals</a> and will be looking forward to sharing what I learn along the way. Happy new year, and see you on the other side! 🫡</p>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><em>This dashboard was produced using a custom Grafana dashboard, where the RSS feeds for this blog and YouTube channels were tracked, transformed and presented in simple gauge widgets</em><a href="#fnref:1" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
