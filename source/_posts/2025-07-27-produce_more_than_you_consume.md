@@ -10,6 +10,11 @@ ogp_image_twitter: "/files/produce_more_than_you_consume/pthumb.jpg"
 published: true
 ---
 
+<div>
+  <div class="youtube-player" data-id="sW1ioe71Wbc" data-thumbsize="1"/>
+</div>
+<br/>
+
 ## Dangers of over-consumption
 
 One’s life can very easily be wasted away on non-consequential, “time passing”, filler, short-term hedonistic experiences. 
