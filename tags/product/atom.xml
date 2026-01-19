@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: product | Byte Tank]]></title>
+  <link href="https://lopespm.com/tags/product/atom.xml" rel="self"/>
+  <link href="https://lopespm.com/"/>
+  <updated>2026-01-19T23:13:45+00:00</updated>
+  <id>https://lopespm.com/</id>
+  <author>
+    <name><![CDATA[Pedro Lopes]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vivo Time]]></title>
+    <link href="https://lopespm.com/product/2026/01/19/vivotime.html"/>
+    <updated>2026-01-19T00:00:00+00:00</updated>
+    <id>https://lopespm.com/product/2026/01/19/vivotime</id>
+    <content type="html"><![CDATA[<p>Launched <a href="https://www.vivotime.net/">vivotime.net</a>, a website focused to help you make the most of your limited life, with ideas aligned with your goals.</p>
+
+<p><center>
+          <picture aria-label="Estimation of useful time left">
+             <source type="image/webp" srcset="/files/vivotime/pscreenshot2_cropped.webp" aria-label="Estimation of useful time left">
+             <source type="image/png" srcset="/files/vivotime/pscreenshot2_cropped.png" aria-label="Estimation of useful time left">
+             <img src="/files/vivotime/pscreenshot2_cropped.png" aria-label="Estimation of useful time left">
+           </picture>
+         </center></p>
+
+<p><br /></p>
+
+<!--more-->
+
+<h1 id="origin-story">Origin Story</h1>
+
+<p>During the past years I’ve been wrestling with the idea of building a website that could be:</p>
+
+<ul>
+  <li>Useful</li>
+  <li>Aligned my views</li>
+  <li>Lean: debloated both in terms of experience, but also behind the scenes</li>
+  <li>Low Maintenance: minimally dependent on outside sources of information</li>
+</ul>
+
+<p>Turns out that ticking all boxes proved to be incredibly hard, but somewhere around 2025 I noticed how hard it was to come up with good ideas of how to use my free time to the fullest. Turns out that even though there were tons of exciting things to do in the world, not all were aligned with my ideals.</p>
+
+<p>On the other hand, time here on Earth is <em>very</em> limited, and in between busy lives and distractions, opportunities, time and energy pass in an instant. We’ve been given a beautiful gift, and we should honour it.</p>
+
+<p>Hence the idea to build <a href="https://www.vivotime.net/">vivotime.net</a>. It shows you, without any sugar coating, how much life time you are predicted to have left, and then according to your goals, it suggests a series of meaningful ideas that you can allocate and manage for the time you have left. That’s it.</p>
+
+<h1 id="tech">Tech</h1>
+
+<p><a href="https://www.vivotime.net/">Vivotime.net</a> was implemented using Laravel, Livewire, picoCSS and a sqlite database. Stripe is used for processing payments. I’ve tried to make it as lean as possible. No need for an overpowered MySQL database, or using tailwind, react, vue, or any other (default) technology du jour that would not serve the site’s purposes.</p>
+
+<p>Docker is used to containerize the website, including the nginx web server. Deploying the website is as easy as running a bash script, and setting up the dev environment is likewise a script execution away. Pure bliss.</p>
+
+<p>There is something beautiful about keeping things contained to their essence, with nothing more, nothing less than what is required.</p>
+
+<p>As a result of having only a few moving parts, maintaining the website has been a breeze.</p>
+
+<h2 id="a-note-about-ai">A Note about AI</h2>
+
+<p>I’ve liberally used Copilot, most of the time with Opus 4.5. There is no way I could have finished this website in such a short (hourly) time span, considering that I’ve worked on it sporadically during some free hours on weekends or after a busy work day.</p>
+
+<p>There is something to be said about coding on these limited time slots, something that I would have found much more challenging before LLMs, given that I would have needed continuous large time blocks just to get all context, system designs and best practices loaded into my head. AI makes the warm up process much easier, and of course, it is a powerful code machine that can produce high quality code, if directed correctly.</p>
+
+<h1 id="how-it-works">How it works</h1>
+
+<p><a href="https://www.vivotime.net/">Vivo Time</a> was built to be simple and to do a limited set of things, but do them <em>right</em>.</p>
+
+<h2 id="step-1-find-how-much-time-you-have-left">Step 1: Find how much time you have left</h2>
+
+<p>First, you need to introduce your year of birth, and optionally your sex, health status, relationship status, if you have children or not, and your occupation. These are used to provide an increasingly accurate estimation of how much time you might have left, and to provide you with relevant objective suggestions (for example, if you already have children, the <em>“Start a Family”</em> objective will not be presented).</p>
+
+<p><center>
+          <picture aria-label="Estimation of useful time left">
+             <source type="image/webp" srcset="/files/vivotime/pscreenshot1_cropped.webp" aria-label="Estimation of useful time left">
+             <source type="image/png" srcset="/files/vivotime/pscreenshot1_cropped.png" aria-label="Estimation of useful time left">
+             <img src="/files/vivotime/pscreenshot1_cropped.png" aria-label="Estimation of useful time left">
+           </picture>
+         </center></p>
+
+<p><br /></p>
+
+<p>Moreover, if you do not want the above information to be saved and associated to your account, you can enable this privacy setting in your account settings:</p>
+
+<p><center>
+          <picture aria-label="Privacy Setting to not save features">
+             <source type="image/webp" srcset="/files/vivotime/pscreenshot_privacy.webp" aria-label="Privacy Setting to not save features">
+             <source type="image/png" srcset="/files/vivotime/pscreenshot_privacy.png" aria-label="Privacy Setting to not save features">
+             <img src="/files/vivotime/pscreenshot_privacy.png" aria-label="Privacy Setting to not save features">
+           </picture>
+         </center></p>
+
+<p><br /></p>
+
+<h2 id="step-2-allocate-objectives">Step 2: Allocate objectives</h2>
+
+<p>Then you are presented with a list of objective suggestions, which you can allocate or hide from the list. Each allocated objective decreases the amount of useful time left.</p>
+
+<p><center>
+          <picture aria-label="Estimation of useful time left">
+             <source type="image/webp" srcset="/files/vivotime/pscreenshot2_cropped.webp" aria-label="Estimation of useful time left">
+             <source type="image/png" srcset="/files/vivotime/pscreenshot2_cropped.png" aria-label="Estimation of useful time left">
+             <img src="/files/vivotime/pscreenshot2_cropped.png" aria-label="Estimation of useful time left">
+           </picture>
+         </center></p>
+
+<p><br /></p>
+
+<h2 id="step-3-manage-objectives">Step 3: Manage objectives</h2>
+
+<p>Afterwards you can manage your objectives by changing their allocation or visibility status, and you can also search for more specific objectives you have in mind.</p>
+
+<p><center>
+          <picture aria-label="Managing your objectives">
+             <source type="image/webp" srcset="/files/vivotime/pscreenshot3_cropped.webp" aria-label="Managing your objectives">
+             <source type="image/png" srcset="/files/vivotime/pscreenshot3_cropped.png" aria-label="Managing your objectives">
+             <img src="/files/vivotime/pscreenshot3_cropped.png" aria-label="Managing your objectives">
+           </picture>
+         </center></p>
+
+<p><br /></p>
+
+<p>That’s it! Let me know your thoughts about it!</p>
+]]></content>
+  </entry>
+  
+</feed>
