@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-02-20T01:10:16+00:00</updated>
+  <updated>2026-02-21T17:05:57+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Don't be a Process Zealot]]></title>
+    <link href="https://lopespm.com/notes/2026/02/21/process_dogmas.html"/>
+    <updated>2026-02-21T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2026/02/21/process_dogmas</id>
+    <content type="html"><![CDATA[<h2 id="you-dont-do-agile">You don’t do agile?</h2>
+
+<p>I once struck up a conversation with someone during one of my trips where I told them that there wasn’t a prescriptive way of organising work at the company I was working on at the time. We were not dogmatic in using kanban, scrum, lean or waterfall, we used whatever worked best for the problem at hand, many times resulting in a mix of these approaches, and even changing them mid-project.</p>
+
+<p>Leads and people in the ground were trusted to take ownership and organize accordingly.</p>
+
+<p>My interlocutor, with a disdained grin said “You do that? You don’t do agile?”. One could almost hear the “pff, ridiculous” undertone.</p>
+
+<h2 id="process-should-not-be-a-dogma">Process should not be a dogma</h2>
+
+<p>I still stand by it. You should not be dogmatic about it in scenarios where the problems keep changing and there is a constant need to adapt. At some point, all companies need to adapt to overcome competition, changing consumer behaviours, regulations, etc. The only thing that really changes between companies is how much time it takes for that change cycle to happen.</p>
+
+<p>It is sensible to have a stable and institutionalised process across a company, when these cycles are long and harmony between people and departments is valued highly, but that same approach in a fast changing environment will the company’s death kneel, crumbling under its own comfortable rigidness.</p>
+
+<p>Overall, the world is moving faster and faster, specially with the ongoing revolution of AI that is slowly creeping through many branches of our society, and the increasing amount of people entering the labor market.</p>
+
+<h2 id="an-example">An example</h2>
+
+<p>On one of the latest projects I was involved in, where requirements would change very rapidly, and product market fit was crucial to first understand, having bulky processes would have done more harm than good. What actually worked was:</p>
+
+<ul>
+  <li>Having a simple tracker</li>
+  <li>Small team</li>
+  <li>(Almost) every day in the morning having a talk async or sync (via call or in the office), where each one of the team members mentioned what they were going to focus during the day, and de-dup where required</li>
+  <li>Once product market fit was established and the product matured, iterations started being mostly incremental, and we started adding processes wherever controlled chaos was not being productive, this is, wherever things started to break and harm the project’s objectives. No process was added for the sake of adding it and make it sound professional</li>
+</ul>
+
+<h2 id="silver-bullets">Silver bullets</h2>
+
+<p>To this day I cringe when thinking about that conversation.</p>
+
+<p>There is not a silver bullet. Processes are like tools. You should use the right one for the right job, combining them when necessary. You wouldn’t use a jackhammer to drive a simple nail.</p>
+
+<p>Don’t be a process zealot. Use it as a means to an objective.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[3,170× more energy to create GPT‑4 than an 18‑year‑old]]></title>
@@ -3663,173 +3705,6 @@ echo &quot;Finished compressing and moving to backup folder&quot;
 <p><br /></p>
 
 <p>All done! After performing these steps, your backup script will run whenever you chose to, and the encrypted backup will be created and placed in the location that you chose on <a href="https://lopespm.com/notes/2024/09/11/obsidian-backup.html#step-1-custom-script-that-encrypts-and-backs-up-all-notes">Step 1.</a> above 🎉</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Investment Tracker - Free Spreadsheet Template]]></title>
-    <link href="https://lopespm.com/notes/2024/09/01/investment-tracker.html"/>
-    <updated>2024-09-01T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2024/09/01/investment-tracker</id>
-    <content type="html"><![CDATA[<p>Do you know:</p>
-
-<ul>
-  <li>Your current net worth?</li>
-  <li>How much money do you have in the bank?</li>
-  <li>Which are your most profitable investments?</li>
-  <li>Which investments do you currently have?</li>
-  <li>How much of your revenue (e.g. salary) contributes to your wealth?</li>
-  <li>How did the above evolve over time?</li>
-</ul>
-
-<p>If coming up with the above answers is hard, or their values are fuzzy, then it might be time to revamp your <a href="https://lopespm.com/notes/2024/08/26/uk-investment-guide.html">investment</a> tracking.</p>
-
-<p>This article will:</p>
-
-<ul>
-  <li>share a Google Spreadsheet template to track your investments, and explain it</li>
-  <li>provide a guide on how to use it</li>
-  <li>suggest a simple process to make sure the above questions will not be a problem anymore</li>
-</ul>
-
-<div>
-  <div class="youtube-player" data-id="dX2UVWU97vc" data-thumbsize="1"></div>
-</div>
-<p><br /></p>
-
-<!--more-->
-
-<h1 id="the-template">The Template</h1>
-
-<h2 id="get-it">Get it</h2>
-
-<ul>
-  <li><strong>Download / copy the <a href="https://docs.google.com/spreadsheets/d/1cR0oOcvwQIXsdOEbtFBoneOfdzrVYB_QkADc1h0BTBk/edit?usp=sharing">Google Sheet Template here</a></strong></li>
-  <li><a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#how-to-use-it">How to use it</a></li>
-</ul>
-
-<h2 id="how-it-is-structured">How it is structured</h2>
-
-<p>The template has several sheets, which are built to have the essential tracking elements that can be immediately used, while also allowing for extensibility for your own custom case.</p>
-
-<h3 id="dates-sheet">Dates sheet</h3>
-
-<center>
-          <picture aria-label="Dates Sheet">
-             <source type="image/webp" srcset="/files/investment-tracker/pdates.webp" aria-label="Dates Sheet" />
-             <source type="image/png" srcset="/files/investment-tracker/pdates.png" aria-label="Dates Sheet" />
-             <img src="https://lopespm.com/files/investment-tracker/pdates.png" aria-label="Dates Sheet" />
-           </picture>
-         </center>
-
-<p>The entire sheeet revolves around these dates. Each of these represents the temporal <em>snapshot</em> of all your assets. All the other sheets use these dates as the starting point for their values, and this would be first thing you would add whenever entering a new series of entries</p>
-
-<h3 id="revenue-sheet">Revenue sheet</h3>
-
-<center>
-          <picture aria-label="Revenue Sheet">
-             <source type="image/webp" srcset="/files/investment-tracker/prevenue.webp" aria-label="Revenue Sheet" />
-             <source type="image/png" srcset="/files/investment-tracker/prevenue.png" aria-label="Revenue Sheet" />
-             <img src="https://lopespm.com/files/investment-tracker/prevenue.png" aria-label="Revenue Sheet" />
-           </picture>
-         </center>
-
-<p>Represents all the resources <em>coming in</em>, which are not a result of your investments. This could be the income from your salary, side-hustle, the app you are selling on the app store, etc.</p>
-
-<h3 id="account-sheet">Account sheet</h3>
-
-<center>
-          <picture aria-label="Account Sheet">
-             <source type="image/webp" srcset="/files/investment-tracker/paccount.webp" aria-label="Account Sheet" />
-             <source type="image/png" srcset="/files/investment-tracker/paccount.png" aria-label="Account Sheet" />
-             <img src="https://lopespm.com/files/investment-tracker/paccount.png" aria-label="Account Sheet" />
-           </picture>
-         </center>
-
-<p>There are two example account sheets provided with the template, each representing a different account on your portfolio, but you can add how many you would need. These could be your bank account, transaction broker, private pension, etc. To create a new one, grab one of the example account sheets, and copy it into a new spreadsheet.</p>
-
-<p>On the template, the <em>Example Account1</em> shows how a bank account could roughly look like, and <em>Example Account2</em> how an investment platform (such as Vanguard) could look like.</p>
-
-<p>Each of the account sheets is structured in the following way:</p>
-
-<ul>
-  <li>Current status: a look at the present, and comparison with the last update
-    <ul>
-      <li><strong>Date Column</strong>: referenced from the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a>, representing the date of this current <em>snapshot</em></li>
-      <li><strong>Top up movement</strong>: any money that you deposited in this account since the last date, would be accounted for here. For example, salary that is deposited, on deposits made in an investment broker. The objective here is to keep track of the money coming into a specific account, so that its performance doesnt look better than it really is.</li>
-      <li><strong>Not Invested</strong>: all uninvested money sitting in the account. For example, money in a bank account which does not yield interest.</li>
-      <li><strong>Invested</strong>: all money invested in this account. For example, the amount of money invested in a transaction broker, which is currently invested in stocks or ETFs.</li>
-      <li><strong>Investment Delta</strong>: the investment difference between the current date and the last date.</li>
-      <li><strong>Investment Delta, minus topup</strong>: the investment difference between the current date and the last date, minus the top up. This value attempts to represent how much money was actually generated by the investment since the last date.</li>
-      <li><strong>Total</strong>: the total invested and not invested amount in the account.</li>
-      <li><strong>Total Delta</strong>: total difference between current date and last date.</li>
-    </ul>
-  </li>
-  <li>Expected gains: predictions of investment gains
-    <ul>
-      <li><strong>Expected Yearly Growth % (Gross)</strong>: for example, if overall the invested money is in a Fixed Term Deposit, this value would represent the gross yearly interest accrued from it, pre-taxes.</li>
-      <li><strong>Expected Yearly Growth % (Net)</strong>: this value represents the actual expected gains from this investment. For example, taking the Fixed Term Deposit example above, this would be the expected yearly interest, after taxes.</li>
-      <li><strong>Expected gains 6 months / 1 year / etc</strong>: taking into consideration the <em>Expected Yearly Growth % (Net)</em>, which would accrue gains from the investment over these time spans.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="summary-sheet">Summary sheet</h3>
-
-<center>
-          <picture aria-label="Summary Sheet">
-             <source type="image/webp" srcset="/files/investment-tracker/psummary.webp" aria-label="Summary Sheet" />
-             <source type="image/png" srcset="/files/investment-tracker/psummary.png" aria-label="Summary Sheet" />
-             <img src="https://lopespm.com/files/investment-tracker/psummary.png" aria-label="Summary Sheet" />
-           </picture>
-         </center>
-
-<p>This is where it all comes together. All the accounts are summed up, resulting in these new relevant columns:</p>
-
-<ul>
-  <li><strong>Total</strong>: the total across all investments, for a given date</li>
-  <li><strong>Total Delta</strong>: total difference between current date and last date.</li>
-  <li><strong>Total Delta minus Revenue (i.e. profit / loss)</strong>: the aim of this column is to roughly represent how much of your net worth is being eaten up by your expenses:
-    <ul>
-      <li>If this value is negative, it means that either your costs are too high, your investments are not yielding yet high values, or both.</li>
-      <li>If this value is neutral, it means that your overall investments are completely covering your costs.</li>
-      <li>If this value is positive, it means that your overall investments are not only covering your costs, but are also increasing your net worth on top.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="how-to-use-it">How to use it</h2>
-
-<h3 id="set-up">Set up</h3>
-
-<ol>
-  <li><a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#get-it">Copy the template</a>, by opening it and clicking on <em>File -&gt; Make a Copy</em></li>
-  <li>Go to the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a>, and leave only the top two dates. The first date would be the previous month, and the second would be the current month. Delete the rest.</li>
-  <li>Go to the other sheets, and delete all the rows which don’t have a date now</li>
-  <li>Zero out the first line on each of the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#account-sheet">account sheets</a> for <em>Top up Investment</em>, <em>Not Invested</em> and <em>Invested</em>.</li>
-  <li>Zero out the first line of the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#revenue-sheet">revenue sheet</a>; or add your revenue from that month.</li>
-  <li>Use the existing example accounts to host your own accounts. If a new account is needed:
-    <ul>
-      <li>Copy one of the account sheets, by right clicking on the sheet’s tab, and selecting <em>Duplicate</em></li>
-      <li>Add a new column to the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#summary-sheet">summary sheets</a>, representing the new account. Change its formula’s value to get the information from your new sheet. You can do this by selecting the cell and changing the name of the referenced sheet, to the name of your new sheet. For example, from <code>'Example Account 2'!G2</code> to <code>'Monzo Bank Account'!G2</code>.</li>
-      <li>Still in the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#summary-sheet">summary sheets</a>, double click the chart, select the <em>Setup</em> tab, and add the range of the new column to the list. For example, if the new column was on the <em>D</em> column, then the data range would change from <em>H7,A2:A1000,B1:B1000,C1:C1000,G1:G1000</em> to <em>H7,A2:1000,B1:B1000,C1:C1000,<strong>D1:D1000</strong>,G1:G1000</em>. Then, on the <em>Series</em> section of the <em>Setup</em> tab, click on <em>Add Series</em> and add the one from your new account.</li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="recurrent-workflow">Recurrent workflow</h3>
-
-<p>Once you have the above set up, I suggest that on the first days of every month, right after your main source of income is deposited (e.g. salary), that the sheet is updated with the current values of each of the accounts. This is key, and using a recurrent calendar event will help you make sure this is done. If this update is not made periodically, eventually there will be gaps in the tracking, and its data will lose relevance. The process would look something like this:</p>
-
-<ol>
-  <li>Add the current date to the <a href="https://lopespm.com/notes/2024/09/01/investment-tracker.html#dates-sheet">dates sheet</a></li>
-  <li>On each the the accounts, expand the date to the new one, and fill in the current <em>Top up Investment</em>, <em>Not Invested</em> and <em>Invested</em> values</li>
-  <li>All done!</li>
-</ol>
-
-<h1 id="final-thoughts">Final thoughts</h1>
-
-<p>Feel free to expand and customize the above tracker to your needs, and let me know how it could be improved and which was its impact on your investment tracking. Would love to hear your thoughts about it.</p>
 ]]></content>
   </entry>
   
