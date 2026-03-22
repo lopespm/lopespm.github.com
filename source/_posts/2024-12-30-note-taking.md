@@ -16,6 +16,8 @@ published: true
 
 Over the past 4 years, I've written about 1820 pages on the 13 A5 notebooks shown in the picture above. This tool has become essential for my job, and in this article I'll describe the simple process behind it, which I've found to deliver consistent results, reliably.
 
+*See the [video version of the article here](https://www.youtube.com/watch?v=c5sIG0nHrAQ).*
+
 <!--more-->
 
 ## Write, Consolidate, Repeat
