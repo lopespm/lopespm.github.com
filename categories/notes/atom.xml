@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-03-23T00:38:29+00:00</updated>
+  <updated>2026-05-02T00:56:44+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lateral thinking using existing technologies]]></title>
+    <link href="https://lopespm.com/notes/2026/05/01/lateral-thinking.html"/>
+    <updated>2026-05-01T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2026/05/01/lateral-thinking</id>
+    <content type="html"><![CDATA[<h2 id="precedent-how-nintendo-did-it">Precedent: How Nintendo did it</h2>
+
+<p>I’ve consumed several <a href="https://www.acquired.fm/">Acquired episodes</a>, and one I found particularly interesting was about Nintendo, where they describe how lateral thinking shapes how to company thinks about their products: instead of always going after the new shiny thing that still has several unknowns and will need time to iterate on, know and perfect, use instead cheaper, already established technologies / materials and come up with new ways to use them<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<ul>
+  <li><strong>NES</strong>: Nintendo’s CEO provided guidance that each unit should be cheap to the consumer, but also be one year ahead of competition, which steered developers away from very expensive CPUs (competition was using just a single CPU), and instead using a cheaper slower CPU with a dedicated PPU (picture processing unit), maybe the first GPU (graphicals processing unit) on console, that leapfrogged the entire competition 5 years ahead.</li>
+  <li><strong>Game Boy</strong>: at the time, color displays were all the rage and the new attractive technology. Leadership guidance was that Game Boy should be low price, therefore requiring low cost of bills, so instead of using a color display it used a monochromatic display that was well visible under the sun, and consumed much less battery.
+    <ul>
+      <li>Released in 1989, it became a massive success due to its long battery life, low price, and the inclusion of Tetris. Its initial 300k-unit shipment sold out within two weeks, and about 118 million over its lifetime.</li>
+      <li>On the other hand, Sega’s Game Gear used a color display, consuming six AA batteries in roughly 3-5 hours, whereas the Game Boy could run for over 15 hours in just four. It sold about 10 million over its lifetime. <strong>10x</strong> less than Game Boy.</li>
+    </ul>
+  </li>
+  <li><strong>Game and Watch</strong> used calculator technology, which was inspired by an observation made by Nintendo’s R&amp;D department lead, that during one of his train rides a business man was just fiddling with his calculator to kill time. If they were receptive to the point that even a calculator would entertain them, surely they would also be a target audience for Game and Watch and later Game Boy. Interestingly enough, <em>adults</em> were a big target demographic for Game <em>Boys</em>.</li>
+  <li><strong>Wii</strong> sported a slower processor when compared to its powerful peer consoles, but it combined existing technologies in novel ways, which unlocked new player experiences that would be more accessible for casual players. Even the UI was shaped in a way that seemed by one was choosing TV channels, and the remote had the familiar resemblance to a TV remote.</li>
+</ul>
+
+<h2 id="combine-solid-technologies-solve-real-problems">Combine solid technologies, solve real problems</h2>
+
+<p>Today LLMs, vibe / agentic coding, and other new technologies are all at rage. This means that a lot of humanity’s headspace is directed towards these new technologies, but there is still an immense unexplored space for the already established tools and technologies that were not fully exploited and combined. For example:</p>
+
+<ul>
+  <li>Pieter Levels, with only HTML, jquery, and SQLite created <a href="https://x.com/levelsio?lang=en">incredibly profitable businesses</a>, when everyone at the time was completely focused on the new tech, libraries, new JS packages, react, vue, etc. Pieter now also uses several new machine learning technologies available though.</li>
+  <li>Existing <a href="https://youtu.be/pclxF9jk0e4?si=m-3hu7XOjWyIQppk&amp;t=1231">simple linear regressions</a>, established programming languages (e.g.  python, C++ and Java), time tested frameworks (e.g. Laravel, with which <a href="/product/2026/01/19/vivotime.html">vivotime.net</a> was built on), tools (e.g. Blender<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>), hardware kits (e.g. <a href="/hardware/2025/07/15/arduino.html">Arduino</a> still pack a punch, and are right in front of all of us waiting to be combined in novel ways.</li>
+</ul>
+
+<p>The most important thing at the end of the day is: are these solutions <strong>solving a real problem</strong>? Are they <strong>generating value</strong>? Their end user likely doesn’t really care how something was implemented behind the scenes, they just need something to solve their problems.</p>
+
+<p><br /></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>“Lateral Thinking with Withered Technology” is a defining product design philosophy popularized by Nintendo engineer Gunpei Yokoi. The philosophy posits that mature, well-understood, and inexpensive technology—”withered technology”—can be used in creative new ways (“lateral thinking”) to create innovative, successful products, rather than relying on expensive, cutting-edge hardware.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>In the spirit of the article, the associated social media thumbnail was created using my favorite open source tool of all time: <a href="https://www.blender.org/">Blender</a>. It still puzzles me how such a high quality tool is free and open source. I’m grateful for it. Without it, <a href="/2019/02/06/survival-ball-making-the-game.html">Survival Ball</a> might not have even come to fruition.<a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Streaks]]></title>
@@ -894,148 +941,6 @@
     </li>
     <li id="fn:2">
       <p>Although there are signs that the USA might be starting to <a href="https://www.youtube.com/watch?v=Vfvd6j4bzEU">lose its cultural influence</a> with the accumulation of serious problems, ideology clashes and hostility towards allied countries.<a href="#fnref:2" rel="reference">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Joy of Walking]]></title>
-    <link href="https://lopespm.com/notes/2025/11/16/joy_of_walking.html"/>
-    <updated>2025-11-16T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2025/11/16/joy_of_walking</id>
-    <content type="html"><![CDATA[<p><em>See the <a href="https://www.youtube.com/watch?v=WOqKR75Y7h4">video version of this article here</a></em></p>
-
-<div class="image-mosaic">
-  <div class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide" style="background-image: url('/files/joy_of_walking/pthumb_compressed_1248.jpg')"></div>
-</div>
-
-<p>I <em>really</em> like to walk. Let me tell you why.</p>
-
-<h2 id="how-it-started">How it started</h2>
-
-<p>Eight years ago I injured my knee. The following 2 months I could hardly walk 10 meters. It took me 6 arduous months to fully recover. Even though I had done several types of physical activities up until that injury, like surfing, biking, rock climbing, running, etc, the only capability I wanted to regain was walking, nothing else.</p>
-
-<p>Walking to the grocery store. Walking to the subway without having to rely on elevators and ways to avoid stairs<sup id="fnref:3"><a href="#fn:3" rel="footnote">1</a></sup>. Walking around the city. Walking to work. Walking in nature. This made me realise how important it is to have this ability, for the freedom, independence and health benefits it provides.</p>
-
-<h3 id="recovery">Recovery</h3>
-
-<p>Progressively I’ve improved. 10 meters turned into 100 meters. 100 meters to 1km. 1km to 5km. 5km to 10km. 10km to 20km. I vividly remember all of these milestones, and every time I surpassed one, I was rejoiced. The more I walked, the more I recovered.</p>
-
-<p>I’ve made a pact with myself during this journey that I would do everything under my control to not lose this ability again.</p>
-
-<h2 id="simplify-focus">Simplify. Focus.</h2>
-
-<p>All those sports I did before? Scrapped. I was asked if I missed running, surfing and all those sports. I do, but no way am I going to risk injuring my knee again for some short term gratification.</p>
-
-<p>This simplified my life greatly.</p>
-
-<ul>
-  <li>No more of “What am I going to do today for sports?”. The answer is easy: <em>walk</em></li>
-  <li>No more dispersing of my energies within several different disciplines, only to be mediocre on most of them.</li>
-</ul>
-
-<p>Walking was the only option, which led me to discover a whole world of depth that was not immediately apparent. It gave me immense focus and showed me how powerful it can be.</p>
-
-<h2 id="benefits">Benefits</h2>
-
-<h3 id="consistency">Consistency</h3>
-
-<p>Ever since I recovered, I’ve started doing at least one long walk every week. No matter if I’m abroad, on vacation, if it’s raining, scorching heat or I’m feeling under the weather. I will find a way to walk somewhere, somehow. This has become a deeply entrenched habit and a part of my identity.</p>
-
-<p>Turns out that the most difficult thing about maintaining a good exercise routine, is actually <a href="https://www.riversfitness.co.uk/blog/the-science-of-fitness-why-consistency-matters-more-than-intensity">maintaining that routine</a>. I <em>need</em> to walk, so that’s sorted.</p>
-
-<h3 id="health">Health</h3>
-
-<p>A natural consequence is its positive effect on health.</p>
-
-<p>For the past 5 years I’ve been employed as a software engineer, meaning that I tend to spend a lot of time in front of a computer. Exercise<sup id="fnref:4"><a href="#fn:4" rel="footnote">2</a></sup> for such a “butt in the chair” kind of job is not only crucial for maintaining my health, but also gives me the fortitude to consistently perform in a demanding high stakes environment.</p>
-
-<h3 id="relationships">Relationships</h3>
-
-<p>Since walking became an unconditional and non-negotiable part of my life, soon I’ve started inviting friends to join me.</p>
-
-<p>I realized how powerful it was to go for a walk and just have a chat. The quality, depth and focus of conversations surpassed any other I’ve had through other means. I love deep conversations, so this was a balsam.</p>
-
-<p>I’ve then made several friends during these walks, and created stronger bonds with the ones I already had. This beats by a mile the type of interactions in places like pubs.</p>
-
-<h3 id="giving-back">Giving back</h3>
-
-<p>Turns out that London has an incredibly active walking and hiking scene. I first discovered this when searching for ways to get to <a href="https://maps.app.goo.gl/7dN9ftsURS3fJfKj8">Seven Sisters</a>, and found a wealth of walking groups that not only did this walk, but also others around London. “I’m in heaven”, I thought.</p>
-
-<p>After attending several of these organized hikes I’ve realized: why not organize them myself?</p>
-
-<p>I’ve then picked some of the routes I enjoyed the most and prepared them by mapping them out and repeating them several times. Soon I started organizing walks in my company (at one point, more than 40 people joined), in my local urbanization, with groups of friends. Gratifying experiences, with all the benefits of <a href="/notes/2025/07/27/produce_more_than_you_consume.html">shifting away from consuming into producing</a>.</p>
-
-<h3 id="learning">Learning</h3>
-
-<p>I’ve lost count of how many audiobooks and podcasts I’ve finished while walking. Listening to these in peaceful places like somewhere in the woods, is an experience I thoroughly enjoy. Several places where I’ve walked tend to be associated with memorable sections of audio contents that struck me the most.</p>
-
-<h3 id="discovery">Discovery</h3>
-
-<p>Walking is one of the best ways to explore a city or surroundings. Even if it takes longer than other means.</p>
-
-<p>Within reason, it is essential for me to walk around in any new city or place I visit, to absorb the environment, the vibes, the random sentences. It gives me time to decide which places I want to explore further, since I’m not tethered to any external transport mechanisms. This explains why I ended up walking <a href="/notes/2023/12/25/nyc.html">180km in New York in 4 days</a>.</p>
-
-<p>Same for my local surroundings. In case I don’t have better ideas, my default activity is to get out of my house, pick a direction, and then start walking towards it. The <a href="https://play.google.com/store/apps/details?id=cz.seznam.mapy&amp;hl=en_GB">mapy.com app</a> is pretty good in these situations<sup id="fnref:1"><a href="#fn:1" rel="footnote">3</a></sup>, since it has an impressive coverage of all possible paths, even the most remote places imaginable.</p>
-
-<p>I’ve discovered several gems hidden in plain sight just by doing this. This also helps fight my natural tendency to take local surroundings as granted, ending up knowing more about foreign places rather than my own.</p>
-
-<h3 id="reflection-and-ideation">Reflection and Ideation</h3>
-
-<p>Walking helps not only getting acquainted with the external world, but also with my internal world. It is my favorite way to think long and hard about problems and strategies, hence why I used long walks at length when <a href="/2019/02/06/survival-ball-making-the-game.html#levels">thinking about ideas for Survival Ball’s game levels and dynamics</a>.</p>
-
-<p>I don’t think I’m alone here. Charles Dickens for example, was known to be a prodigious walker, who was estimated to walk about <a href="https://lukemckernan.com/2013/06/09/walking-with-charles-dickens/">19km per day</a>. He did so because walking time was thinking time, or perhaps more accurately dreaming time. I understand that. This becomes ever more important in today’s world, where we are constantly flooded with information and stimuli. Walking is grounding.</p>
-
-<h3 id="physical-joy5-and-good-biodynamics">Physical joy<sup id="fnref:5"><a href="#fn:5" rel="footnote">4</a></sup> and good biodynamics</h3>
-
-<p>There is a physical component of walking that makes it deeply enjoyable. I don’t know what it is for sure, but likely it is <a href="/notes/2025/02/10/story-human-body-lessons.html">related with our evolution</a>.</p>
-
-<p>Two years ago I found another layer of enjoyment: barefoot walking. Or at least, barefoot <em>shoe</em> walking, when I tried my first pair of <a href="https://www.vivobarefoot.com/uk/">Vivos</a>. I was hooked from the first time I tried them.</p>
-
-<p>The connection with the ground, especially when walking around nature, and how it felt in my body, is something that I have expressiveness limitations on how to describe. You need to try out for yourself.</p>
-
-<h4 id="evolution-made-us-prodigious-walkers">Evolution made us prodigious walkers</h4>
-
-<p>And it makes sense right? It’s been relatively recent in our human history that shoes started being widely used. My father still tells me stories of how good it felt to just go around barefoot in the fields, while taking care of the land.</p>
-
-<p>Yes, hard city floors are also novel, and it helps having something in our feet to diminish their impact on us, but still, our feet have natural shock absorbers (the tips of our feet), and having some minimal padding by barefoot shoes plus the immediate feedback will make you more aware of your stride, forcing you to adapt your walking technique.</p>
-
-<h4 id="trainer-crutches">Trainer crutches</h4>
-
-<p>Mainstream trainers go too far by having too much support, too much padding, too much. That comes at a price, because our body then needs to adapt to whatever structure the shoe manufacturer chose. It makes our bodies crooked by unsettling the balance we were designed for, and shifts more work to muscles, joints and bones that are not made for such loads, while other structures get lazier and underused. These shoes also have little space for our toes, leaving them crooked and warped, in the name of a toebox style that was originally meant to <a href="https://www.bbc.co.uk/news/articles/c9vnl1evdkko">distinguish wealthy classes from peasants</a>, since peasants could not afford to have their feet crammed into small little shoe coffins when doing hard physical labour.</p>
-
-<h4 id="wellness-by-being-well-shod">Wellness by being well shod</h4>
-
-<p>I can tell you from personal experience that my biodynamics are for sure better. I’ve only used barefoot shoes for these past two years, be it walking around, at work, or even weddings. I just can’t stand wearing other types of shoes at this point. I’ve never walked so much in my life, and still feel nowhere near the pains I felt before in my hips, knees and other parts of the body. Pure bliss.</p>
-
-<p>Of course, years from now things might change, but that is not the direction of travel I see. I feel much better walking with barefoot shoes than otherwise. </p>
-
-<h3 id="go-out-and-walk">Go out and walk</h3>
-
-<p>The main message is: go out there and enjoy one the greatest gifts you have been given, and walk to your heart’s desire.<sup id="fnref:2"><a href="#fn:2" rel="footnote">5</a></sup></p>
-
-<p>I was pleasantly surprised by how many people took walking as their main activity during COVID, but once that faded away, many went back to their old ways. Don’t wait for the next crisis to remember the gifts you’ve been given. Use them while you can.</p>
-
-<p><br /></p>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:3">
-      <p>Driving with a manual clutch was a challenge. Every bump, stair and incline was a pain, which made me value accessible sidewalks and transports.<a href="#fnref:3" rel="reference">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>Due to another incident (a story for another time), I also have an (almost) daily upper body exercise routine that keeps me more holistically balanced, even though walking and hiking tend to work my <a href="https://www.220triathlon.com/training/which-muscles-does-walking-use-and-tone">entire body</a><a href="#fnref:4" rel="reference">&#8617;</a></p>
-    </li>
-    <li id="fn:1">
-      <p><a href="https://www.alltrails.com/">Alltrails</a> is also an interesting app for discovery, since it offers several user-made paths for you to browse, but it is more clunky than happy. I use alltrails mostly to track existing paths and have a record of them, since it’s trail coverage is inferior when compared to <a href="https://play.google.com/store/apps/details?id=cz.seznam.mapy&amp;hl=en_GB">mapy.com</a><a href="#fnref:1" rel="reference">&#8617;</a></p>
-    </li>
-    <li id="fn:5">
-      <p>Wondering why the header picture’s walker and scenary look that way they do? Think happy trees and happy clouds.<a href="#fnref:5" rel="reference">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>Unfortunately, many people suffer conditions that debilitate or completely negate their ability to walk. Some things are just outside our control, and we cannot do anything about them, but if you can (still) walk, do it.<a href="#fnref:2" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>

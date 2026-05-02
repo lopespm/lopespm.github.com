@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-03-23T00:38:29+00:00</updated>
+  <updated>2026-05-02T00:56:44+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lateral thinking using existing technologies]]></title>
+    <link href="https://lopespm.com/notes/2026/05/01/lateral-thinking.html"/>
+    <updated>2026-05-01T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2026/05/01/lateral-thinking</id>
+    <content type="html"><![CDATA[<h2 id="precedent-how-nintendo-did-it">Precedent: How Nintendo did it</h2>
+
+<p>I’ve consumed several <a href="https://www.acquired.fm/">Acquired episodes</a>, and one I found particularly interesting was about Nintendo, where they describe how lateral thinking shapes how to company thinks about their products: instead of always going after the new shiny thing that still has several unknowns and will need time to iterate on, know and perfect, use instead cheaper, already established technologies / materials and come up with new ways to use them<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<ul>
+  <li><strong>NES</strong>: Nintendo’s CEO provided guidance that each unit should be cheap to the consumer, but also be one year ahead of competition, which steered developers away from very expensive CPUs (competition was using just a single CPU), and instead using a cheaper slower CPU with a dedicated PPU (picture processing unit), maybe the first GPU (graphicals processing unit) on console, that leapfrogged the entire competition 5 years ahead.</li>
+  <li><strong>Game Boy</strong>: at the time, color displays were all the rage and the new attractive technology. Leadership guidance was that Game Boy should be low price, therefore requiring low cost of bills, so instead of using a color display it used a monochromatic display that was well visible under the sun, and consumed much less battery.
+    <ul>
+      <li>Released in 1989, it became a massive success due to its long battery life, low price, and the inclusion of Tetris. Its initial 300k-unit shipment sold out within two weeks, and about 118 million over its lifetime.</li>
+      <li>On the other hand, Sega’s Game Gear used a color display, consuming six AA batteries in roughly 3-5 hours, whereas the Game Boy could run for over 15 hours in just four. It sold about 10 million over its lifetime. <strong>10x</strong> less than Game Boy.</li>
+    </ul>
+  </li>
+  <li><strong>Game and Watch</strong> used calculator technology, which was inspired by an observation made by Nintendo’s R&amp;D department lead, that during one of his train rides a business man was just fiddling with his calculator to kill time. If they were receptive to the point that even a calculator would entertain them, surely they would also be a target audience for Game and Watch and later Game Boy. Interestingly enough, <em>adults</em> were a big target demographic for Game <em>Boys</em>.</li>
+  <li><strong>Wii</strong> sported a slower processor when compared to its powerful peer consoles, but it combined existing technologies in novel ways, which unlocked new player experiences that would be more accessible for casual players. Even the UI was shaped in a way that seemed by one was choosing TV channels, and the remote had the familiar resemblance to a TV remote.</li>
+</ul>
+
+<h2 id="combine-solid-technologies-solve-real-problems">Combine solid technologies, solve real problems</h2>
+
+<p>Today LLMs, vibe / agentic coding, and other new technologies are all at rage. This means that a lot of humanity’s headspace is directed towards these new technologies, but there is still an immense unexplored space for the already established tools and technologies that were not fully exploited and combined. For example:</p>
+
+<ul>
+  <li>Pieter Levels, with only HTML, jquery, and SQLite created <a href="https://x.com/levelsio?lang=en">incredibly profitable businesses</a>, when everyone at the time was completely focused on the new tech, libraries, new JS packages, react, vue, etc. Pieter now also uses several new machine learning technologies available though.</li>
+  <li>Existing <a href="https://youtu.be/pclxF9jk0e4?si=m-3hu7XOjWyIQppk&amp;t=1231">simple linear regressions</a>, established programming languages (e.g.  python, C++ and Java), time tested frameworks (e.g. Laravel, with which <a href="https://lopespm.com/product/2026/01/19/vivotime.html">vivotime.net</a> was built on), tools (e.g. Blender<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>), hardware kits (e.g. <a href="https://lopespm.com/hardware/2025/07/15/arduino.html">Arduino</a> still pack a punch, and are right in front of all of us waiting to be combined in novel ways.</li>
+</ul>
+
+<p>The most important thing at the end of the day is: are these solutions <strong>solving a real problem</strong>? Are they <strong>generating value</strong>? Their end user likely doesn’t really care how something was implemented behind the scenes, they just need something to solve their problems.</p>
+
+<p><br /></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>“Lateral Thinking with Withered Technology” is a defining product design philosophy popularized by Nintendo engineer Gunpei Yokoi. The philosophy posits that mature, well-understood, and inexpensive technology—”withered technology”—can be used in creative new ways (“lateral thinking”) to create innovative, successful products, rather than relying on expensive, cutting-edge hardware.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>In the spirit of the article, the associated social media thumbnail was created using my favorite open source tool of all time: <a href="https://www.blender.org/">Blender</a>. It still puzzles me how such a high quality tool is free and open source. I’m grateful for it. Without it, <a href="https://lopespm.com/2019/02/06/survival-ball-making-the-game.html">Survival Ball</a> might not have even come to fruition.<a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Streaks]]></title>
@@ -3464,163 +3511,6 @@
 <p>Apart from all this, and just as important, it’s for <em>you</em> to maintain <em>your</em> contact with reality.</p>
 
 <p>So if you feel you spend too much time around the internet, digital devices, TV series, etc, I invite you to the outdoors, the world outside. It’s free, it’s accessible. You just need to open the door and step out, provided you are fortunate enough to have the required physical capabilities. I’m pretty sure that it will make your life much better.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Interview Learnings from former CIA Intelligence Officer]]></title>
-    <link href="https://lopespm.com/notes/2024/09/12/interview_learnings_cia.html"/>
-    <updated>2024-09-12T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2024/09/12/interview_learnings_cia</id>
-    <content type="html"><![CDATA[<div>
-  <div class="youtube-player" data-id="vlFAvIOUFCk" data-thumbsize="1"></div>
-</div>
-<p><br /></p>
-
-<p>I’ve been getting into the habit of writing down what I learned from content I consume and I’ve recently seen an interview with Andrew Bustamante,
-a former CIA intelligence officer on the <a href="https://www.youtube.com/watch?v=QVVe2rCHtN0">Diary of a CEO with Steven Bartlett</a>.</p>
-
-<p>Andrew Bustamante is a former covert CIA intelligence officer, US Air Force combat veteran, and Fortune 10 corporate advisor, who founded Everyday Spy, where individuals and teams are trained to leverage influence, intelligence and intent. Techniques once reserved for elite spy agencies can now serve everyday people in their pursuit of personal and professional objectives.</p>
-
-<p>Andrew shared his candid and unfiltered views on the human condition and how his previous CIA intelligence officer (commonly known as a spy) can be leveraged towards gaining an advantage in business and everyday life, and in this article I will share some of the highlights and learnings from this interview. Here are my key takeaways:</p>
-
-<!--more-->
-
-<h2 id="do-an-action-any-action">Do an Action, Any Action</h2>
-
-<p>For you to be a step ahead of everyone else just do an action, any action, and you’ll already be ahead of everyone. Even if you fall, you’ll already be four steps ahead of everyone else.</p>
-
-<h2 id="two-kinds-of-people">Two kinds of people</h2>
-
-<p>There are two kinds of people:</p>
-
-<ol>
-  <li>Those who fall victim to their fears and will be stuck on a cycle of consumption, he calls them the cogs, the bobbleheads. He mentions that we actually need them, because they are needed by the kind.</li>
-  <li>Those who face their fears and produce the things that the cogs want, but fear of doing. So they exploit them.</li>
-</ol>
-
-<h2 id="motivation--manipulation">Motivation &amp; Manipulation</h2>
-
-<p>Motivation and manipulation are two sides of the same coin.</p>
-
-<p>Using motivation just exploits something that people are already prone to do, and we just give them something that they want.</p>
-
-<p>If they’re not motivated, then we use manipulation, so they can actually give us what we want.</p>
-
-<h2 id="moral-flexibility">Moral Flexibility</h2>
-
-<p>Moral Flexibility is a gateway for manipulation, which makes something acceptable in one context, but unacceptable in another context.</p>
-
-<h2 id="public-private-and-secret-spheres">Public, Private and Secret Spheres</h2>
-
-<p>Then there are three spheres: the public, the private and the secret.</p>
-
-<h3 id="public-sphere">Public Sphere</h3>
-
-<p>The public sphere is the safe zone:</p>
-
-<ul>
-  <li>It’s what you wear</li>
-  <li>It’s what you say in Instagram</li>
-  <li>It’s what you state to everyone</li>
-  <li>It’s the identity that you want other people to perceive</li>
-</ul>
-
-<h3 id="private-sphere">Private Sphere</h3>
-
-<p>The private sphere is what the people in your inner circle see:</p>
-
-<ul>
-  <li>They know your birthday</li>
-  <li>They know your favorite ice cream</li>
-  <li>They are the ones that really know you</li>
-</ul>
-
-<p>So it’s small by definition. This makes you feel good and special, and you have this elite group which is distinct from the public.</p>
-
-<h3 id="secret-sphere">Secret Sphere</h3>
-
-<p>The secret sphere is where all of your secrets lie:</p>
-
-<ul>
-  <li>It’s the affair you’re having</li>
-  <li>It was the molestation you had as a kid</li>
-  <li>It’s all of your dark thoughts</li>
-</ul>
-
-<p>To move from one person’s public to secret sphere, you need to pass by the private one first.</p>
-
-<p>We want to have someone to tell our secrets, but we don’t have enough trust on the people that are in our private sphere.</p>
-
-<p>Once you get to someone’s secrets, they’ll trust you so much that even if you break their heart. They’ll resist leaving you, because it is very rare to find someone who we can tell our secrets to.</p>
-
-<h2 id="core-motivations">4 Core Motivations</h2>
-
-<p>About the four core motivations, they are described by RICE: Reward, Ideology, Coercion and Ego</p>
-
-<ol>
-  <li>Ideology is the biggest driver. This could be politics, values, morals, etc</li>
-  <li>Ego comes next. Even showing yourself to the world for people to see and to validate how you want to be seen is ego. Andrew mentioned that Madre Teresa wanted to be seen as someone who is a martyr.</li>
-  <li>Reward: Money, sex, alcohol, drugs, etc</li>
-  <li>Coercion: this is the negative one, and includes things like blackmailing</li>
-</ol>
-
-<h2 id="questions-1-validation">2 Questions, 1 Validation</h2>
-
-<p>If you want to get information from a person, then you can ask two questions and then follow up with the validation.</p>
-
-<p>For example, if the other person mentioned that they have an issue with their wife, then you ask:</p>
-
-<ul>
-  <li>“Oh what happened?”</li>
-  <li>After their reply you ask: “Did she really do that?”</li>
-  <li>Again, after their reply, you do a validation, so it doesn’t sound like an interrogatory, by saying for example “Yeah, I had a girlfriend that did the same thing”</li>
-  <li>After their reply, you then ask another two questions, and so on and so forth.</li>
-</ul>
-
-<h2 id="doors-and-windows">Doors and Windows</h2>
-
-<p>Use windows instead of doors when leading a conversation.</p>
-
-<p>Opening a door is when you change the topic completely. For example, if the conversation is about the weather and all of a sudden you ask about someone’s income. The analogy is that you’re breaking through someone’s door.</p>
-
-<p>Instead you’ll want to open a window, which is to leave a hint for the other party that will organically lead them towards a new ramification of the conversation. You open a window by giving a queue, a suggestion, or an implicit conversation seed.</p>
-
-<h2 id="volunteered-information">Volunteered Information</h2>
-
-<p>People will also volunteer information to you, and you can actually assess that by the information that they give you through their statements.</p>
-
-<h2 id="the-power-of-questions">The Power of Questions</h2>
-
-<p>The person that is asking the questions has the power over the conversation, and not the person who is saying the most words. For example, in the interview it was agreed by both  that Steve was the interviewer, so Steve had the power there.</p>
-
-<h2 id="sadrat-in-business">SADRAT in Business</h2>
-
-<p>Andrew mentioned how the SADRAT methodology can be used in business. SADRAT stands for: spotting, assessing, development, recruiting, agent handling and termination.</p>
-
-<ul>
-  <li>Spotting is finding the client, this is, you need to kiss a lot of frogs to get to the prince.</li>
-  <li>Recruit means you provide a given product in exchange for their money.</li>
-  <li>Assess is about finding if someone is going to be a good productive client, so you can place your Investments on the clients that give you the return on the time span that you want. This can be known through their common traits, their profile, etc.</li>
-</ul>
-
-<h2 id="detecting-lies">Detecting Lies</h2>
-
-<p>In order to know if someone is a liar, you need to first establish a baseline. Once that is acquired, you need to put pressure on them to see if they react differently.</p>
-
-<p>The difference between good liars and bad liars is that bad liars tend to twitch and turn, as if they were in a hot seat when they get exposed to pressure.</p>
-
-<p>Good liars, on the other hand, they occlude all of these signals. Good liars tend to be the ones at parties that ask a lot of questions, and you felt like they were so friendly, but in reality you know nothing about them.</p>
-
-<h2 id="perception-vs-perspective">Perception vs Perspective</h2>
-
-<p>Perception is your gut view. Perspective is seeing the event through other lenses.</p>
-
-<p>You should not trust your perception, because most of the time it is wrong and it is emotion based. You need to use your rational side to process challenging situations.</p>
-
-<p>To achieve that, you need to be inoculated by getting exposed to small doses of something you fear. For example, asking someone if you’re overweight. You’ll get the physical fear arousal, but once it’s over no real harm was done.</p>
-
-<p>You can train yourself to not respond to that physical jolt to make your emotional part slower, and your rational part faster.</p>
 ]]></content>
   </entry>
   
