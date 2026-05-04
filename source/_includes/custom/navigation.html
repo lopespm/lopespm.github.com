@@ -1,7 +1,16 @@
 {% comment %}<!--
 <li><a href="{{ root_url }}/about">About</a></li>
 -->{% endcomment %}
+{% assign nav_active = '' %}
+{% if page.url contains '/notes' %}
+  {% assign nav_active = 'notes' %}
+{% elsif page.url contains '/about' %}
+  {% assign nav_active = 'about' %}
+{% else %}
+  {% assign nav_active = 'blog' %}
+{% endif %}
 <ul class="main-navigation">
-  <li><a href="{{ root_url }}/">Blog</a></li>
-  <li><a href="{{ root_url }}/notes">Notes</a></li>
+  <li{% if nav_active == 'blog' %} class="nav-current"{% endif %}><a href="{{ root_url }}/">Blog</a></li>
+  <li{% if nav_active == 'notes' %} class="nav-current"{% endif %}><a href="{{ root_url }}/notes">Notes</a></li>
+  <li{% if nav_active == 'about' %} class="nav-current"{% endif %}><a href="{{ root_url }}/about">About</a></li>
 </ul>

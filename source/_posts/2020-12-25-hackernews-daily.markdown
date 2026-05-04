@@ -10,7 +10,7 @@ ogp_image_twitter: "/files/hackernews_daily/screenshots_cropped2.png"
 published: true
 ---
 
-This article will dive into the system behind the generation of [Hacker News Daily](https://lopespm.github.io/hackernews_daily), an [open source](https://github.com/lopespm/hackernews_daily) lightweight daily Hacker News best stories website, with screenshots and top comments.
+This article will dive into the system behind the generation of [Hacker News Daily](https://lopespm.github.io/hackernews-daily), an [open source](https://github.com/lopespm/hackernews_daily) lightweight daily Hacker News best stories website, with screenshots and top comments.
 
 {% imgopt /files/hackernews_daily/screenshots_cropped2_705 Screenshot of Hacker News Daily %}
 
