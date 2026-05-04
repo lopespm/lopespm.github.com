@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: aggregators | Byte Tank]]></title>
   <link href="https://lopespm.com/tags/aggregators/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-05-02T00:56:44+00:00</updated>
+  <updated>2026-05-04T15:18:58+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -18,7 +18,7 @@
     <link href="https://lopespm.com/2020/12/25/hackernews-daily.html"/>
     <updated>2020-12-25T00:00:00+00:00</updated>
     <id>https://lopespm.com/2020/12/25/hackernews-daily</id>
-    <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews_daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
+    <content type="html"><![CDATA[<p>This article will dive into the system behind the generation of <a href="https://lopespm.github.io/hackernews-daily">Hacker News Daily</a>, an <a href="https://github.com/lopespm/hackernews_daily">open source</a> lightweight daily Hacker News best stories website, with screenshots and top comments.</p>
 
 <p><center>
           <picture aria-label="Screenshot of Hacker News Daily">
