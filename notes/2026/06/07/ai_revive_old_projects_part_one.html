@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Life has several exits - Byte Tank</title>
+  <title>Using AI to Revive Old Projects [Part 1] - Byte Tank</title>
   <meta name="author" content="Pedro Lopes">
 
   
-  <meta name="description" content="How the world has changed on each egress">
+  <meta name="description" content="Shooting the AI powered backlog burner">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="https://lopespm.com/notes/2023/08/19/life_exits.html">
+  <link rel="canonical" href="https://lopespm.com/notes/2026/06/07/ai_revive_old_projects_part_one.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -35,21 +35,21 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Fjalla+One&display=swap' rel='stylesheet' type='text/css'>
 <link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
-  <meta property="og:title" content="Life has several exits - Byte Tank" />
-<meta property="og:description" content="How the world has changed on each egress" />
-<meta property="og:url" content="https://lopespm.com/notes/2023/08/19/life_exits.html" />
-<meta property="og:image" content="https://lopespm.com/files/life_exits/life_exits_thumb.png" />
+  <meta property="og:title" content="Using AI to Revive Old Projects [Part 1] - Byte Tank" />
+<meta property="og:description" content="Shooting the AI powered backlog burner" />
+<meta property="og:url" content="https://lopespm.com/notes/2026/06/07/ai_revive_old_projects_part_one.html" />
+<meta property="og:image" content="https://lopespm.com/files/ai_revive_old_projects_part_one/pthumb1.jpg" />
 <meta property="og:site_name" content="Byte Tank" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
 
-<meta name="twitter:title" content="Life has several exits - Byte Tank">
-<meta name="twitter:description" content="How the world has changed on each egress">
+<meta name="twitter:title" content="Using AI to Revive Old Projects [Part 1] - Byte Tank">
+<meta name="twitter:description" content="Shooting the AI powered backlog burner">
 
 <meta name="twitter:creator" content="@lopes_pm">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://lopespm.com/files/life_exits/life_exits_thumb.png">
+<meta name="twitter:image" content="https://lopespm.com/files/ai_revive_old_projects_part_one/pthumb1.jpg">
 
 
   
@@ -226,7 +226,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Life Has Several Exits</h1>
+      <h1 class="entry-title">Using AI to Revive Old Projects [Part 1]</h1>
     
     
       <p class="meta">
@@ -242,7 +242,7 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2023-08-19T00:00:00+00:00" pubdate data-updated="true">Aug 19<span>th</span>, 2023</time>
+<time datetime="2026-06-07T00:00:00+00:00" pubdate data-updated="true">Jun 7<span>th</span>, 2026</time>
         <!--
         
         -->
@@ -252,24 +252,82 @@ MathJax.Hub.Config({
   </header>
 
 
-<div class="entry-content"><p>Life has several exits:</p>
+<div class="entry-content"><h2 id="ai-powered-backlog-burner">AI powered backlog burner</h2>
+<p>Ideas come cheap. That’s why my backlog of project ideas keeps growing - there is only so much time and energy. </p>
+
+<p>The recent agentic AI advancements are changing that equation. All of a sudden, projects I long relegated to an uncertain future can now be brought to fruition with a single human pair of hands (read, mine).</p>
+
+<p>A good example of this is <a href="/product/2026/01/19/vivotime.html">vivotime.net</a>. There is no way I could have made it a reality on my own in such a short amount of time, in the midst of my routines and demanding job. AI changed all that. A success story in my book.</p>
+
+<h2 id="new-life-to-old-projects">New life to old projects</h2>
+
+<p>My backlog does not only consist of new projects, but also improvements to older ones that ended up getting outdated, or had missing features I long wanted to add. </p>
+
+<p>So in a single weekend I grabbed three of my older longstanding projects, and gave them an overhaul.</p>
+
+<h3 id="personal-local-llm-extended-with-whatsapp--obsidian-data">Personal Local LLM Extended With WhatsApp + Obsidian Data</h3>
+
+<p>I grabbed this now <a href="/machine_learning/2024/06/24/personal-llm.html">2 year old project</a>, and gave it a <a href="https://github.com/lopespm/personal_llm">new life</a> with:</p>
 
 <ul>
-  <li>The exit from your workplace. The last day of work for your employer or your company.</li>
-  <li>The exit from that youth group that accompanied you through teenage years and early adulthood.</li>
-  <li>The exit from your high-school.</li>
-  <li>The exit from your hometown.</li>
-  <li>The exit from a long term relationship.</li>
-  <li>The exit from life. Your funeral.</li>
+  <li><strong>New model</strong>: instead of Llama3 8B, use the newer and more powerful Qwen 2.5 model.</li>
+  <li><strong>Agentic behaviour for research</strong>: instead of performing a single query to the vector database to retrieve contextual information, the agent can do as many queries to the contextual data as it needs (up to a limit of course). The main point here is that once the agent is satisfied with the amount of context, it can stop information gathering altogether, which reduces context noise.</li>
+  <li><strong>Embeddings model</strong>: updated to the more capable Qwen3 embeddings model</li>
+  <li><strong>Streaming</strong>: instead of waiting for the model to generate the entire response, the response is now written as soon as the first token arrives. A much fluid experience.</li>
+  <li><strong>Presentation</strong>: added several nice progress bars and indicators that give the user better feedback on what is happening behind the scenes.</li>
+  <li><strong>Performance</strong>: the entire system is now much more performant, leveraging threading whenever possible, specially when creating embeddings, which is a fairly time consuming process</li>
+  <li><strong>Correct system prompt structure</strong>: the system prompt had several gaps in its structure and how the conversation should be provided to the LLM. This is now fixed.</li>
 </ul>
 
-<p>Upon your exit, your contributions, actions, decisions, opinions and presence most likely will have affected the trajectories of the people and the world around you, in obvious and less obvious ways. Perhaps your own trajectory was deeply changed as well.</p>
+<center>
+          <picture aria-label="Presentation Improvements">
+             <source type="image/webp" srcset="/files/ai_revive_old_projects_part_one/personal_llm1.webp" aria-label="Presentation Improvements" />
+             <source type="image/png" srcset="/files/ai_revive_old_projects_part_one/personal_llm1.png" aria-label="Presentation Improvements" />
+             <img src="/files/ai_revive_old_projects_part_one/personal_llm1.png" aria-label="Presentation Improvements" />
+           </picture>
+         </center>
 
-<p>These exits may be celebrated, be a special day with fulfilling words and thoughts. They may be the last time you see a set of people. The last time you will see them in your entire life.</p>
+<p><br /></p>
 
-<p>Perhaps upon your final exit, you have made such consequential dents on the world that your name will be engraved into the annals of history for centuries to come. On the other hand, contemporary personalities such Steve Jobs, Bill Gates, Elon Musk and Warren Buffet might be mostly forgotten a few centuries from now. People will move on, so most likely you should be grateful if your loved ones keep you in their thoughts for those ensuing decades.</p>
+<p>You might be thinking: <em>“That’s cool and all, but I already have LM Studio + Anything LLM, Ollama and OpenClaw”</em>. Those are incredible, but this project offers two unique things:</p>
 
-<p>Life has several exits. Life is also short and limited. There’ll be a finite number of exits you will experience. Make the most out of each period they enclose.</p>
+<ul>
+  <li>It has 595 total lines, over 8 significant Python files. Small and understandable. Ideal to learn how these agents / harnesses work.</li>
+  <li>Try importing all of your whatsapp conversations and obsidian notes to Anything LLM so that it can RAG them. If you have more than 400 files, good luck. With this project, you can.</li>
+</ul>
+
+<h2 id="hacker-news-daily">Hacker news daily</h2>
+
+<p>This one was relatively simple. The pipeline was broken for this almost <a href="/2020/12/25/hackernews-daily.html">6 year old project</a>, and the site stopped updating. It is now back online, hardened against rogue errors, like image previews not loading and crashing the build.</p>
+
+<p>Presentation is improved on larger screens as well, with a simple simple change to contrain the max width of the site’s contents.</p>
+
+<p>It is better than ever: <a href="https://lopespm.com/hackernews-daily/">https://lopespm.com/hackernews-daily/</a></p>
+
+<center>
+          <picture aria-label="Hacker News Daily Screenshot">
+             <source type="image/webp" srcset="/files/ai_revive_old_projects_part_one/hn1.webp" aria-label="Hacker News Daily Screenshot" />
+             <source type="image/png" srcset="/files/ai_revive_old_projects_part_one/hn1.png" aria-label="Hacker News Daily Screenshot" />
+             <img src="/files/ai_revive_old_projects_part_one/hn1.png" aria-label="Hacker News Daily Screenshot" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<h2 id="this-blog">This blog</h2>
+
+<p>There is a nifty user optimization where certain images are presented via their WebP proxy, delivering much smaller file sizes (25-35% lighter than PNG).</p>
+
+<p>The problem is that image editors tend to work best when exporting and working with PNGs and JPEGs, so before, I would need to go through each image, one by one, and export them to WebP via the terminal. This was infrequent enough to make me postpone its automation, but also frequent enough to be annoying.</p>
+
+<p>That is now a relic of the past. Presenting, a <a href="https://gist.github.com/lopespm/2e0adf0ef9e2731b1bca63c38c50251c">completely ordinary script</a> that batch converts PNGs and JPEGs to WebP. Simple utility, high utility value.</p>
+
+<h2 id="whats-next">What’s next?</h2>
+
+<p>I want to eventually revamp <a href="/2019/02/06/survival-ball-making-the-game.html">Survival Ball</a>, but there is a problem: AI alone won’t cut it, since proper game design iterations, testing and porting it to Mac and Windows are some of the most time consuming tasks.</p>
+
+<p>If I don’t find the time and energy to tackle it, there are other projects itching to come to life, which don’t suffer as much from the above problems, it at all. I’ll keep you posted!</p>
+
 </div>
 
 
@@ -292,7 +350,7 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2023-08-19T00:00:00+00:00" pubdate data-updated="true">Aug 19<span>th</span>, 2023</time>
+<time datetime="2026-06-07T00:00:00+00:00" pubdate data-updated="true">Jun 7<span>th</span>, 2026</time>
       
       
 
@@ -301,10 +359,8 @@ MathJax.Hub.Config({
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/notes/2023/08/05/real_question_behind_what_you_want.html" title="Previous Post: The real question behind 'what do you want?'">&laquo; The real question behind 'what do you want?'</a>
+        <a class="basic-alignment left" href="/notes/2026/05/01/lateral-thinking.html" title="Previous Post: Lateral thinking using existing technologies">&laquo; Lateral thinking using existing technologies</a>
       
-      
-        <a class="basic-alignment right" href="/notes/2023/09/30/goal_clarity_in_delegation.html" title="Next Post: Importance of Goal Clarity for Delegation">Importance of Goal Clarity for Delegation &raquo;</a>
       
     </p>
   </footer>

@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-05-04T15:18:58+00:00</updated>
+  <updated>2026-06-07T18:24:18+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,90 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using AI to Revive Old Projects [Part 1]]]></title>
+    <link href="https://lopespm.com/notes/2026/06/07/ai_revive_old_projects_part_one.html"/>
+    <updated>2026-06-07T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2026/06/07/ai_revive_old_projects_part_one</id>
+    <content type="html"><![CDATA[<h2 id="ai-powered-backlog-burner">AI powered backlog burner</h2>
+<p>Ideas come cheap. That’s why my backlog of project ideas keeps growing - there is only so much time and energy. </p>
+
+<p>The recent agentic AI advancements are changing that equation. All of a sudden, projects I long relegated to an uncertain future can now be brought to fruition with a single human pair of hands (read, mine).</p>
+
+<p>A good example of this is <a href="https://lopespm.com/product/2026/01/19/vivotime.html">vivotime.net</a>. There is no way I could have made it a reality on my own in such a short amount of time, in the midst of my routines and demanding job. AI changed all that. A success story in my book.</p>
+
+<h2 id="new-life-to-old-projects">New life to old projects</h2>
+
+<p>My backlog does not only consist of new projects, but also improvements to older ones that ended up getting outdated, or had missing features I long wanted to add. </p>
+
+<p>So in a single weekend I grabbed three of my older longstanding projects, and gave them an overhaul.</p>
+
+<h3 id="personal-local-llm-extended-with-whatsapp--obsidian-data">Personal Local LLM Extended With WhatsApp + Obsidian Data</h3>
+
+<p>I grabbed this now <a href="https://lopespm.com/machine_learning/2024/06/24/personal-llm.html">2 year old project</a>, and gave it a <a href="https://github.com/lopespm/personal_llm">new life</a> with:</p>
+
+<ul>
+  <li><strong>New model</strong>: instead of Llama3 8B, use the newer and more powerful Qwen 2.5 model.</li>
+  <li><strong>Agentic behaviour for research</strong>: instead of performing a single query to the vector database to retrieve contextual information, the agent can do as many queries to the contextual data as it needs (up to a limit of course). The main point here is that once the agent is satisfied with the amount of context, it can stop information gathering altogether, which reduces context noise.</li>
+  <li><strong>Embeddings model</strong>: updated to the more capable Qwen3 embeddings model</li>
+  <li><strong>Streaming</strong>: instead of waiting for the model to generate the entire response, the response is now written as soon as the first token arrives. A much fluid experience.</li>
+  <li><strong>Presentation</strong>: added several nice progress bars and indicators that give the user better feedback on what is happening behind the scenes.</li>
+  <li><strong>Performance</strong>: the entire system is now much more performant, leveraging threading whenever possible, specially when creating embeddings, which is a fairly time consuming process</li>
+  <li><strong>Correct system prompt structure</strong>: the system prompt had several gaps in its structure and how the conversation should be provided to the LLM. This is now fixed.</li>
+</ul>
+
+<center>
+          <picture aria-label="Presentation Improvements">
+             <source type="image/webp" srcset="/files/ai_revive_old_projects_part_one/personal_llm1.webp" aria-label="Presentation Improvements" />
+             <source type="image/png" srcset="/files/ai_revive_old_projects_part_one/personal_llm1.png" aria-label="Presentation Improvements" />
+             <img src="https://lopespm.com/files/ai_revive_old_projects_part_one/personal_llm1.png" aria-label="Presentation Improvements" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<p>You might be thinking: <em>“That’s cool and all, but I already have LM Studio + Anything LLM, Ollama and OpenClaw”</em>. Those are incredible, but this project offers two unique things:</p>
+
+<ul>
+  <li>It has 595 total lines, over 8 significant Python files. Small and understandable. Ideal to learn how these agents / harnesses work.</li>
+  <li>Try importing all of your whatsapp conversations and obsidian notes to Anything LLM so that it can RAG them. If you have more than 400 files, good luck. With this project, you can.</li>
+</ul>
+
+<h2 id="hacker-news-daily">Hacker news daily</h2>
+
+<p>This one was relatively simple. The pipeline was broken for this almost <a href="https://lopespm.com/2020/12/25/hackernews-daily.html">6 year old project</a>, and the site stopped updating. It is now back online, hardened against rogue errors, like image previews not loading and crashing the build.</p>
+
+<p>Presentation is improved on larger screens as well, with a simple simple change to contrain the max width of the site’s contents.</p>
+
+<p>It is better than ever: <a href="https://lopespm.com/hackernews-daily/">https://lopespm.com/hackernews-daily/</a></p>
+
+<center>
+          <picture aria-label="Hacker News Daily Screenshot">
+             <source type="image/webp" srcset="/files/ai_revive_old_projects_part_one/hn1.webp" aria-label="Hacker News Daily Screenshot" />
+             <source type="image/png" srcset="/files/ai_revive_old_projects_part_one/hn1.png" aria-label="Hacker News Daily Screenshot" />
+             <img src="https://lopespm.com/files/ai_revive_old_projects_part_one/hn1.png" aria-label="Hacker News Daily Screenshot" />
+           </picture>
+         </center>
+
+<p><br /></p>
+
+<h2 id="this-blog">This blog</h2>
+
+<p>There is a nifty user optimization where certain images are presented via their WebP proxy, delivering much smaller file sizes (25-35% lighter than PNG).</p>
+
+<p>The problem is that image editors tend to work best when exporting and working with PNGs and JPEGs, so before, I would need to go through each image, one by one, and export them to WebP via the terminal. This was infrequent enough to make me postpone its automation, but also frequent enough to be annoying.</p>
+
+<p>That is now a relic of the past. Presenting, a <a href="https://gist.github.com/lopespm/2e0adf0ef9e2731b1bca63c38c50251c">completely ordinary script</a> that batch converts PNGs and JPEGs to WebP. Simple utility, high utility value.</p>
+
+<h2 id="whats-next">What’s next?</h2>
+
+<p>I want to eventually revamp <a href="https://lopespm.com/2019/02/06/survival-ball-making-the-game.html">Survival Ball</a>, but there is a problem: AI alone won’t cut it, since proper game design iterations, testing and porting it to Mac and Windows are some of the most time consuming tasks.</p>
+
+<p>If I don’t find the time and energy to tackle it, there are other projects itching to come to life, which don’t suffer as much from the above problems, it at all. I’ll keep you posted!</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lateral thinking using existing technologies]]></title>
@@ -3473,44 +3557,6 @@
     </li>
   </ol>
 </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Connection with reality]]></title>
-    <link href="https://lopespm.com/notes/2024/09/15/connection_with_reality.html"/>
-    <updated>2024-09-15T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2024/09/15/connection_with_reality</id>
-    <content type="html"><![CDATA[<div>
-  <div class="youtube-player" data-id="wk2DwbfgmMU" data-thumbsize="1"></div>
-</div>
-<p><br /></p>
-
-<p>As we experience an increase of massive amounts of AI generated content, this note will go through the role and added value that a connection with reality and nature brings not only to your business and craft, but also to yourself.</p>
-
-<h2 id="striking-a-balance">Striking a balance</h2>
-
-<p>Walking or hiking has been a recurrent weekly habit of mine for several years, and its one of my favorite activities.</p>
-
-<p>I find it essential to have a walk outside the office / home and be in contact with the surrounding world, be it in nature or around the city. This is especially relevant for those, like me, who have their daily jobs working at the computer.</p>
-
-<p>I love to be enthralled in the digital world, think about abstract concepts, and use digital devices to, for example, communicate this content to you. But like anything else, a balance needs to be kept, and a balance between the digital and real domains seems essential.</p>
-
-<!--more-->
-
-<h2 id="the-added-value-of-connecting-with-reality">The added value of (connecting with) reality</h2>
-
-<p>As generative models get better, more and more people will just assume that a given piece of text, image or video is likely fake, and I believe there will be an increased demand for a connection with the real world through experiences such as in-person events, travel, spirituality, or consumption of digital content by certified entities.</p>
-
-<p>Businesses and creators that prove their connection with the real world and real people, will likely have an edge and rise against the noise.</p>
-
-<p>So if you’re creating a business, a piece of content, anything really, think how it relates with the real world. Ask yourself: how can you provide that connection? How can you provide <em>reality as a service</em>?</p>
-
-<h2 id="keep-yourself-connected-with-reality">Keep yourself connected with reality</h2>
-
-<p>Apart from all this, and just as important, it’s for <em>you</em> to maintain <em>your</em> contact with reality.</p>
-
-<p>So if you feel you spend too much time around the internet, digital devices, TV series, etc, I invite you to the outdoors, the world outside. It’s free, it’s accessible. You just need to open the door and step out, provided you are fortunate enough to have the required physical capabilities. I’m pretty sure that it will make your life much better.</p>
 ]]></content>
   </entry>
   
