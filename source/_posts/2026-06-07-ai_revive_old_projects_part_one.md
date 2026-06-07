@@ -30,7 +30,7 @@ I grabbed this now [2 year old project]({% post_url 2024-06-24-personal-llm %}),
 - **New model**: instead of Llama3 8B, use the newer and more powerful Qwen 2.5 model.
 - **Agentic behaviour for research**: instead of performing a single query to the vector database to retrieve contextual information, the agent can do as many queries to the contextual data as it needs (up to a limit of course). The main point here is that once the agent is satisfied with the amount of context, it can stop information gathering altogether, which reduces context noise.
 - **Embeddings model**: updated to the more capable Qwen3 embeddings model
-- **Streaming**: instead of waiting for the model to generate the entire response, the response is now written as soon as the first token arrives. A much fluid experience.
+- **Streaming**: instead of waiting for the model to generate the entire response, the response is now written as soon as the first token arrives. A much more fluid experience.
 - **Presentation**: added several nice progress bars and indicators that give the user better feedback on what is happening behind the scenes.
 - **Performance**: the entire system is now much more performant, leveraging threading whenever possible, specially when creating embeddings, which is a fairly time consuming process
 - **Correct system prompt structure**: the system prompt had several gaps in its structure and how the conversation should be provided to the LLM. This is now fixed.
