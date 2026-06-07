@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-06-07T20:03:45+00:00</updated>
+  <updated>2026-06-07T20:06:37+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -39,7 +39,7 @@
   <li><strong>New model</strong>: instead of Llama3 8B, use the newer and more powerful Qwen 2.5 model.</li>
   <li><strong>Agentic behaviour for research</strong>: instead of performing a single query to the vector database to retrieve contextual information, the agent can do as many queries to the contextual data as it needs (up to a limit of course). The main point here is that once the agent is satisfied with the amount of context, it can stop information gathering altogether, which reduces context noise.</li>
   <li><strong>Embeddings model</strong>: updated to the more capable Qwen3 embeddings model</li>
-  <li><strong>Streaming</strong>: instead of waiting for the model to generate the entire response, the response is now written as soon as the first token arrives. A much fluid experience.</li>
+  <li><strong>Streaming</strong>: instead of waiting for the model to generate the entire response, the response is now written as soon as the first token arrives. A much more fluid experience.</li>
   <li><strong>Presentation</strong>: added several nice progress bars and indicators that give the user better feedback on what is happening behind the scenes.</li>
   <li><strong>Performance</strong>: the entire system is now much more performant, leveraging threading whenever possible, specially when creating embeddings, which is a fairly time consuming process</li>
   <li><strong>Correct system prompt structure</strong>: the system prompt had several gaps in its structure and how the conversation should be provided to the LLM. This is now fixed.</li>
