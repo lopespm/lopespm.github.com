@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-06-07T18:24:18+00:00</updated>
+  <updated>2026-06-07T18:25:59+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -66,7 +66,7 @@
 
 <p>This one was relatively simple. The pipeline was broken for this almost <a href="/2020/12/25/hackernews-daily.html">6 year old project</a>, and the site stopped updating. It is now back online, hardened against rogue errors, like image previews not loading and crashing the build.</p>
 
-<p>Presentation is improved on larger screens as well, with a simple simple change to contrain the max width of the site’s contents.</p>
+<p>Presentation is improved on larger screens as well, with a simple simple change to constrain the max width of the site’s contents.</p>
 
 <p>It is better than ever: <a href="https://lopespm.com/hackernews-daily/">https://lopespm.com/hackernews-daily/</a></p>
 
@@ -92,8 +92,7 @@
 
 <p>I want to eventually revamp <a href="/2019/02/06/survival-ball-making-the-game.html">Survival Ball</a>, but there is a problem: AI alone won’t cut it, since proper game design iterations, testing and porting it to Mac and Windows are some of the most time consuming tasks.</p>
 
-<p>If I don’t find the time and energy to tackle it, there are other projects itching to come to life, which don’t suffer as much from the above problems, it at all. I’ll keep you posted!</p>
-
+<p>If I don’t find the time and energy to tackle it, there are other projects itching to come to life, which don’t suffer as much from the above problems. I’ll keep you posted!</p>
 ]]></content>
   </entry>
   
