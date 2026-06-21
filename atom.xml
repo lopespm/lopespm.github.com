@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-06-21T15:42:13+00:00</updated>
+  <updated>2026-06-21T15:44:09+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -40,7 +40,7 @@
     </ol>
   </li>
   <li>Configured the Payhip store and added my initial products, and connected it to the <a href="https://getoutnabout.store/">getoutnabout.store</a> domain.</li>
-  <li>Since each product required a deliverable, I’ve opted to create the deliverable by putting all the necessary contents in a markdown file, then used a VS Code plugin to export it to PDF, uploaded it as part of each of the Payhip’s products, et voilà, I had a fully functioning store.</li>
+  <li>Since each product required a deliverable, I’ve opted to creating it by putting all the necessary contents in a markdown file, then used a VS Code plugin to export it to PDF, uploaded it as part of each of the Payhip’s products, et voilà, I had a fully functioning store.</li>
 </ol>
 
 <center>
