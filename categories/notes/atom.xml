@@ -4,7 +4,7 @@
   <title><![CDATA[Category: notes | Byte Tank]]></title>
   <link href="https://lopespm.com/categories/notes/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-06-07T20:06:37+00:00</updated>
+  <updated>2026-06-21T15:42:13+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Out N' About Walks Store]]></title>
+    <link href="https://lopespm.com/notes/2026/06/21/out_and_about.html"/>
+    <updated>2026-06-21T00:00:00+00:00</updated>
+    <id>https://lopespm.com/notes/2026/06/21/out_and_about</id>
+    <content type="html"><![CDATA[<p>Ever since 2017 I’ve made at least one long walk or hike per week. <a href="/notes/2025/11/16/joy_of_walking.html">I love walking</a>, and shared that passion by organizing several walks via meetup, eventbrite, in my local community, in my company, and with friends.</p>
+
+<p>I’ve accumulated a fair amount of miles under my feet and progressively built a catalog of favorite trails, and an opinion on what makes for an enjoyable walk.</p>
+
+<p>I think many others could benefit from this knowledge, hence why I’ve opened the <strong><a href="https://getoutnabout.store/">Out N’ About Walks Store</a></strong>, which is crystallization of all the above, where you will find detailed <strong>routes</strong>, <strong>videos</strong>, <strong>descriptions</strong> and <strong>hints</strong> about my favorite walks.</p>
+
+<h2 id="setting-up-shop">Setting up shop</h2>
+
+<p>I’m really happy with how the store nicely fits on top of all of my investments and further compounds them, rather than being a distraction.</p>
+
+<p>I’ve opened this shop in a <em>single weekend morning</em>. No exaggeration. The process was:</p>
+
+<ol>
+  <li>Go through the <a href="https://www.meetup.com/meetup-group-ornvsudc/">latest meetup walks that I’ve organized</a>, and gather routes, videos, images and descriptions for each.</li>
+  <li>Buy the domain <a href="https://getoutnabout.store/">getoutnabout.store</a> from namecheap, which turned out to be a bargain.</li>
+  <li>The store was meant to be simple: upon purchase, the customer should get all the information for each walk. I could build it from scratch myself and host it, but instead I went hunting for services that could do this for me
+    <ol>
+      <li>First I tried Shopify, did the initial setup, but soon started to see that this was way too complicated and way too expensive for such a simple digital store. I can see the value this brings for merchants with complex flows, but this was not suitable for me. Too much overhead.</li>
+      <li>Tried to find some alternatives, and eventually found <a href="https://payhip.com">Payhip</a>. It was perfect for my use case. Setup is incredibly quick. There is little to no bloat, it is free, and the customer experience is streamlined.</li>
+    </ol>
+  </li>
+  <li>Configured the Payhip store and added my initial products, and connected it to the <a href="https://getoutnabout.store/">getoutnabout.store</a> domain.</li>
+  <li>Since each product required a deliverable, I’ve opted to create the deliverable by putting all the necessary contents in a markdown file, then used a VS Code plugin to export it to PDF, uploaded it as part of each of the Payhip’s products, et voilà, I had a fully functioning store.</li>
+</ol>
+
+<p><center>
+          <picture aria-label="Screenshot of the store">
+             <source type="image/webp" srcset="/files/out_about_store/store.webp" aria-label="Screenshot of the store">
+             <source type="image/png" srcset="/files/out_about_store/store.png" aria-label="Screenshot of the store">
+             <img src="/files/out_about_store/store.png" aria-label="Screenshot of the store">
+           </picture>
+         </center></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using AI to Revive Old Projects [Part 1]]]></title>
@@ -245,28 +285,6 @@
 <p>There is not a silver bullet. Processes are like tools. You should use the right one for the right job, combining them when necessary. You wouldn’t use a jackhammer to drive a simple nail.</p>
 
 <p>Don’t be a process zealot. Use it as a means to an objective.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[3,170× more energy to create GPT‑4 than an 18‑year‑old]]></title>
-    <link href="https://lopespm.com/notes/2026/02/20/human_vs_artifical_intelligence.html"/>
-    <updated>2026-02-20T00:00:00+00:00</updated>
-    <id>https://lopespm.com/notes/2026/02/20/human_vs_artifical_intelligence</id>
-    <content type="html"><![CDATA[<p>The average human body consumes energy at a rate of approximately <a href="https://www.fst.com/news-stories/renewable-energies/human-power-plant/">100 watts</a></p>
-
-<ul>
-  <li>1 day consumption = 100W * 24h = 2.4k Wh</li>
-  <li>365 days * 2.4k Wh * <strong>18 years</strong> = 15,768k Wh = <strong>0.015768 GWh</strong></li>
-</ul>
-
-<p><strong>GPT-4</strong> took about <a href="https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/"><strong>50 GWh</strong></a> of electricity to train.</p>
-
-<p>It takes <strong>3,170 times</strong> more energy to train a model than to raise a human to 18 years old. </p>
-
-<p>GPT-4 is really good at specific tasks, but is nowhere near as generically inteligent or able to function efficiently and adaptively within the real world. GPT-4 can’t even drive a car.</p>
-
-<p>This suggests that just scaling existing models will not be enough to reach real AGI. New fundamental breakthroughs are still required to get there.</p>
 ]]></content>
   </entry>
   
