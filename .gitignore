@@ -4,6 +4,7 @@
 .gist-cache
 .pygments-cache
 .preview-mode
+*.code-workspace
 public
 sass.old
 source.old

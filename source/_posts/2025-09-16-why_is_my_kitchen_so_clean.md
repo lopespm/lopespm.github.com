@@ -18,6 +18,12 @@ If you had a video call with me, if you happened to see my videos, or if you vis
 
 <br/>
 
+I even got a prize for it, in one of our team's socials 😂:
+
+{% imgopt /files/why_is_my_kitchen_so_clean/pprize2 Prize for immaculate background %}
+
+<br/>
+
 I'm of the opinion that once you get asked multiple times the same question, then it's time to document it and have it available for the next person.
 
 It's time to address it.
@@ -47,6 +53,10 @@ In case you are wondering, the container in the center is soaking buckwheat groa
 That should answer the question that yes, I do cook.
 
 <div class="image-mosaic">
+  <div
+    class="image-mosaic-card image-mosaic-card-tall image-mosaic-card-wide"
+    style="background-image: url('{{ root_url }}/files/why_is_my_kitchen_so_clean/cooking/p14.jpg')"
+  ></div>
   <div
     class="image-mosaic-card image-mosaic-card-tall"
     style="background-image: url('{{ root_url }}/files/why_is_my_kitchen_so_clean/cooking/p2.jpg')"
@@ -109,3 +119,6 @@ There are 3 reasons why my kitchen looks virtually the same, every time.
  - There are other examples of this. In case you follow [Tech ingredients](https://www.youtube.com/@TechIngredients), you'll notice that their laboratory and space is quite neat, regardless of the outstanding breadth of experiments done in the channel. I found it amusing that some years ago they were once asked by some viewers _"how do they keep their lab so clean"_, to which the main presenter replied that "we are not hiding anything, we just take care to tidy and store the components we are not working on" (paraphrased).
 2. **The rest of the utensils are away from camera sight.** When I am having a meeting or sharing my thoughts via video, I want to get things done and not have my mind occupied with non-consequential thoughts such as _"Oh, my background looks a bit a messy. That piece looks out place. I wonder how that looks for someone else"_, nor do I want to distract my interlocutors with something irrelevant in the background. There are video filters which blur out the background, but I don't like the way they look, not do I want to have yet another moving component in my workflow that might (or might not) work. If my background is relatively the same and neutral, then I don't have to worry about it, and can focus my energies on the the things that _really matter_.
 3. Apart from my weekly buckwheat bread, **I only cook at weekends**, since I am fortunate enough to often cook for pleasure, rather than necessity. The rest of the week I either get to have my meals at the office, or through [Planty](https://planty.uk/), a plant based clean food subscription.
+
+
+*Edit (2026-06-28): Added the prize and roasted lamb photo*
