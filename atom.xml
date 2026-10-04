@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-10-04T02:40:02+00:00</updated>
+  <updated>2026-10-04T02:44:05+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Survival Ball: Versus Mode]]></title>
+    <title type="html"><![CDATA[Building a Versus Mode for Survival Ball]]></title>
     <link href="https://lopespm.com/2026/10/04/survival_ball_versus.html"/>
     <updated>2026-10-04T00:00:00+00:00</updated>
     <id>https://lopespm.com/2026/10/04/survival_ball_versus</id>
@@ -25,7 +25,7 @@
  </div>
 </center>
 
-<p>The new versus mode is now available in a <strong><a href="https://store.steampowered.com/app/918690/Survival_Ball/">free update to Survival Ball</a></strong>, a game I published <a href="https://lopespm.com/2019/02/06/survival-ball-making-the-game.html">8 years ago</a> that originally shipped with a solo / co-op campaign.</p>
+<p>The new versus mode is now available in a <strong><a href="https://store.steampowered.com/app/918690/Survival_Ball/">free update to Survival Ball</a></strong>, a game I published <a href="https://lopespm.com/2019/02/06/survival-ball-making-the-game.html">8 years ago</a> that originally shipped with a solo / co-op campaign. Here is the story behind it.</p>
 
 <!--more-->
 
