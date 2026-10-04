@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-10-04T09:52:34+00:00</updated>
+  <updated>2026-10-04T09:53:30+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -108,7 +108,7 @@
 
 <p>The ball’s behaviour was kept essentially the same: one can move, stomp and dash, the difference being that on the versus mode those same stomp and dashes carry additional force towards other players, which transforms them into offensive weapons. An aura of power effect was added to reinforce and indicate that difference in versus.</p>
 
-<p>I love how you can make your opponents fly off the screen in Super Smash Bros, and wanted something that would allow it. As such, another new mechanism is the ability to grab a power-up crate to further increase the force applied to a stomp or dash. A well timed / placed stomp or dash will take your opponents to the stratosphere.</p>
+<p>I loved how you could make your opponents fly off the screen in Super Smash Bros, and wanted something that would allow it. As such, another new mechanism is the ability to grab a power-up crate to further increase the force applied to a stomp or dash. A well timed / placed stomp or dash will take your opponents to the stratosphere.</p>
 
 <h3 id="battlefield">Battlefield</h3>
 
