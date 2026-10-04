@@ -4,7 +4,7 @@
   <title><![CDATA[Byte Tank - Pedro Lopes Blog]]></title>
   <link href="https://lopespm.com/atom.xml" rel="self"/>
   <link href="https://lopespm.com/"/>
-  <updated>2026-10-04T09:49:20+00:00</updated>
+  <updated>2026-10-04T09:52:34+00:00</updated>
   <id>https://lopespm.com/</id>
   <author>
     <name><![CDATA[Pedro Lopes]]></name>
@@ -94,7 +94,7 @@
 
 <p>I spent zero time setting up all the nice AI agent harnesses that I used for my normal professional and personal work. I didn’t need any of that. The real challenge of developing this new mode was making sure that the experience felt right and cohesive. Much of that comes down to gut feeling and trying things live. </p>
 
-<p>Where AI agents were indeed helpful was during algorithm and behaviour development, and finding what is the best way to do X on Unity 2018. As such, you might be surprised to know that the only AI agent I used was Gemini <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, <em>on a logged out window</em>. That’s it.</p>
+<p>Where AI agents were indeed helpful was during algorithm and behaviour development, and finding what is the best way to do X on Unity 2018. As such, you might be surprised to know that the only AI agent I used was Gemini <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, <em>on a  browser window</em>. That was it.</p>
 
 <p>This worked really well, since it forced me to only provide the code snippets and context that was relevant, which in turn helped me to remember how the code was structured, and because the context was so clean and unambiguous, the agent’s responses were fast and provided me exactly what I needed, about 95% of the time. It was a great development experience. </p>
 
