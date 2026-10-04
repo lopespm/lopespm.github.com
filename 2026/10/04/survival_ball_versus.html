@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Survival Ball: Versus Mode - Byte Tank</title>
+  <meta name="author" content="Pedro Lopes">
+
+  
+  <meta name="description" content="Behind the scene of the new mode for Survival Ball for Steam">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="https://lopespm.com/2026/10/04/survival_ball_versus.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="Byte Tank" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js" async></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One&display=swap' rel='stylesheet' type='text/css'>
+<link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
+  <meta property="og:title" content="Survival Ball: Versus Mode - Byte Tank" />
+<meta property="og:description" content="Behind the scene of the new mode for Survival Ball for Steam" />
+<meta property="og:url" content="https://lopespm.com/2026/10/04/survival_ball_versus.html" />
+<meta property="og:image" content="https://lopespm.com/files/sbversus/pthumb.png" />
+<meta property="og:site_name" content="Byte Tank" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:title" content="Survival Ball: Versus Mode - Byte Tank">
+<meta name="twitter:description" content="Behind the scene of the new mode for Survival Ball for Steam">
+
+<meta name="twitter:creator" content="@lopes_pm">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lopespm.com/files/sbversus/pthumb.png">
+
+
+  
+  <script async>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39962763-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+<script defer>
+
+  /* Based on: http://labnol.org/?p=27941 */
+
+  // function onYouTubeIframeAPIReady() {
+  //   initialize();
+  // }
+
+  document.addEventListener("DOMContentLoaded", initialize );
+
+  function initialize() {
+    var div, n,
+      v = document.getElementsByClassName("youtube-player");
+    for (n = 0; n < v.length; n++) {
+      div = document.createElement("div");
+      div.setAttribute("data-id", v[n].dataset.id);
+      div.innerHTML = labnolThumb(v[n].dataset.id, v[n].dataset.thumbsize);
+      div.onclick = labnolIframe;
+
+      v[n].classList.add("ytp-thumbnail-overlay");
+      v[n].classList.add("ytp-cued-thumbnail-overlay");
+
+      v[n].appendChild(div);
+    }
+  }
+
+  function labnolThumb(id, thumbSize) {
+    var thumb = getThumb(thumbSize);
+    var thumbWithId = thumb.replace("ID", id);
+
+    var youtubePlayButton = '<div class="play-youtube-button"><button class="ytp-large-play-button ytp-button" aria-label="Play Video"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z" fill="#1f1f1e" fill-opacity="0.81"></path><path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path><path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path></svg></button></div>';
+
+
+
+    var bg = '<div class="bg" style=\'background-image: url(\"' + thumbWithId + '\')\"></div>';
+    var fadeBg = '<div class="fadeBg"></div>';
+    return bg + fadeBg + youtubePlayButton;
+  }
+
+  function getThumb(thumbSize) {
+    if (thumbSize === "0")
+      return 'https://i.ytimg.com/vi/ID/hqdefault.jpg';
+    if (thumbSize === "1")
+      return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+    else if (thumbSize === "2")
+      return 'https://i.ytimg.com/vi/ID/maxresdefault.jpg';
+    return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+  }
+
+  function labnolIframe() {
+    var container = document.createElement("div");
+
+    var loaderContainerOuter = document.createElement("div");
+    loaderContainerOuter.setAttribute("style", "display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: black; z-index: 200;");
+    var loaderContainerMiddle = document.createElement("div");
+    loaderContainerMiddle.setAttribute("style", "  display: table-cell; vertical-align: middle;");
+    var loaderContainerInner = document.createElement("div");
+    loaderContainerInner.setAttribute("style", "margin-left: auto; margin-right: auto; width: 400px;");
+
+    loaderContainerOuter.appendChild(loaderContainerMiddle);
+    loaderContainerMiddle.appendChild(loaderContainerInner);
+
+    const loader = Rocket.loader({
+      target: loaderContainerInner,
+      size: 'large',
+      type: 'spinner',
+      colour: 'grey-blue-dark'
+      //body: "Loading Video"
+    });
+
+    var containerPlayer = document.createElement("div");
+    container.appendChild(containerPlayer);
+    container.appendChild(loaderContainerOuter);
+
+    this.parentNode.replaceChild(container, this);
+
+    var didLoadAndPlay = 0;
+    player = new YT.Player(containerPlayer, {
+      videoId: this.dataset.id,
+      playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': function(event) {
+          event.target.playVideo();
+
+          // Fallback if onStateChange is not called
+          setInterval(function () {
+            if (didLoadAndPlay === 0) {
+              container.removeChild(loaderContainerOuter);
+              didLoadAndPlay = 1;
+            }
+          }, 5000);
+        },
+        'onStateChange': function (event) {
+          if (didLoadAndPlay === 0) {
+            container.removeChild(loaderContainerOuter);
+            didLoadAndPlay = 1;
+          }
+        }
+      }
+    });
+
+  }
+
+</script>
+
+
+<script src="/javascripts/rocket-loader/tools.min.js" defer></script>
+<script src="/javascripts/rocket-loader/loader.min.js" defer></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config" async>
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript" async></script>
+  <header role="banner"><hgroup>
+  <h1><a href="/">Byte Tank</a></h1>
+  
+    <h2>Pedro Lopes Blog</h2>
+  
+</hgroup>
+
+
+</header>
+  <nav role="navigation">
+
+<ul class="subscription">
+  <li><a href="https://www.youtube.com/@lopespm"><img src="/images/cn_youtube_19.png" height="19px" width="19px" alt="Go to YouTube Channel"/></a></li>
+  <li><a href="https://x.com/lopes_pm"><img src="/images/cn_twitter_19.png" height="19px" width="19px" alt="Go to Twitter"/></a></li>
+  <li><a href="https://github.com/lopespm"><img src="/images/cn_github_19.png" height="19px" width="19px" alt="Go to GitHub"/></a></li>
+  <li><a href="/atom.xml"><img src="/images/cn_rss_19.png" height="19px" width="19px" alt="RSS Feed"/></a></li>  
+</ul>
+
+  
+
+
+
+  
+
+<ul class="main-navigation">
+  <li class="nav-current"><a href="/">Blog</a></li>
+  <li><a href="/notes">Notes</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="article-full">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Survival Ball: Versus Mode</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2026-10-04T00:00:00+00:00" pubdate data-updated="true">Oct 4<span>th</span>, 2026</time>
+        <!--
+        
+        -->
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="Oc1gJ_m-w2s"></div></div>
+   <p class="media-caption media-caption-two">Versus Mode Trailer</p>
+ </div>
+</center>
+
+<p>The new versus mode is now available in a <strong><a href="https://store.steampowered.com/app/918690/Survival_Ball/">free update to Survival Ball</a></strong>, a game I published <a href="/2019/02/06/survival-ball-making-the-game.html">8 years ago</a> that originally shipped with a co-op campaign only.</p>
+
+<!--more-->
+
+<h2 id="cooperative-vs-competitive">Cooperative vs Competitive</h2>
+
+<p>Local co-op gaming experiences have been one of the best I had when playing with others. Not only did they create a healthy environment that usually brought up the best of each of the players, but also offered mechanics that could run deep and be intellectually satisfying.</p>
+
+<p>When developing the original game, I wanted to tap into those features and provide my own interpretation. I did not want to incentivize competition, but cooperation instead. </p>
+
+<p>As time went by, I came to appreciate the merits of rubbing your shoulders against someone else. It plainly demonstrates where your shortcomings are, calibrates your expectations, teaches you humility, and challenges you to up your game and <em>grow</em>, if you so choose. It all comes down to how you handle it.</p>
+
+<p>Hence the idea of adding a versus mode started growing on me, specially because during the original play tests a few friends mentioned that a versus mode seemed like a natural fit for the game.</p>
+
+<h2 id="making-it-happen">Making it happen</h2>
+
+<p>I knew that developing a new feature from start to finish in the game was not something I could pull off by taking a weekend here, a late night there. It required <em>large</em> continuous focus blocks where the only thing in mind would be the game.</p>
+
+<p>Just so happened that my company offers a full continuous month of recharge for every five years of work. Being six years in, I took it starting from mid-August, the perfect time to develop a new versus mode, so I planned accordingly.</p>
+
+<h3 id="preparation">Preparation</h3>
+
+<p>I spent a few odd days and nights preparing my development setup before recharge started in preparation for the development phase.</p>
+
+<p>Survival Ball was originally developed almost fully in my 2011 Intel MacBookPro, and then ported to Windows via my 2015-ish mini-itx PC. Unity 2018 was the game’s engine.  </p>
+
+<p>I now have a much more powerful Apple Silicon MacBookPro M3, where I have my entire dev setup, do all of my personal work, and game. “Gaming on a Mac, wut?” you might ask. Yes, it works fairly well via CrossOver, which runs Windows based applications like Steam and its games.</p>
+
+<p>I wanted to replicate my past workflow and use my M3 and upgrade the game to use a newer Unity version. Turns out, none of it worked.</p>
+
+<p>Upgrading the game to use, even a small bump, higher Unity version completely breaks it:</p>
+
+<ul>
+  <li>breaks the <strong>plugins</strong>: such as my custom <a href="https://guavaman.com/projects/rewired/">ReWired</a> integration, which is essential for controller handling</li>
+  <li>breaks the <strong>model import pipeline</strong>: since newer Unity versions don’t auto collapse blender modifiers, so I would have needed re-export all my models</li>
+  <li>breaks <strong>rendering</strong>: since tricks and quirks used in Unity 2018 stopped working)</li>
+  <li>breaks the <strong>code</strong>: APIs changed or disappeared, leading to fixes that changed the behaviour of the game, and would have required a complete retesting of the game </li>
+</ul>
+
+<p>How about forgetting the upgrade, and instead use Unity Editor 2018 on my M3? No dice, since the 2018 editor version is Intel based, leading to a wealth of errors, stalled imports and editor windows not being rendered. I tried it via CrossOver, Parallels and without any mediators. All had issues.</p>
+
+<h3 id="pc-to-the-rescue">PC to the rescue</h3>
+
+<p>One thing did work though. My old Windows based mini-itx PC still ran everything perfectly well and its development environment remained intact and functional, even though I hadn’t touch it since 2018 (when I launched the game).</p>
+
+<p>I was not going to spend a minute more trying to upgrade anything. That would be my development setup for the new mode. If it gets the job done, I’m all for it.</p>
+
+<h2 id="ready-set-execute-ruthlessly">Ready, set, execute ruthlessly</h2>
+
+<p>My last day of work was on a Friday, and once I wrapped up everything and had a nice dinner, I could not contain myself with the excitement of starting my recharge. What should I do first?!</p>
+
+<p>I really wanted to finish <a href="https://x.com/lopes_pm/status/2068447979040551423">Titanfall 2</a>, but that would have to wait, since I could not stop thinking about this new game mode for Survival Ball. I was well aware that this could be the only realistic opportunity to fully focus on an endeavour like this, specially because I would travel about one week and half after my recharge started, so my precious continuous time block would be in reality constrained to that time.</p>
+
+<p>I had one week and a half to give it all and make this new game mode happen, so I couldn’t waste any time. I started developing the versus right on that Friday night.</p>
+
+<p>I powered up my mini-ITX PC, and started banging on it. By 3AM or 4AM, I already had a very basic versus mode running.</p>
+
+<p>I was in full flow, for 5 consecutive days.</p>
+
+<p>My mind was fully consumed by the game, day and night. It was wonderful. This state of constant flow is one of the most enjoyable things I can think of, and was very similar to how I felt while developing the original version of the game.</p>
+
+<h3 id="no-need-for-a-bloated-ai-setup">No need for a bloated AI setup</h3>
+
+<p>Execution was all that mattered to me. I knew roughly what I wanted to do, so I just needed the essential tools to get the job done. </p>
+
+<p>Luckily, my C# / Unity dev environment worked as nicely as before (Rider is still a kickass IDE), and I only needed to do a few tweaks to get the system working nicely with my Apple Magic Keyboard and some new shortcuts I’ve become used to.</p>
+
+<p>I spent zero time setting up all the nice AI agent harnesses that I used for my normal professional and personal work. I didn’t need any of that. The real challenge of developing this new mode was making sure that the experience felt right and cohesive. Much of that comes down to gut feeling and trying things live. </p>
+
+<p>Where AI agents were indeed helpful was during algorithm and behaviour development, and finding what is the best way to do X on Unity 2018. As such, you might be surprised to know that the only AI agent I used was Gemini <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>, <em>on a logged out window</em>. That’s it.</p>
+
+<p>This worked really well, since it forced me to only provide the code snippets and context that was relevant, which in turn helped me to remember how the code was structured, and because the context was so clean and unambiguous, the agent’s responses were fast and provided me exactly what I needed, about 95% of the time. It was a great development experience. </p>
+
+<p>Without all this help from an AI, I would have easily taken twice or thrice the time to develop this new mode.</p>
+
+<h2 id="leveraging-what-already-exists">Leveraging what already exists</h2>
+
+<p>One of the great things about iterating on top of an existing game was the possibility to use a  wealth of fully baked components.</p>
+
+<h3 id="behaviour">Behaviour</h3>
+
+<p>The ball’s behaviour was kept essentially the same: one can move, stomp and dash, the difference being that on the versus mode those same stomp and dashes carry additional force towards other players, which transforms them into offensive weapons. An aura of power effect was added to reinforce and indicate that difference in versus.</p>
+
+<p>I love how you can make your opponents fly off the screen in Super Smash Bros, and wanted something that would allow it. As such, another new mechanism is the ability to grab a power-up crate to further increase the force applied to a stomp or dash. A well timed / placed stomp or dash will take your opponents to the stratosphere.</p>
+
+<h3 id="battlefield">Battlefield</h3>
+
+<p>Players need somewhere to hash it out, and since there were already a wealth of different scenarios in the co-op game, it came naturally to reuse them.</p>
+
+<p>The first pick was <a href="/2019/02/06/survival-ball-making-the-game.html#venom-rig">Venom Rig</a>, a plain, rectangular platform. I quickly realized on that Friday night that it was not a good fit, since the experience felt too plain and one dimensional.</p>
+
+<p>I pivoted towards using <a href="/2019/02/06/survival-ball-making-the-game.html#hex-elevator">Hex Elevator</a>, which had two interesting components:</p>
+
+<ul>
+  <li>each platform is procedurally generated, so every new gameplay would be different</li>
+  <li>originally, the players would need to quickly catch their elevators in order to escape from the rising lava, where all players would need to be on top of their elevator for the elevators to rise. On the versus mode however, these platforms could be used as an offensive tactic, since they would not be linked anymore. First one(s) to get the elevator(s) and able to reach the top first, trigger the lava to creep upon the players left in the bottom.</li>
+</ul>
+
+<h3 id="code">Code</h3>
+
+<p>After so many professional years of dealing with realms of sloppy, quickly pieced together code, it was a breath of fresh air to rediscover the codebase I carefully laid out for the original game, where events were neatly coordinated via reactive streams and the structure was pondered to serve the game as best as possible, with minimal bloat.</p>
+
+<p>Looking at that code was something I can compare to experiencing an harmonious art piece, like a painting. Beauty has a value of its own. It’s not often one can have that nowadays.</p>
+
+<p>More than beautiful, it was functional and easily extensible.</p>
+
+<p>Because I was not offloading my reasoning to a random AI agent, I interiorized the code’s architecture and could play that against my game design ideas. For example, if there was some specific behaviour I wanted to attribute to an elevator, I knew exactly which streams I could leverage for maximum effect and low code entropy.</p>
+
+<h3 id="speed">Speed</h3>
+
+<p>You might notice the game feels faster. It is. One of the pieces of feedback I got for the original game was that the physics felt like you were on the moon, and I got the same feeling when playing the game after all these years. The cooperative mode speed was slightly increased and the versus mode speed was increased a step more. It feels nicer and punchier.</p>
+
+<h2 id="testing">Testing</h2>
+
+<p>As with any (multiplayer) game, the proof of the pudding happens when experienced together with others.</p>
+
+<p>Right after finishing the game’s development, I invited friends of mine to play the game with me, or between them. I took note of their observations, tweaked the game accordingly, and then repeated the cycle.</p>
+
+<p>In the end, the versus mode got its quirks ironed out, and as with the original game’s play tests, these sessions were a fantastic way to spend some quality time with a group of friends.</p>
+
+<h2 id="finished-product">Finished product</h2>
+
+<p>The new versus mode, support for spanish and portuguese locales, plus several bug fixes are now available as a free update for Survival Ball. The update feels like a polished deliverable, which personally is deeply satisfying.</p>
+
+<p>The update is for Windows only because of the challenges I faced to develop on a Mac, but the final packaged game runs amazingly well via Mac’s Crossover app, which curiously was how the game was run during play tests. Developed on Windows, play tested on a Mac, the <a href="/2019/02/06/survival-ball-making-the-game.html#final-notes">exact opposite</a> of what happened during the original game’s development.</p>
+
+<p>I still have many other ideas I would like to bring to fruition, one of them being to expand the number of scenarios and mechanics for the versus mode, but one step at a time. <a href="https://store.steampowered.com/app/918690/Survival_Ball/">Get it now on Steam</a> and let me know what you think!</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Counter to many of the memes floating around, Gemini is actually a pretty decent model for many tasks.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2026-10-04T00:00:00+00:00" pubdate data-updated="true">Oct 4<span>th</span>, 2026</time>
+      
+      
+
+
+    </p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/notes/2026/06/24/music.html" title="Previous Post: How Music Shaped Me">&laquo; How Music Shaped Me</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <div id="giscus-comments">
+    <script async src="https://giscus.app/client.js"
+        data-repo="lopespm/lopespm.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3MDExOTAxNg=="
+        data-category="Comments"
+        data-category-id="DIC_kwDOBC3uaM4CYFCk"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </section>
+
+<!--
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+-->
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2026/10/04/survival_ball_versus.html">Survival Ball: Versus Mode</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2026/06/24/music.html">How Music Shaped Me</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2026/06/21/out_and_about.html">The Out N' About Walks Store</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2026/06/07/ai_revive_old_projects_part_one.html">Using AI to Revive Old Projects [Part 1]</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2026/05/01/lateral-thinking.html">Lateral thinking using existing technologies</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/lopespm">@lopespm</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'lopespm',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2026 - <a href="/about">Pedro Lopes</a> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>. Theme based on <a href="https://github.com/lucaslew/whitespace"> Whitespace</a>. Subscribe via <a href="/atom.xml">RSS Feed</a>
+</p>
+
+</footer>
+  
+
+
+
+
+
+<script src="/javascripts/anchor.min.js"></script>
+
+<script>
+    anchors.options = {
+      placement: 'left'
+    };
+    anchors.add();
+    anchors.remove('.entry-title');
+    anchors.remove('#byte-tank');
+</script>
+
+
+
+</body>
+</html>
