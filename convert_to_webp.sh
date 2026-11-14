@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-SEARCH_DIR="$(dirname "$0")/source/files/why_is_my_kitchen_so_clean"
+SEARCH_DIR="$(dirname "$0")/source/files/v_a_storehouse"
 
 find "$SEARCH_DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) | while IFS= read -r src; do
   basename=$(basename "$src")
