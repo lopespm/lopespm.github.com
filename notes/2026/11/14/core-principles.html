@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Core Principles - Byte Tank</title>
+  <meta name="author" content="Pedro Lopes">
+
+  
+  <meta name="description" content="Find them, exploit them">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="https://lopespm.com/notes/2026/11/14/core-principles.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="Byte Tank" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js" async></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&display=swap" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One&display=swap' rel='stylesheet' type='text/css'>
+<link href="/stylesheets/rocket-loader/loader.min.css" rel="stylesheet" type="text/css">
+  <meta property="og:title" content="Core Principles - Byte Tank" />
+<meta property="og:description" content="Find them, exploit them" />
+<meta property="og:url" content="https://lopespm.com/notes/2026/11/14/core-principles.html" />
+<meta property="og:image" content="https://lopespm.com/files/core_principles/pthumb.jpg" />
+<meta property="og:site_name" content="Byte Tank" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:title" content="Core Principles - Byte Tank">
+<meta name="twitter:description" content="Find them, exploit them">
+
+<meta name="twitter:creator" content="@lopes_pm">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lopespm.com/files/core_principles/pthumb.jpg">
+
+
+  
+  <script async>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39962763-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+<script defer>
+
+  /* Based on: http://labnol.org/?p=27941 */
+
+  // function onYouTubeIframeAPIReady() {
+  //   initialize();
+  // }
+
+  document.addEventListener("DOMContentLoaded", initialize );
+
+  function initialize() {
+    var div, n,
+      v = document.getElementsByClassName("youtube-player");
+    for (n = 0; n < v.length; n++) {
+      div = document.createElement("div");
+      div.setAttribute("data-id", v[n].dataset.id);
+      div.innerHTML = labnolThumb(v[n].dataset.id, v[n].dataset.thumbsize);
+      div.onclick = labnolIframe;
+
+      v[n].classList.add("ytp-thumbnail-overlay");
+      v[n].classList.add("ytp-cued-thumbnail-overlay");
+
+      v[n].appendChild(div);
+    }
+  }
+
+  function labnolThumb(id, thumbSize) {
+    var thumb = getThumb(thumbSize);
+    var thumbWithId = thumb.replace("ID", id);
+
+    var youtubePlayButton = '<div class="play-youtube-button"><button class="ytp-large-play-button ytp-button" aria-label="Play Video"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z" fill="#1f1f1e" fill-opacity="0.81"></path><path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path><path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path></svg></button></div>';
+
+
+
+    var bg = '<div class="bg" style=\'background-image: url(\"' + thumbWithId + '\')\"></div>';
+    var fadeBg = '<div class="fadeBg"></div>';
+    return bg + fadeBg + youtubePlayButton;
+  }
+
+  function getThumb(thumbSize) {
+    if (thumbSize === "0")
+      return 'https://i.ytimg.com/vi/ID/hqdefault.jpg';
+    if (thumbSize === "1")
+      return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+    else if (thumbSize === "2")
+      return 'https://i.ytimg.com/vi/ID/maxresdefault.jpg';
+    return 'https://i.ytimg.com/vi/ID/sddefault.jpg';
+  }
+
+  function labnolIframe() {
+    var container = document.createElement("div");
+
+    var loaderContainerOuter = document.createElement("div");
+    loaderContainerOuter.setAttribute("style", "display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: black; z-index: 200;");
+    var loaderContainerMiddle = document.createElement("div");
+    loaderContainerMiddle.setAttribute("style", "  display: table-cell; vertical-align: middle;");
+    var loaderContainerInner = document.createElement("div");
+    loaderContainerInner.setAttribute("style", "margin-left: auto; margin-right: auto; width: 400px;");
+
+    loaderContainerOuter.appendChild(loaderContainerMiddle);
+    loaderContainerMiddle.appendChild(loaderContainerInner);
+
+    const loader = Rocket.loader({
+      target: loaderContainerInner,
+      size: 'large',
+      type: 'spinner',
+      colour: 'grey-blue-dark'
+      //body: "Loading Video"
+    });
+
+    var containerPlayer = document.createElement("div");
+    container.appendChild(containerPlayer);
+    container.appendChild(loaderContainerOuter);
+
+    this.parentNode.replaceChild(container, this);
+
+    var didLoadAndPlay = 0;
+    player = new YT.Player(containerPlayer, {
+      videoId: this.dataset.id,
+      playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': function(event) {
+          event.target.playVideo();
+
+          // Fallback if onStateChange is not called
+          setInterval(function () {
+            if (didLoadAndPlay === 0) {
+              container.removeChild(loaderContainerOuter);
+              didLoadAndPlay = 1;
+            }
+          }, 5000);
+        },
+        'onStateChange': function (event) {
+          if (didLoadAndPlay === 0) {
+            container.removeChild(loaderContainerOuter);
+            didLoadAndPlay = 1;
+          }
+        }
+      }
+    });
+
+  }
+
+</script>
+
+
+<script src="/javascripts/rocket-loader/tools.min.js" defer></script>
+<script src="/javascripts/rocket-loader/loader.min.js" defer></script>
+  <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config" async>
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML" type="text/javascript" async></script>
+  <header role="banner">
+    <hgroup>
+      <h1><a href="/">Byte Tank</a></h1>
+      <h2>Pedro Lopes <span class="note-header-subtitle">Notes</span></h2>
+</hgroup>
+</header>
+  <nav role="navigation">
+
+<ul class="subscription">
+  <li><a href="https://www.youtube.com/@lopespm"><img src="/images/cn_youtube_19.png" height="19px" width="19px" alt="Go to YouTube Channel"/></a></li>
+  <li><a href="https://x.com/lopes_pm"><img src="/images/cn_twitter_19.png" height="19px" width="19px" alt="Go to Twitter"/></a></li>
+  <li><a href="https://github.com/lopespm"><img src="/images/cn_github_19.png" height="19px" width="19px" alt="Go to GitHub"/></a></li>
+  <li><a href="/atom.xml"><img src="/images/cn_rss_19.png" height="19px" width="19px" alt="RSS Feed"/></a></li>  
+</ul>
+
+  
+
+
+
+  
+
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li class="nav-current"><a href="/notes">Notes</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="article-full">
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Core Principles</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2026-11-14T00:00:00+00:00" pubdate data-updated="true">Nov 14<span>th</span>, 2026</time>
+        <!--
+        
+        -->
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Once you find the core principles of something, you can limit the search space of your exploits and reach your desired outcomes by applying different sets of actions, as long as those actions are aligned with the principles. The problem is when:</p>
+
+<ul>
+  <li>the principles cover a very narrow spectrum of your goals space, so you become repetitive and boring by strictly following them</li>
+  <li>some or all of the principles are wrong, so the respective actions will consistently miss the goal</li>
+  <li>the right principles are ignored completely, so it becomes unpredictable what will be the result of an action</li>
+</ul>
+
+<h1 id="how-this-applies">How this applies</h1>
+
+<p>Take <a href="https://www.youtube.com/channel/UCDe08Fs0s0YKJuk5h45csAQ">Polyphia</a>, an innovative band that crosses different interesting styles with flawless musical execution, which, in my opinion, created some of highest quality music over the past years:</p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="1JNmz17gnMw"></div></div>
+   <p class="media-caption media-caption-two">Polyphia - Ego Death feat. Steve Vai</p>
+ </div>
+</center>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="Z5NoQg8LdDk"></div></div>
+   <p class="media-caption media-caption-two">Polyphia - Playing God</p>
+ </div>
+</center>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="Mtd24QIBJ5Y"></div></div>
+   <p class="media-caption media-caption-two">Polyphia - ABC feat. Sophia Black</p>
+ </div>
+</center>
+
+<p>They found a sweet niche spot that is unrivalled, and exploited it in several of their songs. They grasped core principles like a fresh unexpected mix genres, above average musical execution, catchy riffs, core musical theory, unexpected structures, and interesting aesthetics.</p>
+
+<h2 id="missing-the-principle-of-focus">Missing the principle of focus</h2>
+
+<p>They are an incredible band, but then there are songs like “Power in the Blood”. This one misses the core principle of focus. Notice how much is happening how much is happening throughout the song, and how much each musical line is battling for your attention:</p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="fDltPLFdkYI"></div></div>
+   <p class="media-caption media-caption-two">Polyphia - Power in the Blood</p>
+ </div>
+</center>
+
+<p>We are limited animals, and can only grasp so much at any given point in time, that’s why even in jazz this is acknowledged several times we see an instrument soloing, while others hold the background. That’s why there are melodies, that’s why there is usually <em>one</em> lead singer.</p>
+
+<p>Now listen to this hidden gem:</p>
+
+<center>
+ <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
+     <div class="youtube-player video-frame-two" data-id="Vj1jtYPfRks"></div></div>
+   <p class="media-caption media-caption-two">Scott LePage&#8217;s line on &#8220;Power in the Blood&#8221;</p>
+ </div>
+</center>
+
+<p>It is still “Power in the Blood”, but focused on Scott LePage’s lines. The competing noise was toned down, and Scott’s magic is forefronted. It’s so good that during one of my walks I’ve listened to it, on repeat, over the span of four hours, meaning I’ve listened to it about 80 times.</p>
+
+<h2 id="climbing-the-ladder">Climbing the ladder</h2>
+
+<p>On the other hand, consider one’s professional career. There are certain formulas inside a company that consistently allow you to hit desired objectives, and allow you to climb the corporate ladder. For example, if your company rewards objective impact to its topline business goals, then you already know that one of the <em>principles</em> you can foster is to align your work consistently with the business’ needs<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<p>On the other hand, if you happen to find a local maxima principle, such as the rules on how to optimize a given user flow, and then don’t abide by any other principle, you’ll become pigeon holed into a role or position. This is usually less stressful, more predictable, but also more boring, and could leave you in a pickle if the ground shifts beneath your feet, as it often does in today’s business / world needs.</p>
+
+<h2 id="find-your-principles">Find your principles</h2>
+
+<p>If you think you already found all the core principles you need, great. Exploit them to the max, but be careful to keep an eye every now and then outside our realm of possibilities, to make sure you are not missing anything fundamentally relevant.</p>
+
+<p>If you found a core of set principles, but choose to disregard them in favour of new explorations, have fun, but remember that you might be wasting your previous investments, and leaving high quality results on the table.</p>
+
+<p>If you don’t have a set of principles yet, whatever the area, make an effort to find them.</p>
+
+<p><br /></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>If your company doesn’t reward behaviours and impact that translates into positive outcomes to the business’ topline objectives, but instead rewards unproductive politics and drama, you can still play that game to climb the internal ladder, but I would advise you to leave instead. No toxic culture is worth anyone’s time.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pedro Lopes</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2026-11-14T00:00:00+00:00" pubdate data-updated="true">Nov 14<span>th</span>, 2026</time>
+      
+      
+
+
+    </p>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/notes/2026/10/24/mufasa_death.html" title="Previous Post: Mufasa's Death">&laquo; Mufasa's Death</a>
+      
+      
+        <a class="basic-alignment right" href="/notes/2026/11/14/v_a_storehouse.html" title="Next Post: V&A Storehouse">V&A Storehouse &raquo;</a>
+      
+    </p>
+    <!--script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="bb20d843-97d2-47f5-a43d-441efaf79104"></script-->
+  </footer>
+</article>
+
+  <div id="giscus-comments">
+    <script async src="https://giscus.app/client.js"
+        data-repo="lopespm/lopespm.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk3MDExOTAxNg=="
+        data-category="Comments"
+        data-category-id="DIC_kwDOBC3uaM4CYFCk"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </section>
+
+<!--
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+-->
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/notes/2026/11/14/v_a_storehouse.html">V&A Storehouse</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2026/11/14/core-principles.html">Core Principles</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2026/10/24/mufasa_death.html">Mufasa's Death</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2026/10/04/survival_ball_versus.html">Survival Ball Versus: The Sabbatical Sprint</a>
+      </li>
+    
+      <li class="post">
+        <a href="/notes/2026/06/24/music.html">How Music Shaped Me</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/lopespm">@lopespm</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'lopespm',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2026 - <a href="/about">Pedro Lopes</a> -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>. Theme based on <a href="https://github.com/lucaslew/whitespace"> Whitespace</a>. Subscribe via <a href="/atom.xml">RSS Feed</a>
+</p>
+
+</footer>
+  
+
+
+
+
+
+<script src="/javascripts/anchor.min.js"></script>
+
+<script>
+    anchors.options = {
+      placement: 'left'
+    };
+    anchors.add();
+    anchors.remove('.entry-title');
+    anchors.remove('#byte-tank');
+</script>
+
+
+
+</body>
+</html>
