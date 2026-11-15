@@ -1,0 +1,194 @@
+---
+layout: nil
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zero-Upload Data Cleaner | lopespm.com</title>
+  <meta name="description" content="Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
+  <meta name="author" content="Pedro Lopes">
+  <meta name="keywords" content="csv cleaner,parquet cleaner,json cleaner,data cleaning,duckdb wasm,zero upload,browser tool,data pipeline">
+  <meta name="application-name" content="Zero-Upload Data Cleaner">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://lopespm.com/p/cleaner/">
+  <meta property="og:locale" content="en_US">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="lopespm.com">
+  <meta property="og:title" content="Zero-Upload Data Cleaner">
+  <meta property="og:description" content="Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
+  <meta property="og:url" content="https://lopespm.com/p/cleaner/">
+  <meta property="og:image" content="https://lopespm.com/favicon.png">
+  <meta property="og:image:alt" content="Zero-Upload Data Cleaner by Pedro Lopes">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Zero-Upload Data Cleaner">
+  <meta name="twitter:description" content="Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
+  <meta name="twitter:image" content="https://lopespm.com/favicon.png">
+  <meta name="twitter:image:alt" content="Zero-Upload Data Cleaner by Pedro Lopes">
+
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link rel="icon" type="image/svg+xml" href="/p/cleaner/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/p/cleaner/cleaner.css?v=20261115d">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Zero-Upload Data Cleaner",
+      "url": "https://lopespm.com/p/cleaner/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "description": "Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.",
+      "author": {
+        "@type": "Person",
+        "name": "Pedro Lopes",
+        "url": "https://lopespm.com/"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Pedro Lopes",
+        "url": "https://lopespm.com/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1>Zero-Upload Data Cleaner</h1>
+      </div>
+      <div class="topbar-right">
+        <a class="byline-link" href="https://lopespm.com/" target="_blank" rel="noopener noreferrer">Built by Pedro Lopes</a>
+        <span class="privacy-pill">🔒 100% Client-Side: Zero bytes uploaded</span>
+      </div>
+    </header>
+
+    <section class="upload-row">
+      <div class="panel upload-panel">
+        <h2>1. Upload / Drop Data File</h2>
+        <label id="dropzone" class="dropzone">
+          <input id="fileInput" type="file" accept=".csv,.parquet,.json,.ndjson,text/csv,application/json,application/x-ndjson,application/octet-stream">
+          <span class="dropzone-main" id="dropzoneText">Drop CSV, Parquet, or JSON file here</span>
+          <span class="dropzone-sub">Supports tabular files only (CSV/Parquet/JSON arrays or records).</span>
+          <span id="dropzoneLoader" class="inline-loader hidden" aria-hidden="true"></span>
+        </label>
+        <p id="fileMeta" class="meta-line">No file selected.</p>
+        <p id="fileFormatMeta" class="meta-line">Detected format: —</p>
+        <p id="ingestSummary" class="meta-line">No data-quality checks yet.</p>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <section class="panel">
+          <h2>2. Auto-Detected Fixes</h2>
+          <label class="toggle-row">
+            <input id="toggleTrimWhitespace" type="checkbox" checked>
+            <span>Trim whitespace (<span id="trimCount">0</span> cells)</span>
+          </label>
+          <label class="toggle-row">
+            <input id="toggleDateNormalization" type="checkbox" checked>
+            <span>Fix mixed dates → ISO-8601 (<span id="dateFixCount">0</span> cells)</span>
+          </label>
+          <div class="toggle-row dedupe-row">
+            <label>
+              <input id="toggleDeduplicate" type="checkbox" checked>
+              <span>Deduplicate by:</span>
+            </label>
+            <select id="dedupeColumn"></select>
+          </div>
+          <label class="toggle-row">
+            <input id="toggleDropEmptyRows" type="checkbox">
+            <span>Drop empty rows (<span id="emptyRowCount">0</span>)</span>
+          </label>
+          <label class="toggle-row">
+            <input id="toggleDropErrorRows" type="checkbox">
+            <span>Drop error rows</span>
+          </label>
+          <details id="normalizationDetails" class="normalization-details">
+            <summary>Normalization details</summary>
+            <div class="normalization-grid">
+              <div class="normalization-item">
+                <strong>Padded short rows</strong>
+                <div id="normPaddedRows" class="normalization-list">none</div>
+              </div>
+              <div class="normalization-item">
+                <strong>Merged long rows</strong>
+                <div id="normMergedRows" class="normalization-list">none</div>
+              </div>
+              <div class="normalization-item">
+                <strong>Dropped blank rows</strong>
+                <div id="normDroppedRows" class="normalization-list">none</div>
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <section class="panel">
+          <h2>3. Column Schema &amp; Renames</h2>
+          <div id="columnSchemaList" class="column-schema-list"></div>
+        </section>
+
+        <section class="panel actions-panel">
+          <button id="exportCsv" class="btn btn-secondary" type="button">Export Clean CSV</button>
+          <button id="exportParquet" class="btn btn-secondary" type="button">Export Parquet</button>
+          <button id="exportJson" class="btn btn-secondary" type="button">Export JSON</button>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <div class="stats-bar">
+          <div class="stats-line-wrap">
+            <div id="statsLine" class="stats-line">Drop a data file to begin.</div>
+            <span id="statsLoader" class="inline-loader hidden" aria-hidden="true"></span>
+          </div>
+          <div class="filter-tabs">
+            <button data-filter="all" class="tab active" type="button">All Rows</button>
+            <button data-filter="modified" class="tab" type="button">Modified Only (<span id="modifiedCount">0</span>)</button>
+            <button data-filter="errors" class="tab" type="button">Errors (<span id="errorsCount">0</span>)</button>
+          </div>
+          <div class="preview-controls">
+            <label class="preview-page-size">
+              Rows per page
+              <select id="previewPageSize">
+                <option value="200" selected>200</option>
+                <option value="1000">1,000</option>
+                <option value="5000">5,000</option>
+                <option value="all">All</option>
+              </select>
+            </label>
+            <div class="preview-pagination">
+              <button id="previewPrev" class="btn btn-secondary" type="button">Prev</button>
+              <span id="previewPageInfo" class="preview-page-info">Page 1 / 1</span>
+              <button id="previewNext" class="btn btn-secondary" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+        <div id="rowDeltaWarning" class="warning-chip hidden"></div>
+        <div class="table-shell">
+          <div id="tableLoading" class="table-loading hidden">
+            <span class="inline-loader" aria-hidden="true"></span>
+            <span>Processing preview…</span>
+          </div>
+          <div id="tableWrap" class="table-wrap">
+            <div class="empty-state">Preview will appear here.</div>
+          </div>
+        </div>
+        <div class="bottom-bar">
+          <button id="copyRecipe" class="btn btn-secondary" type="button">Copy Recipe JSON</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="/p/cleaner/cleaner.js?v=20261115d"></script>
+</body>
+</html>

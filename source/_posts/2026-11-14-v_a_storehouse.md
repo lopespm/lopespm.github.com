@@ -4,7 +4,7 @@ title: "V&A Storehouse"
 comments: true
 categories: notes
 tags: []
-description: "Find them, exploit them"
+description: "Beautiful and thought provoking"
 ogp_image: "/files/v_a_storehouse/pthumb.jpg"
 ogp_image_twitter: "/files/v_a_storehouse/pthumb.jpg"
 published: true

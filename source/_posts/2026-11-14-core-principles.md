@@ -45,7 +45,7 @@ They found a sweet niche spot that is unrivalled, and exploited it in several of
 
 ## Missing the principle of focus
 
-They are an incredible band, but then there are songs like “Power in the Blood”. This one misses the core principle of focus. Notice how much is happening how much is happening throughout the song, and how much each musical line is battling for your attention:
+They are an incredible band, but then there are songs like “Power in the Blood”. This one misses the core principle of focus. Notice how much is happening throughout the song, and how much each musical line is battling for your attention:
 
 <center>
  <div class="video-media-caption-wrapper-two"><div class="video-wrapper-two">
@@ -78,9 +78,9 @@ On the other hand, if you happen to find a local maxima principle, such as the r
 
 ## Find your principles
 
-If you think you already found all the core principles you need, great. Exploit them to the max, but be careful to keep an eye every now and then outside your perceived realm of possibilities, to make sure you are not missing anything fundamental.
+If you think you already found all the core principles you need, great. Exploit them to the max, but be careful to keep an eye outside your perceived realm of possibilities, in order to make sure you are not missing anything fundamental.
 
-If you found a core of set principles, but choose to disregard them in favour of new explorations, have fun, but remember that you might be wasting your previous investments, and high leverage outcomes on the table.
+If you found a core of set principles, but chose to disregard them in favour of new explorations, have fun, but remember that you might be wasting your previous investments, and leaving high leverage outcomes on the table.
 
 If you don’t have a set of principles yet, whatever the area, make an effort to find them.
 
