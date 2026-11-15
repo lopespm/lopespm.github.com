@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zero-Upload CSV Data Cleaner | lopespm.com</title>
-  <meta name="description" content="Clean messy CSV files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
+  <title>Zero-Upload Data Cleaner | lopespm.com</title>
+  <meta name="description" content="Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
   <meta name="author" content="Pedro Lopes">
-  <meta name="keywords" content="csv cleaner,data cleaning,duckdb wasm,zero upload,browser tool,data pipeline">
+  <meta name="keywords" content="csv cleaner,parquet cleaner,json cleaner,data cleaning,duckdb wasm,zero upload,browser tool,data pipeline">
   <meta name="application-name" content="Zero-Upload Data Cleaner">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -16,33 +16,33 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="lopespm.com">
-  <meta property="og:title" content="Zero-Upload CSV Data Cleaner">
-  <meta property="og:description" content="Clean messy CSV files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
+  <meta property="og:title" content="Zero-Upload Data Cleaner">
+  <meta property="og:description" content="Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
   <meta property="og:url" content="https://lopespm.com/p/cleaner/">
   <meta property="og:image" content="https://lopespm.com/favicon.png">
-  <meta property="og:image:alt" content="Zero-Upload CSV Data Cleaner by Pedro Lopes">
+  <meta property="og:image:alt" content="Zero-Upload Data Cleaner by Pedro Lopes">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Zero-Upload CSV Data Cleaner">
-  <meta name="twitter:description" content="Clean messy CSV files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
+  <meta name="twitter:title" content="Zero-Upload Data Cleaner">
+  <meta name="twitter:description" content="Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.">
   <meta name="twitter:image" content="https://lopespm.com/favicon.png">
-  <meta name="twitter:image:alt" content="Zero-Upload CSV Data Cleaner by Pedro Lopes">
+  <meta name="twitter:image:alt" content="Zero-Upload Data Cleaner by Pedro Lopes">
 
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
   <link rel="icon" type="image/svg+xml" href="/p/cleaner/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="stylesheet" href="/p/cleaner/cleaner.css?v=20261115b">
+  <link rel="stylesheet" href="/p/cleaner/cleaner.css?v=20261115d">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Zero-Upload CSV Data Cleaner",
+      "name": "Zero-Upload Data Cleaner",
       "url": "https://lopespm.com/p/cleaner/",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Any",
-      "description": "Clean messy CSV files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.",
+      "description": "Clean messy CSV, Parquet, and JSON files instantly in your browser with deterministic rules, zero uploads, and fast DuckDB-Wasm processing.",
       "author": {
         "@type": "Person",
         "name": "Pedro Lopes",
@@ -70,14 +70,15 @@
 
     <section class="upload-row">
       <div class="panel upload-panel">
-        <h2>1. Upload / Drop CSV</h2>
+        <h2>1. Upload / Drop Data File</h2>
         <label id="dropzone" class="dropzone">
-          <input id="fileInput" type="file" accept=".csv,text/csv">
-          <span class="dropzone-main" id="dropzoneText">Drop CSV file here or click to choose</span>
-          <span class="dropzone-sub">This is the first step — everything starts here.</span>
+          <input id="fileInput" type="file" accept=".csv,.parquet,.json,.ndjson,text/csv,application/json,application/x-ndjson,application/octet-stream">
+          <span class="dropzone-main" id="dropzoneText">Drop CSV, Parquet, or JSON file here</span>
+          <span class="dropzone-sub">Supports tabular files only (CSV/Parquet/JSON arrays or records).</span>
           <span id="dropzoneLoader" class="inline-loader hidden" aria-hidden="true"></span>
         </label>
         <p id="fileMeta" class="meta-line">No file selected.</p>
+        <p id="fileFormatMeta" class="meta-line">Detected format: —</p>
         <p id="ingestSummary" class="meta-line">No data-quality checks yet.</p>
       </div>
     </section>
@@ -143,7 +144,7 @@
       <main class="workspace">
         <div class="stats-bar">
           <div class="stats-line-wrap">
-            <div id="statsLine" class="stats-line">Drop a CSV to begin.</div>
+            <div id="statsLine" class="stats-line">Drop a data file to begin.</div>
             <span id="statsLoader" class="inline-loader hidden" aria-hidden="true"></span>
           </div>
           <div class="filter-tabs">
@@ -185,6 +186,6 @@
     </div>
   </div>
 
-  <script type="module" src="/p/cleaner/cleaner.js?v=20261115b"></script>
+  <script type="module" src="/p/cleaner/cleaner.js?v=20261115d"></script>
 </body>
 </html>

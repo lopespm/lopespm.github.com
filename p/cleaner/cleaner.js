@@ -2,12 +2,15 @@ import * as duckdb from "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.29.0
 
 const COMMON_DATE_FORMATS = ["%Y-%m-%d", "%m/%d/%Y", "%d-%m-%Y", "%d/%m/%Y", "%Y/%m/%d"];
 const MAX_PREVIEW_ROWS = 200;
+const INGEST_ROW_ISSUE_COLUMN = "__ingest_row_issue";
+const INTERNAL_RAW_COLUMNS = new Set([INGEST_ROW_ISSUE_COLUMN]);
 
 const state = {
   db: null,
   conn: null,
   inputFile: null,
   inputFileName: "",
+  inputFormat: null,
   rawColumns: [],
   recipe: null,
   compiled: null,
@@ -16,6 +19,8 @@ const state = {
   previewPageSize: MAX_PREVIEW_ROWS,
   hasData: false,
   sanitizeStats: null,
+  hasIngestRowIssueColumn: false,
+  jsonStructureStats: null,
   tableStats: { rows: 0, cols: 0, modified: 0, errors: 0, inputRows: 0, filteredRows: 0 }
 };
 
@@ -25,6 +30,7 @@ const elements = {
   dropzoneText: document.getElementById("dropzoneText"),
   dropzoneLoader: document.getElementById("dropzoneLoader"),
   fileMeta: document.getElementById("fileMeta"),
+  fileFormatMeta: document.getElementById("fileFormatMeta"),
   ingestSummary: document.getElementById("ingestSummary"),
   normalizationDetails: document.getElementById("normalizationDetails"),
   normPaddedRows: document.getElementById("normPaddedRows"),
@@ -57,6 +63,12 @@ const elements = {
   exportJson: document.getElementById("exportJson")
 };
 
+const SUPPORTED_FORMATS = {
+  csv: "CSV",
+  parquet: "Parquet",
+  json: "JSON"
+};
+
 function quoteIdent(name) {
   return `"${String(name).replace(/"/g, "\"\"")}"`;
 }
@@ -86,6 +98,26 @@ function formatBytes(bytes) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 ** 2) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / (1024 ** 2)).toFixed(1)} MB`;
+}
+
+function inferInputFormat(file) {
+  const name = (file?.name || "").toLowerCase();
+  const type = (file?.type || "").toLowerCase();
+  if (name.endsWith(".csv") || type === "text/csv") return "csv";
+  if (name.endsWith(".parquet") || type.includes("parquet")) return "parquet";
+  if (
+    name.endsWith(".json") ||
+    name.endsWith(".ndjson") ||
+    type === "application/json" ||
+    type === "application/x-ndjson" ||
+    type === "application/ndjson"
+  ) return "json";
+  return null;
+}
+
+function formatNotSupportedError(file) {
+  const ext = file?.name?.includes(".") ? file.name.slice(file.name.lastIndexOf(".")).toLowerCase() : "unknown";
+  return `Unsupported file format (${ext}). Please use CSV (.csv), Parquet (.parquet), or JSON (.json/.ndjson) with tabular records.`;
 }
 
 function setLoadingState(isLoading, statusText) {
@@ -125,6 +157,13 @@ function formatRowList(values) {
   return values.join(", ");
 }
 
+function formatCompactRowList(values, maxShown = 8) {
+  if (!values || values.length === 0) return "none";
+  const shown = values.slice(0, maxShown).join(", ");
+  if (values.length <= maxShown) return shown;
+  return `${shown}, … (+${values.length - maxShown} more)`;
+}
+
 function updateNormalizationDetails(stats) {
   elements.normPaddedRows.textContent = formatRowList(stats?.paddedRowNumbers);
   elements.normMergedRows.textContent = formatRowList(stats?.mergedRowNumbers);
@@ -133,12 +172,19 @@ function updateNormalizationDetails(stats) {
   elements.normalizationDetails.open = issueCount > 0;
 }
 
-function resetDataState(reason = "Drop a CSV to begin.") {
+function setFormatMeta(format) {
+  elements.fileFormatMeta.textContent = `Detected format: ${SUPPORTED_FORMATS[format] || "—"}`;
+}
+
+function resetDataState(reason = "Drop a data file to begin.") {
   state.hasData = false;
   state.recipe = null;
   state.compiled = null;
   state.rawColumns = [];
   state.sanitizeStats = null;
+  state.hasIngestRowIssueColumn = false;
+  state.jsonStructureStats = null;
+  state.inputFormat = null;
   elements.statsLine.textContent = reason;
   elements.tableWrap.innerHTML = '<div class="empty-state">Preview will appear here.</div>';
   elements.previewPageInfo.textContent = "Page 1 / 1";
@@ -152,6 +198,8 @@ function resetDataState(reason = "Drop a CSV to begin.") {
   elements.columnSchemaList.innerHTML = "";
   elements.dedupeColumn.innerHTML = "";
   elements.ingestSummary.textContent = "No data-quality checks yet.";
+  setFormatMeta(null);
+  elements.normalizationDetails.classList.remove("hidden");
   elements.rowDeltaWarning.classList.add("hidden");
   updateNormalizationDetails({
     paddedRowNumbers: [],
@@ -267,6 +315,176 @@ function escapeCsvField(value, delimiter) {
   return escaped;
 }
 
+function isPlainObject(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+function recordsToCsvText(records) {
+  const headers = [];
+  const seen = new Set();
+  for (const record of records) {
+    for (const key of Object.keys(record)) {
+      if (seen.has(key)) continue;
+      seen.add(key);
+      headers.push(key);
+    }
+  }
+  if (!headers.length) {
+    throw new Error("JSON records do not have columns.");
+  }
+  const csvHeader = headers.map((h) => escapeCsvField(h, ",")).join(",");
+  const csvRows = records.map((record) => headers.map((key) => {
+    const value = record[key];
+    if (value === null || value === undefined) return "";
+    if (typeof value === "object") return escapeCsvField(JSON.stringify(value), ",");
+    return escapeCsvField(String(value), ",");
+  }).join(","));
+  return { csvText: `${csvHeader}\n${csvRows.join("\n")}\n`, headers };
+}
+
+function detectJsonStructuralOutliers(records) {
+  const toToken = (value) => String(value ?? "").trim();
+  const isEmpty = (value) => toToken(value) === "";
+  const isDateLike = (value) => /^\d{4}-\d{2}-\d{2}$/.test(toToken(value));
+  const isIntegerLike = (value) => /^[+-]?\d+$/.test(toToken(value));
+  const isDecimalLike = (value) => /^[+-]?\d+(\.\d+)?$/.test(toToken(value));
+  const hasLetters = (value) => /[a-z]/i.test(toToken(value));
+
+  const signatureCounts = new Map();
+  for (const record of records) {
+    const signature = Object.keys(record).sort().join("|");
+    signatureCounts.set(signature, (signatureCounts.get(signature) ?? 0) + 1);
+  }
+  let dominantSignature = "";
+  let dominantCount = -1;
+  for (const [signature, count] of signatureCounts.entries()) {
+    if (count > dominantCount) {
+      dominantSignature = signature;
+      dominantCount = count;
+    }
+  }
+  const dominantRatio = records.length > 0 ? dominantCount / records.length : 0;
+  const hasReliableDominantShape = dominantCount >= 2 && dominantRatio >= 0.6;
+
+  const allColumns = Array.from(new Set(records.flatMap((record) => Object.keys(record))));
+  const semanticExpectations = new Map();
+  for (const column of allColumns) {
+    const values = records.map((record) => record[column]).filter((value) => !isEmpty(value));
+    if (values.length < 3) continue;
+    const coverage = values.length / records.length;
+    if (coverage < 0.6) continue;
+    const dateRatio = values.filter(isDateLike).length / values.length;
+    const integerRatio = values.filter(isIntegerLike).length / values.length;
+    const decimalRatio = values.filter(isDecimalLike).length / values.length;
+    const alphaRatio = values.filter(hasLetters).length / values.length;
+    if (dateRatio >= 0.8) {
+      semanticExpectations.set(column, "date");
+    } else if (integerRatio >= 0.8) {
+      semanticExpectations.set(column, "integer");
+    } else if (decimalRatio >= 0.8) {
+      semanticExpectations.set(column, "decimal");
+    } else if (alphaRatio >= 0.8) {
+      semanticExpectations.set(column, "text_alpha");
+    }
+  }
+
+  const outlierRowNumbers = [];
+  const totalColumns = allColumns.length || 1;
+  const enrichedRecords = records.map((record, idx) => {
+    const signature = Object.keys(record).sort().join("|");
+    const shapeOutlier = hasReliableDominantShape && signature !== dominantSignature;
+    let semanticViolations = 0;
+    let semanticChecks = 0;
+    for (const [column, expectedKind] of semanticExpectations.entries()) {
+      const value = record[column];
+      if (isEmpty(value)) continue;
+      semanticChecks += 1;
+      const token = toToken(value);
+      const violates = (
+        (expectedKind === "date" && !isDateLike(token)) ||
+        (expectedKind === "integer" && !isIntegerLike(token)) ||
+        (expectedKind === "decimal" && !isDecimalLike(token)) ||
+        (expectedKind === "text_alpha" && !hasLetters(token))
+      );
+      if (violates) semanticViolations += 1;
+    }
+    const nonEmptyCount = allColumns.filter((column) => !isEmpty(record[column])).length;
+    const nullRatio = 1 - (nonEmptyCount / totalColumns);
+    const semanticOutlier = semanticExpectations.size >= 2 && (
+      (
+        semanticChecks >= 4
+        && semanticViolations >= 3
+        && (semanticViolations / semanticChecks) >= 0.6
+      ) || (
+        semanticChecks >= 2
+        && semanticViolations >= 2
+        && nullRatio >= 0.5
+      )
+    );
+    const isOutlier = shapeOutlier || semanticOutlier;
+    if (isOutlier) outlierRowNumbers.push(idx + 1);
+    return {
+      ...record,
+      [INGEST_ROW_ISSUE_COLUMN]: isOutlier ? "true" : "false"
+    };
+  });
+  return {
+    records: enrichedRecords,
+    stats: {
+      outlierRows: outlierRowNumbers.length,
+      outlierRowNumbers,
+      dominantStructureCount: Math.max(dominantCount, 0),
+      semanticColumnsProfiled: semanticExpectations.size,
+      totalRows: records.length
+    }
+  };
+}
+
+function parseJsonRecords(text) {
+  const trimmed = text.trim();
+  if (!trimmed) {
+    throw new Error("JSON file is empty.");
+  }
+  let parsed;
+  try {
+    parsed = JSON.parse(trimmed);
+  } catch {
+    parsed = undefined;
+  }
+  if (parsed !== undefined) {
+    if (Array.isArray(parsed)) {
+      if (!parsed.length) throw new Error("JSON array is empty.");
+      if (!parsed.every(isPlainObject)) throw new Error("JSON array must contain objects (records).");
+      return parsed;
+    }
+    if (isPlainObject(parsed)) {
+      throw new Error("Top-level JSON object is not tabular. Use an array of objects or NDJSON.");
+    }
+    throw new Error("JSON scalar values are not supported. Use object records.");
+  }
+  const lines = trimmed.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  if (!lines.length) {
+    throw new Error("JSON file is empty.");
+  }
+  const records = [];
+  for (const line of lines) {
+    let row;
+    try {
+      row = JSON.parse(line);
+    } catch {
+      throw new Error("Invalid JSON content. Use valid JSON array/object records or NDJSON.");
+    }
+    if (!isPlainObject(row)) {
+      throw new Error("NDJSON rows must be JSON objects.");
+    }
+    records.push(row);
+  }
+  if (!records.length) {
+    throw new Error("No records found in JSON file.");
+  }
+  return records;
+}
+
 async function sanitizeCsvText(file, csvConfig) {
   const text = await file.text();
   const lines = text.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n");
@@ -326,7 +544,21 @@ async function loadSanitizedRawInputView(fileName, delimiter, headers) {
   return (await state.conn.query("DESCRIBE raw_input"))
     .toArray()
     .map((r) => r.column_name)
-    .filter((c) => c !== "__rowid");
+    .filter((c) => c !== "__rowid" && !INTERNAL_RAW_COLUMNS.has(c));
+}
+
+async function loadRawInputViewFromParquet(fileName) {
+  await state.conn.query(`
+    CREATE OR REPLACE TEMP VIEW raw_input AS
+    SELECT ROW_NUMBER() OVER () AS __rowid, *
+    FROM read_parquet(${quoteLiteral(fileName)});
+  `);
+  const describeRows = (await state.conn.query("DESCRIBE raw_input")).toArray();
+  const tabularColumns = describeRows.filter((r) => r.column_name !== "__rowid");
+  if (!tabularColumns.length) {
+    throw new Error("No tabular columns were detected in this Parquet file.");
+  }
+  return tabularColumns.map((r) => r.column_name);
 }
 
 async function ensureDuckDb() {
@@ -426,7 +658,7 @@ function compileRecipe(recipe, tableName = "raw_input") {
   const errorColumns = [];
   const normalizeStrings = recipe.globalRules.trimWhitespace;
   for (const col of recipe.columns) {
-    const src = `${quoteIdent("r")}.${quoteIdent(col.sourceName)}`;
+    const src = `CAST(${quoteIdent("r")}.${quoteIdent(col.sourceName)} AS VARCHAR)`;
     let expr = src;
     if (normalizeStrings) expr = `TRIM(${expr})`;
     if (col.transforms?.includes("lowercase")) expr = `LOWER(${expr})`;
@@ -457,6 +689,11 @@ function compileRecipe(recipe, tableName = "raw_input") {
       selectClauses.push(`${invalidExpr} AS ${quoteIdent(errCol)}`);
       errorColumns.push(errCol);
     }
+  }
+  if (state.hasIngestRowIssueColumn) {
+    const structuralErrCol = "__err_structural_shape";
+    selectClauses.push(`COALESCE(TRY_CAST(${quoteIdent("r")}.${quoteIdent(INGEST_ROW_ISSUE_COLUMN)} AS BOOLEAN), FALSE) AS ${quoteIdent(structuralErrCol)}`);
+    errorColumns.push(structuralErrCol);
   }
 
   let sql = `SELECT\n  ${selectClauses.join(",\n  ")}\nFROM ${tableName} r`;
@@ -543,36 +780,85 @@ function renderDedupeDropdown() {
 }
 
 async function handleFile(file) {
-  setLoadingState(true, "Preparing and parsing CSV...");
+  setLoadingState(true, "Preparing and parsing file...");
   setControlsEnabled(false);
   try {
     elements.fileMeta.textContent = "Initializing DuckDB...";
     await ensureDuckDb();
     state.inputFile = file;
-    const csvConfig = await sniffCsvConfig(file);
-    const { csvText, headers, stats } = await sanitizeCsvText(file, csvConfig);
-    state.sanitizeStats = stats;
-    state.inputFileName = `sanitized_${Date.now()}.csv`;
-    await state.db.registerFileText(state.inputFileName, csvText);
-    state.rawColumns = await loadSanitizedRawInputView(state.inputFileName, csvConfig.delimiter, headers);
+    const format = inferInputFormat(file);
+    if (!format) {
+      throw new Error(formatNotSupportedError(file));
+    }
+    state.inputFormat = format;
+    setFormatMeta(format);
+    state.inputFileName = `${Date.now()}_${file.name.replace(/[^\w.\-]/g, "_")}`;
+    if (format === "csv") {
+      state.hasIngestRowIssueColumn = false;
+      state.jsonStructureStats = null;
+      const csvConfig = await sniffCsvConfig(file);
+      const { csvText, headers, stats } = await sanitizeCsvText(file, csvConfig);
+      state.sanitizeStats = stats;
+      state.inputFileName = `sanitized_${state.inputFileName}.csv`;
+      await state.db.registerFileText(state.inputFileName, csvText);
+      state.rawColumns = await loadSanitizedRawInputView(state.inputFileName, csvConfig.delimiter, headers);
+      const issueCount = stats.paddedRows + stats.mergedRows + stats.droppedEmptyRows;
+      const headerNote = stats.hasHeader ? "header detected." : "no header detected; generated column names.";
+      elements.ingestSummary.textContent = issueCount > 0
+        ? `Input normalization: ${stats.paddedRows} short rows padded, ${stats.mergedRows} long rows merged, ${stats.droppedEmptyRows} blank rows dropped; ${headerNote}`
+        : `Input normalization: no structural row issues detected; ${headerNote}`;
+      elements.normalizationDetails.classList.remove("hidden");
+      updateNormalizationDetails(stats);
+    } else if (format === "parquet") {
+      state.sanitizeStats = null;
+      state.hasIngestRowIssueColumn = false;
+      state.jsonStructureStats = null;
+      await state.db.registerFileBuffer(state.inputFileName, new Uint8Array(await file.arrayBuffer()));
+      state.rawColumns = await loadRawInputViewFromParquet(state.inputFileName);
+      elements.ingestSummary.textContent = "Parquet loaded. Structural normalization is CSV-only.";
+      elements.normalizationDetails.classList.add("hidden");
+      updateNormalizationDetails({ paddedRowNumbers: [], mergedRowNumbers: [], droppedRowNumbers: [] });
+    } else {
+      state.sanitizeStats = null;
+      state.hasIngestRowIssueColumn = true;
+      const records = parseJsonRecords(await file.text());
+      const { records: enrichedRecords, stats: jsonStructureStats } = detectJsonStructuralOutliers(records);
+      state.jsonStructureStats = jsonStructureStats;
+      const { csvText, headers } = recordsToCsvText(enrichedRecords);
+      state.inputFileName = `normalized_${state.inputFileName}.csv`;
+      await state.db.registerFileText(state.inputFileName, csvText);
+      state.rawColumns = await loadSanitizedRawInputView(state.inputFileName, ",", headers);
+      const outlierStats = jsonStructureStats.outlierRows > 0
+        ? ` Structural/value outliers detected: ${jsonStructureStats.outlierRows.toLocaleString()} rows (rows ${formatCompactRowList(jsonStructureStats.outlierRowNumbers)}).`
+        : " No structural/value outliers detected.";
+      elements.ingestSummary.textContent = `JSON loaded (${records.length.toLocaleString()} rows).${outlierStats}`;
+      elements.normalizationDetails.classList.add("hidden");
+      updateNormalizationDetails({ paddedRowNumbers: [], mergedRowNumbers: [], droppedRowNumbers: [] });
+    }
+
+    if (!state.rawColumns.length) {
+      throw new Error("No columns were detected after reading the file.");
+    }
+
     state.recipe = buildDefaultRecipe(state.rawColumns);
     renderSchemaEditor();
     renderDedupeDropdown();
     elements.dropzoneText.textContent = file.name;
     elements.fileMeta.textContent = `${file.name} • ${formatBytes(file.size)}`;
-    const issueCount = stats.paddedRows + stats.mergedRows + stats.droppedEmptyRows;
-    const headerNote = stats.hasHeader ? "header detected." : "no header detected; generated column names.";
-    elements.ingestSummary.textContent = issueCount > 0
-      ? `Input normalization: ${stats.paddedRows} short rows padded, ${stats.mergedRows} long rows merged, ${stats.droppedEmptyRows} blank rows dropped; ${headerNote}`
-      : `Input normalization: no structural row issues detected; ${headerNote}`;
-    updateNormalizationDetails(stats);
     await detectAndApplyAutoFixes();
     await recompute();
     state.hasData = true;
     setControlsEnabled(true);
   } catch (error) {
-    elements.fileMeta.textContent = `Failed to load file: ${error.message}`;
-    resetDataState("Failed to load CSV. Please try another file.");
+    const errorMessage = `Failed to load file: ${error.message}`;
+    const attemptedFormat = state.inputFormat;
+    resetDataState("Failed to load file. Try another CSV, Parquet, or tabular JSON.");
+    elements.fileMeta.textContent = errorMessage;
+    elements.ingestSummary.textContent = attemptedFormat === "parquet"
+      ? "Tip: Parquet must contain a readable table schema."
+      : attemptedFormat === "json"
+        ? "Tip: JSON must be an array of objects or NDJSON records with table-like fields."
+        : "Tip: Use CSV (.csv), Parquet (.parquet), or JSON (.json/.ndjson) with table-like records.";
   } finally {
     setLoadingState(false);
   }
@@ -580,18 +866,30 @@ async function handleFile(file) {
 
 async function detectAndApplyAutoFixes() {
   if (!state.rawColumns.length) return;
+  const isCsv = state.inputFormat === "csv";
+  if (!isCsv) {
+    elements.trimCount.textContent = "0";
+    elements.emptyRowCount.textContent = "0";
+    elements.dateFixCount.textContent = "0";
+    elements.toggleTrimWhitespace.checked = false;
+    elements.toggleDropEmptyRows.checked = false;
+    elements.toggleDateNormalization.checked = false;
+    elements.toggleDropErrorRows.checked = state.inputFormat === "json" && Number(state.jsonStructureStats?.outlierRows || 0) > 0;
+  }
+
+  const colToText = (c) => `CAST(${quoteIdent(c)} AS VARCHAR)`;
   const whitespaceChecks = state.rawColumns
-    .map((c) => `SUM(CASE WHEN NULLIF(${quoteIdent(c)}, '') IS NOT NULL AND ${quoteIdent(c)} <> TRIM(${quoteIdent(c)}) THEN 1 ELSE 0 END)`)
+    .map((c) => `SUM(CASE WHEN NULLIF(${colToText(c)}, '') IS NOT NULL AND ${colToText(c)} <> TRIM(${colToText(c)}) THEN 1 ELSE 0 END)`)
     .join(" + ");
   const emptyChecks = state.rawColumns
-    .map((c) => `NULLIF(TRIM(${quoteIdent(c)}), '') IS NOT NULL`)
+    .map((c) => `NULLIF(TRIM(${colToText(c)}), '') IS NOT NULL`)
     .join(" OR ");
   const dateChecks = state.rawColumns
     .map((c) => {
       const parsers = COMMON_DATE_FORMATS
-        .map((fmt) => `TRY_STRPTIME(TRIM(${quoteIdent(c)}), ${quoteLiteral(fmt)})`)
+        .map((fmt) => `TRY_STRPTIME(TRIM(${colToText(c)}), ${quoteLiteral(fmt)})`)
         .join(", ");
-      return `SUM(CASE WHEN NULLIF(TRIM(${quoteIdent(c)}), '') IS NOT NULL AND COALESCE(${parsers}) IS NOT NULL AND NOT REGEXP_MATCHES(TRIM(${quoteIdent(c)}), '^\\\\d{4}-\\\\d{2}-\\\\d{2}$') THEN 1 ELSE 0 END)`;
+      return `SUM(CASE WHEN NULLIF(TRIM(${colToText(c)}), '') IS NOT NULL AND COALESCE(${parsers}) IS NOT NULL AND NOT REGEXP_MATCHES(TRIM(${colToText(c)}), '^\\\\d{4}-\\\\d{2}-\\\\d{2}$') THEN 1 ELSE 0 END)`;
     })
     .join(" + ");
   const profileSql = `
@@ -602,12 +900,14 @@ async function detectAndApplyAutoFixes() {
     FROM raw_input;
   `;
   const profile = (await state.conn.query(profileSql)).toArray()[0];
-  elements.trimCount.textContent = Number(profile.whitespace_count || 0).toLocaleString();
-  elements.emptyRowCount.textContent = Number(profile.empty_rows_count || 0).toLocaleString();
-  elements.dateFixCount.textContent = Number(profile.date_fix_count || 0).toLocaleString();
-  elements.toggleTrimWhitespace.checked = Number(profile.whitespace_count || 0) > 0;
-  elements.toggleDropEmptyRows.checked = Number(profile.empty_rows_count || 0) > 0;
-  elements.toggleDateNormalization.checked = Number(profile.date_fix_count || 0) > 0;
+  if (isCsv) {
+    elements.trimCount.textContent = Number(profile.whitespace_count || 0).toLocaleString();
+    elements.emptyRowCount.textContent = Number(profile.empty_rows_count || 0).toLocaleString();
+    elements.dateFixCount.textContent = Number(profile.date_fix_count || 0).toLocaleString();
+    elements.toggleTrimWhitespace.checked = Number(profile.whitespace_count || 0) > 0;
+    elements.toggleDropEmptyRows.checked = Number(profile.empty_rows_count || 0) > 0;
+    elements.toggleDateNormalization.checked = Number(profile.date_fix_count || 0) > 0;
+  }
 
   let dedupeTarget = null;
   for (const col of state.recipe.columns) {
@@ -618,10 +918,10 @@ async function detectAndApplyAutoFixes() {
       col.targetName = "email";
       col.autoDetectedHint = "Auto-detected: Email · High confidence (header keyword match)";
       dedupeTarget = "email";
-    } else if (lower.includes("date") || lower.startsWith("dt_")) {
+    } else if (isCsv && (lower.includes("date") || lower.startsWith("dt_"))) {
       col.type = elements.toggleDateNormalization.checked ? "date" : "string";
       col.autoDetectedHint = "Auto-detected: Date · Medium confidence (header keyword match)";
-    } else if (lower.includes("amount") || lower.includes("total") || lower.includes("amt") || lower.includes("price")) {
+    } else if (isCsv && (lower.includes("amount") || lower.includes("total") || lower.includes("amt") || lower.includes("price"))) {
       col.type = "decimal";
       col.autoDetectedHint = "Auto-detected: Float · Medium confidence (header keyword match)";
     } else {
@@ -711,7 +1011,7 @@ async function refreshStats() {
 
 async function renderPreview() {
   if (!state.compiled) {
-    elements.tableWrap.innerHTML = '<div class="empty-state">Load a CSV and apply a valid recipe to render preview.</div>';
+    elements.tableWrap.innerHTML = '<div class="empty-state">Load a file and apply a valid recipe to render preview.</div>';
     elements.previewPageInfo.textContent = "Page 1 / 1";
     elements.previewPrev.disabled = true;
     elements.previewNext.disabled = true;
